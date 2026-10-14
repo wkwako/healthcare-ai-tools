@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} 835 Denial Validator {% endblock %}
+
+{% block content %}
+<h1> 835 Denial Validator </h1>
+
+<form action="/denials-error-checker" method="post" enctype="multipart/form-data">
+    <label for="file">Upload an 835 file:</label>
+    <br>
+    <input type="file" id="file" name="file">
+    <br>
+    <input type="submit" value="Check file">
+</form>
+
+{% if filename %}
+<p>Received {{ filename }}: {{ segment_count }} segments.</p>
+{% endif %}
+
+{% endblock %}
