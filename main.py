@@ -39,10 +39,9 @@ async def check_835(request: Request, file: UploadFile=File(...)):
     result, err_msg = structure_check(segments)
     print (result, err_msg)
 
-    #TODO: make get_element more user friendly?
-    info_dict = create_info_dict(segments)
-    print (info_dict)
-    print (get_element("CLP", 1, info_dict))
+    #info_dict = create_info_dict(segments)
+    #print (info_dict)
+    #print (get_element("CLP", 1, info_dict))
 
     info = {"filename": file.filename, "segment_count": len(segments)}
 

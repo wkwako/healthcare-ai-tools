@@ -27,6 +27,8 @@ def get_element(name, location, info_dict):
     return info_dict[name][location]
 
 def structure_check(segments):
+    if not segments:
+        return False, "Empty file"
     gs_found = False
     st_found = False
     st_count = 0
@@ -56,11 +58,11 @@ def structure_check(segments):
         elif marker == "GE":
             #didn't find a GS, nothing to close
             if not gs_found:
-                return False, "No opening GS for GE/ST envelope"
+                return False, "No opening GS for GS/GE envelope"
             
             #closing the GE before closing the SE/ST
             elif st_found:
-                return False, "No closing SE for ST/SE v"
+                return False, "No closing SE for ST/SE envelope"
 
             #close the GE/ST by setting sg_found to False
             else:
