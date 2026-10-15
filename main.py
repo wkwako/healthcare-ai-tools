@@ -3,6 +3,8 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
+from denial_validator import *
+
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -26,22 +28,21 @@ async def medicare_policy_assistant(request: Request):
 async def denial_validator(request: Request):
     return templates.TemplateResponse(request, "denial-validator.html")
 
-
-@app.post("/denials-error-checker", response_class=HTMLResponse)
-async def check_835(request: Request, file: UploadFile=File((...))):
+@app.post("/denial-validator", response_class=HTMLResponse)
+async def check_835(request: Request, file: UploadFile=File(...)):
     contents = await file.read()
     text = contents.decode("utf-8")
 
-    if "~" in text:
-        raw_segments = text.split("~")
-    else:
-        raw_segments = text.splitlines()
+    segments = get_segments(text)
 
-    segments = []
-    for s in raw_segments:
-        line = s.strip()
-        if line:
-            segments.append(line)
+    #ISA/IEA, GS/GE, ST/SE envelope check
+    result, err_msg = structure_check(segments)
+    print (result, err_msg)
+
+    #TODO: make get_element more user friendly?
+    info_dict = create_info_dict(segments)
+    print (info_dict)
+    print (get_element("CLP", 1, info_dict))
 
     info = {"filename": file.filename, "segment_count": len(segments)}
 
