@@ -1,3 +1,6 @@
+from pathlib import Path
+from decimal import Decimal
+
 def get_segments(text):
     if "~" in text:
         raw_segments = text.split("~")
@@ -106,3 +109,43 @@ def structure_check(segments):
         return False, "No closing GE for GS/GE envelope"
 
     return True, ""
+
+def balance_check(segments):
+    i = 0
+    while i < len(segments):
+        line = segments[i]
+        elements = line.split("*")
+        if elements[0] == "CLP":
+            #payment found
+            if len(elements) < 5:
+                return False, f"Incomplete CLP segment at line {i}"
+            
+            billed = elements[3]
+            paid = elements[4]
+            adjustments = []
+
+            #start looking for line-level payments
+            j = 1   
+            new_line = segments[i+j]
+            new_elements = new_line.split("*")
+            while new_elements[0] == "CAS":
+                for k in range(3, len(new_elements), 3):
+                    if new_elements[k]:
+                        adjustments.append(Decimal(new_elements[k]))
+                j += 1
+                new_line = segments[i+j]
+                new_elements = new_line.split("*")
+
+            if Decimal(billed) - sum(adjustments) != Decimal(paid):
+                return False, f"Sum of payments does not equal paid for CLP at line {i}"
+
+            i += j - 1
+
+        i += 1
+
+    return True, ""
+
+path = Path(__file__).parent / "tests" / "sample_835s" / "partial_payments.835"
+text = path.read_text()
+segments = get_segments(text)
+print (balance_check(segments))
