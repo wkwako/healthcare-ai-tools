@@ -63,6 +63,18 @@ def test_partial_payment_mismatch2():
     ok, msg = balance_check(segments)
     assert not ok
 
+def test_valid_plb():
+    """Tests a valid file with PLB adjustments, including multiple adjustments on the same line, multiple PLB segments, and negative amounts."""
+    segments = load_and_check_file("valid_plbs.835")
+    ok, msg = balance_check(segments)
+    assert ok
+
+def test_():
+    """Tests PLBs for a file with an incorrect BPR02 element."""
+    segments = load_and_check_file("plb_test_bpr02_mismatch.835")
+    ok, msg = balance_check(segments)
+    assert not ok
+
 def test_empty_file():
     """Tests that an empty file errors"""
     text = ""
