@@ -122,8 +122,9 @@ def balance_check(segments):
             plb_total = 0
 
         elif elements[0] == "BPR":
-            bpr_amount = Decimal(elements[2])
-
+            if len(elements) >= 3:
+                bpr_amount = Decimal(elements[2])
+            
         elif elements[0] == "CLP":
             #payment found
             if len(elements) < 5:

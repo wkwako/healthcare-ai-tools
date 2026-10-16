@@ -14,6 +14,19 @@
 
 {% if filename %}
 <p>Received {{ filename }}: {{ segment_count }} segments.</p>
+
+  {% if structure_result %}
+  <p>Structure result: OK</p>
+  {% else %}
+  <p>Structure result: Error - {{ structure_err_msg }}</p>
+  {% endif %}
+
+  {% if balance_result %}
+  <p>Balance result: OK</p>
+  {% else %}
+  <p>Balance result: Error - {{ balance_err_msg }}</p>
+  {% endif %}
+
 {% endif %}
 
 {% endblock %}

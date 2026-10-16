@@ -36,13 +36,16 @@ async def check_835(request: Request, file: UploadFile=File(...)):
     segments = get_segments(text)
 
     #ISA/IEA, GS/GE, ST/SE envelope check
-    result, err_msg = structure_check(segments)
-    print (result, err_msg)
+    structure_result, structure_err_msg = structure_check(segments)
+    balance_result, balance_err_msg = balance_check(segments)
 
-    #info_dict = create_info_dict(segments)
-    #print (info_dict)
-    #print (get_element("CLP", 1, info_dict))
+   
 
-    info = {"filename": file.filename, "segment_count": len(segments)}
+    info = {"filename": file.filename,
+            "segment_count": len(segments),
+            "structure_result": structure_result,
+            "structure_err_msg": structure_err_msg,
+            "balance_result": balance_result,
+            "balance_err_msg": balance_err_msg}
 
     return templates.TemplateResponse(request, "denial-validator.html", info)
