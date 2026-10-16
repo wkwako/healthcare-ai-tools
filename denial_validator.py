@@ -115,13 +115,23 @@ def balance_check(segments):
     while i < len(segments):
         line = segments[i]
         elements = line.split("*")
-        if elements[0] == "CLP":
+
+        if elements[0] == "ST":
+            bpr_amount = 0
+            paid_total = 0
+            plb_total = 0
+
+        elif elements[0] == "BPR":
+            bpr_amount = Decimal(elements[2])
+
+        elif elements[0] == "CLP":
             #payment found
             if len(elements) < 5:
                 return False, f"Incomplete CLP segment at line {i}"
             
-            billed = elements[3]
-            paid = elements[4]
+            billed = Decimal(elements[3])
+            paid = Decimal(elements[4])
+            paid_total += paid
             adjustments = []
 
             #start looking for line-level payments
@@ -130,17 +140,25 @@ def balance_check(segments):
             new_elements = new_line.split("*")
             while new_elements[0] == "CAS":
                 for k in range(3, len(new_elements), 3):
-                    if new_elements[k]:
-                        adjustments.append(Decimal(new_elements[k]))
+                    adjustments.append(Decimal(new_elements[k]))
                 j += 1
                 new_line = segments[i+j]
                 new_elements = new_line.split("*")
 
-            if Decimal(billed) - sum(adjustments) != Decimal(paid):
+            if billed - sum(adjustments) != paid:
                 return False, f"Sum of payments does not equal paid for CLP at line {i}"
 
             i += j - 1
 
+        elif elements[0] == "PLB":
+            plb_adjustments = []
+            for k in range(4, len(elements), 2):
+                plb_adjustments.append(Decimal(elements[k]))
+            plb_total += sum(plb_adjustments)
+
+        elif elements[0] == "SE":
+            if paid_total - plb_total != bpr_amount:
+                return False, "PLB total does not match BPR02 total"
         i += 1
 
     return True, ""
