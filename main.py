@@ -37,9 +37,9 @@ async def check_835(request: Request, file: UploadFile=File(...)):
 
     #ISA/IEA, GS/GE, ST/SE envelope check
     structure_result, structure_err_msg = structure_check(segments)
-    balance_result, balance_err_msg = balance_check(segments)
 
-   
+    #balance and PLB adjustments check
+    balance_result, balance_err_msg = balance_check(segments)
 
     info = {"filename": file.filename,
             "segment_count": len(segments),
