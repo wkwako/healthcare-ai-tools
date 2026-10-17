@@ -11,3 +11,6 @@ wheels/
 
 # keys
 .env
+
+# cpt codes
+/data/lcd
