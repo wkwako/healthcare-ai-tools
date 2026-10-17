@@ -1,6 +1,8 @@
 import requests
 import json
 from pathlib import Path
+import html
+from bs4 import BeautifulSoup
 
 base = "https://api.coverage.cms.gov"
 
@@ -65,4 +67,34 @@ def get_lcd_info():
             
 get_lcd_info()
 
+def clean_html(raw):
+    text = BeautifulSoup(html.unescape(raw), "html.parser").get_text("\n")
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    return "\n".join(lines)
+
+def clean_data():
+    input_path = Path(__file__).parent / "data" / "lcd" / "raw"
+    output_path = Path(__file__).parent / "data" / "lcd" / "clean"
+
+    files = [item for item in input_path.iterdir() if item.is_file()]
+    for file in files:
+        raw = json.loads(file.read_text(encoding="utf-8"))
+        lcd = raw["data"][0]
+
+        cleaned = {
+            "lcd_id": lcd["lcd_id"],
+            "version": lcd["lcd_version"],
+            "title": lcd["title"],
+            "status": lcd["status"],
+            "contractors": raw["contractor"],
+            "sections": {
+                "indication": clean_html(lcd["indication"]),
+                "associated_info": clean_html(lcd["associated_info"]),
+            },
+        }
+
+        with (output_path / file.name).open("w", encoding="utf-8") as f:
+            json.dump(cleaned, f, indent=2)
+
+    return cleaned
 
