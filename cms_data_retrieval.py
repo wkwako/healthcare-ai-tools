@@ -2,21 +2,33 @@ import requests
 import json
 from pathlib import Path
 import html
+from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
 base = "https://api.coverage.cms.gov"
 
+TOKEN_LIFETIME = timedelta(hours=1)
+token_cache = {"token": None, "created_at": None}
+
 def get_license_agreement_token():
+    """Requests a new token and records when it was generated"""
     url = "/v1/metadata/license-agreement"
     complete_url = base + url
     response = requests.get(complete_url)
+    response.raise_for_status()
 
-    return response.json()
+    token_cache["token"] = response.json()["data"][0]["Token"]
+    token_cache["created_at"] = datetime.now()
 
-#print (get_license_agreement_token())
+    return token_cache["token"]
 
-token = "88876fbb-a199-4133-81af-12a641d8af4d"
-headers = {"Authorization": f"Bearer {token}"}
+def get_token():
+    """Returns the stored token, or a new one if it's missing or an hour old"""
+    created_at = token_cache["created_at"]
+    if created_at is None or datetime.now() - created_at >= TOKEN_LIFETIME:
+        return get_license_agreement_token()
+
+    return token_cache["token"]
 
 def build_contractor_name_dict():
     """Builds a dictionary of lcdid:[contractor] key:value pairs"""
@@ -39,6 +51,7 @@ def get_lcd_info():
     contractors_dict = build_contractor_name_dict()
     for lcdid in lines:
         params["lcdid"] = lcdid
+        headers = {"Authorization": f"Bearer {get_token()}"}
 
         #get general lcd information
         r = requests.get(url, headers=headers, params=params)
@@ -61,11 +74,6 @@ def get_lcd_info():
         save_path = Path(__file__).parent / "data" / "lcd" / "raw" / f"L{lcdid}.json"
         with save_path.open("w", encoding="utf-8") as f:
             json.dump(text, f)
-
-        #one file, remove after testing
-        #break
-            
-get_lcd_info()
 
 def clean_html(raw):
     text = BeautifulSoup(html.unescape(raw), "html.parser").get_text("\n")
@@ -98,3 +106,9 @@ def clean_data():
 
     return cleaned
 
+if __name__ == "__main__":
+    # re-download raw files
+    # get_lcd_info()
+
+    # creates clean files
+    clean_data()
