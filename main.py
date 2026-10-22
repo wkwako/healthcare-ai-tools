@@ -24,6 +24,10 @@ async def denials_explainer(request: Request):
 async def medicare_policy_assistant(request: Request):
     return templates.TemplateResponse(request, "medicare-policy-assistant.html")
 
+@app.get("/prior-auth-checker", response_class=HTMLResponse)
+async def prior_auth_checker(request: Request):
+    return templates.TemplateResponse(request, "prior-auth-checker.html")
+
 @app.get("/denial-validator", response_class=HTMLResponse)
 async def denial_validator(request: Request):
     return templates.TemplateResponse(request, "denial-validator.html")

@@ -164,7 +164,7 @@ def balance_check(segments):
 
     return True, ""
 
-path = Path(__file__).parent / "tests" / "sample_835s" / "partial_payments.835"
-text = path.read_text()
-segments = get_segments(text)
-print (balance_check(segments))
+# path = Path(__file__).parent / "tests" / "sample_835s" / "partial_payments.835"
+# text = path.read_text()
+# segments = get_segments(text)
+# print (balance_check(segments))
