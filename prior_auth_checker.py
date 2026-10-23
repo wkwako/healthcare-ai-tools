@@ -61,13 +61,13 @@ def decode_note(document):
     data = document["content"][0]["attachment"]["data"]
     return base64.b64decode(data).decode("utf-8").strip()
 
-def summarize_fhir_record(path, lookback_years=2, as_of=None):
-    """Turns a Synthea FHIR bundle into a compact text summary for the LLM.
+def summarize_fhir_record(record, lookback_years=2, as_of=None):
+    """Turns a Synthea FHIR bundle (a file path, or the already-parsed bundle) into a compact text summary for the LLM.
     Conditions, active medications, devices and orders are always included; encounters, procedures,
     observations, reports and notes only from the last lookback_years before as_of (default: the
     record's latest date). Each line is tagged [R1], [R2], ... so the LLM can cite evidence.
     Returns (summary, refs), where refs maps each tag to its FHIR resource id."""
-    bundle = json.loads(Path(path).read_text(encoding="utf-8"))
+    bundle = record if isinstance(record, dict) else json.loads(Path(record).read_text(encoding="utf-8"))
     resources = [entry["resource"] for entry in bundle["entry"] if entry["resource"]["resourceType"] not in SKIPPED_TYPES]
     patient = next(r for r in resources if r["resourceType"] == "Patient")
 

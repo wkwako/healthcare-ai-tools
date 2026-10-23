@@ -3,5 +3,87 @@
 
 {% block content %}
 <h1> Prior Authorization Checker </h1>
-<p> Coming soon </p>
+
+<form id="pa-form" action="/prior-auth-checker" method="post" enctype="multipart/form-data">
+    <label for="file">Patient record (FHIR bundle, .json):</label>
+    <br>
+    <input type="file" id="file" name="file" accept=".json,application/json" required>
+    <br><br>
+    <label for="order">Order code (HCPCS/CPT):</label>
+    <br>
+    <input type="text" id="order" name="order" placeholder="E0601" value="{{ order or '' }}" maxlength="5" required>
+    <br><br>
+    <input type="submit" id="predict" class="button" value="Predict">
+</form>
+
+<!-- shown while the analysis runs; same shape as the results so the page doesn't jump -->
+<div id="loading" class="loading" hidden aria-live="polite">
+    <p class="loading-text">Finding the matching policy and checking each criterion. This takes about 30 seconds.</p>
+    <div class="skeleton skeleton-banner"></div>
+    <div class="skeleton skeleton-line"></div>
+    <div class="skeleton skeleton-line short"></div>
+    <div class="skeleton skeleton-row"></div>
+    <div class="skeleton skeleton-row"></div>
+    <div class="skeleton skeleton-row"></div>
+</div>
+
+<div id="results">
+{% if error %}
+  <p class="error">{{ error }}</p>
+{% endif %}
+
+{% if result %}
+  <p>Checked {{ filename }} for order {{ order }}{% if result.order_description %} ({{ result.order_description }}){% endif %}.</p>
+
+  <div class="decision decision-{{ result.decision | replace(' ', '-') }}">
+    <span class="decision-label">{{ decision_label }}</span>
+    <p>{{ result.decision_explanation }}</p>
+  </div>
+
+  {% if result.selected_policy != "none" %}
+  <p><strong>Policy:</strong> {{ result.selected_policy }} {{ policy_title }}</p>
+  {% endif %}
+  <p class="muted">{{ result.selection_reason }}</p>
+
+  {% for criterion in result.criteria %}
+  <div class="criterion">
+    <div class="criterion-head">
+      <strong>{{ criterion.criterion }}</strong>
+      <span class="verdict verdict-{{ criterion.verdict | replace(' ', '-') }}">{{ criterion.verdict }}</span>
+    </div>
+    <p class="policy-text">{{ criterion.policy_text }}</p>
+    <p>{{ criterion.explanation }}</p>
+    {% if criterion.evidence_text %}
+    <details>
+      <summary>Evidence ({{ criterion.evidence_text | length }})</summary>
+      <ul>
+        {% for item in criterion.evidence_text %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </details>
+    {% endif %}
+  </div>
+  {% endfor %}
+{% endif %}
+</div>
+
+<script>
+  //the form posts normally; this just swaps the old results for the skeleton while the browser waits
+  document.getElementById("pa-form").addEventListener("submit", function () {
+    document.getElementById("results").hidden = true;
+    document.getElementById("loading").hidden = false;
+    var button = document.getElementById("predict");
+    button.disabled = true;
+    button.value = "Predicting...";
+  });
+  //coming back with the browser's back button can restore the page mid-load; reset it
+  window.addEventListener("pageshow", function () {
+    document.getElementById("loading").hidden = true;
+    document.getElementById("results").hidden = false;
+    var button = document.getElementById("predict");
+    button.disabled = false;
+    button.value = "Predict";
+  });
+</script>
 {% endblock %}

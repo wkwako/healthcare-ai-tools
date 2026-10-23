@@ -16,3 +16,151 @@ body {
 .button:hover {
   background: #2c5282;
 }
+
+input.button {
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input.button:disabled {
+  background: #718096;
+  cursor: wait;
+}
+
+/* Prior authorization checker */
+.error {
+  color: #9b2c2c;
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+
+.muted {
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.decision {
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-left: 6px solid;
+}
+
+.decision p {
+  margin: 6px 0 0;
+}
+
+.decision-label {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.decision-covered {
+  background: #f0fff4;
+  border-color: #2f855a;
+}
+
+.decision-denied {
+  background: #fff5f5;
+  border-color: #c53030;
+}
+
+.decision-insufficient-information {
+  background: #fffff0;
+  border-color: #b7791f;
+}
+
+.criterion {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 10px 0;
+}
+
+.criterion p {
+  margin: 6px 0;
+}
+
+.criterion-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.policy-text {
+  color: #4a5568;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.verdict {
+  font-size: 0.85rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.verdict-met {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.verdict-not-met {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.verdict-insufficient-information {
+  background: #fefcbf;
+  color: #744210;
+}
+
+.verdict-not-applicable {
+  background: #edf2f7;
+  color: #2d3748;
+}
+
+/* Skeleton loader shown while the analysis runs */
+.loading-text {
+  color: #4a5568;
+}
+
+.skeleton {
+  border-radius: 6px;
+  margin: 10px 0;
+  background: linear-gradient(90deg, #edf2f7 25%, #f7fafc 50%, #edf2f7 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.skeleton-banner {
+  height: 72px;
+}
+
+.skeleton-line {
+  height: 14px;
+  width: 80%;
+}
+
+.skeleton-line.short {
+  width: 50%;
+}
+
+.skeleton-row {
+  height: 90px;
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}
