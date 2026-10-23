@@ -17,3 +17,4 @@ wheels/
 
 # vector store, rebuilt from /data/lcd
 /data/chroma
+/data/patient_data/

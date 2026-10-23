@@ -1,0 +1,156 @@
+{
+  "case_id": "case_001",
+  "patient_file": "Shalanda398_West559_c0f85a14-440d-79b8-1a24-9792cf230f87_case_001.json",
+  "source_file": "Shalanda398_West559_c0f85a14-440d-79b8-1a24-9792cf230f87.json",
+  "case_summary": "E0601, AHI 22, in-person evaluation before the sleep test, no supplier instruction",
+  "order": {
+    "code": "E0601",
+    "description": "Continuous positive airway pressure (CPAP) device",
+    "date": "2026-09-24",
+    "resource_id": "0e7b0a24-fa6d-48ad-abbc-51209dbece35"
+  },
+  "governing_policies": [
+    "L33718"
+  ],
+  "checklist": "data/criteria/L33718.json",
+  "criteria": {
+    "osa_diagnosis": {
+      "verdict": "met",
+      "evidence": [
+        "b2e28443-47d8-42f4-bf91-114e1f2b68cb",
+        "a695d584-7127-40ca-93e6-d3a46dd4db7c"
+      ],
+      "explanation": "Obstructive sleep apnea diagnosed 2026-09-24, based on the 2026-09-15 polysomnogram."
+    },
+    "A": {
+      "verdict": "met",
+      "evidence": [
+        "43698f0d-c200-4f9b-a436-70b8cbcc6878",
+        "c8f849ef-1677-4f66-bf74-e356b8013787",
+        "7fced58b-77a6-4b8b-973f-94d93b7ceb4f"
+      ],
+      "explanation": "In-person visit with Dr. Chang901 Kutch271 on 2026-09-02 assessing for OSA, 13 days before the sleep test."
+    },
+    "B": {
+      "verdict": "met",
+      "evidence": [
+        "e7fb44d2-20db-4431-97d0-26cade9b572f",
+        "091c8a05-5a0e-46c9-a549-c4b5d0ce99e4",
+        "a695d584-7127-40ca-93e6-d3a46dd4db7c"
+      ],
+      "explanation": "Type I polysomnogram with AHI 22 (>= 15) and 143 events (>= 30)."
+    },
+    "B2_symptoms": {
+      "verdict": "not applicable",
+      "evidence": [],
+      "explanation": "AHI is >= 15, so the AHI 5-14 symptom requirement does not apply. (Symptoms and hypertension are documented anyway.)"
+    },
+    "test_ordered_by_practitioner": {
+      "verdict": "met",
+      "evidence": [
+        "a701fcb7-2c6c-4345-8a5b-69f70f296ebd",
+        "a695d584-7127-40ca-93e6-d3a46dd4db7c"
+      ],
+      "explanation": "Sleep study ordered by Dr. Chang901 Kutch271 on 2026-09-02; the report is based on that order."
+    },
+    "C": {
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "Nothing in the record shows the supplier instructed the patient or caregiver on using and caring for the device. The order was only sent to a supplier."
+    }
+  },
+  "expected_decision": "insufficient information",
+  "decision_explanation": "Every applicable criterion is met except C, which has no evidence either way.",
+  "added_resources": [
+    {
+      "id": "43698f0d-c200-4f9b-a436-70b8cbcc6878",
+      "resourceType": "Encounter",
+      "description": "In-person evaluation encounter"
+    },
+    {
+      "id": "c8f849ef-1677-4f66-bf74-e356b8013787",
+      "resourceType": "Procedure",
+      "description": "Sleep apnea assessment at the evaluation"
+    },
+    {
+      "id": "17cdb2a9-d4ab-4ca9-be14-795fa717f8d4",
+      "resourceType": "Observation",
+      "description": "Epworth Sleepiness Scale score of 13"
+    },
+    {
+      "id": "a701fcb7-2c6c-4345-8a5b-69f70f296ebd",
+      "resourceType": "ServiceRequest",
+      "description": "Sleep study order from the treating practitioner"
+    },
+    {
+      "id": "7fced58b-77a6-4b8b-973f-94d93b7ceb4f",
+      "resourceType": "DiagnosticReport",
+      "description": "Evaluation note (note)"
+    },
+    {
+      "id": "cac08a33-bbfd-4d2f-9ce4-525e4d5c869e",
+      "resourceType": "DocumentReference",
+      "description": "Evaluation note (note, document copy)"
+    },
+    {
+      "id": "f3292c6a-fd8f-45df-acf1-5e1d1afa8af1",
+      "resourceType": "Encounter",
+      "description": "Overnight sleep study encounter"
+    },
+    {
+      "id": "e7fb44d2-20db-4431-97d0-26cade9b572f",
+      "resourceType": "Observation",
+      "description": "AHI of 22 events per hour"
+    },
+    {
+      "id": "091c8a05-5a0e-46c9-a549-c4b5d0ce99e4",
+      "resourceType": "Observation",
+      "description": "143 total events"
+    },
+    {
+      "id": "8d6b35a8-3ea3-4065-a96a-4eacb0b1ddc6",
+      "resourceType": "Observation",
+      "description": "Total sleep time 6.5 hours"
+    },
+    {
+      "id": "3fb2f2be-f576-4532-b1c4-7f7ca42efcb8",
+      "resourceType": "Observation",
+      "description": "Central/mixed apneas 4% of AHI"
+    },
+    {
+      "id": "827bb6e4-6fc3-4633-a171-2abdabdf0e33",
+      "resourceType": "Observation",
+      "description": "SpO2 nadir 84%"
+    },
+    {
+      "id": "a695d584-7127-40ca-93e6-d3a46dd4db7c",
+      "resourceType": "DiagnosticReport",
+      "description": "Sleep study report linking the results and the order"
+    },
+    {
+      "id": "9414ea0c-cf8d-48c7-979f-d1c8f9166d36",
+      "resourceType": "Encounter",
+      "description": "Follow-up encounter to review results"
+    },
+    {
+      "id": "b2e28443-47d8-42f4-bf91-114e1f2b68cb",
+      "resourceType": "Condition",
+      "description": "Obstructive sleep apnea diagnosis"
+    },
+    {
+      "id": "0e7b0a24-fa6d-48ad-abbc-51209dbece35",
+      "resourceType": "DeviceRequest",
+      "description": "E0601 CPAP order"
+    },
+    {
+      "id": "408b75c7-bf56-4d47-ac19-b05e55d366c1",
+      "resourceType": "DiagnosticReport",
+      "description": "Follow-up note (note)"
+    },
+    {
+      "id": "8bad03f6-6aa3-43c7-be8b-889ef2044fb7",
+      "resourceType": "DocumentReference",
+      "description": "Follow-up note (note, document copy)"
+    }
+  ]
+}

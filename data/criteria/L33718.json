@@ -1,0 +1,128 @@
+{
+  "lcd_id": 33718,
+  "version": 52,
+  "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+  "verdicts": ["met", "not met", "insufficient information", "not applicable"],
+  "decision_rule": "Covered if every applicable criterion for the order is met. Denied if any is not met. Otherwise insufficient information.",
+
+  "orders": {
+    "E0601": {
+      "description": "Continuous positive airway pressure (CPAP) device",
+      "policy_ref": "Initial Coverage I",
+      "criteria": ["osa_diagnosis", "A", "B", "B2_symptoms", "test_ordered_by_practitioner", "C"]
+    },
+    "E0470": {
+      "description": "Bi-level respiratory assist device without back-up rate",
+      "policy_ref": "Initial Coverage II",
+      "criteria": ["osa_diagnosis", "A", "B", "B2_symptoms", "test_ordered_by_practitioner", "C", "D"]
+    },
+    "E0471": {
+      "description": "Bi-level respiratory assist device with back-up rate",
+      "policy_ref": "Initial Coverage, paragraph after II",
+      "criteria": ["E0471_exclusion"]
+    }
+  },
+
+  "criteria": [
+    {
+      "id": "osa_diagnosis",
+      "policy_ref": "Initial Coverage (implied by 'for the treatment of obstructive sleep apnea')",
+      "policy_text": "In this policy, the term PAP (positive airway pressure) device will refer to both a single-level continuous positive airway pressure device (E0601) and a bi-level respiratory assist device without back-up rate (E0470) when it is used in the treatment of obstructive sleep apnea.",
+      "check": "The record has a diagnosis of obstructive sleep apnea.",
+      "evidence": ["Condition: obstructive sleep apnea"],
+      "notes": "Not lettered in the policy, but every other criterion assumes it. A patient with a non-OSA diagnosis (e.g. COPD, hypoventilation) falls under the Respiratory Assist Devices LCD (L33800) instead."
+    },
+    {
+      "id": "A",
+      "policy_ref": "Initial Coverage I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "check": "An in-person visit with the treating practitioner, assessing for OSA, dated before the sleep test.",
+      "evidence": ["Encounter: in-person (not telehealth) visit", "Procedure or note: sleep apnea assessment during that visit"],
+      "notes": "Timing matters: a visit after the sleep test does not count. For E0470 after a failed E0601 trial, the original evaluation still counts, but if the E0601 was used for more than 3 months a new in-person evaluation is required (Initial Coverage, paragraphs after II)."
+    },
+    {
+      "id": "B",
+      "policy_ref": "Initial Coverage I.B (1 or 2)",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. The apnea-hypopnea index (AHI) or Respiratory Disturbance Index (RDI) is greater than or equal to 15 events per hour with a minimum of 30 events; or, 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of: [B2_symptoms]",
+      "check": "A sleep test (Type I-IV or other home sleep test) with AHI or RDI >= 15 and at least 30 events, or AHI or RDI 5-14 and at least 10 events.",
+      "evidence": ["DiagnosticReport: sleep study, with test type", "Observation: AHI or RDI value", "Observation: total number of events"],
+      "notes": "AHI below 5 is not met. AHI 5-14 is met only if B2_symptoms is also met. The event minimums matter mainly for short recordings: if the AHI or RDI is based on less than 2 hours, the events must still reach 30 (or 10 with symptoms) (Definitions). AHI and RDI exclude RERAs."
+    },
+    {
+      "id": "B2_symptoms",
+      "policy_ref": "Initial Coverage I.B.2.a-b",
+      "applies_when": "Only when the AHI or RDI is 5-14. Not applicable when it is >= 15.",
+      "policy_text": "a. Excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia; or, b. Hypertension, ischemic heart disease, or history of stroke.",
+      "check": "Documentation of at least one of: excessive daytime sleepiness, impaired cognition, a mood disorder, insomnia, hypertension, ischemic heart disease, or a history of stroke.",
+      "evidence": ["Condition: hypertension, ischemic heart disease, stroke, insomnia, mood disorder, or cognitive impairment", "Observation: Epworth Sleepiness Scale score, or a note documenting daytime sleepiness"],
+      "notes": "Any one item from list a or b is enough."
+    },
+    {
+      "id": "test_ordered_by_practitioner",
+      "policy_ref": "Sleep Tests 4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner; and,",
+      "check": "The sleep test was ordered by the patient's treating practitioner.",
+      "evidence": ["ServiceRequest: sleep study, with requester", "DiagnosticReport: link to that order"],
+      "notes": "One of five sleep test requirements under Sleep Tests. Item 3 duplicates criterion B; items 1, 2 and 5 are listed under out_of_scope."
+    },
+    {
+      "id": "C",
+      "policy_ref": "Initial Coverage I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "check": "The patient or caregiver received instruction from the device supplier on how to use and care for the device.",
+      "evidence": ["Procedure or DocumentReference: device education or training"],
+      "notes": "This is supplier documentation and is often absent from clinical records, so 'insufficient information' will be a common correct answer."
+    },
+    {
+      "id": "D",
+      "policy_ref": "Initial Coverage II.D",
+      "policy_text": "An E0601 has been tried and proven ineffective based on a therapeutic trial conducted in either a facility or in a home setting. Ineffective is defined as documented failure to meet therapeutic goals using an E0601 during the titration portion of a facility-based study or during home use despite optimal therapy (i.e., proper mask selection and fitting and appropriate pressure settings).",
+      "check": "A CPAP (E0601) trial, in a facility titration or at home, is documented as failing to meet therapeutic goals despite proper mask fit and pressure settings.",
+      "evidence": ["Device or Procedure: CPAP trial or titration study", "Observation or note: failure to meet therapeutic goals", "Note: mask fitting and pressure settings were optimized"],
+      "notes": "E0470 only. Simply having used a CPAP is not enough; the record must show it failed despite optimal therapy. This is the cross-document dependency the project highlights: E0470 depends on an E0601 history."
+    },
+    {
+      "id": "E0471_exclusion",
+      "policy_ref": "Initial Coverage, paragraph after II",
+      "policy_text": "A bi-level positive airway pressure device with back-up rate (E0471) is not reasonable and necessary if the primary diagnosis is OSA. If an E0471 is billed with a diagnosis of OSA, it will be denied as not reasonable and necessary.",
+      "check": "An E0471 is not covered when the primary diagnosis is OSA.",
+      "evidence": ["Condition: primary diagnosis"],
+      "notes": "'not met' if the primary diagnosis is OSA. If it is something else, the Respiratory Assist Devices LCD (L33800) governs instead."
+    }
+  ],
+
+  "continued_coverage": {
+    "description": "Criteria for keeping a PAP device beyond the first 3 months. Applies to a different kind of case than the initial order, so it is kept separate.",
+    "policy_ref": "Continued Coverage Beyond the First Three Months of Therapy",
+    "criteria": [
+      {
+        "id": "reevaluation",
+        "policy_text": "In-person clinical re-evaluation by the treating practitioner with documentation that symptoms of obstructive sleep apnea are improved",
+        "check": "An in-person re-evaluation between day 31 and day 91 after starting therapy, documenting improved OSA symptoms.",
+        "evidence": ["Encounter: in-person visit 31-91 days after the device start date", "Note or Observation: symptoms improved"],
+        "notes": "A re-evaluation after day 91 still qualifies, but coverage restarts from that visit's date."
+      },
+      {
+        "id": "adherence",
+        "policy_text": "Objective evidence of adherence to use of the PAP device, reviewed by the treating practitioner. Adherence to therapy is defined as use of PAP >= 4 hours per night on 70% of nights during a consecutive thirty (30) day period anytime during the first three (3) months of initial usage.",
+        "check": "Device usage data showing >= 4 hours per night on at least 70% of nights (21 of 30) in some consecutive 30-day period within the first 3 months, reviewed by the treating practitioner.",
+        "evidence": ["Observation: nightly usage hours or a download summary", "Note: practitioner reviewed the data"]
+      }
+    ]
+  },
+
+  "out_of_scope": [
+    {
+      "policy_ref": "Sleep Tests 1, 2, 5",
+      "reason": "Whether the sleep test meets NCD 240.4.1, uses an FDA-approved device, and was run by a qualified Medicare provider are administrative facts not found in a clinical record."
+    },
+    {
+      "policy_ref": "Re-qualifying after a failed 12 week trial; Replacement; Beneficiaries Entering Medicare; Accessories; Refill Requirements",
+      "reason": "Separate claim scenarios. Can be added later as their own checklists if test cases need them."
+    },
+    {
+      "policy_ref": "Concurrent Use of Oxygen with PAP Therapy",
+      "reason": "Requires the Oxygen and Oxygen Equipment LCD (L33797) as well; a good candidate for a later cross-document test case."
+    }
+  ]
+}
