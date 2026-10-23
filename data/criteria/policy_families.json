@@ -1,0 +1,17 @@
+{
+  "description": "LCDs that cover the same service for different contractors (regions). Region is ignored for now, so selecting any LCD in a family counts as correct. Wording and some criteria differ slightly between members; see notes.",
+  "families": {
+    "hypoglossal_nerve_stimulation": {
+      "lcds": ["L38276", "L38307", "L38310", "L38385", "L38387", "L38398", "L38528"],
+      "notes": "L38307, L38310, L38385 and L38398 have the same criteria. L38387 limits the neuromuscular disease contraindication to disease affecting the respiratory system. L38528 requires shared decision making to be documented by both the referring and implanting physicians. L38276 defines CPAP intolerance as < 4 hours a night on >= 70% of nights in a month (others: < 4 hours a night, 5 nights a week) and requires shared decision making with a sleep physician and an otolaryngologist."
+    },
+    "sleep_studies": {
+      "lcds": ["L33405", "L35050", "L36593", "L36839", "L36861", "L36902"],
+      "notes": "L36839, L36861 and L36902 have the same criteria; L36861 adds the repeat Type I study for re-qualifying after a failed PAP trial. L33405 requires a face-to-face evaluation with an Epworth score and exam (BMI, neck circumference) before testing. L35050 and L36593 add home sleep test conditions."
+    },
+    "cosmetic_and_reconstructive_surgery": {
+      "lcds": ["L33428", "L35090", "L38914", "L39051", "L39506"],
+      "notes": "L35090 and L38914 are identical. Septoplasty for nasal obstruction that interferes with CPAP is covered in all five; the 6-week conservative treatment requirement appears in L33428, L39051 and L39506."
+    }
+  }
+}
