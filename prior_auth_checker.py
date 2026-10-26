@@ -1,5 +1,6 @@
 import base64
 import json
+import re
 from datetime import date
 from pathlib import Path
 from dotenv import load_dotenv
@@ -320,7 +321,46 @@ def judge_criteria(pt_summary, order, refs=None):
             criterion["evidence_ids"] = [refs.get(tag.strip("[]"), tag) for tag in criterion["evidence"]]
     return result | judgment
 
+def criterion_label(label):
+    """Normalizes a criterion label so "Sleep Tests.4", "Sleep Tests 4" and "sleep tests.4" all match"""
+    return re.sub(r"[^a-z0-9]", "", label.lower())
+
+def score_against_answer_key(result, key):
+    """Compares judge_criteria()'s result with a test case's answer key.
+    Policy: correct if the selected LCD is one of the key's accepted policies (any contractor's version counts).
+    Criteria: each answer-key criterion is matched to the model's by label; a criterion the model left out counts
+    as wrong. Evidence: how many of the key's evidence resources the model cited. Extra criteria the model judged
+    but the key doesn't list are reported, not scored.
+    Cases scored on policy selection only (no criteria in the key) skip the decision and criteria."""
+    score = {
+        "case_id": key["case_id"],
+        "policy": {"selected": result["selected_policy"], "accepted": key["accepted_policies"],
+                   "correct": result["selected_policy"] in key["accepted_policies"]},
+    }
+    if not key["criteria"]:
+        return score
+
+    by_label = {criterion_label(c["criterion"]): c for c in result["criteria"]}
+    criteria = []
+    for cid, expected in key["criteria"].items():
+        got = by_label.pop(criterion_label(cid), None)
+        cited = set(got.get("evidence_ids", [])) if got else set()
+        criteria.append({
+            "criterion": cid,
+            "expected": expected["verdict"],
+            "got": got["verdict"] if got else "missing",
+            "correct": bool(got) and got["verdict"] == expected["verdict"],
+            "evidence_expected": len(expected["evidence"]),
+            "evidence_cited": len(cited & set(expected["evidence"])),
+        })
+    score["decision"] = {"expected": key["expected_decision"], "got": result["decision"],
+                         "correct": result["decision"] == key["expected_decision"]}
+    score["criteria"] = criteria
+    score["criteria_correct"] = sum(c["correct"] for c in criteria)
+    score["extra_criteria"] = [{"criterion": c["criterion"], "verdict": c["verdict"]} for c in by_label.values()]
+    return score
+
 if __name__ == "__main__":
-    path = Path(__file__).parent / "data/modified_patient_data/Shalanda398_West559_c0f85a14-440d-79b8-1a24-9792cf230f87_case_001.json"
+    path = Path(__file__).parent / "data/modified_patient_data/Asia282_Prosacco716_3f0c90c7-2489-1306-ff69-868509c56635_case_006.json"
     summary, refs = summarize_fhir_record(path)
     print(json.dumps(judge_criteria(summary, "E0601", refs), indent=2))

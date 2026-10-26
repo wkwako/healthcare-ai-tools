@@ -47,7 +47,7 @@
       "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article; and,",
       "check": "The diagnosis rests on a sleep test of a recognized type: a facility-based polysomnogram (Type I) or a home or hospital sleep test (Type II, III, IV, or Other).",
       "evidence": ["DiagnosticReport: sleep study, stating the test type"],
-      "notes": "Judged on the test type the record shows. The rest of NCD 240.4.1 (testing standards, billing rules) is administrative and not judged. 'insufficient information' if the record has an AHI but never says what kind of test produced it."
+      "notes": "Judged on the test type the record shows. The rest of NCD 240.4.1 (testing standards, billing rules) is administrative and not judged. 'insufficient information' if the record has an AHI but never says what kind of test produced it, even though the policy's definitions imply an AHI comes from a Type I or II study: the type must be stated, not inferred. Wrongly answering 'insufficient' sends the user to find the document; wrongly answering 'met' could approve a claim that should not be."
     },
     {
       "id": "Sleep Tests.3",
