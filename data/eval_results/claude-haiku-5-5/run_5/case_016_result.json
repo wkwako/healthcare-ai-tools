@@ -1,0 +1,147 @@
+{
+  "order": "E0470",
+  "order_description": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for an E0470 bi-level device without backup rate for a patient with obstructive sleep apnea. L33718 covers E0470 for OSA when an E0601 CPAP was tried and proven ineffective despite optimal therapy. The record documents CPAP failure after mask refitting to a full-face mask and retitration, with residual AHI 18, average use 5.3 h/night, and a sleep study showing AHI 22 with SpO2 nadir 78%. L33800 covers E0470 for restrictive, central/complex sleep apnea, and hypoventilation indications, and itself refers OSA E0470 coverage to L33718. Polysomnography LCD L33405 does not govern this device order.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R150",
+        "R67",
+        "R68"
+      ],
+      "explanation": "On 2026-10-30 Dr. Cletus494 Paucek755 saw the patient in person (R150) for evaluation of possible obstructive sleep apnea (R67 encounter for snoring and possible sleep apnea). The attended in-laboratory polysomnography followed on 2026-11-15 (R68), so the evaluation came before the sleep test.",
+      "evidence_ids": [
+        "8b58c779-1e7d-4c52-ac25-1c452e6616d4",
+        "c833146b-52c6-4513-b66c-5f2ee3549b04",
+        "3e823617-5078-45b6-b80d-38098e6e94c5"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. The apnea-hypopnea index (AHI) or Respiratory Disturbance Index (RDI) is greater than or equal to 15 events per hour with a minimum of 30 events; or, 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia; or hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R85",
+        "R139",
+        "R142",
+        "R145",
+        "R68"
+      ],
+      "explanation": "Alternative 1 applies. The Type I polysomnogram recorded an AHI of 22 events/hour with 143 total apnea and hypopnea events over 6.5 hours of sleep, which satisfies AHI of at least 15 with at least 30 events. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "9805e572-e1d3-4571-bd0a-a7b65daa68a4",
+        "3ddec54e-afba-434f-b6b4-8daaac3e2ef8",
+        "932a0a7e-e5fd-46e2-8fd4-ea83486b08c0",
+        "452a9521-b548-4cd9-9a2a-b9352fa8ca3b",
+        "3e823617-5078-45b6-b80d-38098e6e94c5"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R84"
+      ],
+      "explanation": "The record documents instruction on use and care of the bi-level respiratory assist device without backup rate given by the DME supplier (R84, dated 2027-02-02).",
+      "evidence_ids": [
+        "752fa220-528f-41f5-8e24-d92c800a20e5"
+      ]
+    },
+    {
+      "criterion": "II.D",
+      "policy_text": "An E0601 has been tried and proven ineffective based on a therapeutic trial conducted in either a facility or in a home setting. Ineffective is defined as documented failure to meet therapeutic goals using an E0601 during the titration portion of a facility-based study or during home use despite optimal therapy (i.e., proper mask selection and fitting and appropriate pressure settings).",
+      "verdict": "met",
+      "evidence": [
+        "R152",
+        "R132",
+        "R86",
+        "R59",
+        "R61"
+      ],
+      "explanation": "The patient used an E0601 at home from 2026-12-01 (R152, R59, R61). Over 58 days the device download showed 5.3 hours of average nightly use (R86) and a residual AHI of 18 events/hour (R132), and the note states symptoms persist and CPAP failed to meet therapeutic goals. Optimal therapy was attempted: the mask was refitted to a full-face mask and pressure was retitrated without improvement (R152).",
+      "evidence_ids": [
+        "bbd9bed8-9b52-4dbd-88f4-3753b537bdae",
+        "88cf82fe-1552-4434-b838-6c8bd19dcfe4",
+        "3fd6faca-a792-4dc2-82b9-41d2e1322312",
+        "40fba058-6a2b-4640-8d60-498a5bb0fb20",
+        "1efd0b8d-6cab-4d14-a1a5-14eee06eef2e"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R68",
+        "R145",
+        "R142",
+        "R139"
+      ],
+      "explanation": "The sleep test was an attended in-laboratory polysomnography, a facility-based Type I study (R68, R145). It recorded 6.5 hours of sleep and 143 events, which meets the 2-hour minimum for AHI calculation. The FDA approval and provider qualification items of this section are regulatory matters outside the clinical record and were not assessed.",
+      "evidence_ids": [
+        "3e823617-5078-45b6-b80d-38098e6e94c5",
+        "452a9521-b548-4cd9-9a2a-b9352fa8ca3b",
+        "932a0a7e-e5fd-46e2-8fd4-ea83486b08c0",
+        "3ddec54e-afba-434f-b6b4-8daaac3e2ef8"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R85",
+        "R139",
+        "R145"
+      ],
+      "explanation": "The polysomnogram AHI of 22 events/hour with 143 events meets the AHI of at least 15 with at least 30 events threshold in effect for this device (see I.B alternative 1).",
+      "evidence_ids": [
+        "9805e572-e1d3-4571-bd0a-a7b65daa68a4",
+        "3ddec54e-afba-434f-b6b4-8daaac3e2ef8",
+        "452a9521-b548-4cd9-9a2a-b9352fa8ca3b"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R60",
+        "R150",
+        "R67"
+      ],
+      "explanation": "Dr. Cletus494 Paucek755, who is the treating practitioner (R150, R67), ordered the attended in-laboratory polysomnography (R60). The note of 2026-10-30 states 'Ordered a sleep study' (R150).",
+      "evidence_ids": [
+        "5417e868-3d5b-47d9-8b31-ff023823390c",
+        "8b58c779-1e7d-4c52-ac25-1c452e6616d4",
+        "c833146b-52c6-4513-b66c-5f2ee3549b04"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "All applicable criteria are met. The patient has obstructive sleep apnea (R48, R145) and meets the E0470 requirements. She had an in-person evaluation before a valid Type I sleep test with AHI 22 and at least 30 events, which the treating practitioner ordered (I.A, I.B, Sleep Tests.1, .3, .4). She received supplier instruction in use and care (I.C). She has a documented home trial of E0601 that was ineffective despite mask refitting and pressure retitration (II.D). The substitution rule means I.A and I.B would not be re-required, but they are met regardless. Sleep Tests items 2 and 5 concern device FDA status and provider qualification, which fall outside the clinical record and were excluded. Continued-coverage, oxygen, replacement, accessory, refill and billing rules do not apply to this initial order.",
+  "patient_file_sha256": "beeb8c1381fbaf601f8510e11d8d0a4ee5ab394d692a18935bdab379d4a01703",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

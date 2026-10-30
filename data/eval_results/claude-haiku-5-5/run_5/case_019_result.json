@@ -1,0 +1,45 @@
+{
+  "order": "E0471",
+  "order_description": "Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 38310,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "Noridian Healthcare Solutions, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for an E0471 bi-level device with back-up rate, and the patient's documented diagnosis is moderate obstructive sleep apnea (AHI 22, no central events). L33718 governs OSA treatment and states that an E0471 with a primary diagnosis of OSA is not reasonable and necessary and will be denied. L33800 covers E0470/E0471 only for restrictive thoracic disorders, CSA/CompSA, hypoventilation syndrome, or CRF from COPD, and the record documents none of these. L38310 concerns hypoglossal nerve stimulation and does not apply to this order.",
+  "criteria": [
+    {
+      "criterion": "INITIAL COVERAGE",
+      "policy_text": "A bi-level positive airway pressure device with back-up rate (E0471) is not reasonable and necessary if the primary diagnosis is OSA. If an E0471 is billed with a diagnosis of OSA, it will be denied as not reasonable and necessary.",
+      "verdict": "not met",
+      "evidence": [
+        "R38",
+        "R183",
+        "R191"
+      ],
+      "explanation": "The order is for an E0471 (bi-level device with back-up rate). The record documents obstructive sleep apnea as an active diagnosis (R38, added 2026-11-01), and the polysomnography report confirms moderate OSA (R183). The 2026-11-01 visit note states the assessment is obstructive sleep apnea and that the E0471 was ordered for it (R191). The OSA diagnosis is therefore the primary diagnosis for this E0471, which the policy says makes the device not reasonable and necessary. This contradicts the criterion. The E0601/E0470 criteria for OSA do not apply to an E0471, because the policy defines PAP devices as only E0601 and E0470. The record does not indicate any diagnosis other than OSA as the basis for this order, so the RAD LCD pathway for non-OSA diagnoses is not relevant here.",
+      "evidence_ids": [
+        "c5dc36c2-d41e-486b-9383-462946978d0a",
+        "78f2d582-abda-4c8b-97fe-469c4db2f330",
+        "dd0555a2-094d-4eee-a2ce-05a238af7ee1"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The only applicable criterion is that an E0471 is not reasonable and necessary when the primary diagnosis is obstructive sleep apnea. The record documents OSA as the diagnosis for this order (R38, R183, R191), so the criterion is not met and the claim would be denied.",
+  "patient_file_sha256": "1d2df3fd9c781ba79185b018aaa35956ae68cf61298f6f7289d02915b537c689",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

@@ -1,0 +1,129 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "E0601 CPAP for obstructive sleep apnea is governed by the DME PAP LCD (L33718), which sets the coverage criteria for E0601 in OSA: an in-person evaluation before the sleep test and qualifying sleep test results. The other two candidates (L33405, L36902) govern the sleep testing itself, not the CPAP device.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R77",
+        "R192",
+        "R109",
+        "R78"
+      ],
+      "explanation": "Dr. Schiller, who later ordered the CPAP, saw the patient in person on 2026-03-15 to evaluate possible OSA. This was before the 2026-04-05 polysomnogram.",
+      "evidence_ids": [
+        "77b80474-df92-4d11-be1a-76ee4746b665",
+        "8826d715-2577-4a8c-a6c7-188b43b07de2",
+        "a7eec6ab-b675-4fb0-8adb-40f6b6c6fda4",
+        "f7c2bd19-f84e-46f6-836a-a7e1d2e32401"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. AHI or RDI >= 15 events per hour with a minimum of 30 events; or, 2. AHI or RDI >= 5 and <= 14 events per hour with a minimum of 10 events and documentation of: a. Excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia; or, b. Hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "not met",
+      "evidence": [
+        "R114",
+        "R177",
+        "R180",
+        "R185",
+        "R193",
+        "R132",
+        "R6"
+      ],
+      "explanation": "The Type I PSG showed an AHI of 15/h, but only 27 events over 1.8 hours of sleep. Alternative 1 requires at least 30 events, and the LCD's rule for studies under 2 hours likewise requires at least 30 events at this threshold, so alternative 1 is not met. Alternative 2 covers an AHI of 5 to 14/h. The patient has documented sleepiness (ESS 17) and ischemic heart disease, but his AHI of 15 falls outside that range as written, so alternative 2 does not literally apply either.",
+      "evidence_ids": [
+        "461f8f30-509c-478f-9a1a-ec01d63c8883",
+        "fa5f9af1-8e28-44b3-9348-1923d6226def",
+        "47a5f69a-eb87-413f-bdc4-7781a8e387cf",
+        "d66df2a6-b6ad-42fd-9fbd-2ec4ed615590",
+        "8f06544d-2fe9-426b-9607-df361e0bc3c4",
+        "92bc44df-1577-46bb-9caf-7af0b7d7b28a",
+        "88deb12c-4d82-d1bc-45a1-de2cc26c795b"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R110"
+      ],
+      "explanation": "The DME supplier documented instruction on use and care of the CPAP device on 2026-04-19.",
+      "evidence_ids": [
+        "95188c14-a185-40b4-95d1-8dfc527ee3f6"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article",
+      "verdict": "met",
+      "evidence": [
+        "R78",
+        "R185"
+      ],
+      "explanation": "The record names the test as an attended in-laboratory polysomnogram (Type I sleep study), which is a recognized valid test type.",
+      "evidence_ids": [
+        "f7c2bd19-f84e-46f6-836a-a7e1d2e32401",
+        "d66df2a6-b6ad-42fd-9fbd-2ec4ed615590"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device",
+      "verdict": "not met",
+      "evidence": [
+        "R114",
+        "R177",
+        "R180",
+        "R185"
+      ],
+      "explanation": "The study recorded 27 events in 1.8 hours with an AHI of 15/h. This falls short of the minimum 30 events required for the ≥15/h criterion, and the AHI is outside the 5 to 14/h range of the alternative criterion.",
+      "evidence_ids": [
+        "461f8f30-509c-478f-9a1a-ec01d63c8883",
+        "fa5f9af1-8e28-44b3-9348-1923d6226def",
+        "47a5f69a-eb87-413f-bdc4-7781a8e387cf",
+        "d66df2a6-b6ad-42fd-9fbd-2ec4ed615590"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner",
+      "verdict": "met",
+      "evidence": [
+        "R69",
+        "R192"
+      ],
+      "explanation": "The Type I PSG was ordered by Dr. Schiller, the treating practitioner who evaluated the patient and ordered the CPAP.",
+      "evidence_ids": [
+        "e54032ee-ae28-4576-9422-42c035782bae",
+        "8826d715-2577-4a8c-a6c7-188b43b07de2"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The in-person evaluation, the supplier instruction, the test type and the ordering practitioner are all documented. However, the qualifying sleep test result is not met. The AHI of 15/h rests on only 27 events over 1.8 hours, below the required minimum of 30 events, and the AHI exceeds the 5 to 14/h range of the alternative symptom-based criterion. Criterion I.B and Sleep Tests.3 are therefore not met, so the request is denied.",
+  "patient_file_sha256": "cd8821ea837a327eb79f61ae231ef104831dfa3949abad18cd2a3126e88c209b",
+  "pipeline_sha256": "627f4c73ad28537786ad213852e7b7e40376d9b9f536b1df4dbcee698290beb6"
+}

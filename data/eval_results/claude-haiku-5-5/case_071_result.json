@@ -1,0 +1,287 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L38398",
+  "selection_reason": "All three candidates share the title Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea and cover the order (CPT 64582). L38398 matches the FDA-approved system described in the order. The patient has severe OSA (AHI 32, central/mixed apneas 8%, SpO2 nadir 76%), documented CPAP intolerance despite mask and pressure changes, BMI 29.5, and drug-induced sleep endoscopy without complete concentric velum collapse or epiglottic collapse, which fits the usual HGNS criteria. Region is not a factor, so L38398 is chosen over the equivalent L38307 and L38528.",
+  "criteria": [
+    {
+      "criterion": "Covered Indications.1 - beneficiary is 22 years of age or older",
+      "policy_text": "Beneficiary is 22 years of age or older",
+      "verdict": "met",
+      "evidence": [
+        "R57",
+        "R58"
+      ],
+      "explanation": "The patient is 37 years old (born 1987-04-22), as recorded in the sleep medicine and otolaryngology notes.",
+      "evidence_ids": [
+        "28c14d88-f908-4605-b6a6-422f8d90b592",
+        "4a8319bf-7c4b-403e-87e1-3d548841c4da"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.2 - body mass index less than 35 kg/m2",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2",
+      "verdict": "met",
+      "evidence": [
+        "R34",
+        "R35",
+        "R58"
+      ],
+      "explanation": "BMI is 29.68 kg/m2 on 2024-07-10 and 29.5 kg/m2 on 2025-01-31, both below 35.",
+      "evidence_ids": [
+        "dbfd10e4-5882-fd43-bd6e-20df031934ea",
+        "7f83b510-3ac0-4720-abd5-cae612450c42",
+        "4a8319bf-7c4b-403e-87e1-3d548841c4da"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.3 - polysomnography within 24 months of first consultation for HGNS implant",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant",
+      "verdict": "met",
+      "evidence": [
+        "R18",
+        "R19",
+        "R53"
+      ],
+      "explanation": "Attended in-laboratory polysomnography was performed on 2024-09-06 (report 2024-09-08). The first HGNS evaluation consultation was 2025-01-14, about four months later.",
+      "evidence_ids": [
+        "d50ddfd9-bb7e-4c8f-8933-de69e7401478",
+        "74eb7872-6a5d-40ab-b77d-66f4a3975828",
+        "7b5226fb-29da-47ab-8720-fe4300da15f9"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.4 - predominantly obstructive events (central and mixed apneas less than 25% of total AHI)",
+      "policy_text": "Beneficiary has predominantly obstructive events (defined as central and mixed apneas less than 25% of the total AHI)",
+      "verdict": "met",
+      "evidence": [
+        "R38",
+        "R53"
+      ],
+      "explanation": "Central and mixed apneas are 8% of the total AHI, below the 25% threshold.",
+      "evidence_ids": [
+        "bbeebc41-9806-4122-9337-54f4bda24cd8",
+        "7b5226fb-29da-47ab-8720-fe4300da15f9"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.5 - AHI between 15 and 65 events per hour",
+      "policy_text": "AHI is 15 to 65 events per hour",
+      "verdict": "met",
+      "evidence": [
+        "R29",
+        "R53"
+      ],
+      "explanation": "AHI is 32 events per hour on the 2024 polysomnography, within the 15 to 65 range.",
+      "evidence_ids": [
+        "e627929b-a533-4a34-bd6c-836f0e994780",
+        "7b5226fb-29da-47ab-8720-fe4300da15f9"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6 - CPAP failure or CPAP intolerance with shared decision making",
+      "policy_text": "Beneficiary has documentation that demonstrates CPAP failure (defined as AHI greater than 15 despite CPAP usage) or CPAP intolerance (defined as less than 4 hours per night, 5 nights per week or the CPAP has been returned) including shared decision making that the patient was intolerant of CPAP despite consultation with a sleep expert",
+      "verdict": "met",
+      "evidence": [
+        "R30",
+        "R37",
+        "R47",
+        "R57",
+        "R58"
+      ],
+      "explanation": "The intolerance alternative applies. CPAP averaged 2.7 hours on nights used and was used on only 7 of the last 30 nights, which is below 4 hours per night and below 5 nights per week. The CPAP failure-by-AHI alternative does not apply, since residual AHI on CPAP is 4. Shared decision making about the CPAP trial and alternatives is documented by the sleep medicine physician (a sleep expert) on 2025-01-14, and by the otolaryngologist on 2025-01-31.",
+      "evidence_ids": [
+        "7f997498-d8c2-48ce-ae78-d3c44867c258",
+        "5bbe6641-25bd-43fd-8204-6dc3c84d2a0a",
+        "cdcc21bd-eaa4-448c-85ae-f4573f4896c5",
+        "28c14d88-f908-4605-b6a6-422f8d90b592",
+        "4a8319bf-7c4b-403e-87e1-3d548841c4da"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.7 - absence of complete concentric collapse at the soft palate on drug-induced sleep endoscopy",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on a drug-induced sleep endoscopy (DISE) procedure",
+      "verdict": "met",
+      "evidence": [
+        "R28",
+        "R54"
+      ],
+      "explanation": "The 2025-02-15 DISE report states partial anteroposterior collapse at the soft palate with no complete concentric collapse.",
+      "evidence_ids": [
+        "3f851101-29cd-475b-ac78-845f1dc454cc",
+        "d2bae17a-e2b8-4846-981c-6b1b5eef6d29"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.8 - no other anatomical findings that would compromise device performance (e.g., tonsil size 3 or 4)",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4 per standardized tonsillar hypertrophy grading scale)",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R54",
+        "R58"
+      ],
+      "explanation": "Tonsil size is not documented anywhere in the record. The DISE report describes partial lateral wall collapse and partial tongue base collapse without stating whether these compromise the device. The neck exam notes no masses but does not address tonsils or other anatomy.",
+      "evidence_ids": [
+        "d2bae17a-e2b8-4846-981c-6b1b5eef6d29",
+        "4a8319bf-7c4b-403e-87e1-3d548841c4da"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - central and mixed apneas making up more than one-quarter of total AHI (absent)",
+      "policy_text": "Beneficiaries with central and mixed apneas that make up more than one-quarter of the total AHI",
+      "verdict": "met",
+      "evidence": [
+        "R38",
+        "R53"
+      ],
+      "explanation": "The contraindication is absent because central and mixed apneas are 8% of total AHI.",
+      "evidence_ids": [
+        "bbeebc41-9806-4122-9337-54f4bda24cd8",
+        "7b5226fb-29da-47ab-8720-fe4300da15f9"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - implantable device that could interact with the HGNS system (absent)",
+      "policy_text": "Beneficiaries with an implantable device could experience unintended interaction with the HGNS implant system",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R13",
+        "R14"
+      ],
+      "explanation": "The device list includes only a dental x-ray system and a home CPAP unit, and no implanted device is named. The record does not explicitly state that the patient has no other implanted device.",
+      "evidence_ids": [
+        "dbfd10e4-5882-fd43-4486-f2dd75715a2e",
+        "9bde7106-8c53-4190-adc2-b7f725f0b044"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - BMI equal to or greater than 35 (absent)",
+      "policy_text": "BMI equal to or greater than 35",
+      "verdict": "met",
+      "evidence": [
+        "R34",
+        "R35"
+      ],
+      "explanation": "The contraindication is absent because BMI is 29.5 to 29.68 kg/m2.",
+      "evidence_ids": [
+        "dbfd10e4-5882-fd43-bd6e-20df031934ea",
+        "7f83b510-3ac0-4720-abd5-cae612450c42"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - neuromuscular disease, hypoglossal-nerve palsy, or condition compromising neurological control of the upper airway (absent)",
+      "policy_text": "Neuromuscular disease; Hypoglossal-nerve palsy; Beneficiaries with any condition or procedure that has compromised neurological control of the upper airway",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R54",
+        "R58"
+      ],
+      "explanation": "No neuromuscular disease, hypoglossal-nerve palsy, or neurological airway condition appears in the problem list. The neck exam and DISE report do not address hypoglossal nerve function or neuromuscular status, so the absence is not documented.",
+      "evidence_ids": [
+        "d2bae17a-e2b8-4846-981c-6b1b5eef6d29",
+        "4a8319bf-7c4b-403e-87e1-3d548841c4da"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - severe pulmonary disease, pulmonary arterial hypertension, cardiac disease, or uncontrolled hypertension (absent)",
+      "policy_text": "Severe restrictive or obstructive pulmonary disease; Moderate-to-severe pulmonary arterial hypertension; Severe valvular heart disease; New York Heart Association class III or IV heart failure; Recent myocardial infarction or severe cardiac arrhythmias (within the past 6 months); Persistent uncontrolled hypertension despite medication use",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R31",
+        "R42",
+        "R58"
+      ],
+      "explanation": "Blood pressure of 120/79 mm[Hg] is not suggestive of uncontrolled hypertension, and no hypertension diagnosis is listed. However, no pulmonary, valvular, heart failure, arrhythmia or myocardial infarction history, or pulmonary arterial hypertension evaluation, is documented. Heart rate was 98 /min on one occasion without comment.",
+      "evidence_ids": [
+        "dbfd10e4-5882-fd43-ab7d-0194eabb48ac",
+        "dbfd10e4-5882-fd43-fdb9-e071b11c4697",
+        "4a8319bf-7c4b-403e-87e1-3d548841c4da"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - active serious mental illness impairing ADLs or ability to operate the device (absent)",
+      "policy_text": "An active, serious mental illness that reduces the ability to carry out ADLs and would interfere with the patient's ability to operate the HNS and report problems to the attending provider",
+      "verdict": "met",
+      "evidence": [
+        "R4",
+        "R45",
+        "R50"
+      ],
+      "explanation": "PHQ-2 score is 0 and DAST-10 score is 0. The patient has full-time employment and no serious mental illness appears in the problem list.",
+      "evidence_ids": [
+        "dbfd10e4-5882-fd43-1eac-5bc64576b9fb",
+        "dbfd10e4-5882-fd43-2018-5177c43bbe99",
+        "dbfd10e4-5882-fd43-58b0-1a4d175a877d"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - coexisting nonrespiratory sleep disorders that would confound functional sleep assessment (absent)",
+      "policy_text": "Coexisting nonrespiratory sleep disorders that would confound functional sleep assessment",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R53",
+        "R57"
+      ],
+      "explanation": "The polysomnography report addresses only obstructive apnea and does not state whether other nonrespiratory sleep disorders are present.",
+      "evidence_ids": [
+        "7b5226fb-29da-47ab-8720-fe4300da15f9",
+        "28c14d88-f908-4605-b6a6-422f8d90b592"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - pregnancy or plans to become pregnant (absent)",
+      "policy_text": "Beneficiaries who are, or who plan to become pregnant",
+      "verdict": "met",
+      "evidence": [
+        "R3"
+      ],
+      "explanation": "A history of tubal ligation is recorded, and no pregnancy or pregnancy plan is documented.",
+      "evidence_ids": [
+        "dbfd10e4-5882-fd43-e725-38238a073859"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - need for MRI with a restricted model (absent)",
+      "policy_text": "Beneficiaries who require Magnetic resonance imaging (MRI) with model 3024 or model 3028",
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "The record does not document whether the patient requires MRI or which device model would be implanted.",
+      "evidence_ids": []
+    },
+    {
+      "criterion": "Limitations.3 - unable or without assistance to operate the sleep remote (absent)",
+      "policy_text": "Beneficiaries who are unable or do not have the necessary assistance to operate the sleep remote",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R14",
+        "R30"
+      ],
+      "explanation": "The patient uses a home CPAP device and the device download shows use. The record does not document her ability to operate a sleep remote or whether she has assistance.",
+      "evidence_ids": [
+        "9bde7106-8c53-4190-adc2-b7f725f0b044",
+        "7f997498-d8c2-48ce-ae78-d3c44867c258"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "No applicable criterion is shown to be unmet, but Covered Indications.8 (absence of other anatomy compromising the device, such as tonsil size) is not documented. Several Limitations.3 contraindications (implantable devices, neuromuscular disease and hypoglossal palsy, cardiopulmonary conditions, coexisting nonrespiratory sleep disorders, MRI requirement, and remote operation) are also not addressed by the record. The decision therefore cannot be made from the record.",
+  "patient_file_sha256": "72cf03dad032407c821e45d6c45865f52ac1fc2225e7e22c5700fa14efccd737",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

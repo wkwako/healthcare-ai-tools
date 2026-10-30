@@ -1,0 +1,119 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for an E0601 (CPAP) device for suspected/diagnosed obstructive sleep apnea. L33718 is the PAP device LCD that directly governs E0601 coverage for OSA, with criteria A-C (in-person evaluation before the sleep test, a qualifying sleep test, and related requirements). The patient had an in-person evaluation on 2026-09-14 before the 2026-09-24 overnight oximetry study, so the criteria must be checked against that test, which lacks airflow and effort channels, but L33718 is the governing policy. L36902 and L33405 address sleep testing and APAP/BPAP, not the E0601 device order.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R172",
+        "R77",
+        "R78"
+      ],
+      "explanation": "On 2026-09-14 Dr. Marth98 Mayer370 saw the patient in person for evaluation of possible obstructive sleep apnea (R172, encounter R77). The overnight home pulse oximetry was performed on 2026-09-24 (R78), after that evaluation.",
+      "evidence_ids": [
+        "bd4f9359-b552-4023-a811-3212ac1efc66",
+        "39f25181-3514-4098-a53c-adeb5a7e148f",
+        "802d8a49-d31a-4cb9-b0a8-c0b6c6a586bf"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. The AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of a. excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia; or b. hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "not met",
+      "evidence": [
+        "R164",
+        "R78",
+        "R143",
+        "R156"
+      ],
+      "explanation": "The record documents no AHI or RDI value. The only sleep test is an overnight home pulse oximetry, and its report states that no airflow or effort channels were recorded, so apnea and hypopnea events cannot be counted and no AHI or RDI can be derived. Alternative 1 (AHI or RDI of 15 or more) is therefore not shown. Alternative 2 also requires a documented AHI or RDI of 5 to 14, which is absent. The record has comorbidities that would satisfy 2a or 2b (Epworth score 18 in R133, ischemic heart disease in R7), but these matter only if a qualifying AHI or RDI exists.",
+      "evidence_ids": [
+        "848ed5b3-dfab-4855-87da-a2618189d31b",
+        "802d8a49-d31a-4cb9-b0a8-c0b6c6a586bf",
+        "932d7fa4-1c44-4b6f-9253-3d9d43c9feae",
+        "f3ac8489-cfac-46c9-af89-d5eb56ba983b"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R116"
+      ],
+      "explanation": "R116 documents instruction on use and care of the CPAP device given by the DME supplier.",
+      "evidence_ids": [
+        "357ea2f2-6069-46e1-9a0d-5c926809477e"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "not met",
+      "evidence": [
+        "R164",
+        "R78",
+        "R68"
+      ],
+      "explanation": "The sleep test performed was an overnight home pulse oximetry with no airflow or effort channels recorded (R164). The record does not identify it as a Type I, II, III, IV or other qualifying sleep study, and pulse oximetry alone does not capture the respiratory events needed for a valid sleep test under this policy.",
+      "evidence_ids": [
+        "848ed5b3-dfab-4855-87da-a2618189d31b",
+        "802d8a49-d31a-4cb9-b0a8-c0b6c6a586bf",
+        "23a2925c-77fc-4964-8c84-c2c878a580c3"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "not met",
+      "evidence": [
+        "R164",
+        "R173"
+      ],
+      "explanation": "The sleep test results do not include an AHI or RDI meeting the thresholds in I.B. The only reported values are an SpO2 nadir of 84% and 17 minutes at or below 88% (R164, R173), which are oximetry measures and not the required event indices.",
+      "evidence_ids": [
+        "848ed5b3-dfab-4855-87da-a2618189d31b",
+        "c773105f-04f8-4837-89f3-c17bd1e96a8e"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R68",
+        "R172"
+      ],
+      "explanation": "The overnight home pulse oximetry was ordered on 2026-09-14 by Dr. Marth98 Mayer370, the treating practitioner (R68). The 2026-09-14 note records that a sleep study was ordered (R172).",
+      "evidence_ids": [
+        "23a2925c-77fc-4964-8c84-c2c878a580c3",
+        "bd4f9359-b552-4023-a811-3212ac1efc66"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The order is for an E0601 CPAP device, so the initial-coverage criteria for E0601 apply. The in-person evaluation (I.A), supplier instruction (I.C) and practitioner ordering of the sleep test (Sleep Tests.4) are met. However, the only sleep test was an overnight home pulse oximetry with no airflow channels, so no AHI or RDI was recorded. The sleep test therefore does not meet the AHI/RDI thresholds (I.B), is not shown to be a valid sleep test type (Sleep Tests.1), and its results do not meet the coverage criteria (Sleep Tests.3). Because these criteria are not met, the claim is denied.",
+  "patient_file_sha256": "784cd9f1dcceeda55a3d9347c26dc64692d7abdf8997c9b337ad237c919e2f96",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

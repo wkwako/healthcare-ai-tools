@@ -1,0 +1,6 @@
+{
+  "description": "Descriptions for order codes that no downloaded LCD lists (their codes are in the billing articles, which aren't downloaded). order_description() checks the LCD code lists first, then this file. Descriptions are written in plain language, not copied from the CPT code set.",
+  "codes": {
+    "64582": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea"
+  }
+}

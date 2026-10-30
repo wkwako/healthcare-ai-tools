@@ -1,0 +1,123 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 is the PAP device policy that directly governs coverage of E0601 CPAP for obstructive sleep apnea. The patient has moderate OSA (AHI 22, SpO2 nadir 84%) documented by an attended in-lab polysomnography, an in-person clinical evaluation preceded the sleep test (09-20), and the CPAP order was placed after review of results, so the policy's criteria A-C for E0601 coverage appear to be addressed. L33405 and L36902 cover sleep testing and APAP/BPAP background rather than E0601 coverage criteria.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R161",
+        "R78",
+        "R79"
+      ],
+      "explanation": "On 2026-09-20 Dr. Chang901 Kutch271 saw the patient in person for evaluation of possible obstructive sleep apnea (R161, reason R78). This was before the attended in-laboratory polysomnography on 2026-09-27 (R79).",
+      "evidence_ids": [
+        "e0b93821-62e4-4f99-b852-ff1046e47d62",
+        "f2ed3b0c-b28e-42fe-aec7-4b82e51174ba",
+        "55c69a99-e58f-4167-aed6-fa111345f258"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either of the following criteria (1 or 2): 1. The AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia, or of hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R105",
+        "R147",
+        "R148",
+        "R151"
+      ],
+      "explanation": "Alternative 1 applies. The sleep test shows an AHI of 22 events/hour, with 143 total apnea and hypopnea events over 6.5 hours of sleep. That is at least 15 events/hour and at least 30 events. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "42f0fee6-a531-48e5-b07c-3892d0f2d5c0",
+        "40ba81a3-1157-402e-b4da-bb25bf09b7c5",
+        "4c078b1d-70b7-4211-8a5a-7b2bc1dec0f9",
+        "301b87c7-1a8d-4fec-aab8-a13493b9bffe"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R79",
+        "R151",
+        "R148"
+      ],
+      "explanation": "The record documents an attended in-laboratory polysomnography (Type I facility-based study) with a sleep center technologist, 6.5 hours of total sleep time (at least 2 hours), and a signed report. The summary does not show every technical NCD detail, but the documented elements are consistent with a valid Type I study.",
+      "evidence_ids": [
+        "55c69a99-e58f-4167-aed6-fa111345f258",
+        "301b87c7-1a8d-4fec-aab8-a13493b9bffe",
+        "4c078b1d-70b7-4211-8a5a-7b2bc1dec0f9"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R105",
+        "R147",
+        "R148",
+        "R151"
+      ],
+      "explanation": "The AHI of 22 events/hour with 143 events over 6.5 hours meets the AHI of 15 or more with at least 30 events criterion in effect for this E0601 order.",
+      "evidence_ids": [
+        "42f0fee6-a531-48e5-b07c-3892d0f2d5c0",
+        "40ba81a3-1157-402e-b4da-bb25bf09b7c5",
+        "4c078b1d-70b7-4211-8a5a-7b2bc1dec0f9",
+        "301b87c7-1a8d-4fec-aab8-a13493b9bffe"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R67",
+        "R161"
+      ],
+      "explanation": "The attended in-laboratory polysomnography was ordered by Dr. Chang901 Kutch271 (R67). The 2026-09-20 note states that the practitioner ordered a sleep study (R161). Dr. Chang901 Kutch271 is the treating practitioner.",
+      "evidence_ids": [
+        "dcbf5dae-bc33-45b7-8057-6b467767b30b",
+        "e0b93821-62e4-4f99-b852-ff1046e47d62"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R162"
+      ],
+      "explanation": "The record shows only that a CPAP device order was sent to a DME supplier. It does not document that the supplier gave the beneficiary or caregiver instruction in proper use and care of the equipment.",
+      "evidence_ids": [
+        "b4a2d145-9ef0-48fe-a0cc-eef3d39100ab"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "Criteria I.A, I.B, Sleep Tests.1, Sleep Tests.3 and Sleep Tests.4 are met. Criterion I.C (supplier instruction in proper use and care of the equipment) has no documentation in the record, so the request cannot be found covered. No applicable criterion is shown as not met, so the decision is insufficient information rather than denied.",
+  "patient_file_sha256": "f76b9855ea6b494bdf9ee33941646ee9992d993743ce466bbf08c6e609eb7267",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

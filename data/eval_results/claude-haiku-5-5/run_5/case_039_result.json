@@ -1,0 +1,28 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "none",
+  "selection_reason": "All three candidates are the same HGNS policy from different contractors, and the order (CPT 64582) falls under it. The patient meets the usual numeric criteria: AHI 32 (within 15 to 65), BMI 29.5 (under 32), central/mixed apneas 8% (under 25%), and documented CPAP intolerance despite mask and pressure changes. However, the 2025-04-01 drug-induced sleep endoscopy (R63) shows complete concentric collapse at the soft palate (velum). Complete concentric velum collapse is a labeled contraindication to hypoglossal nerve stimulation and is an exclusion in these LCDs, so the order is not covered under any candidate. The candidate passages shown do not include the full criteria text, so this exclusion is based on the standard policy language rather than the excerpts provided.",
+  "decision": "insufficient information",
+  "criteria": [],
+  "decision_explanation": "None of the retrieved policies covers this order.",
+  "patient_file_sha256": "69819134f41e250bc1f24cb986a8cd45990536cdc887f0c536596544c782be86",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

@@ -1,0 +1,28 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "none",
+  "selection_reason": "The record lists Medicaid as primary insurance, not Medicare, so no Medicare LCD is shown to govern this order. The record also has no state or address-to-jurisdiction link, so it cannot pick between the three candidates. L38398 and L38307 are nearly identical, and L38528 describes a different lead configuration. The passages are background only and contain no coverage criteria.",
+  "decision": "insufficient information",
+  "criteria": [],
+  "decision_explanation": "None of the retrieved policies covers this order.",
+  "patient_file_sha256": "7842cfd86267a0c06e88c5476a4cd8482c8418f30de6a296bf1b48cb9fae5e80",
+  "pipeline_sha256": "2239bbb686c070e9f4fb8170306548f275db87a431e5038837b9470d78573794"
+}

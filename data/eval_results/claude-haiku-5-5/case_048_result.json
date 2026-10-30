@@ -1,0 +1,311 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L38398",
+  "selection_reason": "Candidates L38398 and L38307 are the same HGNS policy issued by different Medicare contractors, and L38528 is a parallel version; all three title-match HGNS for obstructive sleep apnea and describe the same implant system (stimulation lead, breathing sensor, generator), so any one governs the order. The order is for hypoglossal nerve neurostimulator implantation for OSA, and the patient has severe OSA (AHI 32) with CPAP intolerance, which fits the policy's subject. Selecting L38398 as an equivalent version; the region is not part of the decision.",
+  "criteria": [
+    {
+      "criterion": "Covered Indications.1",
+      "policy_text": "Beneficiary is 22 years of age or older",
+      "verdict": "met",
+      "evidence": [
+        "R112"
+      ],
+      "explanation": "The otolaryngology note of 2027-01-06 records the patient as a 36 year-old male, and the procedure is on 2027-02-02, so he is over 22.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.2",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2",
+      "verdict": "not met",
+      "evidence": [
+        "R86",
+        "R112"
+      ],
+      "explanation": "The most recent BMI is 36.2 kg/m2 (R86, 2027-01-06), confirmed on the otolaryngology exam (R112). This is 35 or above, so the criterion fails. The earlier BMI of 29.6 (R85, 2026-06-14) predates the latest measurement.",
+      "evidence_ids": [
+        "b6f2c8ba-390e-42db-91ef-86905c08b919",
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.3",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant",
+      "verdict": "met",
+      "evidence": [
+        "R52",
+        "R106",
+        "R53"
+      ],
+      "explanation": "An attended in-laboratory polysomnography was done 2026-08-10 (R52, report R106). The first HGNS consultation was 2026-12-20 (R53), well within 24 months.",
+      "evidence_ids": [
+        "fe0352fe-cbd8-45f8-8a8f-cb56ab6c708e",
+        "883aa637-46dd-4b74-90e1-bb1b79940cff",
+        "512cdc85-1b7e-4712-8e17-e92d106fd498"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.4",
+      "policy_text": "Predominantly obstructive events, with central and mixed apneas less than 25% of the total AHI",
+      "verdict": "met",
+      "evidence": [
+        "R88",
+        "R106"
+      ],
+      "explanation": "Central and mixed apneas are 8% of the total AHI, which is under 25%.",
+      "evidence_ids": [
+        "0ae62e8c-d411-4157-818f-f5a60ed6cb85",
+        "883aa637-46dd-4b74-90e1-bb1b79940cff"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.5",
+      "policy_text": "AHI is 15 to 65 events per hour",
+      "verdict": "met",
+      "evidence": [
+        "R76",
+        "R106"
+      ],
+      "explanation": "AHI is 32 per hour on the 2026-08-11 observation and the polysomnography report, which falls within 15 to 65.",
+      "evidence_ids": [
+        "84098e2c-2f9f-43be-845c-78c09551f15a",
+        "883aa637-46dd-4b74-90e1-bb1b79940cff"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6",
+      "policy_text": "Documentation of CPAP failure (AHI greater than 15 despite CPAP) or CPAP intolerance (less than 4 hours per night, 5 nights per week, or CPAP returned), including shared decision making with a sleep expert that the patient was intolerant of CPAP",
+      "verdict": "met",
+      "evidence": [
+        "R77",
+        "R87",
+        "R111",
+        "R112"
+      ],
+      "explanation": "CPAP intolerance is documented: the device download shows use on 12 of the last 30 nights (fewer than 5 nights per week) and averages 2.1 hours on nights used (under 4 hours). Shared decision making about CPAP intolerance was documented by the sleep medicine physician (R111), and the otolaryngologist confirmed it (R112).",
+      "evidence_ids": [
+        "93e815c4-3925-4f9b-90ff-412b35ad9871",
+        "c28c8221-cd13-496b-a97e-0a2f2a08742e",
+        "68397140-a823-4fdd-9c64-ef7c70c4bacb",
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.7",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on drug-induced sleep endoscopy (DISE)",
+      "verdict": "met",
+      "evidence": [
+        "R107",
+        "R55"
+      ],
+      "explanation": "The DISE report of 2027-02-02 states no complete concentric collapse at the velum (soft palate) and shows only partial anteroposterior collapse.",
+      "evidence_ids": [
+        "b5b1d9e0-47a7-43b4-a03a-146a21eed531",
+        "19e8d887-2ce0-4bc5-88b7-8743d35326e5"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.8",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4)",
+      "verdict": "met",
+      "evidence": [
+        "R112",
+        "R107"
+      ],
+      "explanation": "Tonsils are size 1 on the Brodsky scale (R112). The DISE shows partial collapse at the oropharynx, tongue base and epiglottis (none complete), and the record names no finding that would compromise the device.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a",
+        "b5b1d9e0-47a7-43b4-a03a-146a21eed531"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - central and mixed apneas making up more than one-quarter of the total AHI",
+      "policy_text": "Beneficiaries with central and mixed apneas that make up more than one-quarter of the total AHI",
+      "verdict": "met",
+      "evidence": [
+        "R88",
+        "R106"
+      ],
+      "explanation": "The contraindication is absent: central and mixed apneas are 8% of total AHI.",
+      "evidence_ids": [
+        "0ae62e8c-d411-4157-818f-f5a60ed6cb85",
+        "883aa637-46dd-4b74-90e1-bb1b79940cff"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - implantable device that could interact with the HGNS system",
+      "policy_text": "Beneficiaries with an implantable device could experience unintended interaction with the HGNS implant system",
+      "verdict": "met",
+      "evidence": [
+        "R112",
+        "R43",
+        "R44",
+        "R45",
+        "R46",
+        "R47"
+      ],
+      "explanation": "The otolaryngology note records no implanted devices. The listed devices (dental x-ray systems and a home CPAP unit) are not implants.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a",
+        "ca4b7b2c-21a2-ec9e-28c9-8d5e010eb732",
+        "ca4b7b2c-21a2-ec9e-43f7-cf38cb9e5e83",
+        "ca4b7b2c-21a2-ec9e-a458-ff94c4cd9a50",
+        "ca4b7b2c-21a2-ec9e-9dfa-84a833d6d44e",
+        "06a539e7-a6cc-4fab-baaf-971bc80227aa"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - BMI equal to or greater than 35",
+      "policy_text": "BMI equal to or greater than 35",
+      "verdict": "not met",
+      "evidence": [
+        "R86",
+        "R112"
+      ],
+      "explanation": "The contraindication is present: BMI is 36.2 kg/m2 (R86, R112).",
+      "evidence_ids": [
+        "b6f2c8ba-390e-42db-91ef-86905c08b919",
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - neuromuscular disease, hypoglossal-nerve palsy, or any condition or procedure compromising neurological control of the upper airway",
+      "policy_text": "Neuromuscular disease; Hypoglossal-nerve palsy; Beneficiaries with any condition or procedure that has compromised neurological control of the upper airway",
+      "verdict": "met",
+      "evidence": [
+        "R112"
+      ],
+      "explanation": "The otolaryngology contraindication screen records no neuromuscular disease, no hypoglossal nerve palsy and no condition affecting neurological control of the upper airway.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - severe restrictive or obstructive pulmonary disease or moderate-to-severe pulmonary arterial hypertension",
+      "policy_text": "Severe restrictive or obstructive pulmonary disease; Moderate-to-severe pulmonary arterial hypertension",
+      "verdict": "met",
+      "evidence": [
+        "R112",
+        "R2"
+      ],
+      "explanation": "The patient has asthma (R2), but the record does not describe it as severe. The otolaryngology screen (R112) documents no severe pulmonary disease and no pulmonary arterial hypertension.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a",
+        "ca4b7b2c-21a2-ec9e-cf22-e328eab3fc1c"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - severe valvular heart disease, NYHA class III or IV heart failure, recent myocardial infarction, or severe cardiac arrhythmia within 6 months",
+      "policy_text": "Severe valvular heart disease; New York Heart Association class III or IV heart failure; Recent myocardial infarction or severe cardiac arrhythmias (within the past 6 months)",
+      "verdict": "met",
+      "evidence": [
+        "R112"
+      ],
+      "explanation": "The otolaryngology screen documents no severe valvular disease, no heart failure, and no myocardial infarction or severe arrhythmia in the past 6 months.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - persistent uncontrolled hypertension despite medication use",
+      "policy_text": "Persistent uncontrolled hypertension despite medication use",
+      "verdict": "met",
+      "evidence": [
+        "R112",
+        "R78",
+        "R79"
+      ],
+      "explanation": "Blood pressure readings are 151/73 (R78) and 142/78 (R79). The otolaryngologist documents that blood pressure is controlled (R112). The contraindication is judged absent on the physician's documentation, though the 2026 systolic reading is elevated.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a",
+        "ca4b7b2c-21a2-ec9e-fbeb-2a384f4ef341",
+        "ca4b7b2c-21a2-ec9e-1e05-a87718fcb9de"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - active serious mental illness, or coexisting nonrespiratory sleep disorder that would confound sleep assessment",
+      "policy_text": "An active, serious mental illness that reduces the ability to carry out ADLs and would interfere with the patient's ability to operate the HNS; Coexisting nonrespiratory sleep disorders that would confound functional sleep assessment",
+      "verdict": "met",
+      "evidence": [
+        "R112",
+        "R94",
+        "R95"
+      ],
+      "explanation": "The otolaryngology note documents no serious mental illness and no other sleep disorder. PHQ-2 scores are 0 and 1 (R94, R95). The active stress and social isolation findings are not described as serious mental illness.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a",
+        "ca4b7b2c-21a2-ec9e-19c6-1309c3cf2662",
+        "ca4b7b2c-21a2-ec9e-c10a-122184a3fd03"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - pregnancy or plans to become pregnant",
+      "policy_text": "Beneficiaries who are, or who plan to become pregnant",
+      "verdict": "not applicable",
+      "evidence": [],
+      "explanation": "The patient is male, so this contraindication does not apply.",
+      "evidence_ids": []
+    },
+    {
+      "criterion": "Limitations.3 - need for MRI with a model 3024 or 3028 device",
+      "policy_text": "Beneficiaries who require Magnetic resonance imaging (MRI) with model 3024 / model 3028",
+      "verdict": "met",
+      "evidence": [
+        "R112"
+      ],
+      "explanation": "The otolaryngology note records no anticipated need for MRI.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 - unable to operate the sleep remote without assistance",
+      "policy_text": "Beneficiaries who are unable or do not have the necessary assistance to operate the sleep remote",
+      "verdict": "met",
+      "evidence": [
+        "R112"
+      ],
+      "explanation": "The otolaryngology note records that the patient is able to operate the sleep remote.",
+      "evidence_ids": [
+        "ae4ab99a-534c-49f7-9d72-f23d7e28f97a"
+      ]
+    },
+    {
+      "criterion": "Place of Services (POS)",
+      "policy_text": "Hypoglossal nerve stimulation for the treatment of OSA must be furnished in accordance with the accepted standards of medical practice in a setting appropriate to the patient's medical needs and condition",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R54",
+        "R55"
+      ],
+      "explanation": "The record documents the otolaryngology consultation and DISE but does not name the setting in which the implant will be performed.",
+      "evidence_ids": [
+        "d7e839ab-0f9c-425b-8602-09a7952c0904",
+        "19e8d887-2ce0-4bc5-88b7-8743d35326e5"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The patient's most recent BMI is 36.2 kg/m2 (R86, R112), which fails Covered Indication 2 (BMI less than 35) and triggers the BMI of 35 or greater contraindication. Because a required criterion is not met, the order is denied. The other clinical criteria are met on the record. The place-of-service setting is not documented, but the denial does not depend on it.",
+  "patient_file_sha256": "a88ded03b3bc8d85c6d6e739414df4f11e0154831f60848be8a994f5d7861e18",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

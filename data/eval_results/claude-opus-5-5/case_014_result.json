@@ -1,0 +1,121 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is E0601, a CPAP device for obstructive sleep apnea, and L33718 (PAP Devices for the Treatment of OSA) is the LCD that sets coverage criteria for E0601. The record supports those criteria: an in-person evaluation on 2026-07-13 before the sleep test, and a sleep study showing AHI 25/h with 162 events. The other two candidates (L33405, L36902) govern sleep testing, not the PAP device itself.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R37",
+        "R53",
+        "R94",
+        "R95"
+      ],
+      "explanation": "On 2026-07-13 Dr. Wiza601 saw the patient in person to evaluate possible OSA. The visit recorded snoring, witnessed apneas, an Epworth score of 17, neck circumference and Mallampati class. This was before the sleep test performed 2026-07-26.",
+      "evidence_ids": [
+        "57e02b91-4463-4cd2-94ad-a41221352d84",
+        "2fb86b15-9443-4536-82ec-1e12d4f66923",
+        "faf4cad4-0113-41b4-9915-4895ce7ef822",
+        "9759763e-dd1c-4fb8-a0b0-ce6b5258e6da"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. The AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or, 2. The AHI or RDI is 5-14 events per hour with a minimum of 10 events and documentation of symptoms or comorbidities.",
+      "verdict": "met",
+      "evidence": [
+        "R55",
+        "R84",
+        "R85",
+        "R89"
+      ],
+      "explanation": "Alternative 1 applies. The sleep study showed an AHI of 25 events/hour with 162 total events over 6.5 hours, which exceeds both 15/hour and the 30-event minimum.",
+      "evidence_ids": [
+        "a2df4dbe-e39d-4f8e-8923-6ee4acb3a94f",
+        "7deab94f-b685-4392-b44b-e4b1d09e7805",
+        "d0c7dff1-ac94-463a-a421-e5f2aeae189b",
+        "8df585f8-5319-403d-b998-6befc801a585"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R54"
+      ],
+      "explanation": "On 2026-08-09 the DME supplier documented instruction on the use and care of the CPAP device.",
+      "evidence_ids": [
+        "ea6f0dc9-8914-4c7b-ad5c-eb337dd8a020"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article",
+      "verdict": "met",
+      "evidence": [
+        "R31",
+        "R89"
+      ],
+      "explanation": "A diagnostic sleep study was ordered, completed and formally reported, with AHI, total events, recording time and SpO2 nadir. This falls within the policy's covered sleep test categories (Type I-IV or Other).",
+      "evidence_ids": [
+        "9704775a-39ba-49e0-9d0d-b537aeb6916b",
+        "8df585f8-5319-403d-b998-6befc801a585"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device",
+      "verdict": "met",
+      "evidence": [
+        "R55",
+        "R84",
+        "R89"
+      ],
+      "explanation": "An AHI of 25/hour with 162 events meets the current criterion I.B.1.",
+      "evidence_ids": [
+        "a2df4dbe-e39d-4f8e-8923-6ee4acb3a94f",
+        "7deab94f-b685-4392-b44b-e4b1d09e7805",
+        "8df585f8-5319-403d-b998-6befc801a585"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner",
+      "verdict": "met",
+      "evidence": [
+        "R31",
+        "R94"
+      ],
+      "explanation": "The sleep study was ordered by Dr. Whitney250 Wiza601, the treating practitioner who performed the OSA evaluation and later ordered the CPAP.",
+      "evidence_ids": [
+        "9704775a-39ba-49e0-9d0d-b537aeb6916b",
+        "faf4cad4-0113-41b4-9915-4895ce7ef822"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "All applicable initial coverage criteria for the E0601 are documented as met. The treating practitioner did an in-person evaluation before the sleep test and ordered the test. The test showed an AHI of 25/hour with 162 events. The supplier instructed the patient on use and care of the device.",
+  "patient_file_sha256": "5b909be4d2641e48083393c093b3a60af3b742085c58b06ff2e6bee04a11b529",
+  "pipeline_sha256": "627f4c73ad28537786ad213852e7b7e40376d9b9f536b1df4dbcee698290beb6"
+}

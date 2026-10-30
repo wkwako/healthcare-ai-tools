@@ -1,0 +1,125 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "Order is E0601 CPAP device for obstructive sleep apnea; L33718 (Positive Airway Pressure Devices for OSA) explicitly governs E0601 coverage via criteria A-C (in-person clinical evaluation before sleep test, qualifying sleep test) and continued coverage rules, directly addressing this order for this patient's OSA diagnosis.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R1014",
+        "R458",
+        "R374",
+        "R459"
+      ],
+      "explanation": "On 2026-11-05 Dr. Adrienne302 Schiller saw the patient in person for evaluation of possible obstructive sleep apnea, and the sleep study was ordered that day. The in-laboratory polysomnography was performed later, on 2026-11-15, so the evaluation came before the sleep test.",
+      "evidence_ids": [
+        "62b6f6dd-f5cb-4a88-99c9-83021dc7b169",
+        "92241978-14c4-4fb3-a0bc-d539ffc87bfd",
+        "af3cc9b7-c6f8-4c3b-a235-ff5d1e18079d",
+        "77a8c268-11e4-43b6-b803-9fd273de1ad6"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either of the following criteria (1 or 2): 1. The AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia, or hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R931",
+        "R867",
+        "R804",
+        "R6",
+        "R12"
+      ],
+      "explanation": "The record has no AHI or RDI for the 2026-11-15 polysomnography. The sleep study report says the scoring summary is not included and gives only an SpO2 nadir of 87%, which is not an AHI or RDI. Alternative 1 cannot be assessed. Alternative 2 would need an AHI or RDI of 5 to 14 plus a qualifying condition; the record has an Epworth score of 14 (excessive daytime sleepiness), hypertension and ischemic heart disease, but the required index is missing.",
+      "evidence_ids": [
+        "b6d421be-e55d-49e1-b528-f322e8aa6e2e",
+        "8541fbf3-a5f1-4e7b-9541-49cea88ff743",
+        "c33b2535-c047-40d5-bb08-16a56c1d97fd",
+        "007a32fb-33a3-6f75-6e5a-2e9cb1da3009",
+        "007a32fb-33a3-6f75-1df4-46ee8bdcf4dc"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R728"
+      ],
+      "explanation": "The record documents instruction on use and care of the CPAP device given by the DME supplier, dated 2026-11-24.",
+      "evidence_ids": [
+        "63e832b6-9292-4750-81a2-9deaede279cc"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R459",
+        "R374",
+        "R931"
+      ],
+      "explanation": "The study is documented as an attended in-laboratory polysomnography (Type I), which is an accepted sleep test type. The report states that the scoring summary is not included, so the record does not show that the test was completed and interpreted to the standard needed for validity.",
+      "evidence_ids": [
+        "77a8c268-11e4-43b6-b803-9fd273de1ad6",
+        "af3cc9b7-c6f8-4c3b-a235-ff5d1e18079d",
+        "b6d421be-e55d-49e1-b528-f322e8aa6e2e"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R931",
+        "R867",
+        "R804"
+      ],
+      "explanation": "The results needed to apply the AHI or RDI thresholds are not recorded. The report gives only an oxygen saturation nadir of 87% and the record gives an Epworth score, neither of which is an AHI or RDI.",
+      "evidence_ids": [
+        "b6d421be-e55d-49e1-b528-f322e8aa6e2e",
+        "8541fbf3-a5f1-4e7b-9541-49cea88ff743",
+        "c33b2535-c047-40d5-bb08-16a56c1d97fd"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R374",
+        "R1014"
+      ],
+      "explanation": "The attended in-laboratory polysomnography order (R374) is documented as ordered by Dr. Adrienne302 Schiller, who is the treating practitioner seeing the patient for this evaluation (R1014).",
+      "evidence_ids": [
+        "af3cc9b7-c6f8-4c3b-a235-ff5d1e18079d",
+        "62b6f6dd-f5cb-4a88-99c9-83021dc7b169"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "The in-person evaluation (I.A), the device-use instruction (I.C) and the treating-practitioner sleep test order (Sleep Tests.4) are documented. However, the record contains no AHI or RDI from the 2026-11-15 sleep study, so the sleep test result criteria (I.B and Sleep Tests.3) cannot be confirmed. The scoring summary is also missing, so test validity (Sleep Tests.1) is not shown. No criterion is contradicted, so the decision is insufficient information rather than denied.",
+  "patient_file_sha256": "31793032508601a390ff011bfd8f7ab171433811a00351e9c9f818d6bd04b3cf",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

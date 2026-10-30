@@ -1,0 +1,28 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "none",
+  "selection_reason": "The order describes the three-component system (stimulation lead, pulse generator, respiratory sensor), which matches L38398 and L38307 and not L38528's chest-implanted neurostimulator with chest sensor lead. The two matching LCDs are administered by different MACs (First Coast for L38398, CGS for L38307), and the record contains no state or jurisdiction to decide between them. The clinical picture fits HGNS criteria (AHI 32, central apneas 8%, BMI 29.5, CPAP intolerance with 1.9 h average use), but the governing LCD cannot be determined without the patient's geography, so this needs human review.",
+  "decision": "insufficient information",
+  "criteria": [],
+  "decision_explanation": "None of the retrieved policies covers this order.",
+  "patient_file_sha256": "69abfec85e0d00c7a67a89bf2f3e3746b6717298d673bc920c83de4968655b6b",
+  "pipeline_sha256": "2239bbb686c070e9f4fb8170306548f275db87a431e5038837b9470d78573794"
+}

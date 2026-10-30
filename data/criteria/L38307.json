@@ -1,0 +1,122 @@
+{
+  "lcd_id": 38307,
+  "version": 14,
+  "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+  "held_out": "The held-out policy (step 18). Its checklist and cases were written without running the model on it, and the pipeline was frozen before its first run. Report its results as they come out; any fix made after seeing them turns it into development data.",
+  "frozen_pipeline": {
+    "date": "2026-10-29",
+    "model": "claude-haiku-5-5",
+    "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac",
+    "notes": "evaluate.pipeline_fingerprint() for the held-out run. Each saved result records the fingerprint it was judged with, so a held-out result with a different one wasn't judged by the frozen pipeline."
+  },
+  "run_history": [
+    {
+      "run": 1,
+      "pipeline_sha256": "2239bbb686c070e9f4fb8170306548f275db87a431e5038837b9470d78573794",
+      "results": "data/eval_results/claude-haiku-5-5/heldout_before_fixes/",
+      "outcome": "Policy selection failed: 15 of 17 cases answered 'none', 2 chose L38398. Criteria verdicts were not examined.",
+      "causes": "1. The younger base patients' Synthea notes name private insurers, so the model reasonably judged that no Medicare LCD applied; the project only ever meant to test Medicare patients. 2. The three candidates were regional versions of the same policy, and the selection prompt never said region is ignored (a project decision from the start), so the model declined to pick one without the patient's state.",
+      "fixes": "1. Cases: the new consult notes state current Medicare coverage. 2. Selection prompt: one sentence saying regional versions of the same policy may appear and any one may be chosen. Neither change touches criteria judging, which run 1 never reached."
+    }
+  ],
+  "id_convention": "Same as L33718: a numbered item under an unnumbered heading is the heading plus the item number (Covered Indications.6). Limitations.3 (the contraindication list) is one criterion: not met if any listed contraindication is present.",
+  "verdicts": ["met", "not met", "insufficient information", "not applicable"],
+  "decision_rule": "Covered if every applicable criterion for the order is met. Denied if any is not met. Otherwise insufficient information.",
+  "ambiguity_rule": "Where two readings of the record are defensible, the answer key takes 'insufficient information'.",
+
+  "family": {
+    "accepted": ["L38307", "L38310", "L38385", "L38387", "L38398", "L38528"],
+    "notes": "These six share the same numbered criteria, so one answer key fits all of them. Cases are built so the verdicts are the same under each: shared decision making is documented by both the referring sleep physician and the implanting surgeon (L38528 requires both), and no case uses neuromuscular disease (L38387 words that contraindication differently). L38276 (Palmetto) numbers its criteria differently and is left out; retrieval for 64582 doesn't offer it as a candidate, so this doesn't come up."
+  },
+
+  "orders": {
+    "64582": {
+      "description": "Implantation of a hypoglossal nerve neurostimulator system",
+      "policy_ref": "Covered Indications; Limitations",
+      "scope": "Moderate to severe OSA in adults.",
+      "criteria": ["Covered Indications.1", "Covered Indications.2", "Covered Indications.3", "Covered Indications.4",
+                   "Covered Indications.5", "Covered Indications.6", "Covered Indications.7", "Covered Indications.8",
+                   "Limitations.3"]
+    }
+  },
+
+  "criteria": [
+    {
+      "id": "Covered Indications.1",
+      "policy_text": "Beneficiary is 22 years of age or older; and",
+      "check": "The patient is at least 22.",
+      "evidence": ["Patient: birth date (shown as the age at the top of the summary)"],
+      "notes": "Age comes from the Patient resource, which the summary shows as a line rather than a tagged resource, so there is no evidence tag to cite."
+    },
+    {
+      "id": "Covered Indications.2",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2; and",
+      "check": "The most recent BMI before the implant order is below 35.",
+      "evidence": ["Observation: BMI"],
+      "notes": "Base patients already have BMI history from Synthea; each case adds a BMI at the implant consultation, which becomes the latest value."
+    },
+    {
+      "id": "Covered Indications.3",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant; and",
+      "check": "A polysomnogram dated no more than 24 months before the first consultation for the implant.",
+      "evidence": ["DiagnosticReport: polysomnography, with date", "Encounter: first HGNS consultation, with date"],
+      "notes": "A PSG older than 24 months is not met. The summary only shows reports from the last 2 years, so an old PSG appears through the consultation note that cites its date and results."
+    },
+    {
+      "id": "Covered Indications.4",
+      "policy_text": "Beneficiary has predominantly obstructive events (defined as central and mixed apneas less than 25% of the total AHI); and",
+      "check": "Central plus mixed apneas are under 25% of the total AHI on the PSG.",
+      "evidence": ["Observation: central and mixed apnea percentage", "DiagnosticReport: PSG"],
+      "notes": "Insufficient information if the PSG reports an AHI but not the central/mixed share: 'obstructive sleep apnea' as a diagnosis doesn't state the percentage."
+    },
+    {
+      "id": "Covered Indications.5",
+      "policy_text": "AHI is 15 to 65 events per hour; and",
+      "check": "The PSG's AHI is between 15 and 65 inclusive.",
+      "evidence": ["Observation: AHI", "DiagnosticReport: PSG"]
+    },
+    {
+      "id": "Covered Indications.6",
+      "policy_text": "Beneficiary has documentation that demonstrates CPAP failure (defined as AHI greater than 15 despite CPAP usage) or CPAP intolerance (defined as less than 4 hours per night, 5 nights per week or the CPAP has been returned) including shared decision making that the patient was intolerant of CPAP despite consultation with a sleep expert: and",
+      "check": "Documented CPAP failure (residual AHI > 15 on CPAP) or intolerance (< 4 hours a night, 5 nights a week, or CPAP returned), plus a documented shared decision making conversation with the patient.",
+      "evidence": ["Observation: residual AHI or nightly CPAP use (device download)", "DocumentReference: CPAP trial note", "DocumentReference: shared decision making note"],
+      "notes": "One criterion with two paths, like L33718's I.B. CPAP that worked and was used (residual AHI <= 15, >= 4 hours a night) is not met. No CPAP history in the record is insufficient information (the record doesn't say it was never tried; same as L33718 II.D). Failure or intolerance without a shared decision making note is insufficient information. Shared decision making is a conversation between a provider and the patient (Limitations.5), documented in cases by both the sleep physician and the surgeon."
+    },
+    {
+      "id": "Covered Indications.7",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on a drug-induced sleep endoscopy (DISE) procedure; and",
+      "check": "A DISE was done and showed no complete concentric collapse at the soft palate.",
+      "evidence": ["Procedure: drug-induced sleep endoscopy", "DocumentReference or DiagnosticReport: DISE findings"],
+      "notes": "Complete concentric collapse on DISE is not met. No DISE recorded is insufficient information. The DISE provider's certification (Limitations.4) is administrative and not judged."
+    },
+    {
+      "id": "Covered Indications.8",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4 per standardized tonsillar hypertrophy grading scale).",
+      "check": "The airway exam shows no compromising anatomy: tonsils size 0-2.",
+      "evidence": ["DocumentReference: exam note with tonsil size"],
+      "notes": "Tonsil size 3 or 4 is not met. No documented airway exam is insufficient information."
+    },
+    {
+      "id": "Limitations.3",
+      "policy_text": "Hypoglossal nerve neurostimulation is considered not medically reasonable and necessary when any of the following contraindications are present: (central and mixed apneas over one-quarter of the AHI; an implantable device that could interact; BMI 35 or more; neuromuscular disease; hypoglossal-nerve palsy; severe restrictive or obstructive pulmonary disease; moderate-to-severe pulmonary arterial hypertension; severe valvular heart disease; NYHA class III or IV heart failure; recent myocardial infarction or severe cardiac arrhythmias (within the past 6 months); persistent uncontrolled hypertension; an active, serious mental illness that would interfere with operating the device; coexisting nonrespiratory sleep disorders; pregnancy or planned pregnancy; MRI requirements by device model; inability to operate the sleep remote; compromised neurological control of the upper airway)",
+      "check": "None of the listed contraindications is present, shown by a documented contraindication screen.",
+      "evidence": ["DocumentReference: consultation note with contraindication screen", "Condition: any contraindicating diagnosis", "Observation: BMI, central/mixed apnea percentage"],
+      "notes": "Met only when a consultation note documents a screen finding none of them; the record can't otherwise rule out items like planned pregnancy or needing MRI. Not met if any is present, including BMI >= 35 or central/mixed apneas over 25% (these repeat Covered Indications.2 and .4). No screen documented and no contraindication found is insufficient information."
+    }
+  ],
+
+  "out_of_scope": [
+    {
+      "policy_ref": "Limitations.1, Limitations.2",
+      "reason": "Limitations.1 (other indications) is covered by the order's scope; Limitations.2 (non-FDA-approved devices) is device regulatory status, which the judging prompt tells the model to skip."
+    },
+    {
+      "policy_ref": "Limitations.4 (DISE provider certification), Provider Qualifications, Place of Service",
+      "reason": "Administrative requirements about providers and facilities that a clinical record does not show."
+    },
+    {
+      "policy_ref": "Limitations.5 (shared decision making definition)",
+      "reason": "A definition used by Covered Indications.6, not a separate requirement."
+    }
+  ]
+}

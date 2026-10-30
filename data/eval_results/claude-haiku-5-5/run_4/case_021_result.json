@@ -1,0 +1,79 @@
+{
+  "order": "E0470",
+  "order_description": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    }
+  ],
+  "selected_policy": "L33800",
+  "selection_reason": "The order is for an E0470 bi-level device without backup rate, and the physician's 2026-12-07 note attributes nocturnal hypoxemia to COPD without significant obstructive sleep apnea. L33800 (Respiratory Assist Devices) covers E0470 for chronic respiratory failure consequent to COPD, requiring facility-based PSG showing SpO2 at or below 88% for at least 5 minutes with AHI under 5. The 2026-11-22 PSG shows SpO2 nadir 88% and AHI 2, which fits. L33718 addresses OSA treatment, which is not the diagnosis here, and L33405 covers sleep testing rather than the device.",
+  "criteria": [
+    {
+      "criterion": "INITIAL COVERAGE CRITERIA FOR E0470 AND E0471 DEVICES (symptom documentation)",
+      "policy_text": "For an E0470 or an E0471 RAD to be covered, the treating practitioner must fully document in the beneficiary's medical record symptoms characteristic of sleep-associated hypoventilation, such as daytime hypersomnolence, excessive fatigue, morning headache, cognitive dysfunction, dyspnea.",
+      "verdict": "met",
+      "evidence": [
+        "R144",
+        "R98"
+      ],
+      "explanation": "The treating practitioner, Dr. Cletus494 Paucek755, documented on 2026-11-03 that the patient dozes off while reading and watching television, and the Epworth Sleepiness Scale total is 11. Daytime hypersomnolence is one of the listed symptoms, and the documentation comes from the treating practitioner.",
+      "evidence_ids": [
+        "b71cd306-a3dd-45cd-97f5-d8eed7f1c2ad",
+        "d938fcd8-edd8-4dc1-a6d7-aadc7b6e12d9"
+      ]
+    },
+    {
+      "criterion": "INITIAL COVERAGE CRITERIA FOR E0470 AND E0471 DEVICES (clinical disorder)",
+      "policy_text": "A RAD (E0470, E0471) is covered for those beneficiaries with one of the following clinical disorders: restrictive thoracic disorders (i.e., neuromuscular diseases or severe thoracic cage abnormalities), CSA or CompSA, hypoventilation syndrome, or chronic respiratory failure (CRF) consequent to chronic obstructive pulmonary disease (COPD).",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R48",
+        "R145",
+        "R139",
+        "R116"
+      ],
+      "explanation": "The record lists chronic obstructive pulmonary disease (R48), and the 2026-12-07 note attributes nocturnal hypoxemia to COPD (R145). No neuromuscular disease or severe thoracic cage abnormality is documented. The polysomnogram shows no significant obstructive sleep apnea and an AHI of 2 with nocturnal desaturation (R139), and no central apnea or central hypopnea index is reported, so CSA or CompSA is not documented. Hypoventilation syndrome is not diagnosed. Chronic respiratory failure is not documented as a diagnosis; the record describes only nocturnal hypoxemia. The record therefore does not name one of the listed disorders.",
+      "evidence_ids": [
+        "48637cec-1c32-4f8e-8f27-87570b14e1a4",
+        "423e5d6b-eeeb-4bcb-848b-148bb49c830a",
+        "7d1cf0d3-96b6-4b38-9a62-3f676f2105dc",
+        "9e66c611-6892-48e6-b678-25607e6675bf"
+      ]
+    },
+    {
+      "criterion": "Chronic Respiratory Failure Consequent to COPD",
+      "policy_text": "A respiratory assist device is covered when the beneficiary meets the initial coverage criteria for either an E0470 or E0471 as described in the Medicare National Coverage Determinations (NCD) Manual (CMS Pub. 100-03) Chapter 1, Part 4, Section 240.9 Noninvasive Positive Pressure Ventilation (NIPPV) in the Home for the Treatment of Chronic Respiratory Failure (CRF) Consequent to Chronic Obstructive Pulmonary Disease (COPD).",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R48",
+        "R145",
+        "R139",
+        "R116"
+      ],
+      "explanation": "The initial criteria are defined in NCD 240.9, which is not included in the policy text provided, so they cannot be checked in full. The record contains no arterial blood gas result, no spirometry (no FEV1 or FVC values), and no awake resting oxygen saturation on the prescribed FIO2. The only oxygen measurement is an overnight SpO2 nadir of 88% (R116), and the duration below 88% is not documented. Total sleep time was 6.5 hours (R136). The criteria cannot be judged from the record.",
+      "evidence_ids": [
+        "48637cec-1c32-4f8e-8f27-87570b14e1a4",
+        "423e5d6b-eeeb-4bcb-848b-148bb49c830a",
+        "7d1cf0d3-96b6-4b38-9a62-3f676f2105dc",
+        "9e66c611-6892-48e6-b678-25607e6675bf"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "The symptom requirement is met (daytime hypersomnolence documented by the treating practitioner). No applicable criterion is shown to be unmet, but the clinical-disorder requirement and the chronic respiratory failure pathway cannot be verified. The record documents COPD and nocturnal hypoxemia but no arterial blood gas, no spirometry, no chronic respiratory failure diagnosis, and no duration for the 88% saturation. The NCD 240.9 criteria that govern this pathway are not in the supplied policy text. The sleep-apnea and hypoventilation sections were left out because the order is for COPD-related nocturnal hypoxemia, not sleep-disordered breathing or hypoventilation syndrome.",
+  "patient_file_sha256": "6f39f7f7fc42f862059723fe14ee35331498796626f932542396b02b3dd48249",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

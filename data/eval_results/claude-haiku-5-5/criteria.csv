@@ -1,0 +1,320 @@
+case_id,status,order,criterion,expected,predicted,correct,evidence_expected,evidence_cited
+case_001,current,E0601,I.A,met,met,True,3,2
+case_001,current,E0601,I.B,met,met,True,3,3
+case_001,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_001,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_001,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_001,current,E0601,I.C,insufficient information,insufficient information,True,0,0
+case_002,current,E0601,I.A,met,met,True,3,3
+case_002,current,E0601,I.B,met,met,True,3,3
+case_002,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_002,current,E0601,Sleep Tests.3,met,met,True,3,2
+case_002,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_002,current,E0601,I.C,met,met,True,1,1
+case_003,current,E0601,I.A,met,met,True,3,2
+case_003,current,E0601,I.B,met,met,True,3,3
+case_003,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_003,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_003,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_003,current,E0601,I.C,met,met,True,1,1
+case_004,current,E0601,I.A,met,met,True,3,2
+case_004,current,E0601,I.B,not met,not met,True,4,4
+case_004,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_004,current,E0601,Sleep Tests.3,not met,not met,True,4,3
+case_004,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_004,current,E0601,I.C,met,met,True,1,1
+case_005,current,E0601,I.A,met,met,True,3,2
+case_005,current,E0601,I.B,met,met,True,5,5
+case_005,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_005,current,E0601,Sleep Tests.3,met,met,True,5,3
+case_005,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_005,current,E0601,I.C,met,met,True,1,1
+case_006,current,E0601,I.A,met,met,True,3,2
+case_006,current,E0601,I.B,met,met,True,4,4
+case_006,current,E0601,Sleep Tests.1,met,missing,False,1,0
+case_006,current,E0601,Sleep Tests.3,met,met,True,4,3
+case_006,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_006,current,E0601,I.C,met,met,True,1,1
+case_007,current,E0601,I.A,met,met,True,3,2
+case_007,current,E0601,I.B,not met,not met,True,3,3
+case_007,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_007,current,E0601,Sleep Tests.3,not met,not met,True,3,2
+case_007,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_007,current,E0601,I.C,met,met,True,1,1
+case_008,current,E0601,I.A,met,met,True,3,2
+case_008,current,E0601,I.B,not met,met,False,3,3
+case_008,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_008,current,E0601,Sleep Tests.3,not met,met,False,3,3
+case_008,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_008,current,E0601,I.C,met,met,True,1,1
+case_009,current,E0601,I.A,met,met,True,3,2
+case_009,current,E0601,I.B,insufficient information,insufficient information,True,0,0
+case_009,current,E0601,Sleep Tests.1,met,insufficient information,False,1,1
+case_009,current,E0601,Sleep Tests.3,insufficient information,insufficient information,True,0,0
+case_009,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_009,current,E0601,I.C,met,met,True,1,1
+case_010,current,E0601,I.A,not met,not met,True,3,1
+case_010,current,E0601,I.B,met,met,True,3,3
+case_010,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_010,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_010,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_010,current,E0601,I.C,met,met,True,1,1
+case_011,current,E0601,I.A,not met,not met,True,3,3
+case_011,current,E0601,I.B,met,met,True,3,3
+case_011,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_011,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_011,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_011,current,E0601,I.C,met,met,True,1,1
+case_012,current,E0601,I.A,insufficient information,insufficient information,True,0,0
+case_012,current,E0601,I.B,met,met,True,3,3
+case_012,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_012,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_012,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_012,current,E0601,I.C,met,met,True,1,1
+case_013,current,E0601,I.A,met,met,True,3,3
+case_013,current,E0601,I.B,not met,not met,True,3,3
+case_013,current,E0601,Sleep Tests.1,not met,not met,True,1,1
+case_013,current,E0601,Sleep Tests.3,not met,not met,True,3,3
+case_013,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_013,current,E0601,I.C,met,met,True,1,1
+case_014,current,E0601,I.A,met,met,True,3,2
+case_014,current,E0601,I.B,met,met,True,3,3
+case_014,current,E0601,Sleep Tests.1,insufficient information,insufficient information,True,0,0
+case_014,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_014,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_014,current,E0601,I.C,met,met,True,1,1
+case_015,current,E0601,I.A,met,met,True,3,2
+case_015,current,E0601,I.B,met,met,True,3,3
+case_015,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_015,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_015,current,E0601,Sleep Tests.4,insufficient information,insufficient information,True,0,0
+case_015,current,E0601,I.C,met,met,True,1,1
+case_016,current,E0470,I.A,met,met,True,3,2
+case_016,current,E0470,I.B,met,met,True,3,3
+case_016,current,E0470,Sleep Tests.1,met,met,True,1,1
+case_016,current,E0470,Sleep Tests.3,met,met,True,3,3
+case_016,current,E0470,Sleep Tests.4,met,met,True,1,1
+case_016,current,E0470,I.C,met,met,True,1,1
+case_016,current,E0470,II.D,met,met,True,5,3
+case_017,current,E0470,I.A,met,met,True,3,3
+case_017,current,E0470,I.B,met,met,True,3,3
+case_017,current,E0470,Sleep Tests.1,met,met,True,1,1
+case_017,current,E0470,Sleep Tests.3,met,met,True,3,3
+case_017,current,E0470,Sleep Tests.4,met,met,True,1,1
+case_017,current,E0470,I.C,met,met,True,1,1
+case_017,current,E0470,II.D,not met,not met,True,5,4
+case_018,current,E0470,I.A,met,met,True,3,2
+case_018,current,E0470,I.B,met,met,True,3,3
+case_018,current,E0470,Sleep Tests.1,met,met,True,1,1
+case_018,current,E0470,Sleep Tests.3,met,met,True,3,3
+case_018,current,E0470,Sleep Tests.4,met,met,True,1,1
+case_018,current,E0470,I.C,met,met,True,1,1
+case_018,current,E0470,II.D,insufficient information,not met,False,0,0
+case_019,current,E0471,Initial Coverage,not met,missing,False,1,0
+case_020,current,E0601,I.A,met,met,True,3,2
+case_020,current,E0601,I.B,not met,not met,True,3,3
+case_020,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_020,current,E0601,Sleep Tests.3,not met,not met,True,3,3
+case_020,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_020,current,E0601,I.C,met,met,True,1,1
+case_022,current,E0601,I.A,not met,not met,True,3,1
+case_022,current,E0601,I.B,met,met,True,3,3
+case_022,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_022,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_022,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_022,current,E0601,I.C,insufficient information,insufficient information,True,0,0
+case_023,current,E0470,I.A,not met,not met,True,3,3
+case_023,current,E0470,I.B,met,met,True,3,3
+case_023,current,E0470,Sleep Tests.1,met,met,True,1,1
+case_023,current,E0470,Sleep Tests.4,met,met,True,1,1
+case_023,current,E0470,I.C,insufficient information,insufficient information,True,0,0
+case_023,current,E0470,II.D,met,met,True,5,3
+case_024,current,E0601,I.A,met,met,True,3,2
+case_024,current,E0601,I.B,not met,not met,True,4,3
+case_024,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_024,current,E0601,Sleep Tests.3,not met,not met,True,4,2
+case_024,current,E0601,Sleep Tests.4,insufficient information,insufficient information,True,0,0
+case_024,current,E0601,I.C,insufficient information,insufficient information,True,0,0
+case_025,current,E0470,I.A,met,met,True,3,2
+case_025,current,E0470,I.B,met,met,True,3,3
+case_025,current,E0470,Sleep Tests.1,met,met,True,1,1
+case_025,current,E0470,Sleep Tests.3,met,met,True,3,3
+case_025,current,E0470,Sleep Tests.4,met,met,True,1,1
+case_025,current,E0470,I.C,insufficient information,insufficient information,True,0,0
+case_025,current,E0470,II.D,met,met,True,5,4
+case_026,current,E0601,I.A,met,met,True,3,2
+case_026,current,E0601,I.B,met,met,True,3,3
+case_026,current,E0601,Sleep Tests.1,met,missing,False,1,0
+case_026,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_026,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_026,current,E0601,I.C,met,met,True,1,1
+case_027,current,E0601,I.A,met,met,True,3,3
+case_027,current,E0601,I.B,met,met,True,3,3
+case_027,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_027,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_027,current,E0601,Sleep Tests.4,met,met,True,1,1
+case_027,current,E0601,I.C,met,met,True,1,1
+case_028,current,E0601,I.A,met,met,True,3,2
+case_028,current,E0601,I.B,met,met,True,3,3
+case_028,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_028,current,E0601,Sleep Tests.4,insufficient information,insufficient information,True,0,0
+case_028,current,E0601,I.C,met,met,True,1,1
+case_029,current,E0601,I.A,met,met,True,3,3
+case_029,current,E0601,I.B,met,met,True,3,3
+case_029,current,E0601,Sleep Tests.1,met,met,True,1,1
+case_029,current,E0601,Sleep Tests.3,met,met,True,3,3
+case_029,current,E0601,Sleep Tests.4,insufficient information,insufficient information,True,0,0
+case_029,current,E0601,I.C,met,met,True,1,1
+case_030,current,64582,Covered Indications.1,met,met,True,2,2
+case_030,current,64582,Covered Indications.2,met,met,True,2,2
+case_030,current,64582,Covered Indications.3,met,met,True,3,2
+case_030,current,64582,Covered Indications.4,met,met,True,2,2
+case_030,current,64582,Covered Indications.5,met,met,True,2,2
+case_030,current,64582,Covered Indications.6,met,met,True,6,6
+case_030,current,64582,Covered Indications.7,met,met,True,2,2
+case_030,current,64582,Covered Indications.8,met,met,True,1,1
+case_030,current,64582,Limitations.3,met,met,True,1,1
+case_031,current,64582,Covered Indications.1,met,met,True,2,2
+case_031,current,64582,Covered Indications.2,met,met,True,2,2
+case_031,current,64582,Covered Indications.3,met,met,True,3,2
+case_031,current,64582,Covered Indications.4,met,met,True,2,2
+case_031,current,64582,Covered Indications.5,met,met,True,2,2
+case_031,current,64582,Covered Indications.6,met,met,True,6,5
+case_031,current,64582,Covered Indications.7,met,met,True,2,2
+case_031,current,64582,Covered Indications.8,met,met,True,1,1
+case_031,current,64582,Limitations.3,met,missing,False,1,0
+case_032,current,64582,Covered Indications.1,met,met,True,2,1
+case_032,current,64582,Covered Indications.2,met,met,True,2,2
+case_032,current,64582,Covered Indications.3,met,met,True,3,2
+case_032,current,64582,Covered Indications.4,met,met,True,2,2
+case_032,current,64582,Covered Indications.5,met,met,True,2,2
+case_032,current,64582,Covered Indications.6,met,met,True,6,5
+case_032,current,64582,Covered Indications.7,met,met,True,2,2
+case_032,current,64582,Covered Indications.8,met,insufficient information,False,1,1
+case_032,current,64582,Limitations.3,met,met,True,1,1
+case_033,current,64582,Covered Indications.1,not met,not met,True,2,2
+case_033,current,64582,Covered Indications.2,met,met,True,2,2
+case_033,current,64582,Covered Indications.3,met,met,True,3,2
+case_033,current,64582,Covered Indications.4,met,met,True,2,2
+case_033,current,64582,Covered Indications.5,met,met,True,2,2
+case_033,current,64582,Covered Indications.6,met,met,True,6,4
+case_033,current,64582,Covered Indications.7,met,met,True,2,2
+case_033,current,64582,Covered Indications.8,met,insufficient information,False,1,1
+case_033,current,64582,Limitations.3,met,met,True,1,1
+case_034,current,64582,Covered Indications.1,met,met,True,2,2
+case_034,current,64582,Covered Indications.2,not met,not met,True,2,2
+case_034,current,64582,Covered Indications.3,met,met,True,3,2
+case_034,current,64582,Covered Indications.4,met,met,True,2,2
+case_034,current,64582,Covered Indications.5,met,met,True,2,2
+case_034,current,64582,Covered Indications.6,met,met,True,6,5
+case_034,current,64582,Covered Indications.7,met,met,True,2,2
+case_034,current,64582,Covered Indications.8,met,met,True,1,1
+case_034,current,64582,Limitations.3,not met,not met,True,2,2
+case_035,current,64582,Covered Indications.1,met,met,True,2,2
+case_035,current,64582,Covered Indications.2,met,met,True,2,1
+case_035,current,64582,Covered Indications.3,not met,not met,True,2,2
+case_035,current,64582,Covered Indications.4,met,met,True,1,1
+case_035,current,64582,Covered Indications.5,met,met,True,1,1
+case_035,current,64582,Covered Indications.6,met,met,True,6,4
+case_035,current,64582,Covered Indications.7,met,met,True,2,1
+case_035,current,64582,Covered Indications.8,met,met,True,1,1
+case_035,current,64582,Limitations.3,met,insufficient information,False,1,1
+case_036,current,64582,Covered Indications.1,met,met,True,2,2
+case_036,current,64582,Covered Indications.2,met,met,True,2,2
+case_036,current,64582,Covered Indications.3,met,met,True,3,2
+case_036,current,64582,Covered Indications.4,not met,not met,True,2,2
+case_036,current,64582,Covered Indications.5,met,met,True,2,2
+case_036,current,64582,Covered Indications.6,met,met,True,6,4
+case_036,current,64582,Covered Indications.7,met,met,True,2,2
+case_036,current,64582,Covered Indications.8,met,met,True,1,1
+case_036,current,64582,Limitations.3,not met,met,False,3,1
+case_037,current,64582,Covered Indications.1,met,met,True,2,1
+case_037,current,64582,Covered Indications.2,met,met,True,2,2
+case_037,current,64582,Covered Indications.3,met,met,True,3,2
+case_037,current,64582,Covered Indications.4,met,met,True,2,2
+case_037,current,64582,Covered Indications.5,not met,not met,True,2,2
+case_037,current,64582,Covered Indications.6,met,met,True,6,4
+case_037,current,64582,Covered Indications.7,met,met,True,2,1
+case_037,current,64582,Covered Indications.8,met,met,True,1,1
+case_037,current,64582,Limitations.3,met,met,True,1,1
+case_038,current,64582,Covered Indications.1,met,met,True,2,2
+case_038,current,64582,Covered Indications.2,met,met,True,2,2
+case_038,current,64582,Covered Indications.3,met,met,True,3,2
+case_038,current,64582,Covered Indications.4,met,met,True,2,2
+case_038,current,64582,Covered Indications.5,met,met,True,2,2
+case_038,current,64582,Covered Indications.6,not met,not met,True,6,5
+case_038,current,64582,Covered Indications.7,met,met,True,2,2
+case_038,current,64582,Covered Indications.8,met,met,True,1,1
+case_038,current,64582,Limitations.3,met,met,True,1,1
+case_039,current,64582,Covered Indications.1,met,met,True,2,2
+case_039,current,64582,Covered Indications.2,met,met,True,2,2
+case_039,current,64582,Covered Indications.3,met,met,True,3,2
+case_039,current,64582,Covered Indications.4,met,met,True,2,2
+case_039,current,64582,Covered Indications.5,met,met,True,2,2
+case_039,current,64582,Covered Indications.6,met,met,True,6,4
+case_039,current,64582,Covered Indications.7,not met,not met,True,2,2
+case_039,current,64582,Covered Indications.8,met,insufficient information,False,1,1
+case_039,current,64582,Limitations.3,met,met,True,1,1
+case_040,current,64582,Covered Indications.1,met,met,True,2,2
+case_040,current,64582,Covered Indications.2,met,met,True,2,2
+case_040,current,64582,Covered Indications.3,met,met,True,3,2
+case_040,current,64582,Covered Indications.4,met,met,True,2,2
+case_040,current,64582,Covered Indications.5,met,met,True,2,2
+case_040,current,64582,Covered Indications.6,met,met,True,6,5
+case_040,current,64582,Covered Indications.7,met,met,True,2,2
+case_040,current,64582,Covered Indications.8,not met,not met,True,1,1
+case_040,current,64582,Limitations.3,met,met,True,1,1
+case_041,current,64582,Covered Indications.1,met,met,True,2,1
+case_041,current,64582,Covered Indications.2,met,met,True,2,2
+case_041,current,64582,Covered Indications.3,met,met,True,3,2
+case_041,current,64582,Covered Indications.4,met,met,True,2,2
+case_041,current,64582,Covered Indications.5,met,met,True,2,2
+case_041,current,64582,Covered Indications.6,met,met,True,6,4
+case_041,current,64582,Covered Indications.7,met,met,True,2,1
+case_041,current,64582,Covered Indications.8,met,met,True,1,1
+case_041,current,64582,Limitations.3,not met,missing,False,2,0
+case_042,current,64582,Covered Indications.1,met,met,True,2,1
+case_042,current,64582,Covered Indications.2,met,met,True,2,2
+case_042,current,64582,Covered Indications.3,met,met,True,3,2
+case_042,current,64582,Covered Indications.4,insufficient information,insufficient information,True,0,0
+case_042,current,64582,Covered Indications.5,met,met,True,2,2
+case_042,current,64582,Covered Indications.6,met,met,True,6,5
+case_042,current,64582,Covered Indications.7,met,met,True,2,2
+case_042,current,64582,Covered Indications.8,met,met,True,1,1
+case_042,current,64582,Limitations.3,insufficient information,insufficient information,True,0,0
+case_043,current,64582,Covered Indications.1,met,met,True,2,1
+case_043,current,64582,Covered Indications.2,met,met,True,2,2
+case_043,current,64582,Covered Indications.3,met,met,True,3,2
+case_043,current,64582,Covered Indications.4,met,met,True,2,2
+case_043,current,64582,Covered Indications.5,met,met,True,2,2
+case_043,current,64582,Covered Indications.6,insufficient information,insufficient information,True,0,0
+case_043,current,64582,Covered Indications.7,met,met,True,2,2
+case_043,current,64582,Covered Indications.8,met,met,True,1,1
+case_043,current,64582,Limitations.3,met,met,True,1,1
+case_044,current,64582,Covered Indications.1,met,met,True,2,2
+case_044,current,64582,Covered Indications.2,met,met,True,2,2
+case_044,current,64582,Covered Indications.3,met,met,True,3,2
+case_044,current,64582,Covered Indications.4,met,met,True,2,2
+case_044,current,64582,Covered Indications.5,met,met,True,2,2
+case_044,current,64582,Covered Indications.6,insufficient information,insufficient information,True,0,0
+case_044,current,64582,Covered Indications.7,met,met,True,2,2
+case_044,current,64582,Covered Indications.8,met,met,True,1,1
+case_044,current,64582,Limitations.3,met,met,True,1,1
+case_045,current,64582,Covered Indications.1,met,met,True,2,1
+case_045,current,64582,Covered Indications.2,met,met,True,2,2
+case_045,current,64582,Covered Indications.3,met,met,True,3,3
+case_045,current,64582,Covered Indications.4,met,met,True,2,2
+case_045,current,64582,Covered Indications.5,met,met,True,2,2
+case_045,current,64582,Covered Indications.6,met,met,True,6,4
+case_045,current,64582,Covered Indications.7,insufficient information,insufficient information,True,0,0
+case_045,current,64582,Covered Indications.8,met,met,True,1,1
+case_045,current,64582,Limitations.3,met,missing,False,1,0
+case_046,current,64582,Covered Indications.1,met,met,True,2,2
+case_046,current,64582,Covered Indications.2,met,met,True,2,2
+case_046,current,64582,Covered Indications.3,met,met,True,3,2
+case_046,current,64582,Covered Indications.4,met,met,True,2,2
+case_046,current,64582,Covered Indications.5,met,met,True,2,2
+case_046,current,64582,Covered Indications.6,met,met,True,6,4
+case_046,current,64582,Covered Indications.7,met,met,True,2,2
+case_046,current,64582,Covered Indications.8,insufficient information,insufficient information,True,0,0
+case_046,current,64582,Limitations.3,insufficient information,insufficient information,True,0,0

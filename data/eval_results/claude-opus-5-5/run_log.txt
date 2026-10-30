@@ -1,0 +1,74 @@
+﻿case_001: the patient file or pipeline changed since the saved result, judging again
+case_001  policy L33718  OK  decision 'insufficient information' OK  criteria 6/6
+case_002: the patient file or pipeline changed since the saved result, judging again
+case_002  policy L33718  OK  decision 'covered' OK  criteria 6/6
+case_003: the patient file or pipeline changed since the saved result, judging again
+case_003  policy L33718  OK  decision 'covered' OK  criteria 6/6
+case_004: the patient file or pipeline changed since the saved result, judging again
+case_004  policy L33718  OK  decision 'denied' OK  criteria 6/6
+case_005: the patient file or pipeline changed since the saved result, judging again
+case_005  policy L33718  OK  decision 'covered' OK  criteria 6/6
+case_006: the patient file or pipeline changed since the saved result, judging again
+case_006  policy L33718  OK  decision 'covered' OK  criteria 6/6
+case_007: the patient file or pipeline changed since the saved result, judging again
+case_007  policy L33718  OK  decision 'denied' OK  criteria 6/6
+case_008: the patient file or pipeline changed since the saved result, judging again
+case_008  policy L33718  OK  decision 'denied' OK  criteria 6/6
+case_009: the patient file or pipeline changed since the saved result, judging again
+case_009  policy L33718  OK  decision 'insufficient information' OK  criteria 6/6
+case_010: the patient file or pipeline changed since the saved result, judging again
+case_010  policy L33718  OK  decision 'denied' OK  criteria 6/6
+case_011: the patient file or pipeline changed since the saved result, judging again
+case_011  policy L33718  OK  decision 'denied' OK  criteria 6/6
+case_012: the patient file or pipeline changed since the saved result, judging again
+case_012  policy L33718  OK  decision 'insufficient information' OK  criteria 6/6
+case_013: the patient file or pipeline changed since the saved result, judging again
+case_013  policy L33718  OK  decision 'denied' OK  criteria 6/6
+case_014: the patient file or pipeline changed since the saved result, judging again
+case_014  policy L33718  OK  decision 'covered' WRONG, expected 'insufficient information'  criteria 5/6
+    Sleep Tests.1: got 'met', expected 'insufficient information'
+case_015: the patient file or pipeline changed since the saved result, judging again
+case_015  policy L33718  OK  decision 'insufficient information' OK  criteria 6/6
+case_016: the patient file or pipeline changed since the saved result, judging again
+case_016  policy L33718  OK  decision 'covered' OK  criteria 7/7
+case_017: the patient file or pipeline changed since the saved result, judging again
+case_017  policy L33718  OK  decision 'denied' OK  criteria 7/7
+case_018: the patient file or pipeline changed since the saved result, judging again
+case_018  policy L33718  OK  decision 'insufficient information' WRONG, expected 'denied'  criteria 6/7
+    II.D: got 'insufficient information', expected 'not met'
+case_019: the patient file or pipeline changed since the saved result, judging again
+case_019  policy L33718  OK  decision 'denied' OK  criteria 1/1
+case_020: the patient file or pipeline changed since the saved result, judging again
+case_020  policy L33718  OK  decision 'denied' OK  criteria 6/6
+case_021: the patient file or pipeline changed since the saved result, judging again
+case_021  policy L33800  OK  (scored on policy selection only)
+case_022: the patient file or pipeline changed since the saved result, judging again
+case_022  policy L33718  OK  decision 'denied' OK  criteria 6/6
+case_023: the patient file or pipeline changed since the saved result, judging again
+case_023  policy L33718  OK  decision 'denied' OK  criteria 7/7
+case_024: the patient file or pipeline changed since the saved result, judging again
+case_024  policy L33718  OK  decision 'denied' OK  criteria 6/6
+case_025: the patient file or pipeline changed since the saved result, judging again
+case_025  policy L33718  OK  decision 'insufficient information' OK  criteria 7/7
+case_026: the patient file or pipeline changed since the saved result, judging again
+case_026  policy L33718  OK  decision 'covered' OK  criteria 6/6
+case_027  policy L33718  OK  decision 'covered' OK  criteria 6/6
+case_028  policy L33718  OK  decision 'insufficient information' OK  criteria 6/6
+case_029  policy L33718  OK  decision 'insufficient information' OK  criteria 6/6
+
+SUMMARY
+  Policy selection:  29/29 (100%)
+  Decisions:         26/28 (93%)
+  Criteria verdicts: 166/168 (99%)
+  Abstention:        12/13 (92%) of 'insufficient' criteria answered 'insufficient'
+  Guessed 'met':     1 criteria answered 'met' with no evidence in the record
+  Missing criteria:  0 (in the answer key but not in the model's output)
+  Extra criteria:    0 (judged but not in the answer key)
+  Evidence cited:    325/336 (97%) of answer-key evidence, on correct met/not met verdicts
+
+  Decisions (expected -> got):
+    covered                    -> covered                    7
+    denied                     -> denied                     12
+    denied                     -> insufficient information   1  <-- wrong
+    insufficient information   -> covered                    1  <-- wrong
+    insufficient information   -> insufficient information   7

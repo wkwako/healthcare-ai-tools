@@ -1,0 +1,183 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L38398",
+  "selection_reason": "All three candidates are the same Hypoglossal Nerve Stimulation for OSA policy from different contractors, and each covers the ordered HGNS system (stimulation lead, pulse generator, respiratory sensor) for obstructive sleep apnea, so any one governs. L38398 is selected. The record shows severe OSA (AHI 32), CPAP intolerance (2.1 h on 9 of 30 nights), and BMI 29.5, but the otolaryngology note documents chronic heart failure NYHA class III as a contraindication to HGNS. The passages provided do not include the LCD's detailed coverage criteria, so whether the patient meets them cannot be confirmed from these excerpts.",
+  "criteria": [
+    {
+      "criterion": "Covered Indications.1",
+      "policy_text": "Beneficiary is 22 years of age or older",
+      "verdict": "met",
+      "evidence": [
+        "R99",
+        "R101"
+      ],
+      "explanation": "The patient is 69 years old as of 2027-01-02 per the record header, and the 2026-06-26 and 2026-12-18 notes describe him as 69 years old, well above the 22-year minimum.",
+      "evidence_ids": [
+        "7cfe421f-cbf6-9c1f-c3c8-fa8b81d15f13",
+        "19e1bc8f-a15b-47fb-beb8-909ca9f14076"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.2",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2",
+      "verdict": "met",
+      "evidence": [
+        "R67",
+        "R101",
+        "R65",
+        "R66"
+      ],
+      "explanation": "BMI was 29.5 kg/m2 on 2026-12-18 (R67, R101) and 27.86 kg/m2 at the 2025 and 2026 visits (R65, R66), all below 35.",
+      "evidence_ids": [
+        "14e4978b-8e7a-4e48-a8d6-822a1f829783",
+        "19e1bc8f-a15b-47fb-beb8-909ca9f14076",
+        "93547944-a253-d0bb-5f93-9a11b248200a",
+        "93547944-a253-d0bb-bd51-afd5b3fc84ca"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.3",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant",
+      "verdict": "met",
+      "evidence": [
+        "R38",
+        "R94",
+        "R39"
+      ],
+      "explanation": "Attended in-laboratory polysomnography was performed on 2026-07-14 (R38, R94). The first HGNS evaluation consultation was on 2026-11-27 (R39), about 4.5 months later, within 24 months.",
+      "evidence_ids": [
+        "b7a752d9-d1af-4b90-9040-c3b95d2f2fce",
+        "6fbdb5d4-60ad-4db5-8f53-285fe3af34fb",
+        "55b649af-bf08-4a62-b7d6-e77989996387"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.4",
+      "policy_text": "Beneficiary has predominantly obstructive events (defined as central and mixed apneas less than 25% of the total AHI)",
+      "verdict": "met",
+      "evidence": [
+        "R69",
+        "R94"
+      ],
+      "explanation": "Central and mixed apneas were 8% of the total AHI on 2026-07-15 (R69), below the 25% limit.",
+      "evidence_ids": [
+        "f27aa099-3848-4ecf-9192-ea68b7dd77a5",
+        "6fbdb5d4-60ad-4db5-8f53-285fe3af34fb"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.5",
+      "policy_text": "AHI is 15 to 65 events per hour",
+      "verdict": "met",
+      "evidence": [
+        "R57",
+        "R94"
+      ],
+      "explanation": "AHI was 32 events per hour on 2026-07-15 (R57) and in the polysomnography report (R94), within the 15 to 65 range.",
+      "evidence_ids": [
+        "4ea1feb0-a3dd-4815-b19f-b09ce2856d01",
+        "6fbdb5d4-60ad-4db5-8f53-285fe3af34fb"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6",
+      "policy_text": "Beneficiary has documentation that demonstrates CPAP failure (defined as AHI greater than 15 despite CPAP usage) or CPAP intolerance (defined as less than 4 hours per night, 5 nights per week or the CPAP has been returned) including shared decision making that the patient was intolerant of CPAP despite consultation with a sleep expert",
+      "verdict": "met",
+      "evidence": [
+        "R58",
+        "R68",
+        "R100",
+        "R101"
+      ],
+      "explanation": "This is met through the intolerance alternative. CPAP was used on only 9 of the last 30 nights (about 2 nights per week) with an average of 2.1 hours on nights used (R68, R58), which is below the 4 hours per night and 5 nights per week threshold. Shared decision making with the patient about CPAP and alternatives was documented by the sleep medicine physician (R100) and the otolaryngologist (R101). The failure alternative is not the basis, since residual AHI on CPAP was 6 (R85).",
+      "evidence_ids": [
+        "0ac2c73a-1d8d-4108-a1d3-76fabd966cf5",
+        "284e03f3-1659-43f3-ab01-60cfd716fc24",
+        "90e771c2-2158-463a-92d1-6c5feda71a97",
+        "19e1bc8f-a15b-47fb-beb8-909ca9f14076"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.7",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on a drug-induced sleep endoscopy (DISE) procedure",
+      "verdict": "met",
+      "evidence": [
+        "R95",
+        "R41",
+        "R56"
+      ],
+      "explanation": "The DISE on 2027-01-02 (R41, R56, R95) showed partial anteroposterior collapse at the soft palate and no complete concentric collapse.",
+      "evidence_ids": [
+        "f45bba1d-eee0-4456-b34a-34a39db7df0d",
+        "05d38fb0-e476-4f7a-9258-44c13872465d",
+        "02c6e96c-97f4-4e00-9bc2-ad5401153590"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.8",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4 per standardized tonsillar hypertrophy grading scale)",
+      "verdict": "met",
+      "evidence": [
+        "R101",
+        "R95"
+      ],
+      "explanation": "Tonsils were size 1 on the Brodsky scale, the neck was supple with no masses, and Mallampati was class II (R101). The DISE showed only partial collapse at the oropharynx, tongue base and velum, with no epiglottic collapse (R95). No other anatomical finding is documented that would compromise the device.",
+      "evidence_ids": [
+        "19e1bc8f-a15b-47fb-beb8-909ca9f14076",
+        "f45bba1d-eee0-4456-b34a-34a39db7df0d"
+      ]
+    },
+    {
+      "criterion": "Limitations.3",
+      "policy_text": "Hypoglossal nerve neurostimulation is considered not medically reasonable and necessary when any of the following contraindications are present (including: New York Heart Association class III or IV heart failure; central and mixed apneas more than one-quarter of total AHI; BMI equal to or greater than 35; neuromuscular disease; hypoglossal-nerve palsy; severe pulmonary disease; persistent uncontrolled hypertension; recent myocardial infarction or severe arrhythmia; and others)",
+      "verdict": "not met",
+      "evidence": [
+        "R17",
+        "R101",
+        "R69",
+        "R67",
+        "R59",
+        "R60"
+      ],
+      "explanation": "Chronic heart failure, NYHA class III, is documented as active (R17) and the otolaryngologist identified it as a contraindication to hypoglossal nerve stimulation (R101). This contraindication is present. Other listed contraindications are absent or not contradicted: central and mixed apneas are 8% (R69), BMI is 29.5 (R67), and blood pressure is 123/80 and 127/77 (R59, R60). The record does not address neuromuscular disease, hypoglossal palsy, severe pulmonary disease, implanted-device interaction or inability to operate the remote. The NYHA class III finding alone makes this criterion not met.",
+      "evidence_ids": [
+        "999aedc0-0c8a-4f68-9710-366e95fb1575",
+        "19e1bc8f-a15b-47fb-beb8-909ca9f14076",
+        "f27aa099-3848-4ecf-9192-ea68b7dd77a5",
+        "14e4978b-8e7a-4e48-a8d6-822a1f829783",
+        "93547944-a253-d0bb-c465-9250f03223ca",
+        "93547944-a253-d0bb-2c7a-345af841dffb"
+      ]
+    },
+    {
+      "criterion": "Place of Services (POS)",
+      "policy_text": "Hypoglossal nerve stimulation for the treatment of OSA must be furnished in accordance with the accepted standards of medical practice in a setting appropriate to the patient's medical needs and condition.",
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "The record does not state the setting in which the implant is to be performed, so whether the setting is appropriate cannot be determined from the record.",
+      "evidence_ids": []
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The patient has documented NYHA class III chronic heart failure (R17, R101), which the LCD lists as a contraindication under Limitations.3, so that criterion is not met and the order is denied. All eight covered-indication criteria are met, and the place-of-service criterion lacks information, but a single unmet criterion is sufficient for denial. Provider credential, DISE-provider certification, and device regulatory-status requirements were excluded as administrative, and shared decision making was assessed under Covered Indications.6.",
+  "patient_file_sha256": "b3c153a0248a725f29c8d3be8f7ff28286cb2b7cf174e59d39cbbf2a7bffce31",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

@@ -1,0 +1,169 @@
+case_id,status,order,criterion,expected,predicted,correct
+case_001,current,E0601,I.A,met,met,True
+case_001,current,E0601,I.B,met,met,True
+case_001,current,E0601,Sleep Tests.1,met,met,True
+case_001,current,E0601,Sleep Tests.3,met,met,True
+case_001,current,E0601,Sleep Tests.4,met,met,True
+case_001,current,E0601,I.C,insufficient information,insufficient information,True
+case_002,current,E0601,I.A,met,met,True
+case_002,current,E0601,I.B,met,met,True
+case_002,current,E0601,Sleep Tests.1,met,met,True
+case_002,current,E0601,Sleep Tests.3,met,met,True
+case_002,current,E0601,Sleep Tests.4,met,met,True
+case_002,current,E0601,I.C,met,met,True
+case_003,current,E0601,I.A,met,met,True
+case_003,current,E0601,I.B,met,met,True
+case_003,current,E0601,Sleep Tests.1,met,met,True
+case_003,current,E0601,Sleep Tests.3,met,met,True
+case_003,current,E0601,Sleep Tests.4,met,met,True
+case_003,current,E0601,I.C,met,met,True
+case_004,current,E0601,I.A,met,met,True
+case_004,current,E0601,I.B,not met,not met,True
+case_004,current,E0601,Sleep Tests.1,met,met,True
+case_004,current,E0601,Sleep Tests.3,not met,not met,True
+case_004,current,E0601,Sleep Tests.4,met,met,True
+case_004,current,E0601,I.C,met,met,True
+case_005,current,E0601,I.A,met,met,True
+case_005,current,E0601,I.B,met,met,True
+case_005,current,E0601,Sleep Tests.1,met,met,True
+case_005,current,E0601,Sleep Tests.3,met,met,True
+case_005,current,E0601,Sleep Tests.4,met,met,True
+case_005,current,E0601,I.C,met,met,True
+case_006,current,E0601,I.A,met,met,True
+case_006,current,E0601,I.B,met,met,True
+case_006,current,E0601,Sleep Tests.1,met,met,True
+case_006,current,E0601,Sleep Tests.3,met,met,True
+case_006,current,E0601,Sleep Tests.4,met,met,True
+case_006,current,E0601,I.C,met,met,True
+case_007,current,E0601,I.A,met,met,True
+case_007,current,E0601,I.B,not met,not met,True
+case_007,current,E0601,Sleep Tests.1,met,met,True
+case_007,current,E0601,Sleep Tests.3,not met,not met,True
+case_007,current,E0601,Sleep Tests.4,met,met,True
+case_007,current,E0601,I.C,met,met,True
+case_008,current,E0601,I.A,met,met,True
+case_008,current,E0601,I.B,not met,not met,True
+case_008,current,E0601,Sleep Tests.1,met,met,True
+case_008,current,E0601,Sleep Tests.3,not met,not met,True
+case_008,current,E0601,Sleep Tests.4,met,met,True
+case_008,current,E0601,I.C,met,met,True
+case_009,current,E0601,I.A,met,met,True
+case_009,current,E0601,I.B,insufficient information,insufficient information,True
+case_009,current,E0601,Sleep Tests.1,met,met,True
+case_009,current,E0601,Sleep Tests.3,insufficient information,insufficient information,True
+case_009,current,E0601,Sleep Tests.4,met,met,True
+case_009,current,E0601,I.C,met,met,True
+case_010,current,E0601,I.A,not met,not met,True
+case_010,current,E0601,I.B,met,met,True
+case_010,current,E0601,Sleep Tests.1,met,met,True
+case_010,current,E0601,Sleep Tests.3,met,met,True
+case_010,current,E0601,Sleep Tests.4,met,met,True
+case_010,current,E0601,I.C,met,met,True
+case_011,current,E0601,I.A,not met,not met,True
+case_011,current,E0601,I.B,met,met,True
+case_011,current,E0601,Sleep Tests.1,met,met,True
+case_011,current,E0601,Sleep Tests.3,met,met,True
+case_011,current,E0601,Sleep Tests.4,met,met,True
+case_011,current,E0601,I.C,met,met,True
+case_012,current,E0601,I.A,insufficient information,insufficient information,True
+case_012,current,E0601,I.B,met,met,True
+case_012,current,E0601,Sleep Tests.1,met,met,True
+case_012,current,E0601,Sleep Tests.3,met,met,True
+case_012,current,E0601,Sleep Tests.4,met,met,True
+case_012,current,E0601,I.C,met,met,True
+case_013,current,E0601,I.A,met,met,True
+case_013,current,E0601,I.B,not met,not met,True
+case_013,current,E0601,Sleep Tests.1,not met,not met,True
+case_013,current,E0601,Sleep Tests.3,not met,not met,True
+case_013,current,E0601,Sleep Tests.4,met,met,True
+case_013,current,E0601,I.C,met,met,True
+case_014,current,E0601,I.A,met,met,True
+case_014,current,E0601,I.B,met,met,True
+case_014,current,E0601,Sleep Tests.1,insufficient information,met,False
+case_014,current,E0601,Sleep Tests.3,met,met,True
+case_014,current,E0601,Sleep Tests.4,met,met,True
+case_014,current,E0601,I.C,met,met,True
+case_015,current,E0601,I.A,met,met,True
+case_015,current,E0601,I.B,met,met,True
+case_015,current,E0601,Sleep Tests.1,met,met,True
+case_015,current,E0601,Sleep Tests.3,met,met,True
+case_015,current,E0601,Sleep Tests.4,insufficient information,insufficient information,True
+case_015,current,E0601,I.C,met,met,True
+case_016,current,E0470,I.A,met,met,True
+case_016,current,E0470,I.B,met,met,True
+case_016,current,E0470,Sleep Tests.1,met,met,True
+case_016,current,E0470,Sleep Tests.3,met,met,True
+case_016,current,E0470,Sleep Tests.4,met,met,True
+case_016,current,E0470,I.C,met,met,True
+case_016,current,E0470,II.D,met,met,True
+case_017,current,E0470,I.A,met,met,True
+case_017,current,E0470,I.B,met,met,True
+case_017,current,E0470,Sleep Tests.1,met,met,True
+case_017,current,E0470,Sleep Tests.3,met,met,True
+case_017,current,E0470,Sleep Tests.4,met,met,True
+case_017,current,E0470,I.C,met,met,True
+case_017,current,E0470,II.D,not met,not met,True
+case_018,current,E0470,I.A,met,met,True
+case_018,current,E0470,I.B,met,met,True
+case_018,current,E0470,Sleep Tests.1,met,met,True
+case_018,current,E0470,Sleep Tests.3,met,met,True
+case_018,current,E0470,Sleep Tests.4,met,met,True
+case_018,current,E0470,I.C,met,met,True
+case_018,current,E0470,II.D,not met,insufficient information,False
+case_019,current,E0471,Initial Coverage,not met,not met,True
+case_020,current,E0601,I.A,met,met,True
+case_020,current,E0601,I.B,not met,not met,True
+case_020,current,E0601,Sleep Tests.1,met,met,True
+case_020,current,E0601,Sleep Tests.3,not met,not met,True
+case_020,current,E0601,Sleep Tests.4,met,met,True
+case_020,current,E0601,I.C,met,met,True
+case_022,current,E0601,I.A,not met,not met,True
+case_022,current,E0601,I.B,met,met,True
+case_022,current,E0601,Sleep Tests.1,met,met,True
+case_022,current,E0601,Sleep Tests.3,met,met,True
+case_022,current,E0601,Sleep Tests.4,met,met,True
+case_022,current,E0601,I.C,insufficient information,insufficient information,True
+case_023,current,E0470,I.A,not met,not met,True
+case_023,current,E0470,I.B,met,met,True
+case_023,current,E0470,Sleep Tests.1,met,met,True
+case_023,current,E0470,Sleep Tests.3,met,met,True
+case_023,current,E0470,Sleep Tests.4,met,met,True
+case_023,current,E0470,I.C,insufficient information,insufficient information,True
+case_023,current,E0470,II.D,met,met,True
+case_024,current,E0601,I.A,met,met,True
+case_024,current,E0601,I.B,not met,not met,True
+case_024,current,E0601,Sleep Tests.1,met,met,True
+case_024,current,E0601,Sleep Tests.3,not met,not met,True
+case_024,current,E0601,Sleep Tests.4,insufficient information,insufficient information,True
+case_024,current,E0601,I.C,insufficient information,insufficient information,True
+case_025,current,E0470,I.A,met,met,True
+case_025,current,E0470,I.B,met,met,True
+case_025,current,E0470,Sleep Tests.1,met,met,True
+case_025,current,E0470,Sleep Tests.3,met,met,True
+case_025,current,E0470,Sleep Tests.4,met,met,True
+case_025,current,E0470,I.C,insufficient information,insufficient information,True
+case_025,current,E0470,II.D,met,met,True
+case_026,current,E0601,I.A,met,met,True
+case_026,current,E0601,I.B,met,met,True
+case_026,current,E0601,Sleep Tests.1,met,met,True
+case_026,current,E0601,Sleep Tests.3,met,met,True
+case_026,current,E0601,Sleep Tests.4,met,met,True
+case_026,current,E0601,I.C,met,met,True
+case_027,current,E0601,I.A,met,met,True
+case_027,current,E0601,I.B,met,met,True
+case_027,current,E0601,Sleep Tests.1,met,met,True
+case_027,current,E0601,Sleep Tests.3,met,met,True
+case_027,current,E0601,Sleep Tests.4,met,met,True
+case_027,current,E0601,I.C,met,met,True
+case_028,current,E0601,I.A,met,met,True
+case_028,current,E0601,I.B,met,met,True
+case_028,current,E0601,Sleep Tests.1,met,met,True
+case_028,current,E0601,Sleep Tests.3,met,met,True
+case_028,current,E0601,Sleep Tests.4,insufficient information,insufficient information,True
+case_028,current,E0601,I.C,met,met,True
+case_029,current,E0601,I.A,met,met,True
+case_029,current,E0601,I.B,met,met,True
+case_029,current,E0601,Sleep Tests.1,met,met,True
+case_029,current,E0601,Sleep Tests.3,met,met,True
+case_029,current,E0601,Sleep Tests.4,insufficient information,insufficient information,True
+case_029,current,E0601,I.C,met,met,True

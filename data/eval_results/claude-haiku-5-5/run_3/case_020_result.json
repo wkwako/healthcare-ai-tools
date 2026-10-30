@@ -1,0 +1,127 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for an E0601 CPAP device for suspected/treated obstructive sleep apnea, and L33718 is the PAP device policy that sets coverage criteria for E0601 (in-person evaluation, qualifying sleep test). The patient's sleep study showed AHI 3 with no significant OSA; the physician attributes nocturnal hypoxemia to COPD, so the OSA-based criteria are not met, but L33718 is still the LCD governing the E0601 order and its criteria would deny it. L33405 and L36902 address sleep testing rather than the CPAP device coverage.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R52",
+        "R184",
+        "R43",
+        "R53"
+      ],
+      "explanation": "Dr. Damaris45 Funk324, the treating practitioner, saw the patient in person on 2026-11-06 (R184 states 'seen in person for evaluation of possible obstructive sleep apnea'; R52 reason 'Snoring and possible sleep apnea'). The attended in-laboratory polysomnography was done afterward, on 2026-11-23 (R53).",
+      "evidence_ids": [
+        "6224b84c-bcd9-48b4-9e56-c886c90f555f",
+        "02cb0e72-7bd0-4c29-9151-6b4340cc1c3c",
+        "7c9e3f20-c357-420e-9c99-ce6b998b6d1f",
+        "ac0a4c8d-7843-48fb-bbc6-1fd29127d87c"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either (1) AHI or RDI greater than or equal to 15 events per hour with a minimum of 30 events, or (2) AHI or RDI greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia, or hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "not met",
+      "evidence": [
+        "R90",
+        "R168",
+        "R171",
+        "R176",
+        "R185"
+      ],
+      "explanation": "The sleep test AHI is 3 events/hour (R90, R176), with 20 apnea-hypopnea events over 6.5 hours of sleep (R168, R171). Neither alternative is satisfied: the AHI is below 5, so alternative 1 (AHI 15 or more) and alternative 2 (AHI 5 to 14) both fail. The record reports no RDI different from the AHI, and the report states 'No significant obstructive sleep apnea'.",
+      "evidence_ids": [
+        "af4b5eff-960c-4e08-88ad-312d88d2c51a",
+        "7c9a640a-b6df-4da9-bc39-75f603d10a59",
+        "29b39b25-d84a-4dc4-b510-7f4281118917",
+        "ba3717b8-9169-4361-bce3-ebeb24a0b81c",
+        "aaa7161e-88f8-4372-b002-f4d5f084bc10"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R83"
+      ],
+      "explanation": "R83 documents instruction on use and care of the CPAP device by the DME supplier, dated 2026-12-05.",
+      "evidence_ids": [
+        "bdb98465-c239-45fa-8dfe-29d9ea405e60"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R53",
+        "R176",
+        "R43"
+      ],
+      "explanation": "The sleep test was an attended in-laboratory polysomnography, a Type I facility-based study, performed with a sleep center technologist (R53, R176). Whether it otherwise meets the NCD validity requirements is not contradicted by the record, so this criterion is treated as satisfied.",
+      "evidence_ids": [
+        "ac0a4c8d-7843-48fb-bbc6-1fd29127d87c",
+        "ba3717b8-9169-4361-bce3-ebeb24a0b81c",
+        "7c9e3f20-c357-420e-9c99-ce6b998b6d1f"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "not met",
+      "evidence": [
+        "R90",
+        "R176",
+        "R168"
+      ],
+      "explanation": "The sleep test results (AHI 3 events/hour, 20 events over 6.5 hours) do not meet the AHI or RDI thresholds of I.B. The report states 'No significant obstructive sleep apnea' (R176).",
+      "evidence_ids": [
+        "af4b5eff-960c-4e08-88ad-312d88d2c51a",
+        "ba3717b8-9169-4361-bce3-ebeb24a0b81c",
+        "7c9a640a-b6df-4da9-bc39-75f603d10a59"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R43",
+        "R52",
+        "R184"
+      ],
+      "explanation": "The attended in-laboratory polysomnography order was placed by Dr. Damaris45 Funk324 (R43). Dr. Funk, the treating practitioner, also documented 'Ordered a sleep study' (R184).",
+      "evidence_ids": [
+        "7c9e3f20-c357-420e-9c99-ce6b998b6d1f",
+        "6224b84c-bcd9-48b4-9e56-c886c90f555f",
+        "02cb0e72-7bd0-4c29-9151-6b4340cc1c3c"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "Criterion I.B is not met because the sleep test AHI of 3 events/hour is below both the 15 events/hour threshold and the 5 to 14 events/hour threshold, and Sleep Tests.3 is not met for the same reason. Under the policy, a claim for E0601 that does not meet all of criteria A through C is denied as not reasonable and necessary. Criteria I.A, I.C, Sleep Tests.1 and Sleep Tests.4 are met, and the continued-coverage, replacement, oxygen, E0470 and refill sections do not apply to this initial order.",
+  "patient_file_sha256": "4efa564b94d675104888d33a768c393b96bd6ab31c4a666dbf951512e23d232c",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

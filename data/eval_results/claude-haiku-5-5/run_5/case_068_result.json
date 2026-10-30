@@ -1,0 +1,189 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L38398",
+  "selection_reason": "All three candidates are the same Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea policy issued by different MACs (L38398 First Coast, L38307 CGS, L38528 WPS), so any version covering the order applies. The order is for CPT 64582 hypoglossal nerve stimulator implantation for obstructive sleep apnea, and the patient has severe OSA (AHI 32, central/mixed apneas 8%, SpO2 nadir 86%), CPAP intolerance despite mask and pressure changes (7 of 30 nights, 1.8 h average), BMI 29.5 (under the typical threshold of 35), no contraindications documented, and drug-induced sleep endoscopy completed without complete concentric velum collapse. The candidate passages describe the device system and the policy covers this use, so L38398 is selected.",
+  "criteria": [
+    {
+      "criterion": "Covered Indications.1",
+      "policy_text": "Beneficiary is 22 years of age or older",
+      "verdict": "met",
+      "evidence": [
+        "R178",
+        "R179"
+      ],
+      "explanation": "The sleep medicine note of 2027-02-12 and the otolaryngology note of 2027-03-17 both document a 66 year-old male, which satisfies the age requirement.",
+      "evidence_ids": [
+        "119ee119-96db-4a66-b7b7-a0dae0ee7f9a",
+        "7cea4bee-5f09-40d6-a1eb-a633e7698600"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.2",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2",
+      "verdict": "met",
+      "evidence": [
+        "R127",
+        "R179"
+      ],
+      "explanation": "BMI was 29.5 kg/m2 on 2027-03-17 and the otolaryngologist records BMI 29.5 kg/m2, which is below 35.",
+      "evidence_ids": [
+        "bcd380ef-f6b8-4435-8a26-5ae91aa3b9e7",
+        "7cea4bee-5f09-40d6-a1eb-a633e7698600"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.3",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant",
+      "verdict": "met",
+      "evidence": [
+        "R77",
+        "R169",
+        "R78"
+      ],
+      "explanation": "An attended in-laboratory polysomnography (Type I) was performed on 2026-09-18. The first consultation for hypoglossal nerve stimulation was on 2027-02-12, about five months later, which is within 24 months.",
+      "evidence_ids": [
+        "272871f9-2f86-4a70-bf20-fdc036001cb1",
+        "865f9250-6c0d-494b-9ac2-f7939f0d19f0",
+        "acf17848-ea54-43e0-b2ac-b2ada3de9697"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.4",
+      "policy_text": "Beneficiary has predominantly obstructive events (central and mixed apneas less than 25% of the total AHI)",
+      "verdict": "met",
+      "evidence": [
+        "R133",
+        "R169"
+      ],
+      "explanation": "Central and mixed apneas were 8% of the total AHI on the 2026-09-19 study, which is below 25%.",
+      "evidence_ids": [
+        "a1b04c77-d6a7-4157-a8c5-730412ecf06f",
+        "865f9250-6c0d-494b-9ac2-f7939f0d19f0"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.5",
+      "policy_text": "AHI is 15 to 65 events per hour",
+      "verdict": "met",
+      "evidence": [
+        "R117",
+        "R169"
+      ],
+      "explanation": "AHI was 32 events per hour on the 2026-09-18 polysomnography, which falls within 15 to 65.",
+      "evidence_ids": [
+        "6f0b1f7c-7f34-47e2-960c-8f7b456fcd27",
+        "865f9250-6c0d-494b-9ac2-f7939f0d19f0"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6",
+      "policy_text": "Beneficiary has documentation that demonstrates CPAP failure (AHI greater than 15 despite CPAP usage) or CPAP intolerance (less than 4 hours per night, 5 nights per week, or the CPAP has been returned)",
+      "verdict": "met",
+      "evidence": [
+        "R118",
+        "R128",
+        "R68",
+        "R178",
+        "R179"
+      ],
+      "explanation": "The CPAP intolerance alternative applies. The device download shows an average of 1.8 hours on nights used and use on only 7 of the last 30 nights, which is below 4 hours per night and below 5 nights per week. The sleep medicine physician and the otolaryngologist both document CPAP intolerance despite mask refitting and pressure adjustment. The residual AHI on CPAP of 8 does not qualify as failure, so intolerance is the basis.",
+      "evidence_ids": [
+        "9192caaa-c32a-4739-8607-451f0631f973",
+        "9aeda329-9772-476e-8935-5a6457371493",
+        "49bf6768-03cd-48d6-bcf4-2bfcccec71dd",
+        "119ee119-96db-4a66-b7b7-a0dae0ee7f9a",
+        "7cea4bee-5f09-40d6-a1eb-a633e7698600"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6 (shared decision making)",
+      "policy_text": "Including shared decision making that the patient was intolerant of CPAP despite consultation with a sleep expert",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R178",
+        "R179"
+      ],
+      "explanation": "The record documents a consultation with a sleep medicine physician and the patient's reports of CPAP intolerance. It does not document a shared decision-making conversation between the attending provider and the patient about treatment options, such as continuing CPAP versus hypoglossal nerve stimulation. Under the policy's definition of shared decision making this element cannot be confirmed from the record.",
+      "evidence_ids": [
+        "119ee119-96db-4a66-b7b7-a0dae0ee7f9a",
+        "7cea4bee-5f09-40d6-a1eb-a633e7698600"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.7",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on a drug-induced sleep endoscopy (DISE) procedure",
+      "verdict": "met",
+      "evidence": [
+        "R170",
+        "R116",
+        "R80"
+      ],
+      "explanation": "The DISE report of 2027-04-04 states partial anteroposterior collapse at the soft palate with no complete concentric collapse.",
+      "evidence_ids": [
+        "41cc9b7a-04da-4a10-91fa-d538eb82e996",
+        "c3b1e5fc-8ffd-46f2-8b58-ebf35fef4080",
+        "8547bee9-d0ab-444a-9046-54a160bb9412"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.8",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4 on the standardized tonsillar hypertrophy grading scale)",
+      "verdict": "met",
+      "evidence": [
+        "R179",
+        "R170"
+      ],
+      "explanation": "The otolaryngology examination records tonsils size 1 on the Brodsky scale, with a supple neck and no masses. The DISE shows only partial collapse at the oropharynx, tongue base and soft palate, with no anatomical finding recorded as compromising the device.",
+      "evidence_ids": [
+        "7cea4bee-5f09-40d6-a1eb-a633e7698600",
+        "41cc9b7a-04da-4a10-91fa-d538eb82e996"
+      ]
+    },
+    {
+      "criterion": "Limitations.3",
+      "policy_text": "HGNS is not medically reasonable and necessary when any listed contraindication is present (for example central and mixed apneas over one-quarter of AHI, BMI 35 or greater, neuromuscular disease, hypoglossal-nerve palsy, severe pulmonary disease, uncontrolled hypertension, recent myocardial infarction, implanted device, MRI need, inability to operate the remote, or other sleep disorder)",
+      "verdict": "met",
+      "evidence": [
+        "R179",
+        "R127",
+        "R133",
+        "R120",
+        "R3",
+        "R73",
+        "R7"
+      ],
+      "explanation": "None of the listed contraindications is documented as present. The otolaryngology contraindication screen records no neuromuscular disease, hypoglossal nerve palsy, severe pulmonary disease, pulmonary arterial hypertension, severe valvular disease, heart failure, recent myocardial infarction or severe arrhythmia, serious mental illness, other sleep disorder, implanted device, anticipated MRI, or inability to operate the remote. BMI is 29.5 and central/mixed apneas are 8%. The asthma history with a 2026-02-17 emergency admission is not characterized as severe obstructive pulmonary disease in the record, and the attending documents no severe pulmonary disease. Blood pressure of 136/76 is documented as controlled. Pregnancy is not applicable to this male patient.",
+      "evidence_ids": [
+        "7cea4bee-5f09-40d6-a1eb-a633e7698600",
+        "bcd380ef-f6b8-4435-8a26-5ae91aa3b9e7",
+        "a1b04c77-d6a7-4157-a8c5-730412ecf06f",
+        "3becd134-79d8-dc95-e5be-11bbcb88162a",
+        "3becd134-79d8-dc95-5ceb-004afc122ae2",
+        "3becd134-79d8-dc95-d5a2-3c8b647a4187",
+        "3becd134-79d8-dc95-a06d-daf65d9dd23d"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "All applicable clinical criteria are met except the shared decision-making element of Covered Indications.6. The record documents CPAP intolerance and a sleep expert consultation but does not document a shared decision-making conversation between the attending provider and the patient, so coverage cannot be confirmed.",
+  "patient_file_sha256": "814abcec4ff31d1981cec8be8efa3f637433a86afbef85e91d1285e318b0f38f",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

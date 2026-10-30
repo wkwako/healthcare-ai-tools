@@ -1,0 +1,135 @@
+{
+  "order": "E0470",
+  "order_description": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is E0470, a bi-level device without backup rate, for moderate obstructive sleep apnea (AHI 22, SpO2 nadir 81%, sleep study 2026-12-15). L33718 governs PAP devices for OSA and expressly includes E0470 when used for OSA. L33800 covers E0470 for non-OSA conditions and refers OSA use to L33718. Under L33718, E0470 requires that an E0601 CPAP was tried and proved ineffective, and the record documents no CPAP trial, so the order as written would not meet that criterion.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R454",
+        "R989",
+        "R455"
+      ],
+      "explanation": "Dr. Adrienne302 Schiller186 saw the patient in person on 2026-11-28 for a visit reasoned as snoring and possible sleep apnea (R454). The note (R989) says the patient was seen in person for evaluation of possible obstructive sleep apnea. The Type I polysomnography followed on 2026-12-15 (R455), so the evaluation came before the sleep test.",
+      "evidence_ids": [
+        "d7b272e0-5b1c-48f9-97a7-d7ac0ee0c5ba",
+        "214251e5-71c9-4575-987e-843ba1ed852b",
+        "401c8cd3-908b-4c46-9cbe-003acee745c9"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either (1) AHI or RDI greater than or equal to 15 events per hour with a minimum of 30 events, or (2) AHI or RDI 5 to 14 per hour with a minimum of 10 events plus a qualifying comorbidity or symptom documentation.",
+      "verdict": "met",
+      "evidence": [
+        "R714",
+        "R889",
+        "R893",
+        "R910"
+      ],
+      "explanation": "Alternative 1 applies. The AHI is 22 events per hour (R714), with 143 total apnea and hypopnea events (R889) over 6.5 hours of sleep (R893), which is at least 2 hours. This satisfies the threshold of 15 or more events per hour with at least 30 events. Alternative 2 is not needed and does not apply, because the AHI is above 14.",
+      "evidence_ids": [
+        "d65c9550-0a81-4adc-a431-b3f6c48dd743",
+        "8968a2e4-1d50-42c5-acb7-a6fe789d6efa",
+        "794ca0ea-8480-4f89-8ee6-f925df263075",
+        "629a03f0-5d49-4d90-95c4-f149da0d200c"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R704"
+      ],
+      "explanation": "A record entry dated 2026-12-29 documents instruction on use and care of the bi-level respiratory assist device without backup rate given by the DME supplier.",
+      "evidence_ids": [
+        "f00a55a8-ad0b-4a29-8b0e-704f6c28f7b9"
+      ]
+    },
+    {
+      "criterion": "II.D",
+      "policy_text": "An E0601 has been tried and proven ineffective based on a therapeutic trial conducted in either a facility or in a home setting.",
+      "verdict": "not met",
+      "evidence": [
+        "R375",
+        "R990"
+      ],
+      "explanation": "The record contains no E0601 trial. The only positive airway pressure device ordered is the E0470 itself (R375), and the 2026-12-24 note orders the E0470 directly (R990). The diagnostic study was 2026-12-15 and the device instruction was 2026-12-29, so no therapeutic trial of any device could have occurred yet. The record therefore contradicts a documented failed E0601 trial, which is required before an E0470 is covered.",
+      "evidence_ids": [
+        "2e0e74d7-3fe5-47eb-ab2a-74be71a03a80",
+        "732f4097-f44f-449e-a5cb-bcc57212d739"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R455",
+        "R910",
+        "R374"
+      ],
+      "explanation": "The sleep test was an attended in-laboratory polysomnography, a Type I facility-based study (R455, R910, R374 completed). This is a qualifying sleep test type. Criteria about FDA device approval and the testing entity's provider status and state compliance are administrative and were not assessed.",
+      "evidence_ids": [
+        "401c8cd3-908b-4c46-9cbe-003acee745c9",
+        "629a03f0-5d49-4d90-95c4-f149da0d200c",
+        "d43c8fc8-93a3-4abe-9282-5c0f59d75f2a"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R714",
+        "R889",
+        "R910"
+      ],
+      "explanation": "The results (AHI 22 events per hour with 143 events) meet the AHI threshold of 15 or more per hour with at least 30 events, as detailed under I.B.",
+      "evidence_ids": [
+        "d65c9550-0a81-4adc-a431-b3f6c48dd743",
+        "8968a2e4-1d50-42c5-acb7-a6fe789d6efa",
+        "629a03f0-5d49-4d90-95c4-f149da0d200c"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary’s treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R374",
+        "R989"
+      ],
+      "explanation": "The attended in-laboratory polysomnography was ordered by Dr. Adrienne302 Schiller186 (R374). Dr. Schiller is the treating practitioner who evaluated the patient in person before the study (R989).",
+      "evidence_ids": [
+        "d43c8fc8-93a3-4abe-9282-5c0f59d75f2a",
+        "214251e5-71c9-4575-987e-843ba1ed852b"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "Criteria I.A, I.B, I.C and the sleep test criteria are met, but II.D is not met. E0470 is covered only after an E0601 has been tried and proven ineffective in a therapeutic trial, and the record documents no such trial. The E0470 was ordered directly after the first diagnostic sleep study, so the claim is denied as not reasonable and necessary.",
+  "patient_file_sha256": "2260d2c03bd8a42dc53588fe0443dd68cf40763fe42c179140e3ab37f7c2bace",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

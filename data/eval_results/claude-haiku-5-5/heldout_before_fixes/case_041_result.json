@@ -1,0 +1,28 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "none",
+  "selection_reason": "All three candidates are jurisdiction-specific MAC LCDs with the same title, and the record gives no state or MAC location (the address has no state), so the governing LCD cannot be determined. L38398 (First Coast) and L38307 (CGS) describe the three-component system that matches the order, and L38528 (WPS) describes a chest-sensor configuration. Separately, the 2026-12-18 otolaryngology note records NYHA class III chronic heart failure as a contraindication to hypoglossal nerve stimulation, which bears on coverage under whichever LCD applies.",
+  "decision": "insufficient information",
+  "criteria": [],
+  "decision_explanation": "None of the retrieved policies covers this order.",
+  "patient_file_sha256": "0588413e616b675c1cc729bff5b05342eaa3e0f00dce3ca36f24cf7b9e11c5e2",
+  "pipeline_sha256": "2239bbb686c070e9f4fb8170306548f275db87a431e5038837b9470d78573794"
+}

@@ -1,0 +1,131 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for an E0601 CPAP device, and L33718 is the PAP device policy that sets coverage criteria for E0601. The patient has obstructive sleep apnea. The record shows an in-person evaluation on 2026-10-15 before the 2026-10-29 sleep study, which meets criterion A. The sleep study reported AHI 5 with SpO2 nadir 82%, and the patient has essential hypertension. The exact sleep test criteria (1 or 2) are not fully quoted in the passages, so meeting criterion B depends on that text, which I could not verify. L33405 addresses sleep testing and device pressure types rather than E0601 coverage. L36902 requires AHI of at least 15 for a positive test, which this AHI of 5 does not meet on its own.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R145",
+        "R65",
+        "R66"
+      ],
+      "explanation": "On 2026-10-15 Dr. Cletus494 Paucek755 saw the patient in person (R145, 'seen in person for evaluation of possible obstructive sleep apnea') and evaluated for suspected OSA. The attended in-laboratory polysomnography followed on 2026-10-29 (R66), so the evaluation preceded the sleep test.",
+      "evidence_ids": [
+        "ba8dc2f0-e800-4892-922e-e0cff364091c",
+        "9f2157b3-dd79-4384-a5f4-895a08bf4fe3",
+        "b7f30be0-99cf-4ec6-9289-2cc19ebc7cb6"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either of the following criteria (1 or 2): 1. AHI or RDI >= 15 with minimum 30 events; or 2. AHI or RDI >= 5 and <= 14 with minimum 10 events and documentation of a. excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia; or b. hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R82",
+        "R134",
+        "R137",
+        "R140",
+        "R35",
+        "R50",
+        "R51",
+        "R52"
+      ],
+      "explanation": "Alternative 1 is not met because the AHI is 5 events/hour, below 15. Alternative 2 applies: the AHI of 5 falls within 5 to 14 and there are 32 apnea and hypopnea events, which exceeds the minimum of 10. Sub-criterion b is documented: essential hypertension is an active condition (R35), and the patient is on lisinopril, hydrochlorothiazide and amlodipine (R50 to R52). The record does not document daytime sleepiness, so sub-criterion a is not used.",
+      "evidence_ids": [
+        "9c4647b0-4a29-489d-9358-c0e8564b72b1",
+        "dff81e24-ba51-4b8f-b08c-bc40971975f6",
+        "30a92ce3-a08b-4452-a4e5-1a9daee8b5e1",
+        "3cd37c59-7c3c-44b6-b2ea-1144e06f78c9",
+        "3f0c90c7-2489-1306-4fa4-28d7047f2d91",
+        "3f0c90c7-2489-1306-6732-53c866394817",
+        "3f0c90c7-2489-1306-1d7f-4e009fc6ffac",
+        "3f0c90c7-2489-1306-585e-719c5fa945d9"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R81"
+      ],
+      "explanation": "The record documents on 2026-11-06 an instruction on use and care of a CPAP device given by the DME supplier (R81).",
+      "evidence_ids": [
+        "c7295404-2dc6-48ff-a285-1d761de0ab92"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R66",
+        "R140",
+        "R137"
+      ],
+      "explanation": "The sleep test was an attended in-laboratory polysomnography, a Type I facility-based study (R66, R140), with 6.5 hours of total sleep time recorded (R137). The study type is clinical and documented. The validity requirements beyond the study type are not itemized in the record, but the study type and sleep-time data are present.",
+      "evidence_ids": [
+        "b7f30be0-99cf-4ec6-9289-2cc19ebc7cb6",
+        "3cd37c59-7c3c-44b6-b2ea-1144e06f78c9",
+        "30a92ce3-a08b-4452-a4e5-1a9daee8b5e1"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R82",
+        "R134",
+        "R137",
+        "R140"
+      ],
+      "explanation": "The results (AHI 5 events/hour, 32 events over 6.5 hours of sleep) satisfy the AHI 5 to 14 alternative with at least 10 events and a documented hypertension comorbidity, as explained under I.B.",
+      "evidence_ids": [
+        "9c4647b0-4a29-489d-9358-c0e8564b72b1",
+        "dff81e24-ba51-4b8f-b08c-bc40971975f6",
+        "30a92ce3-a08b-4452-a4e5-1a9daee8b5e1",
+        "3cd37c59-7c3c-44b6-b2ea-1144e06f78c9"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R59",
+        "R145"
+      ],
+      "explanation": "The attended in-laboratory polysomnography order was placed by Dr. Cletus494 Paucek755, the treating practitioner (R59). The 2026-10-15 note records 'Ordered a sleep study' by the same practitioner (R145).",
+      "evidence_ids": [
+        "4954c956-064a-4134-98a6-182b50260560",
+        "ba8dc2f0-e800-4892-922e-e0cff364091c"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "All applicable criteria are met. The in-person evaluation preceded a Type I polysomnography that showed an AHI of 5 with 32 events. Alternative 2 of I.B is satisfied through documented essential hypertension. The treating practitioner ordered the sleep study, and the supplier gave use and care instruction. Excluded as administrative: the FDA device status and the provider qualification requirements of the Sleep Tests section, and the SWO, refill and proof-of-delivery rules. Continued coverage, oxygen, replacement, entering-Medicare and accessory sections do not apply to this initial E0601 order.",
+  "patient_file_sha256": "75b2d849395753b46ab4a826eb67b08387e3bb192fc733c234a81a8a4b8dc00c",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

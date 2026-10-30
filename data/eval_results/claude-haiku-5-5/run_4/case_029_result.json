@@ -1,0 +1,127 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 is the PAP device LCD that directly covers E0601 (CPAP) for obstructive sleep apnea. The patient meets its initial criteria: an in-person clinical evaluation by the treating practitioner (2026-04-11) preceded the sleep test (2026-04-30), and the home sleep test showed RDI 22 events/hour with 143 events, which satisfies the RDI threshold of at least 15 with a minimum of 30 events.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R191",
+        "R76",
+        "R77",
+        "R108"
+      ],
+      "explanation": "On 2026-04-11 Dr. Bea654 Schiller186 saw the patient in person for evaluation of possible obstructive sleep apnea (R191). The home sleep test was done later, on 2026-04-30 (R77), so the evaluation came before the sleep test.",
+      "evidence_ids": [
+        "f6c40ab8-45ec-4d68-a0d8-a52624a9ac71",
+        "39f5d460-cb41-437d-ab25-cf1fdb2cce0d",
+        "4bf2f908-7877-4d6b-b2b1-d31e2bbb1cc6",
+        "2eda8108-7294-43b1-9bf3-140e0f56b603"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or 2. AHI or RDI 5 to 14 with a minimum of 10 events plus documented symptoms or comorbidities.",
+      "verdict": "met",
+      "evidence": [
+        "R170",
+        "R176",
+        "R177",
+        "R184"
+      ],
+      "explanation": "Alternative 1 applies. The RDI is 22 events/hour, which is at least 15, and there were 143 apnea and hypopnea events, which is at least 30. The recording time was 6.5 hours, more than 2 hours, so the minimum-event adjustment for short recordings does not apply. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "6a15199b-fb66-415d-abcd-49b32711a2e9",
+        "ddefece1-d3f0-44f8-b47f-979d63acd58b",
+        "3d422f50-f448-4ef2-9c71-a1ab22c2f960",
+        "6d358d74-94bd-45a9-80d1-17d7bda35489"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R109"
+      ],
+      "explanation": "On 2026-05-18 the record documents instruction on use and care of the CPAP device given by the DME supplier.",
+      "evidence_ids": [
+        "a4e54e4e-42da-44a6-a162-a7ef8beb171e"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R184",
+        "R177",
+        "R176",
+        "R170"
+      ],
+      "explanation": "The sleep test is documented as a Type III, 4-channel home sleep apnea test with recording time, event counts and RDI. A home-based Type III study is an allowed sleep test type. The record does not contradict the technical validity requirements.",
+      "evidence_ids": [
+        "6d358d74-94bd-45a9-80d1-17d7bda35489",
+        "3d422f50-f448-4ef2-9c71-a1ab22c2f960",
+        "ddefece1-d3f0-44f8-b47f-979d63acd58b",
+        "6a15199b-fb66-415d-abcd-49b32711a2e9"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R170",
+        "R176",
+        "R177",
+        "R184"
+      ],
+      "explanation": "The RDI of 22 events/hour with 143 events over 6.5 hours meets the AHI/RDI criterion I.B.1 that applies to this claim, as explained under I.B.",
+      "evidence_ids": [
+        "6a15199b-fb66-415d-abcd-49b32711a2e9",
+        "ddefece1-d3f0-44f8-b47f-979d63acd58b",
+        "3d422f50-f448-4ef2-9c71-a1ab22c2f960",
+        "6d358d74-94bd-45a9-80d1-17d7bda35489"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R77",
+        "R191"
+      ],
+      "explanation": "The home sleep apnea test encounter lists Dr. Bea654 Schiller186 as the provider, and the 2026-04-11 note says only that sleep testing was discussed. Neither document records that the treating practitioner ordered the sleep test, which the policy requires as a specific action.",
+      "evidence_ids": [
+        "4bf2f908-7877-4d6b-b2b1-d31e2bbb1cc6",
+        "f6c40ab8-45ec-4d68-a0d8-a52624a9ac71"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "Criteria I.A, I.B, I.C and Sleep Tests.1 and .3 are met. Sleep Tests.4 is not documented, because the record shows sleep testing was discussed and the test was done with Dr. Bea654 Schiller186 but does not state that the treating practitioner ordered it. FDA status of the sleep test and the qualifications of the test provider were left out as administrative requirements that the clinical record would not document. Coverage cannot be confirmed until the ordering of the sleep test by the treating practitioner is documented.",
+  "patient_file_sha256": "5e633f9581ea30caf973d56dd1beb12217630849837c77d221087336ad548777",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}
