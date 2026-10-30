@@ -1,0 +1,119 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 (Positive Airway Pressure Devices for the Treatment of OSA) is the device policy governing E0601 CPAP. Its criteria for covering an E0601 are an in-person clinical evaluation before the sleep test (met: 2026-11-14 visit), and a qualifying sleep test (met: 2026-12-05 attended PSG with AHI 22/h, moderate OSA). The patient's record supports coverage under this policy, while L33405 and L36902 address sleep testing and related pressure modalities rather than the CPAP device coverage criteria.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R97",
+        "R259",
+        "R98"
+      ],
+      "explanation": "On 2026-11-14 Dr. Ignacio928 Cortés936, the treating practitioner, saw the patient in person (R259 states she was seen in person) to evaluate possible obstructive sleep apnea. The attended polysomnography was performed on 2026-12-05 (R98), after that evaluation.",
+      "evidence_ids": [
+        "0f0f38e8-6b2a-4bbb-af03-e6582a806661",
+        "390d54dc-67fd-4bd1-87b9-fff433a0c2ce",
+        "95593a27-11de-4b0e-a20f-d10b23a26f97"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either (1) AHI or RDI greater than or equal to 15 events per hour with a minimum of 30 events, or (2) AHI or RDI 5 to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, insomnia, hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R172",
+        "R243",
+        "R244",
+        "R249"
+      ],
+      "explanation": "Alternative 1 applies. The attended in-laboratory polysomnography (Type I) recorded an AHI of 22 events/h (R172) with 143 total apnea and hypopnea events over 6.5 hours of sleep (R243, R244). This meets AHI of at least 15 with at least 30 events. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "211f6564-fd57-4593-afcd-0eb645583299",
+        "bd7d4589-f3ae-4153-aeab-db7ef19380f3",
+        "4573a0a0-1567-49e0-a7a8-fa32f9ae5c8a",
+        "3dd92bb4-fa3c-4283-82c8-76f86b8af5d0"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R171"
+      ],
+      "explanation": "R171 records instruction on use and care of the CPAP device given by the DME supplier, dated 2026-12-25.",
+      "evidence_ids": [
+        "3fc58c5c-f5a6-476c-a2a2-3d190fdd2421"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R98",
+        "R249"
+      ],
+      "explanation": "The sleep test is named in the record as an attended in-laboratory polysomnography, a Type I facility-based study, which is a permitted sleep test type. It recorded 6.5 hours of sleep and countable events, which satisfy the usable-sleep-time requirement for AHI. The record does not separately itemize the NCD 240.4.1 validity checklist, but the named test type and recorded duration satisfy the criterion as documented.",
+      "evidence_ids": [
+        "95593a27-11de-4b0e-a20f-d10b23a26f97",
+        "3dd92bb4-fa3c-4283-82c8-76f86b8af5d0"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R172",
+        "R243",
+        "R249"
+      ],
+      "explanation": "The sleep test result (AHI 22 events/h with 143 events) meets the AHI of at least 15 with at least 30 events criterion, which is the criterion applicable to this claim as documented in the record.",
+      "evidence_ids": [
+        "211f6564-fd57-4593-afcd-0eb645583299",
+        "bd7d4589-f3ae-4153-aeab-db7ef19380f3",
+        "3dd92bb4-fa3c-4283-82c8-76f86b8af5d0"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R86",
+        "R259"
+      ],
+      "explanation": "R86 documents the attended in-laboratory polysomnography order placed on 2026-11-14 by Dr. Ignacio928 Cortés936. R259 states 'Ordered a sleep study.' Dr. Cortés is the treating practitioner who evaluated the patient in person and later ordered the CPAP.",
+      "evidence_ids": [
+        "0ae1f2e6-b1a0-4632-be11-97afb86fb831",
+        "390d54dc-67fd-4bd1-87b9-fff433a0c2ce"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "Every applicable criterion is met: the in-person evaluation preceded the sleep test (I.A), the Type I sleep test shows AHI 22 with 143 events, meeting B.1 (I.B), the supplier gave use and care instruction (I.C), and the sleep test type, results, and ordering practitioner meet Sleep Tests.1, .3 and .4. Sleep Tests.2 (FDA status of the test) and Sleep Tests.5 (provider qualification and state compliance) were excluded as administrative. The SWO, refill, humidifier, accessory, continued-coverage, replacement, oxygen and entering-Medicare sections were excluded because they do not govern the initial coverage of this E0601 order.",
+  "patient_file_sha256": "6dfd0f4ef1bdef4c933b3c487c3a92e5f3c8743899d4d709fcfd9e2944ec0bdf",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

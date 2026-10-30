@@ -1,0 +1,135 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "E0601 CPAP for obstructive sleep apnea is governed by the PAP Devices for OSA LCD (L33718), which sets the device coverage criteria. L33405 and L36902 govern sleep testing, not the CPAP device. This patient's AHI is 14 (5–14 range), so coverage under L33718 requires documented symptoms or comorbidities. The record supports this: Epworth score of 17 (excessive sleepiness), a history of myocardial infarction, and elevated blood pressure.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R49",
+        "R80",
+        "R152",
+        "R50"
+      ],
+      "explanation": "Dr. Kirlin saw the patient in person on 2026-03-12 to evaluate possible OSA. The visit documented snoring, witnessed apneas, ESS 17 and an airway exam. This was before the 2026-03-23 sleep study.",
+      "evidence_ids": [
+        "d9442b2e-1e7d-4cba-beb4-0eefb6421fcb",
+        "9c84635f-4078-4e60-907b-e36824ecc6e4",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f",
+        "54898869-acb3-47ed-b0f9-e80297f94875"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either: 1. AHI or RDI >= 15 events per hour with a minimum of 30 events; or 2. AHI or RDI >= 5 and <= 14 events per hour with a minimum of 10 events and documentation of a. excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia; or b. hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R82",
+        "R139",
+        "R143",
+        "R147",
+        "R102",
+        "R152",
+        "R11",
+        "R12"
+      ],
+      "explanation": "Alternative 2 applies. The Type I PSG showed AHI 14/h with 91 events over 6.5 hours, which exceeds the 10-event minimum. Excessive daytime sleepiness is documented by ESS 17 and dozing while reading and watching TV (2a). Ischemic heart disease is documented by a prior NSTEMI and history of MI (2b).",
+      "evidence_ids": [
+        "a779ef78-e321-407f-ac66-e4a118d85106",
+        "02d53a85-e49d-46f9-983f-b4abab78779f",
+        "43b95bd4-8570-41e4-8cc9-7b0636f7462c",
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "a0681564-f68e-4773-957b-00f96ac3b420",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f",
+        "49fd2675-243c-0fbf-e9ac-6bda7e72b43d",
+        "49fd2675-243c-0fbf-e0b3-12d375cc66fd"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R81"
+      ],
+      "explanation": "On 2026-04-09 the DME supplier documented instruction on the use and care of the CPAP device.",
+      "evidence_ids": [
+        "7fcbc1c8-4a0a-4ade-8940-a9f84a6a78e2"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article",
+      "verdict": "met",
+      "evidence": [
+        "R50",
+        "R147",
+        "R43"
+      ],
+      "explanation": "The patient had an attended in-laboratory polysomnography (Type I sleep study) on 2026-03-23. This is a recognized valid sleep test type.",
+      "evidence_ids": [
+        "54898869-acb3-47ed-b0f9-e80297f94875",
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "8dfe88f4-3ee7-41b2-b573-55af39f0eb05"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device",
+      "verdict": "met",
+      "evidence": [
+        "R147",
+        "R82",
+        "R139",
+        "R102",
+        "R11"
+      ],
+      "explanation": "AHI 14/h with 91 events, together with documented sleepiness and ischemic heart disease, meets criterion I.B.2.",
+      "evidence_ids": [
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "a779ef78-e321-407f-ac66-e4a118d85106",
+        "02d53a85-e49d-46f9-983f-b4abab78779f",
+        "a0681564-f68e-4773-957b-00f96ac3b420",
+        "49fd2675-243c-0fbf-e9ac-6bda7e72b43d"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner",
+      "verdict": "met",
+      "evidence": [
+        "R43",
+        "R152"
+      ],
+      "explanation": "Dr. Kirlin, the treating practitioner who evaluated the patient and ordered the CPAP, ordered the Type I PSG on 2026-03-12.",
+      "evidence_ids": [
+        "8dfe88f4-3ee7-41b2-b573-55af39f0eb05",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "Every applicable criterion for the E0601 is met. The patient had an in-person evaluation by the treating practitioner before the sleep test. The practitioner ordered a Type I PSG, which showed AHI 14/h with 91 events, and the record documents excessive daytime sleepiness and ischemic heart disease. The supplier provided instruction on use and care of the device.",
+  "patient_file_sha256": "670d068704565ef49c416758e9b72f450679424f3b7c4d17ca70e3b95022531d",
+  "pipeline_sha256": "627f4c73ad28537786ad213852e7b7e40376d9b9f536b1df4dbcee698290beb6"
+}

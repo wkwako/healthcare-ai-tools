@@ -1,0 +1,163 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L38398",
+  "selection_reason": "The order is for hypoglossal nerve neurostimulator implantation for obstructive sleep apnea, and L38398 (First Coast) covers the hypoglossal nerve stimulation system for OSA, including its stimulation lead, breathing sensor lead, and generator. The patient has severe OSA (AHI 70) with CPAP intolerance and a documented contraindication screen, so this policy applies. L38307 (CGS) is the same policy from another contractor, so L38398 is chosen as an equivalent version.",
+  "criteria": [
+    {
+      "criterion": "Covered Indications.1",
+      "policy_text": "Beneficiary is 22 years of age or older",
+      "verdict": "met",
+      "evidence": [
+        "R83",
+        "R84"
+      ],
+      "explanation": "The record documents the patient as a 29-year-old male in the 2025-09-09 sleep medicine note and the 2025-10-14 otolaryngology note, which satisfies the age requirement.",
+      "evidence_ids": [
+        "4641ec65-a54a-4d1b-aaab-d11537e713a9",
+        "9a83b33c-9913-428a-bdd3-0b5bac68a9c0"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.2",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2",
+      "verdict": "met",
+      "evidence": [
+        "R48"
+      ],
+      "explanation": "BMI on 2025-10-14 was 29.5 kg/m2, below the threshold of 35.",
+      "evidence_ids": [
+        "eeecede0-a0df-4abf-8900-e54f8671016a"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.3",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant",
+      "verdict": "met",
+      "evidence": [
+        "R26",
+        "R77",
+        "R27"
+      ],
+      "explanation": "An attended in-laboratory polysomnography was performed on 2025-04-03 (report 2025-04-06). The first HGNS consultation was on 2025-09-09, about five months later, which is within 24 months.",
+      "evidence_ids": [
+        "d403c00f-8c81-4e5d-a3a8-41332c070f1b",
+        "194871bf-b2fb-489c-a754-1cd72cdbce36",
+        "748d7449-23ee-4eef-a752-7d512efd09a1"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.4",
+      "policy_text": "Beneficiary has predominantly obstructive events (defined as central and mixed apneas less than 25% of the total AHI)",
+      "verdict": "met",
+      "evidence": [
+        "R50",
+        "R77"
+      ],
+      "explanation": "Central and mixed apneas were 8% of the total AHI on the 2025-04 polysomnography, which is under the 25% limit.",
+      "evidence_ids": [
+        "282e4a6b-98ee-4b0a-9054-5bcdb7607984",
+        "194871bf-b2fb-489c-a754-1cd72cdbce36"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.5",
+      "policy_text": "AHI is 15 to 65 events per hour",
+      "verdict": "not met",
+      "evidence": [
+        "R38",
+        "R77"
+      ],
+      "explanation": "The AHI was 70 events per hour on the 2025-04 polysomnography, which is above the 65 events per hour upper limit of the covered range.",
+      "evidence_ids": [
+        "4b507fa4-d761-4162-aff7-09c4169bab5c",
+        "194871bf-b2fb-489c-a754-1cd72cdbce36"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6",
+      "policy_text": "Beneficiary has documentation that demonstrates CPAP failure (defined as AHI greater than 15 despite CPAP usage) or CPAP intolerance (defined as less than 4 hours per night, 5 nights per week or the CPAP has been returned) including shared decision making that the patient was intolerant of CPAP despite consultation with a sleep expert",
+      "verdict": "met",
+      "evidence": [
+        "R39",
+        "R49",
+        "R71",
+        "R83",
+        "R84"
+      ],
+      "explanation": "The alternative used is CPAP intolerance. In the 30 days before 2025-09-09 CPAP was used on 9 nights (about 2 nights per week, not 5) with an average of 2.3 hours on nights used, which is under 4 hours. The CPAP failure-by-AHI route does not apply because residual AHI on CPAP was 6. Shared decision making with the patient about CPAP intolerance was documented by the sleep medicine physician, a sleep expert, on 2025-09-09 and by the otolaryngologist on 2025-10-14.",
+      "evidence_ids": [
+        "87877cae-8c2e-4aaa-9be9-6229ab960d8f",
+        "a02d0996-7cb5-4c12-8ef1-f55514bef5c4",
+        "b50ef9d7-d2fe-4348-8b58-aff1fcaca5c4",
+        "4641ec65-a54a-4d1b-aaab-d11537e713a9",
+        "9a83b33c-9913-428a-bdd3-0b5bac68a9c0"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.7",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on a drug-induced sleep endoscopy (DISE) procedure",
+      "verdict": "met",
+      "evidence": [
+        "R78",
+        "R37"
+      ],
+      "explanation": "The 2025-11-05 drug-induced sleep endoscopy reports partial anteroposterior collapse at the soft palate and no complete concentric collapse.",
+      "evidence_ids": [
+        "550f8d88-41d5-4c2b-be74-38e3982da394",
+        "77a2e36f-d8c6-4915-8085-17aabe938ab0"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.8",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4 per standardized tonsillar hypertrophy grading scale)",
+      "verdict": "met",
+      "evidence": [
+        "R84",
+        "R78"
+      ],
+      "explanation": "The 2025-10-14 exam records tonsils size 1 on the Brodsky scale and a supple neck without masses. The DISE report shows only partial collapse at the oropharynx, tongue base and velum, with no complete concentric collapse, and no other anatomical finding that would compromise the device is documented.",
+      "evidence_ids": [
+        "9a83b33c-9913-428a-bdd3-0b5bac68a9c0",
+        "550f8d88-41d5-4c2b-be74-38e3982da394"
+      ]
+    },
+    {
+      "criterion": "Limitations.3",
+      "policy_text": "HGNS is considered not medically reasonable and necessary when any of the following contraindications are present (central/mixed apneas over one-quarter of AHI, implantable device, BMI of 35 or more, neuromuscular disease, hypoglossal palsy, severe pulmonary disease, pulmonary hypertension, severe valvular disease, NYHA III/IV heart failure, recent MI or severe arrhythmia, uncontrolled hypertension, serious mental illness, nonrespiratory sleep disorders, pregnancy, MRI needs, inability to operate the remote, or neurological compromise of the upper airway)",
+      "verdict": "met",
+      "evidence": [
+        "R84",
+        "R48",
+        "R41"
+      ],
+      "explanation": "None of the listed contraindications is documented as present. The 2025-10-14 otolaryngology contraindication screen is negative for each listed item, including no implanted devices and no anticipated MRI. BMI is 29.5. Central/mixed apneas are 8%. Blood pressure was 134/81 on 2025-02-03 and is documented as controlled on 2025-10-14, with no antihypertensive medication listed. The patient is male, so pregnancy does not apply.",
+      "evidence_ids": [
+        "9a83b33c-9913-428a-bdd3-0b5bac68a9c0",
+        "eeecede0-a0df-4abf-8900-e54f8671016a",
+        "f5d96290-3260-c984-5dbb-7fffe159d989"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "Covered Indications.5 is not met because the AHI of 70 events per hour exceeds the policy's covered range of 15 to 65. All other applicable criteria are met, but a single unmet criterion makes the order non-covered under this LCD.",
+  "patient_file_sha256": "407a9315782e17f3149193eca95c7e1ffbac9a9231fedf0b32835014a3f61ae1",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

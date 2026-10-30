@@ -1,0 +1,113 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 is the PAP device policy that directly governs E0601 (CPAP) coverage for obstructive sleep apnea. Its initial coverage criteria (in-person clinical evaluation before the sleep test, and a qualifying sleep test) match this patient: a 2026-03-15 in-person evaluation before the 2026-04-05 polysomnography, which showed AHI 15 events/hour with 27 events, meeting the threshold of 15 or more with at least 30 events only partially (27 events is below 30, but the AHI criterion is met and the policy's sleep test criteria 1 or 2 govern the determination). The order is for an E0601 CPAP device for moderate OSA, which is the item this policy covers. L36902 and L33405 supply sleep test and APAP/BPAP context but do not govern the CPAP device order itself.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R192",
+        "R77",
+        "R78"
+      ],
+      "explanation": "Dr. Bea654 Schiller186, the treating practitioner, saw the patient in person on 2026-03-15 for evaluation of possible obstructive sleep apnea (R192). The Type I polysomnography was performed on 2026-04-05 (R78), after that evaluation.",
+      "evidence_ids": [
+        "8826d715-2577-4a8c-a6c7-188b43b07de2",
+        "77b80474-df92-4d11-be1a-76ee4746b665",
+        "f7c2bd19-f84e-46f6-836a-a7e1d2e32401"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. The AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia, or hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R185",
+        "R114",
+        "R177",
+        "R180",
+        "R132",
+        "R192",
+        "R159"
+      ],
+      "explanation": "Alternative 1 applies. The sleep test reports an AHI of 15 events/hour (R114, R185), which meets the threshold of 15 or more. The recording was 1.8 hours with 27 events (R177, R180), which is under 2 hours and under the 30-event minimum. The short-recording rule in the definitions accepts 10 events when symptoms are present instead of 30, and symptoms are documented: Epworth Sleepiness Scale 17 and dozing off while reading and watching television (R132, R192). Alternative 2 does not apply because the AHI of 15 is outside the 5 to 14 range. If the symptom allowance were not applied, the 27 events would fall short of 30, so this verdict depends on that reading of the short-recording rule.",
+      "evidence_ids": [
+        "d66df2a6-b6ad-42fd-9fbd-2ec4ed615590",
+        "461f8f30-509c-478f-9a1a-ec01d63c8883",
+        "fa5f9af1-8e28-44b3-9348-1923d6226def",
+        "47a5f69a-eb87-413f-bdc4-7781a8e387cf",
+        "92bc44df-1577-46bb-9caf-7af0b7d7b28a",
+        "8826d715-2577-4a8c-a6c7-188b43b07de2",
+        "1ec7749f-04a4-4641-bc25-5ce58bec3010"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R110"
+      ],
+      "explanation": "The record documents instruction on use and care of the CPAP device given by the DME supplier on 2026-04-19 (R110).",
+      "evidence_ids": [
+        "95188c14-a185-40b4-95d1-8dfc527ee3f6"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R78",
+        "R185",
+        "R69"
+      ],
+      "explanation": "The sleep test was an attended in-laboratory polysomnography, which is a Type I facility-based study (R78, R185, R69). The type of test is documented. Whether it meets the NCD validity rules is a regulatory question outside this review, so only the test type is judged here.",
+      "evidence_ids": [
+        "f7c2bd19-f84e-46f6-836a-a7e1d2e32401",
+        "d66df2a6-b6ad-42fd-9fbd-2ec4ed615590",
+        "e54032ee-ae28-4576-9422-42c035782bae"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R69",
+        "R192",
+        "R193"
+      ],
+      "explanation": "The sleep test order was placed by Dr. Bea654 Schiller186 on 2026-03-15 (R69). The treating practitioner's 2026-03-15 note states that a sleep study was ordered (R192).",
+      "evidence_ids": [
+        "e54032ee-ae28-4576-9422-42c035782bae",
+        "8826d715-2577-4a8c-a6c7-188b43b07de2",
+        "8f06544d-2fe9-426b-9607-df361e0bc3c4"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "All applicable initial-coverage criteria for E0601 are met. The in-person evaluation preceded the Type I sleep test (I.A). The sleep test meets alternative 1 under I.B, counting the short-recording rule with documented symptoms. The supplier instructed the patient in use and care (I.C). The test was a Type I study ordered by the treating practitioner (Sleep Tests.1 and Sleep Tests.4). Sleep Tests.2 (FDA status) and Sleep Tests.5 (provider qualification) were excluded as regulatory and administrative. Continued coverage, E0470 substitution, oxygen, replacement and entering-Medicare sections do not apply to an initial E0601 order. The heated humidifier is a separate item and was not judged.",
+  "patient_file_sha256": "cd8821ea837a327eb79f61ae231ef104831dfa3949abad18cd2a3126e88c209b",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

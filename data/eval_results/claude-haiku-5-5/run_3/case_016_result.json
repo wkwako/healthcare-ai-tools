@@ -1,0 +1,139 @@
+{
+  "order": "E0470",
+  "order_description": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for an E0470 bi-level device without backup rate for obstructive sleep apnea. L33718 covers E0470 for OSA when E0601 (CPAP) was tried and proven ineffective despite optimal therapy. The record shows a moderate OSA diagnosis (AHI 22 on a facility-based PSG), an in-person evaluation before the sleep test, CPAP started 2026-12-01 with mask refitting and re-titration, residual AHI 18 with 5.3 h/night use, and documented failure to meet therapeutic goals. L33800 is for restrictive, CSA/CompSA, hypoventilation, or COPD-related respiratory failure and directs OSA to the PAP LCD, so it does not govern this order.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R150",
+        "R67",
+        "R68"
+      ],
+      "explanation": "Applies to E0470 through section II, which requires criteria A-C. On 2026-10-30 Dr. Cletus494 Paucek755 saw the patient in person for evaluation of possible obstructive sleep apnea (R150, encounter R67). The attended polysomnography was on 2026-11-15 (R68), after that evaluation.",
+      "evidence_ids": [
+        "8b58c779-1e7d-4c52-ac25-1c452e6616d4",
+        "c833146b-52c6-4513-b66c-5f2ee3549b04",
+        "3e823617-5078-45b6-b80d-38098e6e94c5"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either of the following criteria (1 or 2): 1. AHI or RDI >= 15 events per hour with a minimum of 30 events; or 2. AHI or RDI 5-14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, insomnia, hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R85",
+        "R139",
+        "R142",
+        "R145"
+      ],
+      "explanation": "Alternative 1 applies. The AHI is 22 events/hour, which is at least 15, and there are 143 total apnea and hypopnea events, which is at least 30. The AHI was calculated over 6.5 hours of sleep, so no adjustment for a short recording is needed. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "9805e572-e1d3-4571-bd0a-a7b65daa68a4",
+        "3ddec54e-afba-434f-b6b4-8daaac3e2ef8",
+        "932a0a7e-e5fd-46e2-8fd4-ea83486b08c0",
+        "452a9521-b548-4cd9-9a2a-b9352fa8ca3b"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R84"
+      ],
+      "explanation": "On 2027-02-02 the DME supplier gave instruction on use and care of the bi-level respiratory assist device without backup rate, which is the E0470 device ordered in R62.",
+      "evidence_ids": [
+        "752fa220-528f-41f5-8e24-d92c800a20e5"
+      ]
+    },
+    {
+      "criterion": "II.D",
+      "policy_text": "An E0601 has been tried and proven ineffective based on a therapeutic trial conducted in either a facility or in a home setting. Ineffective is defined as documented failure to meet therapeutic goals using an E0601 during the titration portion of a facility-based study or during home use despite optimal therapy (i.e., proper mask selection and fitting and appropriate pressure settings).",
+      "verdict": "met",
+      "evidence": [
+        "R152",
+        "R132",
+        "R86",
+        "R59"
+      ],
+      "explanation": "The home E0601 trial started 2026-12-01 and ran 58 days. Residual AHI remained 18 events/hour, above the therapeutic goal, despite average use of 5.3 hours per night. The note documents that the mask was refitted to a full-face mask and pressure was retitrated without improvement, and that CPAP failed to meet therapeutic goals despite optimal therapy. This meets the definition of ineffective. The trial was under 3 months, so the switch to E0470 does not require a new in-person evaluation or new sleep test.",
+      "evidence_ids": [
+        "bbd9bed8-9b52-4dbd-88f4-3753b537bdae",
+        "88cf82fe-1552-4434-b838-6c8bd19dcfe4",
+        "3fd6faca-a792-4dc2-82b9-41d2e1322312",
+        "40fba058-6a2b-4640-8d60-498a5bb0fb20"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R68",
+        "R145",
+        "R142"
+      ],
+      "explanation": "The sleep test was an attended in-laboratory polysomnography, a Type I facility-based study, with a documented total sleep time of 6.5 hours. The test type is clinical and is met. Whether the study meets the NCD 240.4.1 validity rules is a regulatory matter outside this clinical review.",
+      "evidence_ids": [
+        "3e823617-5078-45b6-b80d-38098e6e94c5",
+        "452a9521-b548-4cd9-9a2a-b9352fa8ca3b",
+        "932a0a7e-e5fd-46e2-8fd4-ea83486b08c0"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R85",
+        "R139",
+        "R145"
+      ],
+      "explanation": "The sleep test results (AHI 22 events/hour with 143 events) meet the AHI criteria in I.B for the claim date, as described above.",
+      "evidence_ids": [
+        "9805e572-e1d3-4571-bd0a-a7b65daa68a4",
+        "3ddec54e-afba-434f-b6b4-8daaac3e2ef8",
+        "452a9521-b548-4cd9-9a2a-b9352fa8ca3b"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R60",
+        "R150"
+      ],
+      "explanation": "The attended in-laboratory polysomnography was ordered by Dr. Cletus494 Paucek755 (R60). The same physician evaluated the patient in person and documented ordering a sleep study (R150), so this is the treating practitioner.",
+      "evidence_ids": [
+        "5417e868-3d5b-47d9-8b31-ff023823390c",
+        "8b58c779-1e7d-4c52-ac25-1c452e6616d4"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "All applicable criteria are met: the in-person evaluation before the sleep test (I.A), a qualifying AHI with at least 30 events via alternative 1 (I.B), supplier instruction on the device (I.C), and documented failure of an E0601 home trial despite optimal therapy (II.D). The sleep test type and ordering practitioner are also documented (Sleep Tests.1, 3, 4). Sleep Tests.2 (FDA status of the test) and Sleep Tests.5 (provider qualification and state compliance) were left out because they are regulatory requirements. Continued coverage beyond three months, oxygen, replacement, accessories, humidifier, refill and order-documentation rules were left out because they do not apply to this initial E0470 order.",
+  "patient_file_sha256": "beeb8c1381fbaf601f8510e11d8d0a4ee5ab394d692a18935bdab379d4a01703",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

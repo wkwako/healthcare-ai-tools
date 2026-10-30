@@ -1,0 +1,28 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "none",
+  "selection_reason": "The order (CPT 64582, HGNS implant for severe OSA with AHI 70, CPAP intolerance, and a DISE showing partial collapse) is within the scope of the HGNS-for-OSA topic, but no candidate can be confirmed as the governing LCD. The record lists the patient as uninsured, with no Medicare coverage or state of residence, so the contractor jurisdiction cannot be determined. L38398 (First Coast) and L38307 (CGS) have identical text and cannot be told apart by content, and the L38528 (WPS) description of a chest-placed sensor lead does not match the three-component system in the order.",
+  "decision": "insufficient information",
+  "criteria": [],
+  "decision_explanation": "None of the retrieved policies covers this order.",
+  "patient_file_sha256": "c7ca5392c2f43f3208ccb3209f9b1e14237f90b8e8dd17f11480ed2012ec2d6d",
+  "pipeline_sha256": "2239bbb686c070e9f4fb8170306548f275db87a431e5038837b9470d78573794"
+}

@@ -1,0 +1,151 @@
+{
+  "order": "E0470",
+  "order_description": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for an E0470 bi-level device without backup rate for obstructive sleep apnea. L33718 governs E0470 for OSA and requires that an E0601 CPAP was tried and proven ineffective, defined as documented failure to meet therapeutic goals despite optimal therapy (proper mask selection and fitting, appropriate pressure settings). The record shows a 2026-08-26 PSG with AHI 22 and 143 events, an in-person evaluation before the sleep test, CPAP started 2026-09-06, and a 2026-11-06 note documenting residual AHI 18, a mask refit to full-face, pressure retitration, and persistent symptoms. L33800 covers E0470 for central, complex, restrictive, or hypoventilation disorders and does not apply to this OSA-only presentation, and L33405 addresses sleep testing rather than device coverage.",
+  "criteria": [
+    {
+      "criterion": "I.A (applies to E0470 via II)",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "not met",
+      "evidence": [
+        "R79",
+        "R178",
+        "R77",
+        "R176",
+        "R80"
+      ],
+      "explanation": "The only evaluation for obstructive sleep apnea before the sleep test on 2026-08-25 was a video (telemedicine) visit on 2026-08-04. The record states the patient was seen by video visit and the exam was limited to what was visible on video, which contradicts the in-person requirement. The in-person general examination on 2026-07-06 by Dr. Tomas Menendez did not assess for sleep apnea, and the treating practitioner's OSA encounters were not in person.",
+      "evidence_ids": [
+        "b7cfcb79-3975-4103-a1d0-cbc4daf64fb7",
+        "de055498-1834-48ca-ae95-4ced2e84acf0",
+        "3becd134-79d8-dc95-32c9-43822b82b3d1",
+        "911786d0-4340-3e0a-0773-b8095e9e5ea4",
+        "d4fe71fd-f4ae-4bed-8d9b-c7d97f344b1c"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either of the following criteria (1 or 2): 1. The AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia, or hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R119",
+        "R163",
+        "R167",
+        "R170",
+        "R80"
+      ],
+      "explanation": "Alternative 1 applies. The attended in-laboratory polysomnography on 2026-08-25 recorded an AHI of 22 events per hour with 143 total events over 6.5 hours of sleep, which is at least 15 per hour with at least 30 events.",
+      "evidence_ids": [
+        "8b4f26ad-3325-4aea-a177-286514dc1adb",
+        "f30ce5d6-3726-49b4-9d6b-5af1f84b487f",
+        "7aedc350-72dc-431f-83ca-196625f4c06a",
+        "9a53557b-cfd7-4b08-9633-a361c985947c",
+        "d4fe71fd-f4ae-4bed-8d9b-c7d97f344b1c"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R68",
+        "R120",
+        "R180"
+      ],
+      "explanation": "The record shows a home CPAP unit and a device download with average nightly use, but it does not document that the supplier instructed the beneficiary or caregiver in proper use and care of the equipment.",
+      "evidence_ids": [
+        "a0bb4415-543a-443c-9d2a-7c437c55abd6",
+        "af14b5a1-9cb4-4525-a5b7-367551061157",
+        "3e5942fa-3543-4a57-a5e6-fa9cd4108f9b"
+      ]
+    },
+    {
+      "criterion": "II.D",
+      "policy_text": "An E0601 has been tried and proven ineffective based on a therapeutic trial conducted in either a facility or in a home setting. Ineffective is defined as documented failure to meet therapeutic goals using an E0601 during the titration portion of a facility-based study or during home use despite optimal therapy (i.e., proper mask selection and fitting and appropriate pressure settings).",
+      "verdict": "met",
+      "evidence": [
+        "R70",
+        "R180",
+        "R156",
+        "R120"
+      ],
+      "explanation": "A CPAP (E0601) home trial started 2026-09-06 and ran about 61 days. Despite average use of 5.6 hours per night, residual AHI remained 18 events per hour. The mask was refitted to a full-face mask and pressure was retitrated without improvement, and the practitioner documented failure to meet therapeutic goals despite optimal therapy. This meets the definition of ineffective.",
+      "evidence_ids": [
+        "ac523bc5-c82c-4e21-9cb8-07da32850715",
+        "3e5942fa-3543-4a57-a5e6-fa9cd4108f9b",
+        "91d76a6b-a89d-4cbd-8605-162372327834",
+        "af14b5a1-9cb4-4525-a5b7-367551061157"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R80",
+        "R170",
+        "R69"
+      ],
+      "explanation": "The record names an attended in-laboratory polysomnography (Type I sleep study) performed on 2026-08-25 with a completed report of the results, which is the sleep test type the policy requires for a valid diagnostic study.",
+      "evidence_ids": [
+        "d4fe71fd-f4ae-4bed-8d9b-c7d97f344b1c",
+        "9a53557b-cfd7-4b08-9633-a361c985947c",
+        "57b00953-4fce-4841-822f-9a0481827002"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R119",
+        "R163",
+        "R167",
+        "R170"
+      ],
+      "explanation": "The Type I study results (AHI 22 events per hour, 143 events over 6.5 hours) satisfy criterion I.B.1 for the date of service.",
+      "evidence_ids": [
+        "8b4f26ad-3325-4aea-a177-286514dc1adb",
+        "f30ce5d6-3726-49b4-9d6b-5af1f84b487f",
+        "7aedc350-72dc-431f-83ca-196625f4c06a",
+        "9a53557b-cfd7-4b08-9633-a361c985947c"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R69",
+        "R178"
+      ],
+      "explanation": "The attended polysomnography order on 2026-08-04 was placed by Dr. Marth98 Mayer370, the treating practitioner, and the 2026-08-04 note documents the decision to order a sleep study.",
+      "evidence_ids": [
+        "57b00953-4fce-4841-822f-9a0481827002",
+        "de055498-1834-48ca-ae95-4ced2e84acf0"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "Criterion I.A is not met because the only obstructive sleep apnea evaluation before the sleep test was a video visit rather than an in-person evaluation. Because criteria A through D must all be met for an E0470, the order is denied even though the sleep test, the trial failure, and the ordering criteria are met and the instruction criterion (I.C) is undocumented.",
+  "patient_file_sha256": "634fbf60b0a2406f16ddf0bc25aed94c3bb1e5a7aba4e2dd8f16e37783a1b7f1",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

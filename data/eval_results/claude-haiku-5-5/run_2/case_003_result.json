@@ -1,0 +1,91 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 (Positive Airway Pressure Devices for the Treatment of OSA) directly governs E0601 CPAP coverage for obstructive sleep apnea. Its criteria A-C (in-person clinical evaluation before the sleep test, qualifying sleep test, and related requirements) map to this patient: an in-person evaluation on 2026-08-10 preceded the home sleep test on 2026-08-31, which showed RDI 15 events/hour with 98 events over 6.5 hours, meeting the RDI of at least 15 threshold in L36902 and moderate OSA. The order is for E0601 CPAP, which L33718 covers directly.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R174",
+        "R77",
+        "R78"
+      ],
+      "explanation": "On 2026-08-10 Dr. Marth98 Mayer370, the treating practitioner, saw the patient in person for evaluation of possible obstructive sleep apnea (R174, encounter R77). The home sleep apnea test was performed afterward on 2026-08-31 (R78), so the evaluation came before the sleep test.",
+      "evidence_ids": [
+        "e17e5152-17a4-43bb-93f5-812aebf99f68",
+        "75ccbb0a-82dd-4d8b-8d3e-f7bf5c0a9921",
+        "efdf622a-dddd-4aff-8119-f3ca6a4ccb9a"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. The apnea-hypopnea index (AHI) or Respiratory Disturbance Index (RDI) is greater than or equal to 15 events per hour with a minimum of 30 events; or, 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia; or hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R152",
+        "R159",
+        "R160",
+        "R166",
+        "R78"
+      ],
+      "explanation": "Alternative 1 applies. The Type III home sleep test of 2026-08-31 reported an RDI of 15 events per hour, which meets the threshold of 15 or more. It recorded 98 apnea and hypopnea events over 6.5 hours, which exceeds the minimum of 30 events and the 2-hour recording minimum. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "4f80447b-eefa-4f9e-9a92-8cf94e7817bb",
+        "60713b91-2d02-423f-ae32-9124e3800937",
+        "15fa82cf-e1ea-41e7-bdd2-8c0969d95af2",
+        "ad95b783-7f83-4780-8640-5edd8d7d245c",
+        "efdf622a-dddd-4aff-8119-f3ca6a4ccb9a"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R116"
+      ],
+      "explanation": "The record documents instruction on use and care of the CPAP device given by the DME supplier on 2026-09-13.",
+      "evidence_ids": [
+        "a9a0e9b3-edfc-451c-adb9-51530eb46237"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R68",
+        "R174"
+      ],
+      "explanation": "The home sleep apnea test order was placed by Dr. Marth98 Mayer370, the treating practitioner, as recorded in R68. The 2026-08-10 note states 'Ordered a sleep study' (R174).",
+      "evidence_ids": [
+        "9a87d130-0835-4b98-a645-19ccf46fbd65",
+        "e17e5152-17a4-43bb-93f5-812aebf99f68"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "All applicable criteria for an E0601 CPAP device are met. The patient had an in-person evaluation by the treating practitioner before a Type III home sleep test. The test showed an RDI of 15 events per hour with 98 events, which meets the initial-coverage threshold. The treating practitioner ordered the test, and the DME supplier gave instruction on use and care. The E0470, continued-coverage, replacement, oxygen and beneficiary-entering-Medicare sections do not apply to this initial E0601 order.",
+  "patient_file_sha256": "79d73fe9b59a7decad709ee7d06088961a432c4a1e7e54cdc184a64c913b36a0",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

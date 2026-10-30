@@ -1,0 +1,111 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 (Positive Airway Pressure Devices for the Treatment of OSA) directly governs E0601 CPAP devices. The patient has a diagnosis of obstructive sleep apnea confirmed by in-laboratory polysomnography (AHI 22 events/hour, moderate OSA), an in-person clinical evaluation by the treating practitioner (video visit 2026-10-04 is telemedicine, but the 2026-11-03 follow-up and the prior sleep test support coverage criteria), and a sleep test meeting the threshold; the policy's criteria A-C for E0601 coverage align with this record. L36902 and L33405 address sleep testing and general PAP/BPAP considerations rather than the E0601 device coverage criteria.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "not met",
+      "evidence": [
+        "R77",
+        "R159",
+        "R74",
+        "R75",
+        "R76"
+      ],
+      "explanation": "The only documented evaluation for suspected OSA by the treating practitioner (Dr. Chang901) before the 2026-10-21 sleep test was a video telemedicine visit on 2026-10-04 (R77, tagged VR), where the exam was limited to what was visible on video (R159). The in-person encounters with Dr. Chang901 before the sleep test (R74, R75, R76) were for dependent drug abuse and do not document an OSA assessment. The record therefore contradicts the in-person requirement for the OSA evaluation.",
+      "evidence_ids": [
+        "fa820ce7-ba9b-43a1-8442-5c50f79edbcb",
+        "883577dd-2be2-4e09-be15-2f0871bad5ef",
+        "c0f85a14-440d-79b8-62d5-5646e15fe53d",
+        "c0f85a14-440d-79b8-e7ef-291ec1d77890",
+        "c0f85a14-440d-79b8-8485-a376fffa0840"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either: (1) AHI or RDI greater than or equal to 15 events per hour with a minimum of 30 events; or (2) AHI or RDI 5 to 14 events per hour with a minimum of 10 events plus documented symptoms or comorbidities.",
+      "verdict": "met",
+      "evidence": [
+        "R104",
+        "R146",
+        "R147",
+        "R150",
+        "R131"
+      ],
+      "explanation": "Alternative 1 applies. The attended in-laboratory PSG on 2026-10-22 recorded an AHI of 22 events/hour with 143 total apnea and hypopnea events over 6.5 hours of sleep (R104, R146, R147, R150). This is at least 15 events/hour with at least 30 events. Because the sleep time exceeds 2 hours, no adjustment is needed. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "851ff8c5-cde5-45f6-866b-81274ff5561a",
+        "17885f8e-bd9f-4ab0-aa6b-f356a64426ae",
+        "90514f04-b34d-4d21-b646-ec477de27a84",
+        "8c31aaf7-8c58-4d52-941c-514552ea25bc",
+        "539c1bcb-60fa-424e-818f-2c7aadcb556a"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R103"
+      ],
+      "explanation": "The record documents instruction on use and care of the CPAP device given by the DME supplier, dated 2026-11-07 (R103). The criterion is satisfied.",
+      "evidence_ids": [
+        "5c818adc-e3b3-408e-b38d-d8ccdefcf40f"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R78",
+        "R150",
+        "R67"
+      ],
+      "explanation": "The sleep test was an attended in-laboratory polysomnography, which is a Type I facility-based study (R78, R150, R67). This is one of the permitted test types. The record does not indicate any problem with the test's validity. The FDA-status and provider-qualification elements of this section are regulatory and are excluded here.",
+      "evidence_ids": [
+        "6d9702e3-7f95-4aa2-af91-da7b94ecebe5",
+        "8c31aaf7-8c58-4d52-941c-514552ea25bc",
+        "4384d9cb-bbfa-46a8-b952-abdf728b3c40"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R67",
+        "R159"
+      ],
+      "explanation": "Dr. Chang901, the treating practitioner, ordered the attended in-laboratory polysomnography (R67). The 2026-10-04 video visit note documents the order for the sleep study (R159).",
+      "evidence_ids": [
+        "4384d9cb-bbfa-46a8-b952-abdf728b3c40",
+        "883577dd-2be2-4e09-be15-2f0871bad5ef"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "Criterion I.A is not met. The only documented OSA evaluation by the treating practitioner before the sleep test was a video visit, not the required in-person evaluation. Under the policy, a claim for an E0601 where all criteria are not met is denied as not reasonable and necessary. Criteria I.B, I.C, Sleep Tests.1 and Sleep Tests.4 are met.",
+  "patient_file_sha256": "fcd697ef9d581e2382096068654b93080b7fddb84754ce3856e13fee3e076185",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

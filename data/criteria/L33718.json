@@ -54,13 +54,15 @@
       "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device; and,",
       "check": "The sleep test results meet the AHI/RDI criteria (same test as I.B).",
       "evidence": ["Same as I.B"],
-      "notes": "Restates I.B, so its verdict should match I.B. Kept as its own item because the model is likely to judge it separately."
+      "restates": "I.B",
+      "notes": "Restates I.B, so its verdict should match I.B. Kept as its own item because the model is likely to judge it separately. A model that leaves it out (having judged I.B) is not penalized; a model that judges it is scored as usual."
     },
     {
       "id": "Sleep Tests.4",
       "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner; and,",
       "check": "The sleep test was ordered by the patient's treating practitioner.",
-      "evidence": ["ServiceRequest: sleep study, with requester", "DiagnosticReport: link to that order"]
+      "evidence": ["ServiceRequest: sleep study, with requester", "DiagnosticReport: link to that order"],
+      "notes": "The order itself must be recorded. The treating practitioner discussing the test, or being listed on the test encounter (a sleep physician who runs the test), is not an order: insufficient information."
     },
     {
       "id": "I.C",
@@ -74,7 +76,7 @@
       "policy_text": "An E0601 has been tried and proven ineffective based on a therapeutic trial conducted in either a facility or in a home setting. Ineffective is defined as documented failure to meet therapeutic goals using an E0601 during the titration portion of a facility-based study or during home use despite optimal therapy (i.e., proper mask selection and fitting and appropriate pressure settings).",
       "check": "A CPAP (E0601) trial, in a facility titration or at home, is documented as failing to meet therapeutic goals despite proper mask fit and pressure settings.",
       "evidence": ["Device or Procedure: CPAP trial or titration study", "Observation or note: failure to meet therapeutic goals", "Note: mask fitting and pressure settings were optimized"],
-      "notes": "E0470 only. Simply having used a CPAP is not enough; the record must show it failed despite optimal therapy. This is the cross-document dependency the project highlights: E0470 depends on an E0601 history."
+      "notes": "E0470 only. Simply having used a CPAP is not enough; the record must show it failed despite optimal therapy. This is the cross-document dependency the project highlights: E0470 depends on an E0601 history. An E0470 ordered at the visit where OSA is first diagnosed, with no CPAP use recorded, is insufficient information: the timeline suggests no trial took place, but the record never says a CPAP wasn't tried elsewhere. Where two readings are defensible, the answer key takes 'insufficient information' (it sends the user to check rather than deciding either way)."
     },
     {
       "id": "Initial Coverage",

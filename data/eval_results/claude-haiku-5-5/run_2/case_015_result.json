@@ -1,0 +1,127 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 is the PAP device LCD that directly covers E0601 CPAP for obstructive sleep apnea. Its initial coverage criteria A-C (in-person evaluation before the sleep test, a qualifying sleep test, and related requirements) match this patient: a 2026-02-27 in-person evaluation preceded the 2026-03-07 polysomnography showing AHI 22 events/hour, which is moderate OSA, and the order is for E0601 CPAP. L36902 and L33405 address sleep testing and BPAP/APAP, not the E0601 device coverage criteria.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R151",
+        "R48",
+        "R49"
+      ],
+      "explanation": "On 2026-02-27, Dr. Irene779 Kirlin939 (the treating practitioner who later ordered the CPAP) saw the patient in person for evaluation of possible obstructive sleep apnea. The attended in-laboratory polysomnography followed on 2026-03-07, so the evaluation preceded the sleep test.",
+      "evidence_ids": [
+        "53b78d21-694d-4e8f-aae4-089c3608b1ea",
+        "0b78bf06-c37d-4292-9d3d-5c80f893330e",
+        "fd817336-a2af-4085-8eff-55f80e58c8a8"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either of the following criteria (1 or 2): 1. The AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or 2. The AHI or RDI is 5 to 14 events per hour with a minimum of 10 events and documentation of a related symptom or comorbidity.",
+      "verdict": "met",
+      "evidence": [
+        "R81",
+        "R138",
+        "R142",
+        "R146"
+      ],
+      "explanation": "Alternative 1 applies. The AHI is 22 events/h, which is at least 15, and there are 143 total apnea and hypopnea events, which exceeds the minimum of 30. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "144b5ca7-72e4-430d-a202-1a846783efe8",
+        "9f39a644-7311-4ea6-b7bd-fa1d4ff1882c",
+        "1327edf8-3f9f-4cd5-a708-11b93cf9ba29",
+        "6ecd2476-7ac4-4276-b000-2a5182f0bea8"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R80"
+      ],
+      "explanation": "On 2026-03-25 the record documents instruction on use and care of the CPAP device by the DME supplier.",
+      "evidence_ids": [
+        "dbece15b-e53e-48a9-8a20-22f0546acfa0"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R49",
+        "R146",
+        "R142",
+        "R81",
+        "R138"
+      ],
+      "explanation": "The study was an attended in-laboratory polysomnography, which is a Type I facility-based study. The record documents 6.5 hours of sleep time and a scored AHI, which meets the sleep-time requirement for a valid test. Billing and coding rules are excluded from this assessment.",
+      "evidence_ids": [
+        "fd817336-a2af-4085-8eff-55f80e58c8a8",
+        "6ecd2476-7ac4-4276-b000-2a5182f0bea8",
+        "1327edf8-3f9f-4cd5-a708-11b93cf9ba29",
+        "144b5ca7-72e4-430d-a202-1a846783efe8",
+        "9f39a644-7311-4ea6-b7bd-fa1d4ff1882c"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R81",
+        "R138",
+        "R142"
+      ],
+      "explanation": "The results (AHI 22 events/h with 143 events over 6.5 hours) satisfy I.B.1, as analyzed above.",
+      "evidence_ids": [
+        "144b5ca7-72e4-430d-a202-1a846783efe8",
+        "9f39a644-7311-4ea6-b7bd-fa1d4ff1882c",
+        "1327edf8-3f9f-4cd5-a708-11b93cf9ba29"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R48",
+        "R151",
+        "R49"
+      ],
+      "explanation": "The 2026-02-27 note by the treating practitioner says only 'Discussed sleep testing,' and the polysomnography entry lists a sleep center technologist and no ordering practitioner. Discussion is not the same as ordering, and the record contains no documented order for the sleep test by the treating practitioner.",
+      "evidence_ids": [
+        "0b78bf06-c37d-4292-9d3d-5c80f893330e",
+        "53b78d21-694d-4e8f-aae4-089c3608b1ea",
+        "fd817336-a2af-4085-8eff-55f80e58c8a8"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "The E0601 initial criteria I.A, I.B and I.C are met, and the sleep test is valid and meets the AHI/RDI threshold. However, the record does not document that the treating practitioner ordered the sleep test (Sleep Tests.4), which is a required element for PAP coverage. Only discussion of sleep testing is recorded, so the decision is insufficient information.",
+  "patient_file_sha256": "db3402a2b888aab82a232ce5178f0b86c19eb0a686115b73b970607e27d6f4ba",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

@@ -1,0 +1,89 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 (Positive Airway Pressure Devices for the Treatment of Obstructive Sleep Apnea) directly governs E0601 CPAP devices. Its initial coverage criteria cover an E0601 for OSA when an in-person clinical evaluation precedes the sleep test and the sleep test meets the stated criteria. The patient has OSA diagnosed on a 2026-12-08 attended polysomnography (AHI 22, moderate), with an in-person evaluation by the treating physician (2026-12-18). L33405 and L36902 address sleep testing and related PAP concepts but not the E0601 device coverage criteria.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "not met",
+      "evidence": [
+        "R86",
+        "R97",
+        "R257"
+      ],
+      "explanation": "The polysomnography was ordered on 2026-11-27 (R86) and performed on 2026-12-08 (R97). The only documented evaluation of the sleep complaints is the 2026-12-18 visit (R257), which occurred after the sleep test and is described as the first visit to evaluate the sleep complaints. No in-person evaluation for OSA before the sleep test is documented, and the record contradicts one.",
+      "evidence_ids": [
+        "f8dfb740-1fd8-4ab7-9b6e-69599eb1948a",
+        "0df1e633-0ce9-4b9e-8526-758a6d037481",
+        "277d9604-2c30-4d86-bd70-adf041c938a3"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either (1) AHI or RDI greater than or equal to 15 events per hour with a minimum of 30 events, or (2) AHI or RDI 5 to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, insomnia, hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R170",
+        "R241",
+        "R242",
+        "R247"
+      ],
+      "explanation": "Alternative 1 is satisfied: AHI is 22 events/hour with 143 total events over 6.5 hours of sleep (R170, R241, R242, R247). Sleep time is at least 2 hours, so no minimum-event adjustment applies. Alternative 2 is not needed. The test was an attended in-laboratory polysomnography (Type I facility-based study) per R86, R97 and R247.",
+      "evidence_ids": [
+        "d1952004-2983-4f62-b977-6301903dd0b3",
+        "4a61c9a2-d60f-40f8-8a11-73e84c4b22c3",
+        "a44f4fb9-bc95-49a2-8194-51e64e8b0271",
+        "32b6ee9c-930d-48af-8407-5dc91dc88e62"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R87"
+      ],
+      "explanation": "The CPAP order was sent to a DME supplier (R257, R87). The record does not document that the supplier has given the beneficiary or a caregiver instruction in proper use and care of the equipment.",
+      "evidence_ids": [
+        "bbbe96ad-2366-467d-8751-9c5c3b948a3b"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R86",
+        "R257"
+      ],
+      "explanation": "The attended in-laboratory polysomnography was ordered by Dr. Ignacio928 Cortés936 (R86). Dr. Cortés is the treating practitioner who reviewed the results and ordered the CPAP device (R257).",
+      "evidence_ids": [
+        "f8dfb740-1fd8-4ab7-9b6e-69599eb1948a",
+        "277d9604-2c30-4d86-bd70-adf041c938a3"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "Criterion I.A is not met. The record documents that the first evaluation of the sleep complaints took place on 2026-12-18, after the 2026-12-08 sleep test, so no pre-test in-person clinical evaluation for OSA is documented. Under the policy, the E0601 claim is denied when any applicable criterion is not met, even though the sleep test (I.B) and the ordering requirement (Sleep Tests.4) are met and I.C is only undocumented. Sleep Tests items 1, 2 and 5 (valid test under NCD 240.4.1, FDA status, and provider qualification) were left out as regulatory and provider-status requirements. Sleep Tests item 3 duplicates I.B and is folded into it. Continued-coverage, re-qualification, replacement, entering-Medicare, oxygen and accessory sections do not apply to this initial E0601 order.",
+  "patient_file_sha256": "03020dd1cd488ecc0f8690477a563a84e31cc768b9a0953498371bb743a7ce8b",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

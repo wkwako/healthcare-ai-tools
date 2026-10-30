@@ -1,0 +1,30 @@
+case_id,status,order,accepted_policies,selected_policy,policy_correct,expected_decision,predicted_decision,decision_correct,criteria_correct,criteria_total
+case_001,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_002,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_003,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_004,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_005,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_006,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_007,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_008,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_009,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_010,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_011,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_012,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_013,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_014,current,E0601,L33718,L33718,True,insufficient information,covered,False,5,6
+case_015,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_016,current,E0470,L33718,L33718,True,covered,covered,True,7,7
+case_017,current,E0470,L33718,L33718,True,denied,denied,True,7,7
+case_018,current,E0470,L33718,L33718,True,denied,insufficient information,False,6,7
+case_019,current,E0471,L33718,L33718,True,denied,denied,True,1,1
+case_020,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_021,current,E0470,L33800,L33800,True,,,,,
+case_022,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_023,current,E0470,L33718,L33718,True,denied,denied,True,7,7
+case_024,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_025,current,E0470,L33718,L33718,True,insufficient information,insufficient information,True,7,7
+case_026,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_027,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_028,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_029,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6

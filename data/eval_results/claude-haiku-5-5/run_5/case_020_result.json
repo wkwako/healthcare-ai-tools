@@ -1,0 +1,28 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "none",
+  "selection_reason": "The order is for an E0601 CPAP device for nocturnal hypoxemia attributed to COPD, with no significant obstructive sleep apnea (AHI 3 events/hour, SpO2 nadir 87%). L33718 covers E0601 only for treating obstructive sleep apnea and requires qualifying sleep test criteria, which this patient does not meet. L36902 requires an AHI or RDI of at least 15 events/hour for a positive OSA test, which is not met. L33405 covers sleep testing and mentions COPD only as a comorbidity that limits unattended APAP use for OSA, not as an indication for CPAP. No candidate covers CPAP for COPD-related hypoxemia without OSA.",
+  "decision": "insufficient information",
+  "criteria": [],
+  "decision_explanation": "None of the retrieved policies covers this order.",
+  "patient_file_sha256": "4efa564b94d675104888d33a768c393b96bd6ab31c4a666dbf951512e23d232c",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

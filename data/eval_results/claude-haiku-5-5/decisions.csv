@@ -1,0 +1,73 @@
+case_id,status,order,accepted_policies,selected_policy,policy_correct,expected_decision,predicted_decision,decision_correct,criteria_correct,criteria_total
+case_001,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_002,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_003,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_004,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_005,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_006,current,E0601,L33718,L33718,True,covered,covered,True,5,6
+case_007,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_008,current,E0601,L33718,L33718,True,denied,covered,False,4,6
+case_009,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,5,6
+case_010,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_011,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_012,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_013,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_014,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_015,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_016,current,E0470,L33718,L33718,True,covered,covered,True,7,7
+case_017,current,E0470,L33718,L33718,True,denied,denied,True,7,7
+case_018,current,E0470,L33718,L33718,True,insufficient information,denied,False,6,7
+case_019,current,E0471,L33718,none,False,denied,insufficient information,False,0,1
+case_020,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_021,current,E0470,L33800,L33800,True,,,,,
+case_022,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_023,current,E0470,L33718,L33718,True,denied,denied,True,6,6
+case_024,current,E0601,L33718,L33718,True,denied,denied,True,6,6
+case_025,current,E0470,L33718,L33718,True,insufficient information,insufficient information,True,7,7
+case_026,current,E0601,L33718,L33718,True,covered,covered,True,5,6
+case_027,current,E0601,L33718,L33718,True,covered,covered,True,6,6
+case_028,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,5,5
+case_029,current,E0601,L33718,L33718,True,insufficient information,insufficient information,True,6,6
+case_030,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,covered,covered,True,9,9
+case_031,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,covered,insufficient information,False,8,9
+case_032,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,covered,insufficient information,False,8,9
+case_033,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,denied,denied,True,8,9
+case_034,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,denied,denied,True,9,9
+case_035,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,denied,denied,True,8,9
+case_036,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,denied,denied,True,8,9
+case_037,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,denied,denied,True,9,9
+case_038,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,denied,denied,True,9,9
+case_039,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,denied,denied,True,8,9
+case_040,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,denied,denied,True,9,9
+case_041,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,denied,denied,True,8,9
+case_042,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,insufficient information,insufficient information,True,9,9
+case_043,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,insufficient information,insufficient information,True,9,9
+case_044,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,insufficient information,insufficient information,True,9,9
+case_045,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,insufficient information,insufficient information,True,8,9
+case_046,current,64582,L38307 L38310 L38385 L38387 L38398 L38528,L38398,True,insufficient information,insufficient information,True,9,9
+case_047,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_048,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,denied,,,,
+case_049,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_050,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,denied,,,,
+case_051,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_052,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,denied,,,,
+case_053,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_054,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,denied,,,,
+case_055,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_056,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,denied,,,,
+case_057,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_058,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,denied,,,,
+case_059,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_060,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,denied,,,,
+case_061,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_062,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,denied,,,,
+case_063,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_064,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,insufficient information,,,,
+case_065,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_066,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,insufficient information,,,,
+case_067,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_068,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,insufficient information,,,,
+case_069,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,covered,,,,
+case_070,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,insufficient information,,,,
+case_071,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,insufficient information,,,,
+case_072,missing,64582,L38307 L38310 L38385 L38387 L38398 L38528,,,denied,,,,

@@ -1,0 +1,127 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "E0601 CPAP for obstructive sleep apnea falls under the DME PAP Devices for OSA LCD (L33718). L33405 and L36902 are LCDs for the sleep tests themselves, not for the device. Under L33718, a patient with an AHI of 5–14 needs documented symptoms or comorbidities: excessive daytime sleepiness, impaired cognition, mood disorders, insomnia, hypertension, ischemic heart disease, or history of stroke. This patient has an AHI of 9, which falls in that range. He denies daytime sleepiness (Epworth score 3) and has normal blood pressure. None of the listed comorbidities are documented, so the criteria appear unmet even though this is the governing LCD.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R36",
+        "R53",
+        "R93",
+        "R37"
+      ],
+      "explanation": "Dr. Wiza601, who later ordered the CPAP, saw the patient in person on 2026-08-15 to evaluate possible OSA. This was before the 2026-09-05 sleep study.",
+      "evidence_ids": [
+        "52c3cdcc-a5b6-4ad6-bedd-3f30506700ad",
+        "4ca7fbc6-5bd1-4063-b784-7354eb32b168",
+        "99a6ddf0-c490-400e-9648-b4998072b673",
+        "87b6528f-ca07-497d-bda3-42d4df2861c9"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either of the following criteria (1 or 2): 1. AHI or RDI ≥15 events per hour with a minimum of 30 events; or, 2. AHI or RDI ≥5 and ≤14 events per hour with a minimum of 10 events and documentation of: a. Excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia; or, b. Hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "not met",
+      "evidence": [
+        "R54",
+        "R83",
+        "R88",
+        "R93",
+        "R67",
+        "R56",
+        "R55",
+        "R70",
+        "R76"
+      ],
+      "explanation": "The AHI was 9 events/hour with 58 events, so alternative 1 (AHI ≥15) does not apply. Only alternative 2 can apply, and it requires a qualifying symptom or comorbidity. The patient denies daytime sleepiness, fatigue and trouble concentrating, and his Epworth score is 3. Anxiety and depression screens are negative (GAD-7 3, PHQ-2 1). Blood pressures are normal (123/80, 127/77), and there is no diagnosis of hypertension, ischemic heart disease or stroke. Insomnia is not mentioned. The record therefore contradicts the required documentation.",
+      "evidence_ids": [
+        "4306ed87-c81b-4318-a099-94df000cd55a",
+        "f7e01751-e889-4420-91fe-20fae1fd4f2b",
+        "c0d6b8e5-7d6a-4d03-b516-b14dafd96e40",
+        "99a6ddf0-c490-400e-9648-b4998072b673",
+        "970c3469-7087-409e-b06f-a35cce2008ea",
+        "93547944-a253-d0bb-2c7a-345af841dffb",
+        "93547944-a253-d0bb-c465-9250f03223ca",
+        "93547944-a253-d0bb-9ea4-6cd596aea82c",
+        "93547944-a253-d0bb-151b-56fe7550ffa2"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "The record does not document any instruction from the DME supplier on use and care of the device.",
+      "evidence_ids": []
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article",
+      "verdict": "met",
+      "evidence": [
+        "R37",
+        "R88"
+      ],
+      "explanation": "The record names the test as an attended in-laboratory polysomnography (Type I sleep study).",
+      "evidence_ids": [
+        "87b6528f-ca07-497d-bda3-42d4df2861c9",
+        "c0d6b8e5-7d6a-4d03-b516-b14dafd96e40"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device",
+      "verdict": "not met",
+      "evidence": [
+        "R54",
+        "R83",
+        "R88",
+        "R93"
+      ],
+      "explanation": "An AHI of 9/h is in the 5–14 range, and the required symptoms or comorbidities are absent (see I.B). The results therefore do not meet the coverage criteria.",
+      "evidence_ids": [
+        "4306ed87-c81b-4318-a099-94df000cd55a",
+        "f7e01751-e889-4420-91fe-20fae1fd4f2b",
+        "c0d6b8e5-7d6a-4d03-b516-b14dafd96e40",
+        "99a6ddf0-c490-400e-9648-b4998072b673"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R93"
+      ],
+      "explanation": "The 2026-08-15 note says only that sleep testing was 'discussed'. The record does not show who ordered the polysomnogram.",
+      "evidence_ids": [
+        "99a6ddf0-c490-400e-9648-b4998072b673"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The in-person evaluation before the sleep test and the Type I test itself are documented. However, the AHI of 9 events/hour is in the mild range and needs a documented qualifying symptom or comorbidity. The patient denies daytime sleepiness and cognitive problems (Epworth 3), mood screens are negative, blood pressure is normal, and there is no ischemic heart disease or stroke. Criteria I.B and Sleep Tests.3 are therefore not met. Supplier instruction and who ordered the test are also undocumented.",
+  "patient_file_sha256": "102932d8eafe677a21d3a0db66e788e9e1b6993a68755bc16cce251befb3ca28",
+  "pipeline_sha256": "627f4c73ad28537786ad213852e7b7e40376d9b9f536b1df4dbcee698290beb6"
+}

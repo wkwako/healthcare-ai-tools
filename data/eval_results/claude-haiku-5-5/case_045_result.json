@@ -1,0 +1,185 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L38398",
+  "selection_reason": "The order is for hypoglossal nerve stimulator implantation (64582) for obstructive sleep apnea, and candidate L38398 is the HGNS for OSA policy covering the FDA-approved three-component system (stimulation lead, breathing sensor lead, generator). The same policy is issued by CGS (L38307) and WPS (L38528), so any version may be chosen; L38398 is selected. The patient has severe OSA (AHI 32, SpO2 nadir 79%, central/mixed apneas 8%), BMI 29.5 (under 35), documented CPAP intolerance (12 of 30 nights, 1.9 h average use), and a surgeon contraindication screen, consistent with the policy's usual coverage conditions.",
+  "criteria": [
+    {
+      "criterion": "Covered Indications.1",
+      "policy_text": "Beneficiary is 22 years of age or older",
+      "verdict": "met",
+      "evidence": [
+        "R193"
+      ],
+      "explanation": "The otolaryngology note of 2027-04-02 records a 60 year-old female, which satisfies the age threshold.",
+      "evidence_ids": [
+        "d9872bc9-3c1f-4e74-92eb-ed31ea2ca900"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.2",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2",
+      "verdict": "met",
+      "evidence": [
+        "R126",
+        "R193"
+      ],
+      "explanation": "The most recent BMI is 29.5 kg/m2 (2027-04-02), below 35. Earlier BMI values of 27.67 kg/m2 (R124, R125) are also below 35.",
+      "evidence_ids": [
+        "f8080e85-44b5-43c2-8901-bed5d8e74fda",
+        "d9872bc9-3c1f-4e74-92eb-ed31ea2ca900"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.3",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant",
+      "verdict": "met",
+      "evidence": [
+        "R82",
+        "R83",
+        "R179",
+        "R192"
+      ],
+      "explanation": "The attended in-laboratory PSG was performed 2026-10-22 (report R179). The first consultation for HGNS evaluation was 2027-03-15 (R83, R192). The PSG falls well within 24 months before that consultation.",
+      "evidence_ids": [
+        "f406aba0-a3dc-42fa-8b6a-1e73782a5b4c",
+        "f9c63276-d724-46af-8c10-eea9e8262071",
+        "fc9069c2-2dce-4014-bfe4-7e42385d91bd",
+        "7b6138b2-a30c-4e22-aac7-15820e5d0289"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.4",
+      "policy_text": "Beneficiary has predominantly obstructive events (defined as central and mixed apneas less than 25% of the total AHI)",
+      "verdict": "met",
+      "evidence": [
+        "R134",
+        "R179"
+      ],
+      "explanation": "Central and mixed apneas are 8% of the total AHI, which is below the 25% threshold.",
+      "evidence_ids": [
+        "cc160e48-4826-44d9-8d86-a4090d8101e0",
+        "fc9069c2-2dce-4014-bfe4-7e42385d91bd"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.5",
+      "policy_text": "AHI is 15 to 65 events per hour",
+      "verdict": "met",
+      "evidence": [
+        "R113",
+        "R179"
+      ],
+      "explanation": "AHI is 32 events per hour on the 2026-10-22 PSG, within the 15 to 65 range.",
+      "evidence_ids": [
+        "715198f6-4597-48e8-b637-ef2181d91956",
+        "fc9069c2-2dce-4014-bfe4-7e42385d91bd"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6",
+      "policy_text": "Beneficiary has documentation that demonstrates CPAP failure (defined as AHI greater than 15 despite CPAP usage) or CPAP intolerance (defined as less than 4 hours per night, 5 nights per week or the CPAP has been returned) including shared decision making that the patient was intolerant of CPAP despite consultation with a sleep expert. The CPAP intolerance alternative applies here.",
+      "verdict": "met",
+      "evidence": [
+        "R114",
+        "R127",
+        "R192",
+        "R193"
+      ],
+      "explanation": "CPAP intolerance is shown: device download shows use on 12 of the last 30 nights (about 2.8 nights per week, below 5) and an average of 1.9 hours on nights used (below 4). The sleep medicine physician documented shared decision making on 2027-03-15 (R192) discussing CPAP alternatives, and the patient was intolerant despite mask and pressure changes. The otolaryngologist's 2027-04-02 note (R193) also documents shared decision making.",
+      "evidence_ids": [
+        "3441d173-b6dc-48fd-b5a7-0477fa2c3ad1",
+        "fa20aeba-34de-4df5-8ec4-5858eba1b68f",
+        "7b6138b2-a30c-4e22-aac7-15820e5d0289",
+        "d9872bc9-3c1f-4e74-92eb-ed31ea2ca900"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.7",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on a drug-induced sleep endoscopy (DISE) procedure",
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "The record contains no drug-induced sleep endoscopy procedure and no finding on soft palate collapse pattern. The otolaryngology exam (R193) describes the neck and oropharynx but not a DISE result.",
+      "evidence_ids": []
+    },
+    {
+      "criterion": "Covered Indications.8",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4 per standardized tonsillar hypertrophy grading scale)",
+      "verdict": "met",
+      "evidence": [
+        "R193"
+      ],
+      "explanation": "The 2027-04-02 exam documents tonsils size 1 on the Brodsky scale, a supple neck without masses and Mallampati class II. Nothing in the record documents an anatomical finding that would compromise the device.",
+      "evidence_ids": [
+        "d9872bc9-3c1f-4e74-92eb-ed31ea2ca900"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 (contraindications other than active serious mental illness)",
+      "policy_text": "Hypoglossal nerve neurostimulation is considered not medically reasonable and necessary when any of the following contraindications are present: central and mixed apneas over one-quarter of AHI; implantable device; BMI 35 or greater; neuromuscular disease; hypoglossal-nerve palsy; severe restrictive or obstructive pulmonary disease; moderate-to-severe pulmonary arterial hypertension; severe valvular heart disease; NYHA class III or IV heart failure; recent MI or severe arrhythmia within 6 months; persistent uncontrolled hypertension despite medication; coexisting nonrespiratory sleep disorders; pregnancy or plans for pregnancy; MRI requirement with model 3024; inability to operate the sleep remote; condition compromising neurological control of the upper airway",
+      "verdict": "met",
+      "evidence": [
+        "R115",
+        "R116",
+        "R117",
+        "R126",
+        "R134",
+        "R193"
+      ],
+      "explanation": "None of these contraindications is documented as present. Central and mixed apneas are 8%. BMI is 29.5. Blood pressure readings are 98/68, 99/75 and 99/71, and the otolaryngologist documents blood pressure controlled. The 2027-04-02 contraindication screen documents no neuromuscular disease, hypoglossal palsy, severe pulmonary disease, pulmonary hypertension, valvular disease, heart failure, recent MI or severe arrhythmia, other sleep disorder, pregnancy, implanted device, anticipated MRI, inability to operate the remote, or neurological airway condition.",
+      "evidence_ids": [
+        "d90eef0c-f760-8eca-0ca8-d3cf8cbea1d7",
+        "d90eef0c-f760-8eca-7269-c7f479730bc4",
+        "d90eef0c-f760-8eca-86eb-2585c561772f",
+        "f8080e85-44b5-43c2-8901-bed5d8e74fda",
+        "cc160e48-4826-44d9-8d86-a4090d8101e0",
+        "d9872bc9-3c1f-4e74-92eb-ed31ea2ca900"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 (active, serious mental illness that reduces ADLs and would interfere with operating the device)",
+      "policy_text": "An active, serious mental illness that reduces the ability to carry out ADLs and would interfere with the patient's ability to operate the HNS and report problems to the attending provider",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R5",
+        "R70",
+        "R78",
+        "R81",
+        "R141",
+        "R157",
+        "R193"
+      ],
+      "explanation": "The otolaryngologist documents no serious mental illness (R193), and depression and anxiety screens are negative (R141, R157). However, dependent drug abuse (R5) is active and has generated repeated encounters (R70, R78 through R81). The record does not document whether this condition is a serious mental illness that reduces ADL function or would interfere with operating the device, so this cannot be resolved from the record.",
+      "evidence_ids": [
+        "d90eef0c-f760-8eca-218e-c961da633c91",
+        "d90eef0c-f760-8eca-c743-878b2f1f4a72",
+        "d90eef0c-f760-8eca-61b3-fb281dec24b0",
+        "d90eef0c-f760-8eca-b32c-aac3ef3ec7a0",
+        "d90eef0c-f760-8eca-c82d-2223cd08a753",
+        "d90eef0c-f760-8eca-cabb-faddc65a0c85",
+        "d9872bc9-3c1f-4e74-92eb-ed31ea2ca900"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "Most applicable criteria are met, but Covered Indications.7 is not documented, since no DISE result showing absence of complete concentric collapse at the soft palate appears in the record. The contraindication for active serious mental illness also cannot be ruled in or out, because active dependent drug abuse is recorded and the record does not address ADL impairment or device-operation capacity. No criterion is clearly not met, so the decision is insufficient information rather than denied.",
+  "patient_file_sha256": "7a6e935f3bc00491df6d757851ead8f8e794fbf629d48a2026f1edd3a04ba9b0",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

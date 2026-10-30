@@ -1,0 +1,61 @@
+{
+  "order": "E0470",
+  "order_description": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    }
+  ],
+  "selected_policy": "L33800",
+  "selection_reason": "The order is for an E0470 bi-level device without backup rate for nocturnal hypoxemia attributed to COPD, with no significant obstructive sleep apnea (AHI 2/h, SpO2 nadir 88%). L33800 Respiratory Assist Devices covers E0470 for chronic respiratory failure consequent to COPD and includes the facility-based PSG criterion of oxygen saturation at or below 88% for at least 5 minutes with AHI under 5. L33718 addresses OSA treatment, which the patient does not have, and L33405 covers sleep testing rather than the device.",
+  "criteria": [
+    {
+      "criterion": "INITIAL COVERAGE CRITERIA FOR E0470 AND E0471 DEVICES",
+      "policy_text": "For an E0470 or an E0471 RAD to be covered, the treating practitioner must fully document in the beneficiary's medical record symptoms characteristic of sleep-associated hypoventilation, such as daytime hypersomnolence, excessive fatigue, morning headache, cognitive dysfunction, dyspnea.",
+      "verdict": "met",
+      "evidence": [
+        "R144",
+        "R98"
+      ],
+      "explanation": "The treating practitioner, Dr. Cletus494 Paucek755, documented on 2026-11-03 that the patient dozes off while reading and watching television, which is daytime hypersomnolence, one of the listed symptoms. The Epworth Sleepiness Scale total of 11 on the same date supports excessive daytime sleepiness. The note also records loud nightly snoring and witnessed breathing pauses, which are not hypoventilation symptoms as such but do not contradict the requirement.",
+      "evidence_ids": [
+        "b71cd306-a3dd-45cd-97f5-d8eed7f1c2ad",
+        "d938fcd8-edd8-4dc1-a6d7-aadc7b6e12d9"
+      ]
+    },
+    {
+      "criterion": "Chronic Respiratory Failure Consequent to COPD",
+      "policy_text": "A respiratory assist device is covered when the beneficiary meets the initial coverage criteria for either an E0470 or E0471 as described in the Medicare National Coverage Determinations (NCD) Manual (CMS Pub. 100-03) Chapter 1, Part 4, Section 240.9 Noninvasive Positive Pressure Ventilation (NIPPV) in the Home for the Treatment of Chronic Respiratory Failure (CRF) Consequent to Chronic Obstructive Pulmonary Disease (COPD).",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R48",
+        "R145",
+        "R116",
+        "R139"
+      ],
+      "explanation": "The order is for a bi-level device without backup rate (E0470) for chronic respiratory failure consequent to COPD. The record documents a COPD diagnosis dated 2026-12-07 (R48) and nocturnal hypoxemia attributed to COPD, with a nocturnal SpO2 nadir of 88% (R116, R139, R145). The criteria themselves are in NCD 240.9, which is not included in the policy text provided, so they cannot be fully applied. The record also lacks the data that the policy's CRF pathway depends on: no arterial blood gas or other awake blood gas result, no spirometry with FEV1/FVC, and no awake oxygen saturation on the prescribed FIO2. The sleep-test section of the policy governs sleep-disordered breathing and was not applied because this device is ordered for CRF consequent to COPD. The 2026-11-23 polysomnogram showed no significant obstructive sleep apnea, and the record documents no central sleep apnea or hypoventilation syndrome diagnosis.",
+      "evidence_ids": [
+        "48637cec-1c32-4f8e-8f27-87570b14e1a4",
+        "423e5d6b-eeeb-4bcb-848b-148bb49c830a",
+        "9e66c611-6892-48e6-b678-25607e6675bf",
+        "7d1cf0d3-96b6-4b38-9a62-3f676f2105dc"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "The documented daytime hypersomnolence criterion is met, but the criterion for chronic respiratory failure consequent to COPD cannot be judged. The record has COPD and nocturnal desaturation to 88% but no arterial blood gas, spirometry or awake oxygen saturation, and the referenced NCD 240.9 criteria are not in the provided policy text. No criterion is contradicted by the record, so the decision is insufficient information rather than denied.",
+  "patient_file_sha256": "6f39f7f7fc42f862059723fe14ee35331498796626f932542396b02b3dd48249",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

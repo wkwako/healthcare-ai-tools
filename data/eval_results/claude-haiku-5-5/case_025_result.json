@@ -1,0 +1,139 @@
+{
+  "order": "E0470",
+  "order_description": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for an E0470 bi-level device for obstructive sleep apnea. L33718 explicitly governs E0470 for OSA and requires that an E0601 CPAP was tried and proven ineffective despite optimal therapy. The record documents a severe OSA diagnosis (RDI 31 with 202 events), an in-person evaluation before the sleep test, CPAP use with residual AHI 26 after mask refitting and pressure retitration, and a physician note stating CPAP failed to meet therapeutic goals. L33800 addresses E0470 for hypoventilation, CSA, restrictive disorders, or COPD-related respiratory failure, not primary OSA, and L33405 covers only sleep testing.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R161",
+        "R78",
+        "R79"
+      ],
+      "explanation": "R161 documents an in-person evaluation on 2026-10-09 by Dr. Chang901 Kutch271, the treating practitioner, for suspected obstructive sleep apnea. R78 is the matching encounter. The home sleep test followed on 2026-10-21 (R79), so the evaluation came before the sleep test.",
+      "evidence_ids": [
+        "c3ddf79c-0221-47af-834a-6bf1158b34b5",
+        "6c66030a-a451-44fa-be31-5fd29e2b43b2",
+        "0f2fcabf-dfc5-40aa-8c09-2e685b0550f5"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either 1) AHI or RDI greater than or equal to 15 events per hour with a minimum of 30 events, or 2) AHI or RDI of 5 to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, insomnia, hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R142",
+        "R149",
+        "R150",
+        "R153"
+      ],
+      "explanation": "Alternative 1 applies. The RDI is 31 events per hour, with 202 events over 6.5 hours of recording. This exceeds 15 per hour and the minimum of 30 events, and the recording is longer than 2 hours, so no adjustment is needed. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "892a374f-b094-4829-ba6b-d577eca90137",
+        "03177a2d-013a-4544-aec8-ab4c77b9ff7b",
+        "a94ef070-8dc3-494c-a4ca-698c8890aefe",
+        "6ecd1169-2131-4814-98a2-d0ef8c6cf959"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "The record shows CPAP use, a device download, a mask refit and a pressure retitration (R105, R163), but nothing states that the device supplier instructed the beneficiary or caregiver in proper use and care. The criterion is not assumed to be met.",
+      "evidence_ids": []
+    },
+    {
+      "criterion": "II.D",
+      "policy_text": "An E0601 has been tried and proven ineffective based on a therapeutic trial conducted in either a facility or in a home setting. Ineffective means documented failure to meet therapeutic goals using an E0601 during home use despite optimal therapy, meaning proper mask selection and fitting and appropriate pressure settings.",
+      "verdict": "met",
+      "evidence": [
+        "R163",
+        "R105",
+        "R141",
+        "R69",
+        "R81"
+      ],
+      "explanation": "An E0601 was started for home use on 2026-11-03 (R163). After 54 days, the device download showed a residual AHI of 26 per hour (R141) with symptoms persisting. The mask was changed to a full-face mask and the pressure was retitrated without improvement, and the note states therapeutic goals were not met despite optimal therapy. This documents an ineffective home trial. Because the trial was under 3 months, the switch rules for a longer trial do not apply.",
+      "evidence_ids": [
+        "f847347c-d3a0-47e5-879a-1059a42c1ccd",
+        "d930e523-9c2e-4629-80d1-7b333fae9ec9",
+        "6194a8ab-3d70-434f-8b4e-a6d94e42e171",
+        "c3a0b183-bd0c-4884-aead-8f39e45e541d",
+        "bffd2378-d9ff-4f2c-92fe-fe9e813d7fb9"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R79",
+        "R153",
+        "R68"
+      ],
+      "explanation": "The record documents a Type III 4-channel home sleep apnea test performed 2026-10-21 with a written report, recording time and event data. These show an allowed sleep test type. The record does not itemize every NCD 240.4.1 technical requirement, but the test type and its documented parameters support this criterion.",
+      "evidence_ids": [
+        "0f2fcabf-dfc5-40aa-8c09-2e685b0550f5",
+        "6ecd1169-2131-4814-98a2-d0ef8c6cf959",
+        "5dc8b968-18fc-4be0-947d-3276f809645b"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R142",
+        "R149",
+        "R150",
+        "R153"
+      ],
+      "explanation": "The RDI of 31 events per hour, with 202 events over 6.5 hours of recording, meets the threshold of at least 15 events per hour with at least 30 events, as shown under I.B.",
+      "evidence_ids": [
+        "892a374f-b094-4829-ba6b-d577eca90137",
+        "03177a2d-013a-4544-aec8-ab4c77b9ff7b",
+        "a94ef070-8dc3-494c-a4ca-698c8890aefe",
+        "6ecd1169-2131-4814-98a2-d0ef8c6cf959"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R68",
+        "R161"
+      ],
+      "explanation": "R68 documents that the home sleep apnea test was ordered on 2026-10-09 by Dr. Chang901 Kutch271. This is the same practitioner who evaluated the beneficiary (R161) and manages the beneficiary's OSA (R81).",
+      "evidence_ids": [
+        "5dc8b968-18fc-4be0-947d-3276f809645b",
+        "c3ddf79c-0221-47af-834a-6bf1158b34b5"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "Criteria I.A, I.B, II.D, Sleep Tests.1, Sleep Tests.3 and Sleep Tests.4 are met. Criterion I.C, which requires documented instruction from the device supplier in proper use and care, has no supporting evidence in the record, so coverage cannot be confirmed. Sleep Tests.2 (FDA status of the test) and Sleep Tests.5 (provider qualification and state compliance) were left out as regulatory or provider-credential requirements, and the standard written order, proof of delivery, coding and refill rules were left out as billing or documentation rules. Not covered until I.C is documented.",
+  "patient_file_sha256": "6c1304e47d770ee8671442ea82dea4bb019cf80afd1ca50de8d2a783acf25a44",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

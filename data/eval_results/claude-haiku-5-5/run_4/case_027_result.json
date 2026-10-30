@@ -1,0 +1,121 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for E0601 (CPAP device) for obstructive sleep apnea. L33718 (Positive Airway Pressure Devices for the Treatment of OSA) directly governs E0601 coverage, setting criteria A-C (in-person evaluation, qualifying sleep test) for CPAP in OSA. The patient has moderate OSA (AHI 22) on a attended PSG with an in-person evaluation before the sleep test, so the policy applies.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R456",
+        "R1005",
+        "R457"
+      ],
+      "explanation": "Dr. Schiller, the treating practitioner, saw the patient in person on 2026-11-01 for evaluation of possible obstructive sleep apnea (R1005, encounter R456). The attended polysomnography took place on 2026-11-21 (R457), after that evaluation.",
+      "evidence_ids": [
+        "25f0822d-966e-4576-946d-034e20ed9901",
+        "839a3d46-b94c-4b1f-92f2-777b4cfaee79",
+        "82d280d2-29f7-46d5-a64e-834a100f0b78"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either criterion 1 (AHI or RDI greater than or equal to 15 events per hour with a minimum of 30 events) or criterion 2 (AHI or RDI 5 to 14 with a minimum of 10 events plus documented symptoms or comorbidity).",
+      "verdict": "met",
+      "evidence": [
+        "R728",
+        "R903",
+        "R907",
+        "R924"
+      ],
+      "explanation": "Alternative 1 applies. The sleep study reports an AHI of 22 events per hour with 143 total apnea and hypopnea events over 6.5 hours of sleep, which meets an AHI of at least 15 with at least 30 events. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "637c1f1f-4305-4014-a877-c2e92b485a30",
+        "8a36a400-8803-452d-bdbd-3e31eaa42284",
+        "92fd71c4-500e-4024-9fc8-77a87e00b130",
+        "40045b4c-6326-453f-bfb5-dbac24a83a86"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R718"
+      ],
+      "explanation": "The record documents instruction on use and care of the CPAP device by the DME supplier on 2026-12-07.",
+      "evidence_ids": [
+        "508d2628-10ad-4f07-801b-e4a3f0cc5e12"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R374",
+        "R457",
+        "R924"
+      ],
+      "explanation": "The sleep test was an attended in-laboratory polysomnography, a Type I facility-based study, which is a recognized sleep test type. Billing and coding details are administrative and were not assessed.",
+      "evidence_ids": [
+        "88ca887b-e327-4b71-8052-d0611841338c",
+        "82d280d2-29f7-46d5-a64e-834a100f0b78",
+        "40045b4c-6326-453f-bfb5-dbac24a83a86"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R728",
+        "R903",
+        "R924"
+      ],
+      "explanation": "An AHI of 22 with 143 events exceeds the threshold of at least 15 events per hour with at least 30 events under I.B.1.",
+      "evidence_ids": [
+        "637c1f1f-4305-4014-a877-c2e92b485a30",
+        "8a36a400-8803-452d-bdbd-3e31eaa42284",
+        "40045b4c-6326-453f-bfb5-dbac24a83a86"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R374",
+        "R1005"
+      ],
+      "explanation": "The attended polysomnography order was placed by Dr. Adrienne302 Schiller186, the treating practitioner, and the 2026-11-01 note documents that a sleep study was ordered.",
+      "evidence_ids": [
+        "88ca887b-e327-4b71-8052-d0611841338c",
+        "839a3d46-b94c-4b1f-92f2-777b4cfaee79"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "All applicable criteria for an initial E0601 are met: an in-person evaluation preceded a Type I polysomnography showing moderate OSA (AHI 22, 143 events, at least 30 events) under I.B.1, the sleep test was ordered by the treating practitioner, and the supplier provided use and care instruction on 2026-12-07. The sleep-test FDA status and conducting-entity qualification items (Sleep Tests.2 and .5) were left out as regulatory and provider-status requirements rather than clinical documentation. The E0470, oxygen, continued-coverage, replacement and beneficiary-entering-Medicare sections do not apply to this E0601 order. Order and SWO requirements are administrative and were not assessed.",
+  "patient_file_sha256": "ded2446763a1b1a880c2e6bb179206d86622b722bd817d94879006d95f42d071",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

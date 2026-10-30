@@ -1,0 +1,191 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L38398",
+  "selection_reason": "L38398 and L38307 are the same HGNS policy issued by different contractors, and both match the order's three-component system (stimulation lead, pulse generator, respiratory sensor) for moderate-to-severe OSA. The patient's region is unknown, so either version applies; L38398 is selected. The patient has severe OSA (AHI 65), central/mixed apneas at 24% of total AHI, CPAP intolerance despite adjustments, BMI 34.9, and a sleep medicine and otolaryngology evaluation with drug-induced sleep endoscopy.",
+  "criteria": [
+    {
+      "criterion": "Covered Indications.1",
+      "policy_text": "Beneficiary is 22 years of age or older",
+      "verdict": "met",
+      "evidence": [
+        "R66",
+        "R67",
+        "R68"
+      ],
+      "explanation": "The 2025-04-24 note records a 22 year-old male, and the 2025-11-23 and 2025-12-18 notes also record age 22. The patient is 22 as of 2026-01-01, so the age requirement is met.",
+      "evidence_ids": [
+        "af2f759b-75fb-c953-c3f1-d5b5a5adab8f",
+        "7ca3502d-9178-42e2-b13b-8d17c9a0a306",
+        "3adbea2c-8da4-40fc-9165-98509933eab0"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.2",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2",
+      "verdict": "met",
+      "evidence": [
+        "R39",
+        "R68"
+      ],
+      "explanation": "The BMI on 2025-12-18 at the implant evaluation was 34.9 kg/m2, which is less than 35. The earlier BMI of 23.93 on 2025-04-24 (R38) is also below 35.",
+      "evidence_ids": [
+        "dc13381c-2821-4d15-9e89-b9a72ede465e",
+        "3adbea2c-8da4-40fc-9165-98509933eab0"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.3",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant",
+      "verdict": "met",
+      "evidence": [
+        "R22",
+        "R64",
+        "R23"
+      ],
+      "explanation": "The attended in-laboratory polysomnography was performed on 2025-06-19 (reported 2025-06-22). The first consultation for HGNS evaluation was on 2025-11-23 (R23). The PSG was about 5 months before that consultation, within 24 months.",
+      "evidence_ids": [
+        "0686d380-b660-462f-97af-be5318859405",
+        "cad27010-a310-4196-935a-31257cbe351c",
+        "105f29ad-5d62-4b2e-8d2d-e4561b176dab"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.4",
+      "policy_text": "Beneficiary has predominantly obstructive events (defined as central and mixed apneas less than 25% of the total AHI)",
+      "verdict": "met",
+      "evidence": [
+        "R41",
+        "R64"
+      ],
+      "explanation": "Central and mixed apneas were 24% of the total AHI on 2025-06-20, which is less than 25%.",
+      "evidence_ids": [
+        "1505bd5f-b319-4d98-a3cf-018b0c762e3e",
+        "cad27010-a310-4196-935a-31257cbe351c"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.5",
+      "policy_text": "AHI is 15 to 65 events per hour",
+      "verdict": "met",
+      "evidence": [
+        "R33",
+        "R64"
+      ],
+      "explanation": "The AHI was 65 events per hour on 2025-06-20, which is within the 15 to 65 range (the upper bound is inclusive).",
+      "evidence_ids": [
+        "2992197d-96fe-4a48-b2dc-f93cacc1ef18",
+        "cad27010-a310-4196-935a-31257cbe351c"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6",
+      "policy_text": "Documentation that demonstrates CPAP failure (AHI greater than 15 despite CPAP usage) or CPAP intolerance (less than 4 hours per night, 5 nights per week or the CPAP has been returned) including shared decision making that the patient was intolerant of CPAP despite consultation with a sleep expert",
+      "verdict": "met",
+      "evidence": [
+        "R34",
+        "R40",
+        "R59",
+        "R67",
+        "R68"
+      ],
+      "explanation": "The intolerance alternative applies. CPAP was used on only 11 of the last 30 nights (about 2.6 nights per week, below 5) with an average of 2.5 hours on nights used (below 4). CPAP failure by residual AHI does not apply, since the residual AHI on CPAP was 7. The sleep medicine physician documented shared decision making with the patient on 2025-11-23 that he was intolerant of CPAP despite mask and pressure changes. The otolaryngologist confirmed this on 2025-12-18.",
+      "evidence_ids": [
+        "74c17f34-721c-49df-bc20-26e7a5a6eaa4",
+        "ca3aa3d3-3338-4d02-83c5-2773fc3a0197",
+        "7fd61560-b56c-45e6-9dc7-eeb0679ea79a",
+        "7ca3502d-9178-42e2-b13b-8d17c9a0a306",
+        "3adbea2c-8da4-40fc-9165-98509933eab0"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.7",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on a drug-induced sleep endoscopy (DISE) procedure",
+      "verdict": "met",
+      "evidence": [
+        "R65",
+        "R25",
+        "R32"
+      ],
+      "explanation": "The drug-induced sleep endoscopy on 2026-01-01 documented partial anteroposterior collapse at the soft palate and no complete concentric collapse.",
+      "evidence_ids": [
+        "1acd6eac-ac3c-4f5a-b607-3401b44b3d25",
+        "4291e5f9-0f71-4b9a-a0ae-799fca5df834",
+        "d54bdb78-b25f-4c83-b957-cc636bda1719"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.8",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4 per standardized tonsillar hypertrophy grading scale)",
+      "verdict": "met",
+      "evidence": [
+        "R68",
+        "R65"
+      ],
+      "explanation": "Tonsils were size 1 on the Brodsky scale on 2025-12-18, well below the size 3 or 4 example. The DISE report found no epiglottic collapse and no complete concentric collapse, and it did not identify any finding that would compromise the device. Partial collapse at the oropharynx lateral wall and tongue base was noted, but no record states that it compromises device performance.",
+      "evidence_ids": [
+        "3adbea2c-8da4-40fc-9165-98509933eab0",
+        "1acd6eac-ac3c-4f5a-b607-3401b44b3d25"
+      ]
+    },
+    {
+      "criterion": "Limitations.3",
+      "policy_text": "Hypoglossal nerve neurostimulation is considered not medically reasonable and necessary when any of the following contraindications are present (central and mixed apneas over one-quarter of AHI, implanted device, BMI 35 or more, neuromuscular disease, hypoglossal palsy, severe pulmonary disease, pulmonary arterial hypertension, severe valvular disease, NYHA III or IV heart failure, recent MI or severe arrhythmia, persistent uncontrolled hypertension despite medication, serious mental illness, nonrespiratory sleep disorders, pregnancy, MRI needs, inability to operate the remote, conditions affecting upper airway neurological control)",
+      "verdict": "met",
+      "evidence": [
+        "R68",
+        "R39",
+        "R41",
+        "R35",
+        "R45",
+        "R54",
+        "R44"
+      ],
+      "explanation": "No listed contraindication is documented as present. The 2025-12-18 contraindication screen was negative for each item and documented no implanted devices and no anticipated MRI. Central and mixed apneas were 24%, BMI was 34.9, and the patient was able to operate the sleep remote. Blood pressure on 2025-04-24 was 136/78, which is elevated, but no antihypertensive appears in the medication list and the otolaryngologist documented controlled blood pressure, so there is no persistent uncontrolled hypertension despite medication. Heart rate was 61, and the PHQ-2 and GAD-7 scores were low. Pregnancy does not apply to this male patient.",
+      "evidence_ids": [
+        "3adbea2c-8da4-40fc-9165-98509933eab0",
+        "dc13381c-2821-4d15-9e89-b9a72ede465e",
+        "1505bd5f-b319-4d98-a3cf-018b0c762e3e",
+        "b3d9fe5d-04e1-dc3e-8f2c-d415696872b6",
+        "b3d9fe5d-04e1-dc3e-88b0-158b2151528c",
+        "b3d9fe5d-04e1-dc3e-9495-b13b6733dd09",
+        "b3d9fe5d-04e1-dc3e-280d-d68b32385419"
+      ]
+    },
+    {
+      "criterion": "Provider Qualifications",
+      "policy_text": "Evaluation, referral and post implant evaluation of the hypoglossal nerve stimulator should be performed by a sleep physician",
+      "verdict": "met",
+      "evidence": [
+        "R23",
+        "R67"
+      ],
+      "explanation": "A sleep medicine physician performed the 2025-11-23 evaluation for hypoglossal nerve stimulation and documented the referral to otolaryngology, which matches the required evaluation and referral by a sleep physician. Board certification and other credentials are excluded as administrative.",
+      "evidence_ids": [
+        "105f29ad-5d62-4b2e-8d2d-e4561b176dab",
+        "7ca3502d-9178-42e2-b13b-8d17c9a0a306"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "Every applicable clinical criterion is met. The patient is 22 with BMI 34.9, a PSG within 24 months of the first HGNS consultation, 24% central and mixed apneas, AHI 65, and documented CPAP intolerance with shared decision making by a sleep physician. DISE shows no complete concentric collapse, tonsils are size 1, and no contraindication is documented. Provider credentials, device regulatory status and billing rules were excluded as administrative.",
+  "patient_file_sha256": "646811f1b44cd37384c84850d48af8c5fa3a020c6a7a3a9cbed474eadf8176e5",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

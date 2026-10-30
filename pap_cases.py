@@ -33,6 +33,9 @@ SYMPTOM_CONDITIONS = re.compile(r"hypertension|ischemic heart|myocardial|stroke|
                                 r"|bipolar|mood|dementia|alzheimer|cognitive", re.I)
 COPD_CONDITIONS = re.compile(r"chronic obstructive|emphysema|chronic bronchitis", re.I)
 SUPPLIER = {"display": "Commonwealth Home Respiratory Supply"}
+#who runs the overnight test: usually sleep center staff; "treating" is a sleep physician who evaluates, orders and
+#runs the test themselves, so the test's attribution can't stand in for an order
+TEST_PERFORMERS = {"sleep center": {"display": "Sleep center technologist"}, "treating": None}
 
 def expected_verdicts(order, diagnosis, visit, ahi, events, test_type, symptoms, test_ordered, supplier_instruction, cpap_trial):
     """The answer key's verdict and explanation for each criterion, from the lever settings alone"""
@@ -74,14 +77,15 @@ def expected_verdicts(order, diagnosis, visit, ahi, events, test_type, symptoms,
     verdicts["II.D"] = {
         "failed": ("met", "A CPAP (E0601) trial is documented as failing despite mask refitting and pressure adjustment."),
         "succeeded": ("not met", "The CPAP (E0601) trial is documented as effective, so it was not proven ineffective."),
-        None: ("insufficient information", "No CPAP trial is recorded."),
+        None: ("insufficient information", "OSA was first diagnosed at the visit where the E0470 was ordered and no CPAP use "
+                                           "is recorded, but the record doesn't say a CPAP was never tried elsewhere."),
     }[cpap_trial]
     verdicts["Initial Coverage"] = ("not met", "An E0471 is not covered when the primary diagnosis is OSA.")
     return {cid: verdicts[cid] for cid in checklist["orders"][order]["criteria"]}
 
 def build_case(case_id, base_patient, order="E0601", diagnosis="OSA", visit="before", ahi=22, sleep_hours=6.5,
                test_type="Type I", symptoms="daytime sleepiness", test_ordered=True, supplier_instruction=False,
-               cpap_trial=None):
+               cpap_trial=None, test_performer="sleep center"):
     """Copies base_patient (a name like "Shalanda398"), appends this case's resources, and writes the patient file
     and answer key to data/modified_patient_data. Lever settings:
       order: "E0601", "E0470" or "E0471"
@@ -93,14 +97,18 @@ def build_case(case_id, base_patient, order="E0601", diagnosis="OSA", visit="bef
                 (normal Epworth score; the base patient must have no qualifying condition)
       test_ordered: whether the treating practitioner's order for the sleep test is recorded
       supplier_instruction: whether the supplier's instruction on device use and care is recorded
-      cpap_trial: E0470 only: "failed", "succeeded", or None (no CPAP history)
+      cpap_trial: E0470 only: "failed", "succeeded", or None (no CPAP history; E0470 ordered at diagnosis)
+      test_performer: who the overnight test encounter lists: "sleep center" (a technologist) or "treating" (the
+                      treating practitioner, who also did the evaluation and follow-up)
     Returns the answer key."""
     levers = {"order": order, "diagnosis": diagnosis, "visit": visit, "ahi": ahi, "sleep_hours": sleep_hours,
               "test_type": test_type, "symptoms": symptoms, "test_ordered": test_ordered,
-              "supplier_instruction": supplier_instruction, "cpap_trial": cpap_trial}
+              "supplier_instruction": supplier_instruction, "cpap_trial": cpap_trial, "test_performer": test_performer}
     if order not in ORDERS or visit not in VISITS or symptoms not in SYMPTOMS or cpap_trial not in CPAP_TRIALS \
-            or test_type not in TEST_TYPES or diagnosis not in ("OSA", "COPD"):
+            or test_type not in TEST_TYPES or diagnosis not in ("OSA", "COPD") or test_performer not in TEST_PERFORMERS:
         raise ValueError(f"{case_id}: unknown lever setting in {levers}")
+    if test_performer == "treating" and test_type is None:
+        raise ValueError(f"{case_id}: a test with no stated type has no test encounter, so test_performer has no effect")
     if test_type == "oximetry" and ahi is not None:
         raise ValueError(f"{case_id}: oximetry doesn't produce an AHI; use ahi=None")
     if diagnosis == "COPD" and ahi is not None and ahi >= 5:
@@ -187,7 +195,8 @@ Suspected obstructive sleep apnea. {plan}
     test_enc = None
     if test_info["home"] is not None:
         test_enc = record.encounter(night, 495, test_info["name"], "Suspected obstructive sleep apnea",
-                                    "Overnight sleep test encounter", setting=setting)
+                                    "Overnight sleep test encounter", setting=setting,
+                                    performer=TEST_PERFORMERS[test_performer])
     results = []
     index_name = INDEX_NAMES[test_info["index"]] if test_info["index"] else None
     events = round(ahi * sleep_hours) if ahi is not None else None
@@ -338,8 +347,9 @@ Follow-up to review sleep study results.
         explanation = "Not OSA, so the Respiratory Assist Devices LCD governs. It has no checklist yet: scored on policy selection only."
     else:
         accepted = [CHECKLIST_NAME]
+        restates = {c["id"]: c["restates"] for c in checklist["criteria"] if "restates" in c}
         criteria = {cid: {"verdict": verdict, "evidence": evidence[cid] if verdict != "insufficient information" else [],
-                          "explanation": text}
+                          "explanation": text, **({"restates": restates[cid]} if cid in restates else {})}
                     for cid, (verdict, text) in expected_verdicts(order, diagnosis, visit, ahi, events, test_type, symptoms,
                                                                   test_ordered, supplier_instruction, cpap_trial).items()}
         decision = decide(criteria)

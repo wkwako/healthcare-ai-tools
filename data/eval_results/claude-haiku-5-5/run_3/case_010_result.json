@@ -1,0 +1,125 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 (Positive Airway Pressure Devices for the Treatment of Obstructive Sleep Apnea) is the policy governing E0601 CPAP devices. It covers E0601 for OSA when an in-person clinical evaluation precedes the sleep test and the sleep test meets the defined criteria. This patient has a 2026-10-08 attended in-lab PSG showing AHI 22 (moderate OSA), a documented in-person evaluation (Dr. Uribe, 2026-10-19 follow-up) and a CPAP order for E0601, so the policy applies. L33405 and L36902 address sleep testing and related pressure devices rather than E0601 coverage criteria.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "not met",
+      "evidence": [
+        "R190",
+        "R52",
+        "R60",
+        "R58"
+      ],
+      "explanation": "The sleep test was performed on 2026-10-08 (R60) and was ordered on 2026-09-26 (R52) with no encounter documented for sleep assessment before the test. The 2026-10-19 note (R190) states that it is the first visit to evaluate the sleep complaints, which is after the sleep test. The 2026-08-24 general examination (R58) documents no sleep assessment. The record therefore contradicts a pre-test in-person evaluation for OSA.",
+      "evidence_ids": [
+        "aac384d2-5cfd-446e-9de1-824c3e7e6934",
+        "8fc88491-79ba-470c-a658-d1eab4b2ce90",
+        "6efac8b0-f12a-424a-a966-b5ec30565163",
+        "3428c73d-cb8d-c081-7f18-6cd00ba4e8eb"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. The apnea-hypopnea index (AHI) or Respiratory Disturbance Index (RDI) is greater than or equal to 15 events per hour with a minimum of 30 events; or, 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of: a. Excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia; or, b. Hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R60",
+        "R100",
+        "R171",
+        "R174",
+        "R183"
+      ],
+      "explanation": "Alternative 1 applies. The Type I attended in-laboratory polysomnography on 2026-10-08 reports an AHI of 22 events per hour, which is at least 15, with 143 total apnea and hypopnea events, which is at least 30. Total sleep time was 6.5 hours, which is at least the 2-hour minimum.",
+      "evidence_ids": [
+        "6efac8b0-f12a-424a-a966-b5ec30565163",
+        "d6a1b043-41b7-41db-8b34-8d71de7dd8ba",
+        "43b7867f-a9d1-4715-9c31-b8a8fb254a6f",
+        "23ff5965-8f75-4d98-9c62-a55b92e7a09f",
+        "762e3810-c9af-4bf4-b074-89c537cf262a"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R96"
+      ],
+      "explanation": "Record R96 documents instruction on use and care of a CPAP device given by the DME supplier.",
+      "evidence_ids": [
+        "3a9abb6a-f4f8-426e-8e07-629d8b38fec8"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R60",
+        "R183",
+        "R174"
+      ],
+      "explanation": "The sleep test is a Type I attended in-laboratory polysomnography, which is a sleep test type this policy accepts. The report documents the study, its results, and 6.5 hours of total sleep time. The record does not detail every NCD 240.4.1 validity element, but the documented study type and complete report support this criterion.",
+      "evidence_ids": [
+        "6efac8b0-f12a-424a-a966-b5ec30565163",
+        "762e3810-c9af-4bf4-b074-89c537cf262a",
+        "23ff5965-8f75-4d98-9c62-a55b92e7a09f"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R100",
+        "R171",
+        "R183"
+      ],
+      "explanation": "The sleep test results (AHI 22 events per hour with 143 events) meet the AHI of at least 15 with at least 30 events criterion from the Initial Coverage section.",
+      "evidence_ids": [
+        "d6a1b043-41b7-41db-8b34-8d71de7dd8ba",
+        "43b7867f-a9d1-4715-9c31-b8a8fb254a6f",
+        "762e3810-c9af-4bf4-b074-89c537cf262a"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R52",
+        "R190"
+      ],
+      "explanation": "Dr. María Cristina Uribe ordered the attended in-laboratory polysomnography on 2026-09-26 (R52). The 2026-10-19 note (R190) shows Dr. Uribe reviewing the study and ordering the CPAP device, which establishes Dr. Uribe as the treating practitioner.",
+      "evidence_ids": [
+        "8fc88491-79ba-470c-a658-d1eab4b2ce90",
+        "aac384d2-5cfd-446e-9de1-824c3e7e6934"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "Criterion I.A is not met. The record shows the first in-person evaluation of the sleep complaints occurred on 2026-10-19 (R190), after the sleep test on 2026-10-08 (R60), and no pre-test evaluation for OSA is documented. Because at least one applicable criterion is not met, the E0601 claim is denied. Criteria I.B, I.C, and Sleep Tests.1, .3 and .4 are met. Sleep Tests.2 (FDA status of the test) and Sleep Tests.5 (provider Medicare enrollment and state compliance) are administrative and were excluded. Continued-coverage, re-qualification, oxygen, replacement, Medicare-entry, accessory, and E0470 criteria do not apply to this initial E0601 order.",
+  "patient_file_sha256": "1db328df6958834cdd52edad4d2764b9b7c86e43b1eed75ca963f893a8aa3004",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

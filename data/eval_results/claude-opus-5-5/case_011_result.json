@@ -1,0 +1,121 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is E0601, a CPAP device, for newly diagnosed obstructive sleep apnea. L33718 is the DME LCD that sets coverage criteria for PAP devices in OSA, including E0601. L33405 and L36902 govern sleep testing (polysomnography), not the device itself. The record also lines up with L33718's criteria: a clinical evaluation before the sleep test, an in-lab polysomnogram showing AHI 22 with 143 events, and documented sleepiness and hypertension.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "not met",
+      "evidence": [
+        "R77",
+        "R159",
+        "R102",
+        "R78"
+      ],
+      "explanation": "The only pre-test evaluation for OSA by the treating practitioner (Dr. Chang, 2026-10-04) is documented as a telemedicine video visit, with the exam 'limited to what was visible on video.' This contradicts the requirement for an in-person evaluation. No other in-person OSA evaluation occurred before the 2026-10-21 sleep test.",
+      "evidence_ids": [
+        "fa820ce7-ba9b-43a1-8442-5c50f79edbcb",
+        "883577dd-2be2-4e09-be15-2f0871bad5ef",
+        "6c63e485-21d2-4bfc-9913-3d986b073abe",
+        "6d9702e3-7f95-4aa2-af91-da7b94ecebe5"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. The AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or, 2. The AHI or RDI is 5 to 14 events per hour with a minimum of 10 events and documentation of symptoms or comorbidities.",
+      "verdict": "met",
+      "evidence": [
+        "R104",
+        "R146",
+        "R147",
+        "R150"
+      ],
+      "explanation": "Alternative 1 applies. The Type I polysomnogram showed an AHI of 22 events/hour, with 143 events over 6.5 hours of sleep. This meets the ≥15/hour and ≥30 events thresholds.",
+      "evidence_ids": [
+        "851ff8c5-cde5-45f6-866b-81274ff5561a",
+        "17885f8e-bd9f-4ab0-aa6b-f356a64426ae",
+        "90514f04-b34d-4d21-b646-ec477de27a84",
+        "8c31aaf7-8c58-4d52-941c-514552ea25bc"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R103"
+      ],
+      "explanation": "On 2026-11-07 the record documents instruction on the use and care of the CPAP device by the DME supplier.",
+      "evidence_ids": [
+        "5c818adc-e3b3-408e-b38d-d8ccdefcf40f"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article",
+      "verdict": "met",
+      "evidence": [
+        "R78",
+        "R150"
+      ],
+      "explanation": "The sleep test was an attended in-laboratory polysomnogram, explicitly identified as a Type I sleep study.",
+      "evidence_ids": [
+        "6d9702e3-7f95-4aa2-af91-da7b94ecebe5",
+        "8c31aaf7-8c58-4d52-941c-514552ea25bc"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device",
+      "verdict": "met",
+      "evidence": [
+        "R104",
+        "R146",
+        "R150"
+      ],
+      "explanation": "An AHI of 22/hour with 143 events meets the current AHI coverage criteria.",
+      "evidence_ids": [
+        "851ff8c5-cde5-45f6-866b-81274ff5561a",
+        "17885f8e-bd9f-4ab0-aa6b-f356a64426ae",
+        "8c31aaf7-8c58-4d52-941c-514552ea25bc"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner",
+      "verdict": "met",
+      "evidence": [
+        "R67",
+        "R159"
+      ],
+      "explanation": "The Type I polysomnogram was ordered by Dr. Chang, the treating practitioner who evaluated the patient and ordered the CPAP.",
+      "evidence_ids": [
+        "4384d9cb-bbfa-46a8-b952-abdf728b3c40",
+        "883577dd-2be2-4e09-be15-2f0871bad5ef"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The sleep test results, the sleep test ordering, and supplier instruction criteria are met. However, the pre-test clinical evaluation was a telemedicine video visit, not the in-person evaluation required by criterion I.A. Because an applicable criterion is not met, the E0601 request is denied.",
+  "patient_file_sha256": "fcd697ef9d581e2382096068654b93080b7fddb84754ce3856e13fee3e076185",
+  "pipeline_sha256": "627f4c73ad28537786ad213852e7b7e40376d9b9f536b1df4dbcee698290beb6"
+}

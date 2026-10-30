@@ -1,0 +1,121 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is E0601, a CPAP device for obstructive sleep apnea. L33718 (PAP Devices for the Treatment of OSA) is the LCD that sets coverage criteria for E0601. Its criteria fit this record: an in-person evaluation (2026-04-11) came before the home sleep test, and the test showed an RDI of 22/h with 143 events. L33405 and L36902 govern the sleep testing itself, not the CPAP device.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R76",
+        "R108",
+        "R191",
+        "R77"
+      ],
+      "explanation": "Dr. Schiller saw the patient in person on 2026-04-11 to evaluate possible obstructive sleep apnea. This was before the home sleep test on 2026-04-30. The same practitioner later ordered the CPAP.",
+      "evidence_ids": [
+        "39f5d460-cb41-437d-ab25-cf1fdb2cce0d",
+        "2eda8108-7294-43b1-9bf3-140e0f56b603",
+        "f6c40ab8-45ec-4d68-a0d8-a52624a9ac71",
+        "4bf2f908-7877-4d6b-b2b1-d31e2bbb1cc6"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. AHI or RDI ≥15 events per hour with a minimum of 30 events; or, 2. AHI or RDI 5-14 with a minimum of 10 events and documentation of symptoms/comorbidities.",
+      "verdict": "met",
+      "evidence": [
+        "R170",
+        "R176",
+        "R177",
+        "R184"
+      ],
+      "explanation": "Alternative 1 applies. The Type III home sleep test showed an RDI of 22 events/hour, with 143 events over 6.5 hours of recording. That is at least 15/hour with at least 30 events.",
+      "evidence_ids": [
+        "6a15199b-fb66-415d-abcd-49b32711a2e9",
+        "ddefece1-d3f0-44f8-b47f-979d63acd58b",
+        "3d422f50-f448-4ef2-9c71-a1ab22c2f960",
+        "6d358d74-94bd-45a9-80d1-17d7bda35489"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R109"
+      ],
+      "explanation": "The DME supplier gave instruction on the use and care of the CPAP device on 2026-05-18.",
+      "evidence_ids": [
+        "a4e54e4e-42da-44a6-a162-a7ef8beb171e"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article",
+      "verdict": "met",
+      "evidence": [
+        "R77",
+        "R184"
+      ],
+      "explanation": "The record names the test as a Type III, 4-channel home sleep apnea test, which is one of the accepted sleep test types.",
+      "evidence_ids": [
+        "4bf2f908-7877-4d6b-b2b1-d31e2bbb1cc6",
+        "6d358d74-94bd-45a9-80d1-17d7bda35489"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device",
+      "verdict": "met",
+      "evidence": [
+        "R170",
+        "R176",
+        "R184"
+      ],
+      "explanation": "An RDI of 22/hour with 143 events meets the AHI/RDI criteria.",
+      "evidence_ids": [
+        "6a15199b-fb66-415d-abcd-49b32711a2e9",
+        "ddefece1-d3f0-44f8-b47f-979d63acd58b",
+        "6d358d74-94bd-45a9-80d1-17d7bda35489"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R191",
+        "R77"
+      ],
+      "explanation": "The 2026-04-11 note says only 'Discussed sleep testing,' and the sleep test encounter is listed with Dr. Schiller. Neither documents that the treating practitioner actually ordered the sleep test. There is no sleep test order in the record.",
+      "evidence_ids": [
+        "f6c40ab8-45ec-4d68-a0d8-a52624a9ac71",
+        "4bf2f908-7877-4d6b-b2b1-d31e2bbb1cc6"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "Most criteria are met: the in-person evaluation came before the test, the Type III HST showed an RDI of 22/hour with 143 events, and the supplier gave instruction on the device. However, the record does not document that the treating practitioner ordered the sleep test. It shows only that testing was discussed and that the test encounter was listed with her. That leaves one criterion undetermined.",
+  "patient_file_sha256": "5e633f9581ea30caf973d56dd1beb12217630849837c77d221087336ad548777",
+  "pipeline_sha256": "627f4c73ad28537786ad213852e7b7e40376d9b9f536b1df4dbcee698290beb6"
+}

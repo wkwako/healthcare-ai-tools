@@ -1,0 +1,119 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 is the PAP device policy that governs E0601 CPAP coverage for obstructive sleep apnea. Criteria for E0601 include an in-person clinical evaluation before the sleep test (met: 2026-10-08 visit) and a qualifying sleep test (met: 2026-10-20 attended in-lab PSG showing AHI 22 with moderate OSA). The policy also covers the initial trial and continued coverage requirements, which the order falls under.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R190",
+        "R60"
+      ],
+      "explanation": "On 2026-10-08 Dr. Maria Cristina Uribe, the treating practitioner, saw the patient in person for evaluation of possible obstructive sleep apnea (R190, 'seen in person'). The attended in-laboratory polysomnography followed on 2026-10-20 (R60), so the evaluation preceded the sleep test.",
+      "evidence_ids": [
+        "3d2d0b05-d122-4e27-88b9-9c9fdb2d4701",
+        "24e5db74-bade-41f5-ab8d-b0d5d9f2fd58"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either (1) AHI or RDI >= 15 events per hour with a minimum of 30 events; or (2) AHI or RDI 5 to 14 events per hour with a minimum of 10 events and documented symptoms or comorbidities.",
+      "verdict": "met",
+      "evidence": [
+        "R100",
+        "R171",
+        "R174",
+        "R183"
+      ],
+      "explanation": "Alternative 1 applies. The AHI is 22 events/hour (R100, R183), which is at least 15, and the study recorded 143 total apnea and hypopnea events (R171), which exceeds the minimum of 30. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "8d64035e-3a1d-485b-8d19-ceb96c712adb",
+        "ea715314-9ab6-4663-957d-c33bbce74a5f",
+        "0e44c129-eea2-43cd-bd5a-2b7d8719d639",
+        "5fbfec3f-51ec-48fb-b166-9119c382e4aa"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R96"
+      ],
+      "explanation": "The record documents instruction on use and care of the CPAP device given by the DME supplier on 2026-11-09 (R96).",
+      "evidence_ids": [
+        "9e5ab26a-fee6-4c6c-bb89-5a5da66b2e1f"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R60",
+        "R183",
+        "R174"
+      ],
+      "explanation": "The sleep test is documented as an attended in-laboratory polysomnography (Type I facility-based study) on 2026-10-20 with a total sleep time of 6.5 hours (R60, R174, R183). This is a sleep test type the policy accepts. The record does not detail every technical NCD requirement, but the documented test type and results satisfy this item on the record provided.",
+      "evidence_ids": [
+        "24e5db74-bade-41f5-ab8d-b0d5d9f2fd58",
+        "5fbfec3f-51ec-48fb-b166-9119c382e4aa",
+        "0e44c129-eea2-43cd-bd5a-2b7d8719d639"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R100",
+        "R171",
+        "R183"
+      ],
+      "explanation": "The AHI of 22 events/hour with 143 events over 6.5 hours (R100, R171, R183) meets the AHI of at least 15 with at least 30 events required by I.B.1.",
+      "evidence_ids": [
+        "8d64035e-3a1d-485b-8d19-ceb96c712adb",
+        "ea715314-9ab6-4663-957d-c33bbce74a5f",
+        "5fbfec3f-51ec-48fb-b166-9119c382e4aa"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R60",
+        "R190"
+      ],
+      "explanation": "Dr. Uribe, the treating practitioner, is listed as the provider of the sleep test encounter (R60), and the 2026-10-08 note says 'Discussed sleep testing' (R190). Neither document records that Dr. Uribe ordered the sleep test. Discussing or performing the test does not satisfy the requirement, so the order is not documented.",
+      "evidence_ids": [
+        "24e5db74-bade-41f5-ab8d-b0d5d9f2fd58",
+        "3d2d0b05-d122-4e27-88b9-9c9fdb2d4701"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "The in-person evaluation (I.A), the qualifying AHI with minimum events (I.B), supplier instruction (I.C), a valid Type I sleep test (Sleep Tests.1) and results meeting the criteria in effect (Sleep Tests.3) are all documented. However, the record does not document that the treating practitioner ordered the sleep test (Sleep Tests.4), so the coverage determination cannot be completed on this record.",
+  "patient_file_sha256": "d14f26e60e98f54c3dbbd84b76c87d2a479161ebc0a3fffacd7d667b9e27992c",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

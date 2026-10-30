@@ -1,0 +1,129 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for E0601 (CPAP device) for obstructive sleep apnea. L33718 (PAP Devices for the Treatment of OSA) directly covers E0601 under criteria A-C: an in-person clinical evaluation before the sleep test (R184, 2026-10-25), and a qualifying sleep test (home sleep apnea test with RDI 18 events/hour, moderate OSA, R176). It is the policy that governs PAP device coverage for this item, whereas L33405 and L36902 address sleep testing criteria rather than the device itself.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R184",
+        "R52",
+        "R43",
+        "R53"
+      ],
+      "explanation": "On 2026-10-25, Dr. Damaris45 Funk324, who also ordered the sleep test (R43), saw the patient in person for evaluation of possible obstructive sleep apnea (R184). The home sleep test was performed on 2026-11-03 (R53), after that evaluation.",
+      "evidence_ids": [
+        "ca80b4d2-e35d-4d5c-b0ef-63f02aedd769",
+        "6104b08f-573b-4d93-b029-08066d7bc33c",
+        "3ffd1d79-3b7f-48ab-a1c3-292ed030ef44",
+        "e71b921d-1c37-4a19-8dc9-8b23da17f292"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test (as defined below) that meets either of the following criteria (1 or 2): 1. The AHI or RDI is greater than or equal to 15 events per hour with a minimum of 30 events; or, 2. The AHI or RDI is greater than or equal to 5 and less than or equal to 14 events per hour with a minimum of 10 events and documentation of excessive daytime sleepiness, impaired cognition, mood disorders, or insomnia, or hypertension, ischemic heart disease, or history of stroke.",
+      "verdict": "met",
+      "evidence": [
+        "R159",
+        "R168",
+        "R169",
+        "R176"
+      ],
+      "explanation": "Alternative 1 applies. The Type IV home sleep test reports an RDI of 18 events/hour, which is at least 15, with 117 total apnea and hypopnea events, which is at least 30. The recording time was 6.5 hours, so the 2-hour minimum event rule does not apply. Alternative 2 is not needed.",
+      "evidence_ids": [
+        "d495d97c-caaf-4d3e-92cc-a058d5afebe9",
+        "4290cd31-a2ae-4296-8a55-5a65216af9ae",
+        "5018ba97-6a16-4b5d-b041-3a0e798f7b53",
+        "7e68de17-6c91-4442-929c-04bf3289a525"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R83"
+      ],
+      "explanation": "The record documents instruction on use and care of the CPAP device by a DME supplier on 2026-11-17.",
+      "evidence_ids": [
+        "d6da670e-ea3c-4d3a-91e2-266249f1d137"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R43",
+        "R53",
+        "R176",
+        "R169"
+      ],
+      "explanation": "The sleep test was a home sleep apnea test of Type IV, which is an allowed type. It recorded 6.5 hours and produced a reported RDI and oxygen nadir. The record contains no fact suggesting the test was invalid.",
+      "evidence_ids": [
+        "3ffd1d79-3b7f-48ab-a1c3-292ed030ef44",
+        "e71b921d-1c37-4a19-8dc9-8b23da17f292",
+        "7e68de17-6c91-4442-929c-04bf3289a525",
+        "5018ba97-6a16-4b5d-b041-3a0e798f7b53"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R159",
+        "R168",
+        "R169",
+        "R176"
+      ],
+      "explanation": "The results are the same as those assessed under I.B. An RDI of 18 events/hour with at least 30 events meets criterion 1 of the coverage criteria in effect.",
+      "evidence_ids": [
+        "d495d97c-caaf-4d3e-92cc-a058d5afebe9",
+        "4290cd31-a2ae-4296-8a55-5a65216af9ae",
+        "5018ba97-6a16-4b5d-b041-3a0e798f7b53",
+        "7e68de17-6c91-4442-929c-04bf3289a525"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "met",
+      "evidence": [
+        "R43",
+        "R52",
+        "R184"
+      ],
+      "explanation": "The home sleep test order (R43) was placed by Dr. Damaris45 Funk324, the same practitioner who evaluated the patient for sleep apnea and is documented as the treating practitioner (R52, R184).",
+      "evidence_ids": [
+        "3ffd1d79-3b7f-48ab-a1c3-292ed030ef44",
+        "6104b08f-573b-4d93-b029-08066d7bc33c",
+        "ca80b4d2-e35d-4d5c-b0ef-63f02aedd769"
+      ]
+    }
+  ],
+  "decision": "covered",
+  "decision_explanation": "All applicable criteria for E0601 are met. The in-person evaluation preceded the sleep test (I.A). The RDI of 18 with 117 events over 6.5 hours satisfies the first sleep-test alternative (I.B and Sleep Tests.3). The sleep test is a Type IV home test that is valid on its face and was ordered by the treating practitioner (Sleep Tests.1 and Sleep Tests.4). The supplier provided use and care instruction (I.C). The FDA approval and provider-qualification items (Sleep Tests.2 and Sleep Tests.5) were excluded as regulatory or provider administrative requirements. The continued-coverage, oxygen, replacement, and entering-Medicare sections do not apply to this initial order.",
+  "patient_file_sha256": "586c7ff9a73477d84a887848cf81d2dc8f2d0e53896f7eb21309ee5e3d161f76",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

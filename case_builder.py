@@ -101,7 +101,9 @@ class RecordBuilder:
     def ref(self, resource_id):
         return {"reference": f"urn:uuid:{resource_id}"}
 
-    def encounter(self, start, minutes, type_text, reason, description, setting="AMB", type_code=None):
+    def encounter(self, start, minutes, type_text, reason, description, setting="AMB", type_code=None, performer=None):
+        """performer: the encounter's primary performer, e.g. {"display": "Sleep center technologist"};
+        defaults to the treating practitioner"""
         end = start + timedelta(minutes=minutes)
         resource = {
             "resourceType": "Encounter", "status": "finished",
@@ -109,7 +111,7 @@ class RecordBuilder:
             "type": [concept(type_text, SNOMED, type_code) if type_code else concept(type_text)],
             "subject": self.patient_ref,
             "participant": [{"type": [concept("primary performer", "http://terminology.hl7.org/CodeSystem/v3-ParticipationType", "PPRF")],
-                             "period": {"start": iso(start), "end": iso(end)}, "individual": self.practitioner}],
+                             "period": {"start": iso(start), "end": iso(end)}, "individual": performer or self.practitioner}],
             "period": {"start": iso(start), "end": iso(end)},
             "reasonCode": [concept(reason)],
             "serviceProvider": self.organization,
@@ -118,9 +120,10 @@ class RecordBuilder:
             resource["location"] = [{"location": self.location}]
         return self.add(resource, description)
 
-    def note(self, encounter_id, when, text, description):
+    def note(self, encounter_id, when, text, description, author=None):
         """Synthea stores each note twice (DiagnosticReport + DocumentReference); returns the DocumentReference id,
-        the copy the patient summary shows"""
+        the copy the patient summary shows. author defaults to the treating practitioner."""
+        author = author or self.practitioner
         data = base64.b64encode(text.strip().encode("utf-8")).decode("ascii")
         note_type = [{"system": LOINC, "code": "34117-2", "display": "History and physical note"},
                      {"system": LOINC, "code": "51847-2", "display": "Evaluation + Plan note"}]
@@ -128,7 +131,7 @@ class RecordBuilder:
             "resourceType": "DiagnosticReport", "status": "final",
             "category": [{"coding": note_type}], "code": {"coding": note_type},
             "subject": self.patient_ref, "encounter": self.ref(encounter_id),
-            "effectiveDateTime": iso(when), "issued": iso(when), "performer": [self.practitioner],
+            "effectiveDateTime": iso(when), "issued": iso(when), "performer": [author],
             "presentedForm": [{"contentType": "text/plain; charset=utf-8", "data": data}],
         }, description + " (note)")
         return self.add({
@@ -136,7 +139,7 @@ class RecordBuilder:
             "identifier": [{"system": "urn:ietf:rfc:3986", "value": f"urn:uuid:{report_id}"}],
             "type": {"coding": note_type},
             "category": [concept("Clinical Note", "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category", "clinical-note")],
-            "subject": self.patient_ref, "date": iso(when), "author": [self.practitioner], "custodian": self.organization,
+            "subject": self.patient_ref, "date": iso(when), "author": [author], "custodian": self.organization,
             "content": [{"attachment": {"contentType": "text/plain; charset=utf-8", "data": data}}],
             "context": {"encounter": [self.ref(encounter_id)], "period": {"start": iso(when), "end": iso(when)}},
         }, description + " (note, document copy)")

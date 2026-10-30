@@ -1,0 +1,28 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "none",
+  "selection_reason": "The record lists the patient's primary insurance as private (Humana), and at age 32 she is not a Medicare beneficiary. Medicare LCDs govern Medicare coverage, so none of the candidates applies to this order. The record also gives no state of residence, so the MAC jurisdiction, and therefore which of the three LCDs would apply under Medicare, cannot be determined. The clinical criteria are otherwise documented (AHI 32, CPAP intolerance, BMI 29.5, central apneas 8%, no complete concentric velum collapse), but that does not settle which LCD governs.",
+  "decision": "insufficient information",
+  "criteria": [],
+  "decision_explanation": "None of the retrieved policies covers this order.",
+  "patient_file_sha256": "dc2f6eafe732358026d9808fbaf1e4f32f363c70aeb1e8940ef3a7a965b85a17",
+  "pipeline_sha256": "2239bbb686c070e9f4fb8170306548f275db87a431e5038837b9470d78573794"
+}

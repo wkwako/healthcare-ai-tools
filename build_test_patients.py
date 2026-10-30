@@ -8,12 +8,14 @@ that returns case_builder.save_case(...), add it here, and add cases with that p
 """
 from collections import Counter
 
+import hgns_cases
 import pap_cases
 from case_builder import validate_case
 from cases import CASES
 
 FAMILIES = {
     "pap": pap_cases,
+    "hgns": hgns_cases,
 }
 
 def build_all(cases):

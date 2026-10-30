@@ -1,0 +1,121 @@
+{
+  "order": "E0601",
+  "order_description": "Continuous positive airway pressure (cpap) device",
+  "candidates": [
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 36902,
+      "title": "Polysomnography and Other Sleep Studies",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "L33718 (PAP Devices for the Treatment of Obstructive Sleep Apnea) directly governs E0601 CPAP devices for OSA. Criteria A-C for E0601 coverage require an in-person clinical evaluation before the sleep test (documented 2026-04-11), and a qualifying sleep test (home sleep test 2026-04-30 with RDI 22 events/hour and 143 events over 6.5 hours, meeting the RDI threshold of 15 or more). The patient is 73 with moderate OSA diagnosed by the treating physician, so the E0601 order is covered under this policy.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "met",
+      "evidence": [
+        "R76",
+        "R191",
+        "R77"
+      ],
+      "explanation": "Dr. Bea654 Schiller186, the treating practitioner, saw the patient in person on 2026-04-11 for evaluation of possible obstructive sleep apnea (R191, R76). This was before the home sleep test on 2026-04-30 (R77).",
+      "evidence_ids": [
+        "39f5d460-cb41-437d-ab25-cf1fdb2cce0d",
+        "f6c40ab8-45ec-4d68-a0d8-a52624a9ac71",
+        "4bf2f908-7877-4d6b-b2b1-d31e2bbb1cc6"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either alternative 1 (AHI or RDI of at least 15 events per hour with a minimum of 30 events) or alternative 2 (AHI or RDI of 5 to 14 events per hour with a minimum of 10 events and documented symptoms or comorbidities).",
+      "verdict": "met",
+      "evidence": [
+        "R170",
+        "R176",
+        "R177",
+        "R184"
+      ],
+      "explanation": "Alternative 1 applies. The RDI is 22 events per hour, with 143 events over 6.5 hours of recording (R170, R176, R177, R184). This exceeds 15 events per hour and the minimum of 30 events, so the 2-hour adjustment does not apply. Alternative 2 is not needed, although the record also lists ischemic heart disease (R6) and an Epworth score of 15 (R130).",
+      "evidence_ids": [
+        "6a15199b-fb66-415d-abcd-49b32711a2e9",
+        "ddefece1-d3f0-44f8-b47f-979d63acd58b",
+        "3d422f50-f448-4ef2-9c71-a1ab22c2f960",
+        "6d358d74-94bd-45a9-80d1-17d7bda35489"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "met",
+      "evidence": [
+        "R109"
+      ],
+      "explanation": "A procedure record dated 2026-05-18 documents instruction on use and care of the CPAP device by the DME supplier.",
+      "evidence_ids": [
+        "a4e54e4e-42da-44a6-a162-a7ef8beb171e"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "The diagnosis of OSA is based on a sleep test (Type I, II, III, IV or Other) that meets the Medicare requirements for a valid sleep test under NCD 240.4.1 and the applicable LCD and billing article.",
+      "verdict": "met",
+      "evidence": [
+        "R77",
+        "R184",
+        "R177"
+      ],
+      "explanation": "The sleep test is a Type III, 4-channel home sleep apnea test, which is one of the permitted test types. The report documents recording time and results (R184, R177).",
+      "evidence_ids": [
+        "4bf2f908-7877-4d6b-b2b1-d31e2bbb1cc6",
+        "6d358d74-94bd-45a9-80d1-17d7bda35489",
+        "3d422f50-f448-4ef2-9c71-a1ab22c2f960"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R170",
+        "R176",
+        "R177"
+      ],
+      "explanation": "The RDI of 22 events per hour with 143 events meets the at-least-15-events-per-hour and at-least-30-events threshold of I.B alternative 1.",
+      "evidence_ids": [
+        "6a15199b-fb66-415d-abcd-49b32711a2e9",
+        "ddefece1-d3f0-44f8-b47f-979d63acd58b",
+        "3d422f50-f448-4ef2-9c71-a1ab22c2f960"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R77",
+        "R191"
+      ],
+      "explanation": "The home sleep test is linked to Dr. Bea654 Schiller186 (R77), and the 2026-04-11 note says Discussed sleep testing (R191). Neither document states that the practitioner ordered the sleep test. The CPAP order (R69, R192) is for the device, not the sleep test. Discussing or being associated with the test does not document the required order.",
+      "evidence_ids": [
+        "4bf2f908-7877-4d6b-b2b1-d31e2bbb1cc6",
+        "f6c40ab8-45ec-4d68-a0d8-a52624a9ac71"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "Criteria I.A, I.B, I.C, Sleep Tests.1 and Sleep Tests.3 are met. Sleep Tests.4 requires documentation that the treating practitioner ordered the sleep test, and the record only shows that the practitioner was associated with the test and discussed it. Because this criterion cannot be confirmed from the record, coverage cannot be decided.",
+  "patient_file_sha256": "5e633f9581ea30caf973d56dd1beb12217630849837c77d221087336ad548777",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}
