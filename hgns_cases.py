@@ -1,6 +1,6 @@
 """Test case family for hypoglossal nerve stimulation (L38307 and the five LCDs with the same criteria), the held-out
 policy: its levers, the patient timeline they shape, and the verdict rules that turn lever settings into the answer
-key. Shared machinery lives in case_builder.py; the cases themselves are in cases.py with policy="hgns".
+key. Shared machinery lives in record_builder.py; the cases themselves are in cases.py with policy="hgns".
 
 Every case tells the same story, with each lever changing one part of it:
   polysomnogram (PSG) -> CPAP trial -> sleep physician's HGNS consultation (the first one) -> surgeon's consultation
@@ -9,7 +9,7 @@ Every case tells the same story, with each lever changing one part of it:
 import re
 from datetime import date, timedelta
 
-from case_builder import RecordBuilder, concept, iso, load_checklist, decide, decision_explanation, save_case
+from record_builder import RecordBuilder, concept, iso, load_checklist, decide, decision_explanation, save_case
 
 CHECKLIST_NAME = "L38307"
 checklist = load_checklist(CHECKLIST_NAME)
