@@ -1,6 +1,5 @@
 import base64
 import json
-import re
 from datetime import date
 from pathlib import Path
 from dotenv import load_dotenv
@@ -333,73 +332,6 @@ def judge_criteria(pt_summary, order, refs=None):
         for criterion in judgment["criteria"]:
             criterion["evidence_ids"] = [refs.get(tag.strip("[]"), tag) for tag in criterion["evidence"]]
     return result | judgment
-
-def criterion_label(label):
-    """Normalizes a criterion label so "Sleep Tests.4", "Sleep Tests 4" and "sleep tests.4" all match"""
-    return re.sub(r"[^a-z0-9]+", " ", label.lower()).strip()
-
-def matching_id(label, ids):
-    """The checklist ID a model's label starts with, ignoring any description after it, so "Limitations.3 (BMI 35
-    or more)" and "Limitations.3: no neuromuscular disease" both match "Limitations.3"; the label itself if none
-    does. The ID must end at a word break, so "Sleep Tests.10" doesn't match "Sleep Tests.1"."""
-    label = criterion_label(label)
-    starts = [i for i in ids if label == criterion_label(i) or label.startswith(criterion_label(i) + " ")]
-    return max(starts, key=len) if starts else label
-
-#when the model splits one criterion into several items (e.g. one per listed contraindication), the combined verdict
-#is the first of these any item has: one "not met" fails the criterion, and it's only "met" if every item is
-MERGE_ORDER = ["not met", "insufficient information", "met", "not applicable"]
-
-def merge_criteria(items):
-    """One verdict for several model items that share a label; their evidence is pooled"""
-    verdicts = {c["verdict"] for c in items}
-    return {"criterion": items[0]["criterion"], "verdict": next(v for v in MERGE_ORDER if v in verdicts),
-            "evidence_ids": [e for c in items for e in c.get("evidence_ids", [])]}
-
-def score_against_answer_key(result, key):
-    """Compares judge_criteria()'s result with a test case's answer key.
-    Policy: correct if the selected LCD is one of the key's accepted policies (any contractor's version counts).
-    Criteria: each answer-key criterion is matched to the model's by label; a criterion the model left out counts
-    as wrong, except one that only restates another criterion the model did judge (reported, not scored). Items the
-    model split one criterion into are merged first (see merge_criteria).
-    Evidence: how many of the key's evidence resources the model cited, and whether it cited at least one.
-    Extra criteria the model judged but the key doesn't list are reported, not scored.
-    Cases scored on policy selection only (no criteria in the key) skip the decision and criteria."""
-    score = {
-        "case_id": key["case_id"],
-        "policy": {"selected": result["selected_policy"], "accepted": key["accepted_policies"],
-                   "correct": result["selected_policy"] in key["accepted_policies"]},
-    }
-    if not key["criteria"]:
-        return score
-
-    grouped = {}
-    for c in result["criteria"]:
-        grouped.setdefault(matching_id(c["criterion"], key["criteria"]), []).append(c)
-    by_label = {label: items[0] if len(items) == 1 else merge_criteria(items) for label, items in grouped.items()}
-    judged = set(by_label)
-    criteria, omitted_restatements = [], []
-    for cid, expected in key["criteria"].items():
-        got = by_label.pop(cid, None)
-        if got is None and matching_id(expected.get("restates", ""), key["criteria"]) in judged:
-            omitted_restatements.append(cid)
-            continue
-        cited = set(got.get("evidence_ids", [])) if got else set()
-        criteria.append({
-            "criterion": cid,
-            "expected": expected["verdict"],
-            "got": got["verdict"] if got else "missing",
-            "correct": bool(got) and got["verdict"] == expected["verdict"],
-            "evidence_expected": len(expected["evidence"]),
-            "evidence_cited": len(cited & set(expected["evidence"])),
-        })
-    score["decision"] = {"expected": key["expected_decision"], "got": result["decision"],
-                         "correct": result["decision"] == key["expected_decision"]}
-    score["criteria"] = criteria
-    score["criteria_correct"] = sum(c["correct"] for c in criteria)
-    score["omitted_restatements"] = omitted_restatements
-    score["extra_criteria"] = [{"criterion": c["criterion"], "verdict": c["verdict"]} for c in by_label.values()]
-    return score
 
 if __name__ == "__main__":
     path = Path(__file__).parent / "data/modified_patient_data/Asia282_Prosacco716_3f0c90c7-2489-1306-ff69-868509c56635_case_006.json"

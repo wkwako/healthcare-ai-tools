@@ -1,16 +1,16 @@
 """Builds and validates every test case in cases.py.
 
-    python build_test_patients.py
+    python build_cases.py
 
 Each case names its policy family; FAMILIES maps that name to the module with the family's levers, timeline and
 verdict rules. To add a family: write <family>_cases.py with a build_case(case_id, base_patient, **levers)
-that returns case_builder.save_case(...), add it here, and add cases with that policy to cases.py.
+that returns record_builder.save_case(...), add it here, and add cases with that policy to cases.py.
 """
 from collections import Counter
 
 import hgns_cases
 import pap_cases
-from case_builder import validate_case
+from record_builder import validate_case
 from cases import CASES
 
 FAMILIES = {

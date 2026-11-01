@@ -1,4 +1,4 @@
-"""Every test case, built by build_test_patients.py. Each case is a policy family, a case id, a base patient,
+"""Every test case, built by build_cases.py. Each case is a policy family, a case id, a base patient,
 and the lever settings that differ from that family's defaults.
 
 Base patients (living, 65+, no sleep diagnosis):

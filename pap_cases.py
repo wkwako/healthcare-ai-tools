@@ -1,11 +1,11 @@
 """Test case family for the PAP policy (L33718): its levers, the patient timeline they shape, and the verdict
-rules that turn lever settings into the answer key. Shared machinery lives in case_builder.py; the cases
+rules that turn lever settings into the answer key. Shared machinery lives in record_builder.py; the cases
 themselves are in cases.py with policy="pap".
 """
 import re
 from datetime import timedelta
 
-from case_builder import RecordBuilder, SNOMED, concept, iso, load_checklist, decide, decision_explanation, save_case
+from record_builder import RecordBuilder, SNOMED, concept, iso, load_checklist, decide, decision_explanation, save_case
 
 CHECKLIST_NAME = "L33718"
 checklist = load_checklist(CHECKLIST_NAME)

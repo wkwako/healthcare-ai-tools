@@ -14,8 +14,7 @@ import argparse
 import csv
 import json
 
-from evaluate import results_path, run_path, load_answer_keys, is_current
-from prior_auth_checker import score_against_answer_key
+from evaluate import results_path, run_path, load_answer_keys, is_current, score_against_answer_key
 
 DECISION_COLUMNS = ["case_id", "status", "order", "accepted_policies", "selected_policy", "policy_correct",
                     "expected_decision", "predicted_decision", "decision_correct", "criteria_correct", "criteria_total"]
