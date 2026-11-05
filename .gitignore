@@ -19,3 +19,5 @@ wheels/
 /data/chroma
 /data/patient_data/
 /data/modified_patient_data/
+# request log (monitoring.py)
+/data/monitoring.db

@@ -17,7 +17,7 @@ body {
   background: #2c5282;
 }
 
-input.button {
+input.button, button.button {
   border: none;
   font-size: 1rem;
   cursor: pointer;
@@ -35,6 +35,25 @@ input.button:disabled {
   border: 1px solid #feb2b2;
   border-radius: 4px;
   padding: 10px 12px;
+}
+
+.warning {
+  color: #744210;
+  background: #fffff0;
+  border: 1px solid #f6e05e;
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+
+.warning ul {
+  margin: 6px 0 0;
+}
+
+.feedback {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
 }
 
 .muted {
