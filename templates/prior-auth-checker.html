@@ -32,8 +32,23 @@
   <p class="error">{{ error }}</p>
 {% endif %}
 
+{% if feedback_saved %}
+  <p>Thanks, your feedback was saved.</p>
+{% endif %}
+
 {% if result %}
   <p>Checked {{ filename }} for order {{ order }}{% if result.order_description %} ({{ result.order_description }}){% endif %}.</p>
+
+  {% if warnings %}
+  <div class="warning">
+    <strong>This record may have problems that affect the result:</strong>
+    <ul>
+      {% for warning in warnings %}
+      <li>{{ warning }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 
   <div class="decision decision-{{ result.decision | replace(' ', '-') }}">
     <span class="decision-label">{{ decision_label }}</span>
@@ -65,6 +80,16 @@
     {% endif %}
   </div>
   {% endfor %}
+
+  {% if feedback_enabled and request_id %}
+  <form class="feedback" action="/prior-auth-checker/feedback" method="post">
+    <input type="hidden" name="request_id" value="{{ request_id }}">
+    <strong>Was this decision right?</strong>
+    {% for value, label in feedback_choices.items() %}
+    <button type="submit" class="button" name="feedback" value="{{ value }}">{{ label }}</button>
+    {% endfor %}
+  </form>
+  {% endif %}
 {% endif %}
 </div>
 
