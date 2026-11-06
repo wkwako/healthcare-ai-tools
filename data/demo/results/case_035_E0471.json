@@ -1,0 +1,167 @@
+{
+  "order": "E0471",
+  "order_description": "Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 38310,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "Noridian Healthcare Solutions, LLC"
+    }
+  ],
+  "selected_policy": "L38310",
+  "selection_reason": "The order text names E0471, a bi-level device with backup rate, but the patient record's actual order (R35) is hypoglossal nerve neurostimulator implantation for severe OSA after CPAP intolerance. E0471 is not reasonable and necessary for OSA under L33718, and L33800 covers hypoventilation, CSA, and CRF rather than OSA, so neither fits. L38310 governs hypoglossal nerve stimulation for OSA, which matches this patient's condition and the ordered implant. The E0471 code on the order appears to be a mismatch and should be reviewed.",
+  "criteria": [
+    {
+      "criterion": "Covered Indications.1",
+      "policy_text": "Beneficiary is 22 years of age or older",
+      "verdict": "met",
+      "evidence": [
+        "R45",
+        "R46"
+      ],
+      "explanation": "Both notes describe the patient as a 42 year-old male, which satisfies the age threshold.",
+      "evidence_ids": [
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa",
+        "d56f75b4-9f35-447a-8b77-2de303908800"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.2",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2",
+      "verdict": "met",
+      "evidence": [
+        "R41",
+        "R46"
+      ],
+      "explanation": "BMI was recorded as 29.5 kg/m2 on 2029-04-26, which is below 35.",
+      "evidence_ids": [
+        "b24804da-0a84-4b5f-be1e-efcdc45d7398",
+        "d56f75b4-9f35-447a-8b77-2de303908800"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.3",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant",
+      "verdict": "not met",
+      "evidence": [
+        "R45",
+        "R36"
+      ],
+      "explanation": "The diagnostic PSG was performed on 2026-10-02 according to the sleep medicine note. The first consultation for HGNS implant was the sleep medicine consult on 2029-03-31 (R36). That interval is about 29 months, which exceeds the 24-month limit. No later PSG is documented.",
+      "evidence_ids": [
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa",
+        "b9408de0-3e32-433a-8be9-2d0d6d95be57"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.4",
+      "policy_text": "Predominantly obstructive events (central and mixed apneas less than 25% of the total AHI)",
+      "verdict": "met",
+      "evidence": [
+        "R45"
+      ],
+      "explanation": "The sleep medicine note states central and mixed apneas are 8% of the total AHI.",
+      "evidence_ids": [
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.5",
+      "policy_text": "AHI is 15 to 65 events per hour",
+      "verdict": "met",
+      "evidence": [
+        "R45"
+      ],
+      "explanation": "The diagnostic AHI was 32 events per hour, which is within 15 to 65.",
+      "evidence_ids": [
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6",
+      "policy_text": "Documentation of CPAP failure (AHI greater than 15 despite CPAP usage) or CPAP intolerance (less than 4 hours per night, 5 nights per week, or CPAP returned), including shared decision making that the patient was intolerant of CPAP despite consultation with a sleep expert",
+      "verdict": "met",
+      "evidence": [
+        "R40",
+        "R42",
+        "R43",
+        "R45"
+      ],
+      "explanation": "The intolerance alternative applies. Average CPAP use on nights used was 1.5 hours, which is under 4 hours, and CPAP was used on only 6 of 30 nights. Shared decision making about CPAP intolerance was documented by the sleep medicine physician in R45. The residual AHI on CPAP of 8 does not establish failure, but intolerance is sufficient.",
+      "evidence_ids": [
+        "80509cd2-ab35-4816-9f2d-40dac32fc2c2",
+        "1e1d638d-c350-41e1-b12c-1b1dad4679cd",
+        "2d45fa8f-0e45-4e4c-be4d-add9ff0a1063",
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.7",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on a drug-induced sleep endoscopy (DISE) procedure",
+      "verdict": "met",
+      "evidence": [
+        "R44"
+      ],
+      "explanation": "The DISE report states partial anteroposterior collapse at the soft palate and no complete concentric collapse.",
+      "evidence_ids": [
+        "cf68eaa0-f345-48ff-a5ee-e0b93a6e3c82"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.8",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4)",
+      "verdict": "met",
+      "evidence": [
+        "R46"
+      ],
+      "explanation": "The otolaryngology exam records tonsils size 1 on the Brodsky scale, with no other anatomical finding documented as compromising the device.",
+      "evidence_ids": [
+        "d56f75b4-9f35-447a-8b77-2de303908800"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 (active serious mental illness reducing ADLs and ability to operate the device)",
+      "policy_text": "An active, serious mental illness that reduces the ability to carry out Activities of Daily Living (ADLs) and would interfere with the patient's ability to operate the HNS and report problems to the attending provider",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R2",
+        "R46"
+      ],
+      "explanation": "The problem list shows active dependent drug abuse (R2) and several overdoses, most recently in 2025. The otolaryngology note states no serious mental illness, but the record does not document whether any substance use disorder is serious or affects ADLs or the ability to operate the device.",
+      "evidence_ids": [
+        "8034b960-0ebd-4e25-6a0c-224aa80a7529",
+        "d56f75b4-9f35-447a-8b77-2de303908800"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 (remaining listed contraindications)",
+      "policy_text": "Hypoglossal nerve stimulation is considered not reasonable and necessary when any listed contraindication is present, including central/mixed apneas over one-quarter of AHI, implanted devices, BMI 35 or greater, neuromuscular disease, hypoglossal-nerve palsy, severe pulmonary disease, pulmonary arterial hypertension, severe valvular disease, NYHA III or IV heart failure, recent MI or severe arrhythmia, uncontrolled hypertension, nonrespiratory sleep disorders, pregnancy, MRI needs, inability to operate the remote, or airway neurological compromise",
+      "verdict": "met",
+      "evidence": [
+        "R41",
+        "R45",
+        "R46"
+      ],
+      "explanation": "The otolaryngology contraindication screen documents none of these conditions: no neuromuscular disease, hypoglossal palsy, severe pulmonary disease, PAH, valvular disease, heart failure, recent MI or severe arrhythmia, nonrespiratory sleep disorder, implanted device or anticipated MRI, or neurological airway compromise. Blood pressure is documented as controlled. Central/mixed apneas are 8% and BMI is 29.5. The patient is able to operate the sleep remote. Pregnancy does not apply to this male patient.",
+      "evidence_ids": [
+        "b24804da-0a84-4b5f-be1e-efcdc45d7398",
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa",
+        "d56f75b4-9f35-447a-8b77-2de303908800"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The LCD requires a PSG within 24 months of the first HGNS consultation. The PSG was on 2026-10-02 and the first HGNS consultation was on 2029-03-31, about 29 months apart, so Covered Indications.3 is not met and the request is denied. Other covered-indication criteria are met, and the mental-illness contraindication is unresolved. The order is listed as E0471, a bi-level positive airway pressure device, while the record's implant order (R35) is for a hypoglossal nerve neurostimulator. The LCD addresses the implant, and the record does not show that the ordered item matches it. Regulatory status of the device and provider credentials were not assessed under the instructions.",
+  "patient_file_sha256": "cf98997f28a2e175be3b80a24b591be127b6afaf2a3074fbfda3a928e24fa700",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

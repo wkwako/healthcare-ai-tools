@@ -1,4 +1,3 @@
-from pathlib import Path
 from decimal import Decimal
 
 def get_segments(text):

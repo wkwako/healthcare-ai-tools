@@ -49,6 +49,26 @@ input.button:disabled {
   margin: 6px 0 0;
 }
 
+fieldset {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin: 0 0 16px;
+  padding: 8px 14px;
+}
+
+.choice {
+  display: block;
+  margin: 6px 0;
+}
+
+.tested {
+  font-size: 0.8rem;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: #bee3f8;
+  color: #2a4365;
+}
+
 .feedback {
   display: flex;
   align-items: center;

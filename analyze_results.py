@@ -51,8 +51,8 @@ def confusion(pairs, labels):
     """Rows are expected labels, columns predicted labels; keeps only rows that occur, and columns that occur or
     match a row"""
     counts = Counter(pairs)
-    rows = [l for l in labels if any(e == l for e, _ in pairs)]
-    cols = [l for l in labels if l in rows or any(p == l for _, p in pairs)]
+    rows = [label for label in labels if any(e == label for e, _ in pairs)]
+    cols = [label for label in labels if label in rows or any(p == label for _, p in pairs)]
     return rows, cols, [[counts[(r, c)] for c in cols] for r in rows]
 
 def false_approvals(pairs):
@@ -61,7 +61,7 @@ def false_approvals(pairs):
     return sum(1 for e, p in pairs if p in ("covered", "met") and e != p)
 
 def print_matrix(title, rows, cols, matrix):
-    width = max(len(SHORT.get(l, l)) for l in rows + cols) + 2
+    width = max(len(SHORT.get(label, label)) for label in rows + cols) + 2
     print(f"\n  {title} (rows: expected, columns: predicted)")
     print("  " + " " * width + "".join(f"{SHORT.get(c, c):>{width}}" for c in cols))
     for r, counts in zip(rows, matrix):

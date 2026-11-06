@@ -1,6 +1,6 @@
 import pytest
 from pathlib import Path
-from denial_validator import *
+from denial_validator import get_segments, structure_check, balance_check
 
 def load_and_check_file(name):
     """Helper function that loads a file and returns its segments"""

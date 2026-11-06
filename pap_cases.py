@@ -170,7 +170,9 @@ Loud snoring and possible pauses in breathing during sleep.
 # Assessment and Plan
 Suspected obstructive sleep apnea. {plan}
 """, "Evaluation note")
-        cite(["I.A"], eval_id); cite(["I.A"], assessment); cite(["I.A"], eval_note)
+        cite(["I.A"], eval_id)
+        cite(["I.A"], assessment)
+        cite(["I.A"], eval_note)
         if symptoms == "daytime sleepiness":
             symptom_ids = [epworth_id, eval_note]
         elif symptoms is None:
@@ -246,7 +248,8 @@ Suspected obstructive sleep apnea. {plan}
                                       SNOMED, "103750000")
         epworth_id = record.observation(fu_id, followup, "Epworth Sleepiness Scale total score", f"Epworth score {epworth}",
                                         integer=epworth, category="survey")
-        cite(["I.A"], fu_id); cite(["I.A"], assessment)
+        cite(["I.A"], fu_id)
+        cite(["I.A"], assessment)
         if symptoms == "daytime sleepiness":
             symptom_ids += [epworth_id]
     elif visit is None and symptoms in ("daytime sleepiness", None):

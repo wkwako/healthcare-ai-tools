@@ -1,0 +1,28 @@
+{
+  "order": "E0471",
+  "order_description": "Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 38310,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "Noridian Healthcare Solutions, LLC"
+    }
+  ],
+  "selected_policy": "none",
+  "selection_reason": "The order is for E0471, a bi-level device with back-up rate. The patient's condition is severe obstructive sleep apnea (AHI 32, central/mixed apneas 8%), not hypoventilation, CSA/CompSA, restrictive thoracic disorder, or COPD-related chronic respiratory failure, so L33800's E0471 criteria do not apply. L33718 states that an E0471 billed with a primary diagnosis of OSA is not reasonable and necessary and will be denied. L38310 governs hypoglossal nerve stimulator implantation, not E0471 coverage, so it does not cover this order.",
+  "decision": "insufficient information",
+  "criteria": [],
+  "decision_explanation": "None of the retrieved policies covers this order.",
+  "patient_file_sha256": "9a8ab17caa2bd0108ad7a9be93ee06b4d9523ecbfc4c564b03ae65aaec3ced91",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

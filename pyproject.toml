@@ -23,6 +23,13 @@ markers = [
     "retrieval: searches the Chroma vector store (needs it built; run python policy_store.py)",
 ]
 
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+#ruff's default rules: likely bugs (F), plus import, statement and syntax problems (E4, E7, E9)
+select = ["E4", "E7", "E9", "F"]
+
 [project.scripts]
 healthcare-ai-tools = "healthcare_ai_tools:main"
 
