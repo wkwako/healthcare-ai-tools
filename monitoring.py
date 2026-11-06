@@ -4,6 +4,7 @@ Each row records what was asked and what happened, without PHI:
 - a de-identified patient profile: gender, 5-year age band, state and resource count. Never names, ids, exact dates
   or the uploaded filename, since Synthea filenames contain the patient's name.
 - whether the record passed validation (validate_bundle), and the problems found
+- whether the patient was a demo patient (with a precomputed result) or an upload
 - the order, the policies retrieval offered, the selected policy, each criterion's verdict, the decision and how long
   the analysis took. Not the model's explanations: in real use they quote dates and values from the record.
 - for uploads that are one of the evaluation's test cases, how the result scored against its answer key
@@ -36,7 +37,9 @@ FEEDBACK_CHOICES = {"correct": "Yes", "incorrect": "No", "unsure": "I don't know
 CREATE_TABLE = """CREATE TABLE IF NOT EXISTS requests (
     id INTEGER PRIMARY KEY,
     created_at TEXT NOT NULL,       --UTC, ISO 8601
-    status TEXT NOT NULL,           --ok, invalid order, invalid record or failed
+    status TEXT NOT NULL,           --ok, invalid choice, invalid order, invalid record or failed
+    source TEXT,                    --demo (a demo patient, with a precomputed result) or upload
+    demo_patient TEXT,              --the demo patient's case id
     order_code TEXT,
     gender TEXT,
     age_band TEXT,                  --e.g. "65-69"; "90+" for 90 and older, as HIPAA Safe Harbor requires
@@ -175,10 +178,13 @@ def test_cases():
         return {}
     return {file_fingerprint(cases_path / key["patient_file"]): key for key in load_answer_keys()}
 
-def test_case_score(contents, order, result):
-    """If the upload (its raw bytes) is a test case and the order is that case's order, how the result scored against
-    the case's answer key, as monitoring columns; {} otherwise"""
-    key = test_cases().get(hashlib.sha256(contents).hexdigest())
+def find_test_case(contents):
+    """The answer key of the test case an upload (its raw bytes) is a copy of, or None"""
+    return test_cases().get(hashlib.sha256(contents).hexdigest())
+
+def test_case_score(key, order, result):
+    """If there's a test case's answer key and the order is the one the case was built for, how the result scored
+    against it, as monitoring columns; {} otherwise"""
     if not key or key["order"]["code"] != order:
         return {}
     score = score_against_answer_key(result, key)

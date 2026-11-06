@@ -1,0 +1,47 @@
+{
+  "order": "E0471",
+  "order_description": "Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 38310,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "Noridian Healthcare Solutions, LLC"
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for E0471 (bi-level with back-up rate), and the patient's diagnosis is obstructive sleep apnea (AHI 32, obstructive events on DISE, no documented central apnea, hypoventilation, or COPD). L33718 explicitly states that an E0471 billed with an OSA diagnosis is not reasonable and necessary. L33800 covers E0471 only for restrictive thoracic disorders, CSA/CompSA, hypoventilation syndrome, or CRF from COPD, none of which is documented. The hypoglossal nerve stimulator implant in the chart (order R20) is governed by L38310, not by this E0471 order.",
+  "criteria": [
+    {
+      "criterion": "INITIAL COVERAGE",
+      "policy_text": "A bi-level positive airway pressure device with back-up rate (E0471) is not reasonable and necessary if the primary diagnosis is OSA. If an E0471 is billed with a diagnosis of OSA, it will be denied as not reasonable and necessary.",
+      "verdict": "not met",
+      "evidence": [
+        "R17",
+        "R76",
+        "R81",
+        "R82"
+      ],
+      "explanation": "The ordered item is E0471, a bi-level device with back-up rate. The record documents obstructive sleep apnea as an active diagnosis (R17, 2025-11-06). The 2025-11-05 polysomnography report (R76) describes severe OSA with AHI 32, and the 2026-03-06 sleep medicine note (R81) and the 2026-03-31 otolaryngology note (R82) both assess the patient for OSA. The record gives no diagnosis other than OSA for which this device would be used, so OSA is the primary diagnosis and this policy makes E0471 not reasonable and necessary. Coverage for E0471 with non-OSA diagnoses is governed by the separate RAD LCD, and the record contains no such diagnosis. Note that the record's order entry (R20) is for hypoglossal nerve neurostimulator implantation, not E0471, and the patient's existing device (R19) is described only as a CPAP unit. Those discrepancies do not change the outcome for the E0471 order as written.",
+      "evidence_ids": [
+        "3c239a52-a77d-40a7-b74c-f6117ba39184",
+        "a34ac905-6a52-467c-b131-72813a395d74",
+        "0791122f-88f9-4658-92ed-9a7db52dd530",
+        "a4824827-a473-4322-b776-34f404c98e8e"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The only applicable criterion is the policy's explicit rule that E0471 billed with an OSA diagnosis is not reasonable and necessary. The patient has active, polysomnography-confirmed OSA (R17, R76), so the E0471 order is denied. The E0470/E0601 criteria and sleep-test requirements apply only to PAP devices for OSA treatment as defined in this policy, and E0471 is excluded from that definition, so they were not assessed for this order.",
+  "patient_file_sha256": "f2c21dab22744221f88dc52203212870fd49bd0c5f60ce71e2f91bf60c8da769",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

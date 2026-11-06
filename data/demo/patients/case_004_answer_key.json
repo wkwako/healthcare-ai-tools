@@ -1,0 +1,179 @@
+{
+  "case_id": "case_004",
+  "patient_file": "case_004.json",
+  "source_file": "Nathaniel596_Olson653_93547944-a253-d0bb-fffe-68a8adee95da.json",
+  "levers": {
+    "order": "E0601",
+    "diagnosis": "OSA",
+    "visit": "before",
+    "ahi": 14,
+    "sleep_hours": 6.5,
+    "test_type": "Type I",
+    "symptoms": null,
+    "test_ordered": true,
+    "supplier_instruction": true,
+    "cpap_trial": null,
+    "test_performer": "sleep center"
+  },
+  "order": {
+    "code": "E0601",
+    "description": "Continuous positive airway pressure (CPAP) device",
+    "date": "2026-09-05",
+    "resource_id": "4fe12d47-cbcd-465c-8271-ae1ef98a3b38"
+  },
+  "governing_policies": [
+    "L33718"
+  ],
+  "accepted_policies": [
+    "L33718"
+  ],
+  "checklist": "data/criteria/L33718.json",
+  "criteria": {
+    "I.A": {
+      "verdict": "met",
+      "evidence": [
+        "79b2d44c-9612-40b7-8a3e-76b9a4b3c345",
+        "f721d05f-0ce8-4ee1-af87-61f399ec4e43",
+        "cce9df38-b8e1-49ab-9cb5-126a911fffa9"
+      ],
+      "explanation": "In-person evaluation for OSA by the treating practitioner before the sleep test."
+    },
+    "I.B": {
+      "verdict": "not met",
+      "evidence": [
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda",
+        "1034d0c3-38de-42f5-915d-de4e0e98f8ab",
+        "d75bd052-0416-4a83-a7f2-29f13850b1b4",
+        "5d227404-6fd7-427f-b187-4c5524d2968f"
+      ],
+      "explanation": "AHI 14 (5-14) and the record documents none of the required symptoms or conditions (normal Epworth score, no hypertension, heart disease or stroke)."
+    },
+    "Sleep Tests.1": {
+      "verdict": "met",
+      "evidence": [
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda"
+      ],
+      "explanation": "The study is a Type I sleep test, a recognized type."
+    },
+    "Sleep Tests.3": {
+      "verdict": "not met",
+      "evidence": [
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda",
+        "1034d0c3-38de-42f5-915d-de4e0e98f8ab",
+        "d75bd052-0416-4a83-a7f2-29f13850b1b4",
+        "5d227404-6fd7-427f-b187-4c5524d2968f"
+      ],
+      "explanation": "Restates I.B: AHI 14 (5-14) and the record documents none of the required symptoms or conditions (normal Epworth score, no hypertension, heart disease or stroke).",
+      "restates": "I.B"
+    },
+    "Sleep Tests.4": {
+      "verdict": "met",
+      "evidence": [
+        "6726459d-7c0f-40dc-a88c-fc00f1d55a3c"
+      ],
+      "explanation": "The sleep test was ordered by the treating practitioner."
+    },
+    "I.C": {
+      "verdict": "met",
+      "evidence": [
+        "d754888f-81f8-48ce-9759-ede530ff914f"
+      ],
+      "explanation": "The supplier's instruction on device use and care is documented."
+    }
+  },
+  "expected_decision": "denied",
+  "decision_explanation": "Not met: I.B, Sleep Tests.3.",
+  "original_entry_count": 687,
+  "added_resources": [
+    {
+      "id": "79b2d44c-9612-40b7-8a3e-76b9a4b3c345",
+      "resourceType": "Encounter",
+      "description": "In-person evaluation encounter"
+    },
+    {
+      "id": "f721d05f-0ce8-4ee1-af87-61f399ec4e43",
+      "resourceType": "Procedure",
+      "description": "Sleep apnea assessment"
+    },
+    {
+      "id": "5d227404-6fd7-427f-b187-4c5524d2968f",
+      "resourceType": "Observation",
+      "description": "Epworth score 8"
+    },
+    {
+      "id": "38af8feb-8037-4986-8c3c-de2099734e3c",
+      "resourceType": "DiagnosticReport",
+      "description": "Evaluation note (note)"
+    },
+    {
+      "id": "cce9df38-b8e1-49ab-9cb5-126a911fffa9",
+      "resourceType": "DocumentReference",
+      "description": "Evaluation note (note, document copy)"
+    },
+    {
+      "id": "6726459d-7c0f-40dc-a88c-fc00f1d55a3c",
+      "resourceType": "ServiceRequest",
+      "description": "Sleep study order from the treating practitioner"
+    },
+    {
+      "id": "40afdf66-280b-4d93-a4a8-787117f182e2",
+      "resourceType": "Encounter",
+      "description": "Overnight sleep test encounter"
+    },
+    {
+      "id": "1034d0c3-38de-42f5-915d-de4e0e98f8ab",
+      "resourceType": "Observation",
+      "description": "AHI 14"
+    },
+    {
+      "id": "d75bd052-0416-4a83-a7f2-29f13850b1b4",
+      "resourceType": "Observation",
+      "description": "91 events"
+    },
+    {
+      "id": "eb17f348-a48f-4472-9097-1089bfd17621",
+      "resourceType": "Observation",
+      "description": "6.5 hours"
+    },
+    {
+      "id": "b7e79e0a-659f-4442-8e9a-f3a7e120b66e",
+      "resourceType": "Observation",
+      "description": "SpO2 nadir 83%"
+    },
+    {
+      "id": "4ed28a56-1c7c-47e0-a92d-603dd6619fda",
+      "resourceType": "DiagnosticReport",
+      "description": "Sleep test report"
+    },
+    {
+      "id": "9760a186-494f-4ba4-906c-d08c73c68e2c",
+      "resourceType": "Encounter",
+      "description": "Follow-up encounter"
+    },
+    {
+      "id": "f059ea3a-1d9b-41fb-816e-45af0e7a85a9",
+      "resourceType": "Condition",
+      "description": "Obstructive sleep apnea diagnosis"
+    },
+    {
+      "id": "2195de6f-b888-45f3-a393-bfb77cd0610d",
+      "resourceType": "DiagnosticReport",
+      "description": "Follow-up note (note)"
+    },
+    {
+      "id": "1451882b-4fc1-4197-8f9e-62866930b135",
+      "resourceType": "DocumentReference",
+      "description": "Follow-up note (note, document copy)"
+    },
+    {
+      "id": "4fe12d47-cbcd-465c-8271-ae1ef98a3b38",
+      "resourceType": "DeviceRequest",
+      "description": "E0601 order"
+    },
+    {
+      "id": "d754888f-81f8-48ce-9759-ede530ff914f",
+      "resourceType": "Procedure",
+      "description": "Supplier instruction on device use and care"
+    }
+  ]
+}

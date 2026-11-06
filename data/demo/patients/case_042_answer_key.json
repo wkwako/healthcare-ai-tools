@@ -1,0 +1,221 @@
+{
+  "case_id": "case_042",
+  "patient_file": "case_042.json",
+  "source_file": "Jed345_Kilback373_d8bb1b82-8deb-201a-0fe8-308f79ce31a8.json",
+  "levers": {
+    "bmi": 29.5,
+    "psg": "recent",
+    "central": null,
+    "ahi": 32,
+    "cpap": "intolerant",
+    "sdm": true,
+    "dise": "no collapse",
+    "tonsils": 1,
+    "screen": "clear"
+  },
+  "order": {
+    "code": "64582",
+    "description": "Implantation of hypoglossal nerve neurostimulator system",
+    "date": "2026-04-27",
+    "resource_id": "357331e7-6596-477b-bd0a-74bcdeffea3d"
+  },
+  "governing_policies": [
+    "L38307",
+    "L38310",
+    "L38385",
+    "L38387",
+    "L38398",
+    "L38528"
+  ],
+  "accepted_policies": [
+    "L38307",
+    "L38310",
+    "L38385",
+    "L38387",
+    "L38398",
+    "L38528"
+  ],
+  "checklist": "data/criteria/L38307.json",
+  "criteria": {
+    "Covered Indications.1": {
+      "verdict": "met",
+      "evidence": [
+        "0791122f-88f9-4658-92ed-9a7db52dd530",
+        "a4824827-a473-4322-b776-34f404c98e8e"
+      ],
+      "explanation": "The patient is 35, at least 22."
+    },
+    "Covered Indications.2": {
+      "verdict": "met",
+      "evidence": [
+        "c3f3e87f-36dc-4a0c-8a34-fd85e493c13c",
+        "a4824827-a473-4322-b776-34f404c98e8e"
+      ],
+      "explanation": "BMI 29.5 is below 35."
+    },
+    "Covered Indications.3": {
+      "verdict": "met",
+      "evidence": [
+        "a34ac905-6a52-467c-b131-72813a395d74",
+        "821ba209-489b-4af6-8c05-6264cc71236c",
+        "0791122f-88f9-4658-92ed-9a7db52dd530"
+      ],
+      "explanation": "The PSG was a few months before the first HGNS consultation, within 24 months."
+    },
+    "Covered Indications.4": {
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "The PSG reports the AHI but not the share of central and mixed apneas."
+    },
+    "Covered Indications.5": {
+      "verdict": "met",
+      "evidence": [
+        "372289ec-ce85-4beb-996d-e4132d2c71ef",
+        "a34ac905-6a52-467c-b131-72813a395d74"
+      ],
+      "explanation": "AHI 32 is within 15 to 65."
+    },
+    "Covered Indications.6": {
+      "verdict": "met",
+      "evidence": [
+        "4c0026fb-9ea5-4f04-8e4c-b58f7c668088",
+        "55409d7f-df6e-42bb-b04b-3656467060b9",
+        "dacbe882-b237-4bb2-bfd3-c5d86fc8a61c",
+        "212c2563-4ef4-4153-bfb6-4329505da59a",
+        "0791122f-88f9-4658-92ed-9a7db52dd530",
+        "a4824827-a473-4322-b776-34f404c98e8e"
+      ],
+      "explanation": "CPAP intolerance (under 4 hours a night, fewer than 5 nights a week), with shared decision making documented by the sleep physician and the surgeon."
+    },
+    "Covered Indications.7": {
+      "verdict": "met",
+      "evidence": [
+        "7f372d11-be40-4f26-bae4-aa3e81ee7ce7",
+        "1ed5903a-ce59-48ca-af5d-40c8978f30d9"
+      ],
+      "explanation": "DISE shows no complete concentric collapse at the soft palate."
+    },
+    "Covered Indications.8": {
+      "verdict": "met",
+      "evidence": [
+        "a4824827-a473-4322-b776-34f404c98e8e"
+      ],
+      "explanation": "Tonsils are size 1; no compromising anatomy."
+    },
+    "Limitations.3": {
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "The screen found no contraindications, but the share of central and mixed apneas (one of them) isn't reported."
+    }
+  },
+  "expected_decision": "insufficient information",
+  "decision_explanation": "Insufficient information for: Covered Indications.4, Limitations.3.",
+  "original_entry_count": 193,
+  "added_resources": [
+    {
+      "id": "df7220c4-94c4-4356-9709-c50b5e74f501",
+      "resourceType": "Encounter",
+      "description": "Polysomnography encounter"
+    },
+    {
+      "id": "372289ec-ce85-4beb-996d-e4132d2c71ef",
+      "resourceType": "Observation",
+      "description": "AHI 32"
+    },
+    {
+      "id": "9a6dcf9a-35a9-4282-9bc9-9ec5e488283d",
+      "resourceType": "Observation",
+      "description": "7.1 hours"
+    },
+    {
+      "id": "f6a3a563-deb0-4e01-8668-c2090213722c",
+      "resourceType": "Observation",
+      "description": "SpO2 nadir 79%"
+    },
+    {
+      "id": "a34ac905-6a52-467c-b131-72813a395d74",
+      "resourceType": "DiagnosticReport",
+      "description": "Polysomnography report"
+    },
+    {
+      "id": "3c239a52-a77d-40a7-b74c-f6117ba39184",
+      "resourceType": "Condition",
+      "description": "Obstructive sleep apnea diagnosis"
+    },
+    {
+      "id": "821ba209-489b-4af6-8c05-6264cc71236c",
+      "resourceType": "Encounter",
+      "description": "Sleep medicine HGNS consultation"
+    },
+    {
+      "id": "4c0026fb-9ea5-4f04-8e4c-b58f7c668088",
+      "resourceType": "Device",
+      "description": "CPAP device"
+    },
+    {
+      "id": "55409d7f-df6e-42bb-b04b-3656467060b9",
+      "resourceType": "Observation",
+      "description": "11 of 30 nights"
+    },
+    {
+      "id": "dacbe882-b237-4bb2-bfd3-c5d86fc8a61c",
+      "resourceType": "Observation",
+      "description": "2.8 hours"
+    },
+    {
+      "id": "212c2563-4ef4-4153-bfb6-4329505da59a",
+      "resourceType": "Observation",
+      "description": "Residual AHI 3"
+    },
+    {
+      "id": "051441c0-b600-4beb-ba4d-996ac723ed16",
+      "resourceType": "DiagnosticReport",
+      "description": "Sleep medicine consultation note (note)"
+    },
+    {
+      "id": "0791122f-88f9-4658-92ed-9a7db52dd530",
+      "resourceType": "DocumentReference",
+      "description": "Sleep medicine consultation note (note, document copy)"
+    },
+    {
+      "id": "64899d4d-2edb-4e6c-8c28-ab5882c22be1",
+      "resourceType": "Encounter",
+      "description": "Otolaryngology HGNS consultation"
+    },
+    {
+      "id": "c3f3e87f-36dc-4a0c-8a34-fd85e493c13c",
+      "resourceType": "Observation",
+      "description": "BMI 29.5"
+    },
+    {
+      "id": "ada5e0f8-1228-48ea-8b90-11d8ba782af5",
+      "resourceType": "DiagnosticReport",
+      "description": "Otolaryngology consultation note (note)"
+    },
+    {
+      "id": "a4824827-a473-4322-b776-34f404c98e8e",
+      "resourceType": "DocumentReference",
+      "description": "Otolaryngology consultation note (note, document copy)"
+    },
+    {
+      "id": "bc8ab56e-0bec-4c05-9526-29134ce961a8",
+      "resourceType": "Encounter",
+      "description": "DISE encounter"
+    },
+    {
+      "id": "7f372d11-be40-4f26-bae4-aa3e81ee7ce7",
+      "resourceType": "Procedure",
+      "description": "DISE procedure"
+    },
+    {
+      "id": "1ed5903a-ce59-48ca-af5d-40c8978f30d9",
+      "resourceType": "DiagnosticReport",
+      "description": "DISE report"
+    },
+    {
+      "id": "357331e7-6596-477b-bd0a-74bcdeffea3d",
+      "resourceType": "ServiceRequest",
+      "description": "64582 order"
+    }
+  ]
+}

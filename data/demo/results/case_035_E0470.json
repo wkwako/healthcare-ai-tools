@@ -1,0 +1,135 @@
+{
+  "order": "E0470",
+  "order_description": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)",
+  "candidates": [
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33405,
+      "title": "Polysomnography and Sleep Testing",
+      "contractors": "First Coast Service Options, Inc."
+    }
+  ],
+  "selected_policy": "L33718",
+  "selection_reason": "The order is for an E0470 bi-level device, and the patient's documented condition is obstructive sleep apnea (AHI 32 on attended PSG, central/mixed apneas only 8%), so L33718 is the policy that governs E0470 for OSA. L33800 applies to CSA/CompSA, hypoventilation, restrictive disorders, or COPD-related CRF, none of which fit. L33405 covers sleep testing only. Under L33718, the sleep test criterion (AHI of 15 or more with at least 30 events) and the in-person evaluation are documented. The E0601 failure criterion is supported by a CPAP trial with mask refitting and pressure adjustment, with 6 nights of use in 30 at 1.5 hours per night and residual AHI 8 on CPAP. Instruction on device use is not explicitly documented. The notes describe a plan for hypoglossal nerve stimulation rather than a bi-level device, which is a mismatch worth noting.",
+  "criteria": [
+    {
+      "criterion": "I.A",
+      "policy_text": "The beneficiary has an in-person clinical evaluation by the treating practitioner prior to the sleep test to assess the beneficiary for obstructive sleep apnea.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R28"
+      ],
+      "explanation": "The record shows an OSA diagnosis dated 2026-10-05, after the attended polysomnography on 2026-10-02 described in R45. No in-person evaluation before that sleep test is documented. The encounters listed (R36, R37, R38) all fall in 2029, after the test.",
+      "evidence_ids": [
+        "c900e052-7144-423d-bbf1-bec13d385965"
+      ]
+    },
+    {
+      "criterion": "I.B",
+      "policy_text": "The beneficiary has a sleep test that meets either (1) AHI or RDI >= 15 events per hour with a minimum of 30 events, or (2) AHI or RDI 5-14 per hour with at least 10 events plus documented symptoms or comorbidities.",
+      "verdict": "met",
+      "evidence": [
+        "R45"
+      ],
+      "explanation": "Alternative 1 applies. R45 documents an AHI of 32 events/hour from 189 events over 5.9 hours of sleep, which meets the AHI >= 15 with at least 30 events threshold.",
+      "evidence_ids": [
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa"
+      ]
+    },
+    {
+      "criterion": "I.C",
+      "policy_text": "The beneficiary and/or their caregiver has received instruction from the supplier of the device in the proper use and care of the equipment.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R34"
+      ],
+      "explanation": "A home CPAP unit is listed (R34), and R45 documents mask refitting and pressure adjustment. Neither documents instruction from the supplier in proper use and care of the equipment.",
+      "evidence_ids": [
+        "00617a3b-a087-4fe3-a953-441050a632a2"
+      ]
+    },
+    {
+      "criterion": "II.D",
+      "policy_text": "An E0601 has been tried and proven ineffective based on a therapeutic trial conducted in either a facility or in a home setting, defined as documented failure to meet therapeutic goals using an E0601 during home use despite optimal therapy (proper mask selection and fitting and appropriate pressure settings).",
+      "verdict": "met",
+      "evidence": [
+        "R34",
+        "R40",
+        "R42",
+        "R43",
+        "R45"
+      ],
+      "explanation": "The trial was a home CPAP trial. The device download shows use on 6 of the last 30 nights with an average of 1.5 hours on nights used (R40, R42), which fails the adherence goal of 4 hours or more on 70% of nights. R45 documents mask refitting (nasal pillows, then full-face), humidification and pressure adjustment, so optimal therapy is documented. The patient cannot tolerate CPAP.",
+      "evidence_ids": [
+        "00617a3b-a087-4fe3-a953-441050a632a2",
+        "80509cd2-ab35-4816-9f2d-40dac32fc2c2",
+        "1e1d638d-c350-41e1-b12c-1b1dad4679cd",
+        "2d45fa8f-0e45-4e4c-be4d-add9ff0a1063",
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.1",
+      "policy_text": "A sleep test (Type I, II, III, IV, Other) that meets the Medicare requirements for a valid sleep test as outlined in NCD 240.4.1 and the applicable A/B MAC LCD and Billing and Coding article.",
+      "verdict": "met",
+      "evidence": [
+        "R45"
+      ],
+      "explanation": "R45 documents an attended polysomnography on 2026-10-02 with 5.9 hours of sleep and a calculated AHI. Attended polysomnography corresponds to the Type I facility-based polysomnogram defined in the policy, so the sleep test type is named.",
+      "evidence_ids": [
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.3",
+      "policy_text": "The sleep test results meet the coverage criteria in effect for the date of service of the claim for the PAP device.",
+      "verdict": "met",
+      "evidence": [
+        "R45"
+      ],
+      "explanation": "The recorded AHI of 32 events/hour with 189 events meets the AHI >= 15 criterion in I.B.1.",
+      "evidence_ids": [
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa"
+      ]
+    },
+    {
+      "criterion": "Sleep Tests.4",
+      "policy_text": "The sleep test is ordered by the beneficiary's treating practitioner.",
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "R45 mentions the 2026-10-02 attended polysomnography but does not document who ordered it. The only order in the record is the hypoglossal nerve neurostimulator implant (R35), which is not a sleep test.",
+      "evidence_ids": []
+    },
+    {
+      "criterion": "INITIAL COVERAGE: switch from E0601 after more than 3 months",
+      "policy_text": "If an E0601 device has been used for more than 3 months and the beneficiary is switched to an E0470, a new initial in-person clinical evaluation is required, but a new sleep test is not required.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R36",
+        "R37",
+        "R46",
+        "R45"
+      ],
+      "explanation": "The CPAP was started 2026-10-23 and used beyond 3 months, so this requirement applies. The record contains 2029 evaluations: a sleep medicine consultation (R36, R45) and an otolaryngology visit with a physical exam (R37, R46). The sleep medicine note does not state the visit was in person. Both evaluations address hypoglossal nerve stimulation, and none documents a new evaluation for switching to E0470.",
+      "evidence_ids": [
+        "b9408de0-3e32-433a-8be9-2d0d6d95be57",
+        "d01160cf-b28b-4497-9af7-0572e155de74",
+        "d56f75b4-9f35-447a-8b77-2de303908800",
+        "51d44a09-9ae6-40a1-a2bf-34dcafa818fa"
+      ]
+    }
+  ],
+  "decision": "insufficient information",
+  "decision_explanation": "Criterion I.B (sleep test severity), II.D (documented E0601 failure at home) and the sleep test type and results criteria are met. Criterion I.A (pre-test in-person evaluation), criterion I.C (supplier instruction in device use), Sleep Tests.4 (ordering practitioner for the sleep test) and the requirement for a new in-person evaluation on switching from E0601 are not documented, so the decision cannot be made. Criteria on FDA device status, the testing entity's Medicare and state compliance, and the standard written order are administrative and were excluded. Continued-coverage re-evaluation, replacement, entering-Medicare, oxygen, accessory and refill rules were excluded as not applicable to an initial E0470 order. The record also documents a plan for hypoglossal nerve stimulation (R35, R45, R46) and no order or plan for an E0470 bi-level device, which should be reconciled with the request.",
+  "patient_file_sha256": "cf98997f28a2e175be3b80a24b591be127b6afaf2a3074fbfda3a928e24fa700",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

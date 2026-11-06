@@ -4,7 +4,36 @@
 {% block content %}
 <h1> Prior Authorization Checker </h1>
 
-<form id="pa-form" action="/prior-auth-checker" method="post" enctype="multipart/form-data">
+<p>Pick a patient and an order. The patients are synthetic test records generated with Synthea, not real people.</p>
+
+<form class="pa-form" action="/prior-auth-checker/demo" method="post">
+  <fieldset>
+    <legend>Patient</legend>
+    {% for case_id, description in demo_patients.items() %}
+    <label class="choice">
+      <input type="radio" name="patient" value="{{ case_id }}" required {% if patient == case_id %}checked{% endif %}>
+      {{ description }}
+    </label>
+    {% endfor %}
+  </fieldset>
+  <fieldset>
+    <legend>Order</legend>
+    {% for code, choice in demo_orders.items() %}
+    <label class="choice">
+      <input type="radio" name="order" value="{{ code }}" required {% if order == code %}checked{% endif %}>
+      {{ code }}: {{ choice.label }}{% if choice.tested %} <span class="tested">tested</span>{% endif %}
+    </label>
+    {% endfor %}
+    <p class="muted">The tool was evaluated on E0601 and 64582, so those give the most meaningful results. The other
+      orders show how it handles a policy it was barely or never tested on.</p>
+  </fieldset>
+  <input type="submit" class="button predict" value="Predict">
+</form>
+
+{% if allow_uploads %}
+<details {% if filename %}open{% endif %}>
+  <summary>Or upload a FHIR bundle</summary>
+  <form class="pa-form" action="/prior-auth-checker" method="post" enctype="multipart/form-data">
     <label for="file">Patient record (FHIR bundle, .json):</label>
     <br>
     <input type="file" id="file" name="file" accept=".json,application/json" required>
@@ -13,12 +42,14 @@
     <br>
     <input type="text" id="order" name="order" placeholder="E0601" value="{{ order or '' }}" maxlength="5" required>
     <br><br>
-    <input type="submit" id="predict" class="button" value="Predict">
-</form>
+    <input type="submit" class="button predict" value="Predict">
+  </form>
+</details>
+{% endif %}
 
 <!-- shown while the analysis runs; same shape as the results so the page doesn't jump -->
 <div id="loading" class="loading" hidden aria-live="polite">
-    <p class="loading-text">Finding the matching policy and checking each criterion. This takes about 30 seconds.</p>
+    <p class="loading-text">Finding the matching policy and checking each criterion. This can take up to 30 seconds.</p>
     <div class="skeleton skeleton-banner"></div>
     <div class="skeleton skeleton-line"></div>
     <div class="skeleton skeleton-line short"></div>
@@ -37,7 +68,13 @@
 {% endif %}
 
 {% if result %}
-  <p>Checked {{ filename }} for order {{ order }}{% if result.order_description %} ({{ result.order_description }}){% endif %}.</p>
+  <p>Checked {% if patient %}the patient "{{ demo_patients[patient] }}"{% else %}{{ filename }}{% endif %}
+    for order {{ order }}{% if result.order_description %} ({{ result.order_description }}){% endif %}.</p>
+
+  {% if built_for and built_for != order %}
+  <p class="muted">This patient was built to test order {{ built_for }}, so this result hasn't been checked against an
+    answer key.</p>
+  {% endif %}
 
   {% if warnings %}
   <div class="warning">
@@ -94,21 +131,24 @@
 </div>
 
 <script>
-  //the form posts normally; this just swaps the old results for the skeleton while the browser waits
-  document.getElementById("pa-form").addEventListener("submit", function () {
-    document.getElementById("results").hidden = true;
-    document.getElementById("loading").hidden = false;
-    var button = document.getElementById("predict");
-    button.disabled = true;
-    button.value = "Predicting...";
+  //the forms post normally; this just swaps the old results for the skeleton while the browser waits
+  document.querySelectorAll(".pa-form").forEach(function (form) {
+    form.addEventListener("submit", function () {
+      document.getElementById("results").hidden = true;
+      document.getElementById("loading").hidden = false;
+      var button = form.querySelector(".predict");
+      button.disabled = true;
+      button.value = "Predicting...";
+    });
   });
   //coming back with the browser's back button can restore the page mid-load; reset it
   window.addEventListener("pageshow", function () {
     document.getElementById("loading").hidden = true;
     document.getElementById("results").hidden = false;
-    var button = document.getElementById("predict");
-    button.disabled = false;
-    button.value = "Predict";
+    document.querySelectorAll(".predict").forEach(function (button) {
+      button.disabled = false;
+      button.value = "Predict";
+    });
   });
 </script>
 {% endblock %}

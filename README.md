@@ -22,7 +22,25 @@ An order is only covered under Medicare if certain criteria are met. For example
 
 ### 835 remittance files
 
-An 835 is the X12 electronic remittance advice. It explains a payment (but it itself is not a payment), including paid amounts, adjustments, and denials, and contains payer, patient, and payment information. It may include partial or full denials as well.  
+An 835 is the X12 electronic remittance advice. It explains a payment (but it itself is not a payment), including paid amounts, adjustments, and denials, and contains payer, patient, and payment information. It may include partial or full denials as well.
+
+# Scope
+
+The tool checks one thing: whether a patient's record supports the clinical criteria in the Medicare policy that governs an order. It is decision support for whoever prepares a coverage request, not a coverage determination.
+
+It does not check administrative requirements (see Design for why):
+- whether the provider or supplier is enrolled in Medicare, credentialed or accredited
+- whether the device is FDA-approved
+- the place of service, billing codes and modifiers
+- whether the claim and its documentation meet Medicare's billing rules
+
+These aren't in a patient's chart; they live in other systems. Provider enrollment and accreditation are in Medicare's enrollment and credentialing databases, device approval is in FDA records, and the place of service, codes and modifiers are on the claim, which billing staff fill in. Payers check them mostly with automated lookups and claim edits, while nurse reviewers or medical directors read the clinical documentation against the policy's criteria. That clinical review is the judgment-heavy part, and it's the part this tool does.
+
+Other limits on scope:
+- **Medicare only.** The tool uses Medicare LCDs, not the policies of Medicare Advantage or commercial plans, and only those in a fixed corpus of about 25 sleep-related LCDs.
+- **Synthetic data only.** It was built and tested on Synthea patients, and the web app is not set up to handle real patient records (PHI).
+- **Not reviewed by a clinician.** Neither the tool's outputs nor the answer keys used to evaluate it were checked by a clinician or coding professional (see Limitations).
+- **Restricted uploads.** The deployed site only runs on five synthetic demo patients, with results computed ahead of time. Additionally, uploads are turned off completely, to prevent PII from accidentally being uploaded.
 
 # Architecture
 
@@ -103,6 +121,19 @@ Every test case was run 5 times, and each run of a case counts as one judgment. 
 | False covers | 4/140, all from one case (case_008) | 4/215, from two cases (case_044, case_068) |
 | Unstable cases | 5 of 28 | 12 of 43 |
 
+Table 2 breaks the pooled numbers out by run, to show how consistent the model is from one run to the next. Each run judges every case once. Decision accuracy on L33718 swings more (89–100%) than on L38307 (86–91%), partly because each L33718 case is a larger share of its smaller set: one case changing its answer moves L33718's accuracy by about 4 points, and L38307's by about 2.
+
+**Table 2: results by run** (from `python analyze_results.py`)
+
+| Run | L33718 decisions | L33718 criteria | L33718 false covers | L38307 decisions | L38307 criteria | L38307 false covers |
+|---|---|---|---|---|---|---|
+| 1 | 89% | 96% | 1 | 88% | 97% | 0 |
+| 2 | 93% | 94% | 1 | 86% | 98% | 1 |
+| 3 | 100% | 99% | 0 | 91% | 96% | 0 |
+| 4 | 96% | 97% | 1 | 88% | 98% | 2 |
+| 5 | 89% | 90% | 1 | 91% | 96% | 1 |
+| **Mean** | **94%** | **95%** | **0.8** | **89%** | **97%** | **0.8** |
+
 Figure 1 displays two confusion matrices for the development set data (PAP devices for sleep apnea, LCD L33718). The expected decision is on the rows, and the model's prediction is on the columns. The left-most confusion matrix represents decisions (covered/denied/insufficient for an *order*), and the right-most matrix represents criterion verdicts (met/not met/insufficient for a *criterion*). LCDs contain several criteria that make up a decision for an order, and we display decision selection separately for orders and criteria.
 
 The diagonals display correctly-predicted selection. Covered accuracy was 100% (when covered was expected, the model predicted covered in 100% of cases), denied accuracy was 87%, and insufficient accuracy was 98%. The model struggles the most with predicting expected denials. Predicting covered when the expected is denied is the most costly mistake, as telling a patient their order is covered when insurance denies could lead to fees the patient wasn't expecting.
@@ -123,10 +154,11 @@ Accuracy varies across LCDs, but only slightly. Overall, the two policies are cl
 # Limitations
 There are several limitations to this study:
 1. **Model usage.** I use Anthropic's Claude Haiku model, designed for quick everyday tasks, to minimize cost. Even with this inexpensive model, each decision takes ~30 seconds of compute time, and costs several cents. Spot tests are cheap, but more robust comparisons that query Haiku hundreds of times cost a few dollars each. Claude Opus may achieve a higher accuracy and make fewer critical errors, but with a restrictive budget, large-scale assessments aren't feasible.
-2. **Amount of Data.** As mentioned earlier, I created 29 test cases for L33718, and 43 test cases for L38307, and ran all tests 5 times to measure variance. This data is sufficient for a small-scale analysis, but ideally I have double or triple this amount. Insufficient data limits the validity and stability of conclusions I can draw from the analysis.
+2. **Amount of Data.** As mentioned earlier, I created 29 test cases for L33718, and 43 test cases for L38307, and ran every case 5 times. The 5 runs show how consistent the model is, but they aren't 5 times as much data: they're the same 72 cases judged repeatedly, so a flaw in one case (like case_047's, see #5) repeats in every run. The pooled totals in Table 1 (140 and 215 judged decisions) therefore overstate how much independent evidence there is; the number of distinct cases is the better measure of sample size. This is enough for a small-scale analysis, but ideally there would be two or three times as many cases. With so few, the conclusions I can draw from the analysis are limited, and a few cases can move the results noticeably.
 3. **Using fake patient data.** Synthea's patient data is clean. Encounters, lab results, and patient information are all present and accounted for, and do not perfectly mimic what a real patient FHIR file would look like. Healthcare in real-world scenarios is messy: registration cannot obtain patient information, family histories are sparse, patients unintentionally miss symptom details, and incorrect information is occasionally sent to payers. The models' predictions may be higher than they would in a real-world scenario due to the availability and presence of information. 
 4. **Some decision errors are costly.** When we expect a decision of "denied" but the model predicts "covered," the outcomes can be disastrous for patients, since they may owe fees that they didn't expect.
 5. **Answer keys without independent review.** The answer keys are computed by code that I wrote with the help of an AI coding assistant (Claude Code). No second person, and no one with clinical or coding expertise, checked them against the LCDs. Because the assistant and the model under test are both Claude models, they may share blind spots: an LCD reading that both get wrong would score as correct. One mistake did surface in the results. Before building a case, the builder rejects base patients whose record already contains a possible contraindication, so that every contraindication in a case is one I added on purpose. That check looks for "pulmonary hypertension" but not ordinary hypertension. L38307 counts uncontrolled hypertension despite medication as a contraindication (Lim.3). case_047's base patient has hypertension on lisinopril, with readings of 138/107 and 136/104. The builder let this patient through, added a note saying blood pressure was controlled, and the answer key expected "covered". The model read the actual readings, saw that they contradict the note, and answered "denied" in all 5 runs, which is arguably correct. I left the case and its answer key unchanged rather than fixing them after seeing the results, so these 5 judgments count as errors in Table 1.
+6. **Incorrect order selection.** On an untested order (E0471), the model sometimes selected an order already in the patient's record instead of the user-entered policy (picked an HGNS policy for a bi-level device).
 
 # Future Work
 1. Deploying to web via Azure
@@ -161,6 +193,12 @@ data folder: contains fake patient files (not on GitHub), LCD documents, criteri
 `policy_store.py`: Turns cleaned LCD files into chunks with ids and metadata for Chroma (for the later policy retrieval step).
 
 `prior_auth_checker.py`: Builds the patient summary, retrieves policy passages, selects the LCD, and judges the order's criteria.
+
+`demo.py`: Builds a demo for the website. Contains 5 demo patients and 5 orders to pick from. It runs every patient/order combination ahead of time and saves the results to data/demo/ so the deployed site never calls the model (saves tokens and prevents PII from accidentally being revealed).
+
+`monitoring.py`: Logs each request to an SQLite3 db (de-identified patient information).
+
+`analyze_monitoring.py`: Summarizes the monitoring database, with helper functions for looking at wrong decisions, wrong criteria, and feedback.
 
 # Appendix
 

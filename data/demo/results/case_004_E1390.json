@@ -1,0 +1,237 @@
+{
+  "order": "E1390",
+  "order_description": "Oxygen concentrator, single delivery port, capable of delivering 85 percent or greater oxygen concentration at the prescribed flow rate",
+  "candidates": [
+    {
+      "lcd_id": 33797,
+      "title": "Oxygen and Oxygen Equipment",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33797",
+  "selection_reason": "The order is for E1390, an oxygen concentrator, so the Oxygen and Oxygen Equipment LCD (L33797) governs it. L33797 sets the qualifying blood gas criteria for home oxygen. The record has an overnight SpO2 nadir of 83% from a PSG done without PAP, and the patient has no documented resting hypoxemia. Whether the patient meets those criteria is a separate coverage question. The L33718 PAP LCD and the L33800 RAD LCD govern the CPAP order and the sleep-hypoventilation criteria, not the oxygen concentrator.",
+  "criteria": [
+    {
+      "criterion": "Initial coverage conditions.1",
+      "policy_text": "The treating practitioner has ordered and evaluated the results of a qualifying blood gas study performed at the time of need.",
+      "verdict": "met",
+      "evidence": [
+        "R31",
+        "R38",
+        "R96"
+      ],
+      "explanation": "Dr. Whitney ordered the attended in-laboratory polysomnography on 2026-08-18 (R31). The study was performed 2026-08-30 (R38), and Dr. Whitney reviewed its results on 2026-09-05 (R96). The order and review are documented. Whether the study's values actually qualify is assessed under the other criteria.",
+      "evidence_ids": [
+        "6726459d-7c0f-40dc-a88c-fc00f1d55a3c",
+        "40afdf66-280b-4d93-a4a8-787117f182e2",
+        "1451882b-4fc1-4197-8f9e-62866930b135"
+      ]
+    },
+    {
+      "criterion": "Initial coverage conditions.2",
+      "policy_text": "The beneficiary's blood gas study meets the criteria stated below (Group I or Group II).",
+      "verdict": "not met",
+      "evidence": [
+        "R75",
+        "R90",
+        "R96"
+      ],
+      "explanation": "The only saturation value in the record is a sleep nadir of 83 percent from a diagnostic polysomnography (R75, R90). No awake room-air value, arterial PO2, or exercise oximetry is documented. The sleep value cannot qualify because the patient has untreated obstructive sleep apnea and no titration study was done (see the OSA criterion below).",
+      "evidence_ids": [
+        "b7e79e0a-659f-4442-8e9a-f3a7e120b66e",
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda",
+        "1451882b-4fc1-4197-8f9e-62866930b135"
+      ]
+    },
+    {
+      "criterion": "Initial coverage conditions.3",
+      "policy_text": "The qualifying blood gas study was performed by a treating practitioner or by a qualified provider or supplier of laboratory services.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R38",
+        "R90"
+      ],
+      "explanation": "The polysomnography was performed by a sleep center technologist in a laboratory setting (R38). The record does not show whether the performing facility or practitioner is a qualified provider or laboratory under the policy, so this cannot be confirmed.",
+      "evidence_ids": [
+        "40afdf66-280b-4d93-a4a8-787117f182e2",
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda"
+      ]
+    },
+    {
+      "criterion": "Initial coverage conditions.4",
+      "policy_text": "The provision of oxygen and oxygen equipment in the home setting will improve the beneficiary's condition.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R32",
+        "R95"
+      ],
+      "explanation": "The record documents a CPAP device order (R32), not an oxygen order, and contains no clinical statement that home oxygen would improve the patient's condition. No evidence addresses this condition.",
+      "evidence_ids": [
+        "4fe12d47-cbcd-465c-8271-ae1ef98a3b38",
+        "cce9df38-b8e1-49ab-9cb5-126a911fffa9"
+      ]
+    },
+    {
+      "criterion": "Group I.1",
+      "policy_text": "An arterial PO2 at or below 55 mm Hg or an arterial oxygen saturation at or below 88 percent taken at rest (awake) while breathing room air.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R75",
+        "R90"
+      ],
+      "explanation": "The record contains no awake, resting, room-air PO2 or oxygen saturation. The only saturation value is from sleep (R75), so this alternative is not documented.",
+      "evidence_ids": [
+        "b7e79e0a-659f-4442-8e9a-f3a7e120b66e",
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda"
+      ]
+    },
+    {
+      "criterion": "Group I.2",
+      "policy_text": "An arterial PO2 at or below 55 mm Hg or an arterial oxygen saturation at or below 88 percent, taken during sleep for a beneficiary who demonstrates an arterial PO2 at or above 56 mm Hg or an arterial oxygen saturation at or above 89 percent while awake.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R75",
+        "R90"
+      ],
+      "explanation": "A sleep nadir of 83 percent is documented (R75), which is at or below 88 percent. However, the record has no awake saturation at or above 89 percent or PO2 at or above 56 mm Hg, which this alternative requires. The sleep value also cannot qualify under the untreated OSA rule.",
+      "evidence_ids": [
+        "b7e79e0a-659f-4442-8e9a-f3a7e120b66e",
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda"
+      ]
+    },
+    {
+      "criterion": "Group I.3",
+      "policy_text": "A decrease in arterial PO2 more than 10 mm Hg, or a decrease in arterial oxygen saturation more than 5 percent from baseline saturation, taken during sleep and associated with symptoms of hypoxemia such as impairment of cognitive processes and nocturnal restlessness or insomnia.",
+      "verdict": "not met",
+      "evidence": [
+        "R75",
+        "R88",
+        "R95",
+        "R69"
+      ],
+      "explanation": "No baseline saturation is reported, so a decrease of more than 5 percent cannot be shown (R75, R88). The 2026-08-18 note records that the patient denies daytime sleepiness, fatigue, or trouble concentrating (R95), which contradicts the cognitive symptoms this alternative requires. The sleep value also cannot qualify under the untreated OSA rule.",
+      "evidence_ids": [
+        "b7e79e0a-659f-4442-8e9a-f3a7e120b66e",
+        "eb17f348-a48f-4472-9097-1089bfd17621",
+        "cce9df38-b8e1-49ab-9cb5-126a911fffa9",
+        "5d227404-6fd7-427f-b187-4c5524d2968f"
+      ]
+    },
+    {
+      "criterion": "Group I.4",
+      "policy_text": "An arterial PO2 at or below 55 mm Hg or an arterial oxygen saturation at or below 88 percent, taken during exercise for a beneficiary who demonstrates an arterial PO2 at or above 56 mm Hg or an arterial oxygen saturation at or above 89 percent during the day while at rest.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R90",
+        "R96"
+      ],
+      "explanation": "No exercise oximetry, and no daytime resting saturation at or above 89 percent, is documented in the record.",
+      "evidence_ids": [
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda",
+        "1451882b-4fc1-4197-8f9e-62866930b135"
+      ]
+    },
+    {
+      "criterion": "Group II.A",
+      "policy_text": "An arterial PO2 of 56-59 mm Hg or an arterial blood oxygen saturation of 89 percent.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R75",
+        "R90"
+      ],
+      "explanation": "The record has no awake PO2 of 56-59 mm Hg and no awake saturation of 89 percent. The only saturation documented is a sleep nadir of 83 percent (R75).",
+      "evidence_ids": [
+        "b7e79e0a-659f-4442-8e9a-f3a7e120b66e",
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda"
+      ]
+    },
+    {
+      "criterion": "Group II.B",
+      "policy_text": "Any of: dependent edema suggesting congestive heart failure; pulmonary hypertension or cor pulmonale; or erythrocythemia with a hematocrit greater than 56 percent.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R95",
+        "R73",
+        "R74"
+      ],
+      "explanation": "The 2026-08-18 cardiopulmonary exam is recorded as unremarkable (R95), but no dependent edema, pulmonary artery pressure, echocardiogram, EKG P-pulmonale, gated scan, or hematocrit is documented. None of the three alternatives can be confirmed.",
+      "evidence_ids": [
+        "cce9df38-b8e1-49ab-9cb5-126a911fffa9",
+        "93547944-a253-d0bb-3a9d-0c1a4c7980c0",
+        "93547944-a253-d0bb-8515-c7d314d93e19"
+      ]
+    },
+    {
+      "criterion": "Group III",
+      "policy_text": "Absence of hypoxemia defined in Group I and Group II, and a medical condition with distinct physiologic, cognitive, and/or functional symptoms documented in high-quality peer-reviewed literature to be improved by oxygen therapy (such as cluster headaches).",
+      "verdict": "not met",
+      "evidence": [
+        "R75",
+        "R27",
+        "R90"
+      ],
+      "explanation": "The sleep oxygen saturation nadir of 83 percent (R75) meets the Group I hypoxemia threshold, which contradicts the absence-of-hypoxemia requirement. The only diagnosis documented is obstructive sleep apnea (R27), not a condition the policy recognizes for oxygen therapy under Group III.",
+      "evidence_ids": [
+        "b7e79e0a-659f-4442-8e9a-f3a7e120b66e",
+        "f059ea3a-1d9b-41fb-816e-45af0e7a85a9",
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda"
+      ]
+    },
+    {
+      "criterion": "Group IV",
+      "policy_text": "Oxygen therapy will be denied as not reasonable and necessary if angina pectoris occurs without hypoxemia, dyspnea occurs without cor pulmonale or hypoxemia, severe peripheral vascular disease causes desaturation without systemic hypoxemia, or a terminal illness does not affect breathing.",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R91",
+        "R95",
+        "R27"
+      ],
+      "explanation": "No angina, peripheral vascular disease, or terminal illness is documented. The record does not address dyspnea, and the cardiopulmonary exam is recorded only as unremarkable, so it cannot be confirmed that none of the denial conditions apply.",
+      "evidence_ids": [
+        "95edad46-035e-effc-6d58-b9175e89d1ab",
+        "cce9df38-b8e1-49ab-9cb5-126a911fffa9",
+        "f059ea3a-1d9b-41fb-816e-45af0e7a85a9"
+      ]
+    },
+    {
+      "criterion": "Obstructive Sleep Apnea (OSA), Polysomnography and Home Sleep Tests",
+      "policy_text": "For beneficiaries with OSA, a qualifying oxygen saturation test may only occur during a titration polysomnographic study in which OSA is sufficiently treated, with optimal PAP settings determined and the beneficiary using the PAP device at those settings, and nocturnal oximetry shows saturation at or below 88 percent.",
+      "verdict": "not met",
+      "evidence": [
+        "R27",
+        "R31",
+        "R38",
+        "R56",
+        "R85",
+        "R90",
+        "R32",
+        "R55"
+      ],
+      "explanation": "The patient has obstructive sleep apnea (R27). The qualifying sleep study (R38, R90) was a diagnostic polysomnography with AHI 14 events per hour, not a titration study, and no PAP titration or optimal PAP settings are documented. A CPAP device was only ordered on 2026-09-05 (R32), and instruction on its use was given on 2026-09-11 (R55), so there is no record of PAP treatment in use. The sleep saturation therefore cannot qualify.",
+      "evidence_ids": [
+        "f059ea3a-1d9b-41fb-816e-45af0e7a85a9",
+        "6726459d-7c0f-40dc-a88c-fc00f1d55a3c",
+        "40afdf66-280b-4d93-a4a8-787117f182e2",
+        "1034d0c3-38de-42f5-915d-de4e0e98f8ab",
+        "d75bd052-0416-4a83-a7f2-29f13850b1b4",
+        "4ed28a56-1c7c-47e0-a92d-603dd6619fda",
+        "4fe12d47-cbcd-465c-8271-ae1ef98a3b38",
+        "d754888f-81f8-48ce-9759-ede530ff914f"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The only blood gas evidence is a sleep oxygen saturation nadir of 83 percent from a diagnostic polysomnography performed in a patient with untreated obstructive sleep apnea. The policy does not allow that result to qualify, because a qualifying sleep saturation requires a titration study after OSA is treated with PAP at optimal settings. Several Group I and Group III elements are also contradicted or unsupported by the record: no awake room-air saturation or PO2 is documented, the patient denies the cognitive symptoms of hypoxemia, and the record shows sleep hypoxemia without a qualifying Group III condition. Because at least one applicable criterion is not met, the order for a stationary oxygen concentrator is denied.",
+  "patient_file_sha256": "8f7d0d51bf366c86b78cce30aeeaebabcc61ca4bd00457ec5cbbdab8fae2fddd",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

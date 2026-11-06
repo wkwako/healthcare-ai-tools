@@ -1,0 +1,199 @@
+{
+  "order": "64582",
+  "order_description": "Implantation of a hypoglossal nerve neurostimulator system (stimulation lead, pulse generator and respiratory sensor) for obstructive sleep apnea",
+  "candidates": [
+    {
+      "lcd_id": 38398,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "First Coast Service Options, Inc."
+    },
+    {
+      "lcd_id": 38528,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "WPS Insurance Corporation"
+    },
+    {
+      "lcd_id": 38307,
+      "title": "Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L38398",
+  "selection_reason": "All three candidates are the same Hypoglossal Nerve Stimulation for OSA policy from different contractors, and each governs implantation of this HGNS system, so L38398 is chosen. The excerpts show only background text, not the coverage criteria. The patient's AHI of 14 (mild, per the 2026-03-25 report) may fall below the usual moderate-to-severe threshold in the full policy, so eligibility should be verified against the criteria.",
+  "criteria": [
+    {
+      "criterion": "Covered Indications.1 (age)",
+      "policy_text": "Beneficiary is 22 years of age or older",
+      "verdict": "met",
+      "evidence": [
+        "R150",
+        "R153"
+      ],
+      "explanation": "The patient is 68 years old per the record header (born 1957-10-18), and the notes describe her as 68 or 69 years old, which satisfies the age requirement.",
+      "evidence_ids": [
+        "cd11cfbd-36f6-1d7a-54f2-51293ca93332",
+        "b9f82d6b-cb71-4434-86f4-be8a1b1991a5"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.2 (BMI)",
+      "policy_text": "Body mass index (BMI) is less than 35 kg/m2",
+      "verdict": "met",
+      "evidence": [
+        "R89",
+        "R90",
+        "R152"
+      ],
+      "explanation": "BMI is recorded as 27.76 kg/m2 on 2025-01-24 and 2026-01-30 and as 28.4 kg/m2 on 2026-03-12, all below 35.",
+      "evidence_ids": [
+        "49fd2675-243c-0fbf-db5e-1467b639080a",
+        "49fd2675-243c-0fbf-d7f6-08655767eae1",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.3 (polysomnography timing)",
+      "policy_text": "A polysomnography (PSG) is performed within 24 months of first consultation for HGNS implant",
+      "verdict": "met",
+      "evidence": [
+        "R43",
+        "R50",
+        "R147"
+      ],
+      "explanation": "An attended in-laboratory Type I polysomnography was performed on 2026-03-23. No HGNS implant consultation is documented, but the first relevant visit (2026-03-12) precedes the PSG and all later visits fall well within 24 months of it, so the timing requirement is satisfied.",
+      "evidence_ids": [
+        "8dfe88f4-3ee7-41b2-b573-55af39f0eb05",
+        "54898869-acb3-47ed-b0f9-e80297f94875",
+        "b57b819a-9882-4f1a-8c35-765e5d30edba"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.4 (predominantly obstructive events)",
+      "policy_text": "Beneficiary has predominantly obstructive events (defined as central and mixed apneas less than 25% of the total AHI)",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R147",
+        "R82",
+        "R139"
+      ],
+      "explanation": "The sleep study report describes mild obstructive sleep apnea with 91 total events and AHI 14, but it does not give the number or percentage of central or mixed apneas, so the less-than-25% threshold cannot be checked.",
+      "evidence_ids": [
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "a779ef78-e321-407f-ac66-e4a118d85106",
+        "02d53a85-e49d-46f9-983f-b4abab78779f"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.5 (AHI range)",
+      "policy_text": "AHI is 15 to 65 events per hour",
+      "verdict": "not met",
+      "evidence": [
+        "R82",
+        "R147",
+        "R139"
+      ],
+      "explanation": "The AHI on the 2026-03-23 polysomnography was 14 events per hour, which is below the required minimum of 15.",
+      "evidence_ids": [
+        "a779ef78-e321-407f-ac66-e4a118d85106",
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "02d53a85-e49d-46f9-983f-b4abab78779f"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.6 (CPAP failure or intolerance with shared decision making)",
+      "policy_text": "Beneficiary has documentation that demonstrates CPAP failure (defined as AHI greater than 15 despite CPAP usage) or CPAP intolerance (defined as less than 4 hours per night, 5 nights per week or the CPAP has been returned) including shared decision making that the patient was intolerant of CPAP despite consultation with a sleep expert",
+      "verdict": "not met",
+      "evidence": [
+        "R44",
+        "R81",
+        "R153"
+      ],
+      "explanation": "CPAP was only ordered on 2026-04-05 and an instruction on CPAP use was given on 2026-04-09. The record documents no CPAP usage, failure or intolerance, and no shared decision making about CPAP intolerance, so the criterion cannot be satisfied at this point.",
+      "evidence_ids": [
+        "29487ff3-6870-4be7-89df-e63fc106770a",
+        "7fcbc1c8-4a0a-4ade-8940-a9f84a6a78e2",
+        "b9f82d6b-cb71-4434-86f4-be8a1b1991a5"
+      ]
+    },
+    {
+      "criterion": "Covered Indications.7 (absence of complete concentric collapse on DISE)",
+      "policy_text": "Absence of complete concentric collapse at the soft palate level as seen on a drug-induced sleep endoscopy (DISE) procedure",
+      "verdict": "insufficient information",
+      "evidence": [],
+      "explanation": "No drug-induced sleep endoscopy is documented in the record, so the presence or absence of complete concentric collapse is unknown.",
+      "evidence_ids": []
+    },
+    {
+      "criterion": "Covered Indications.8 (no compromising anatomical findings)",
+      "policy_text": "No other anatomical findings that would compromise performance of device (e.g., tonsil size 3 or 4 per standardized tonsillar hypertrophy grading scale)",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R152"
+      ],
+      "explanation": "The 2026-03-12 note records a Mallampati class II airway and neck circumference of 17 inches but does not document tonsil size or other anatomical findings relevant to device performance.",
+      "evidence_ids": [
+        "8ab24879-0a23-40e5-ae23-72d3c271455f"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 (central and mixed apneas bullet): no contraindication from central or mixed apneas above one-quarter of AHI",
+      "policy_text": "Beneficiaries with central and mixed apneas that make up more than one-quarter of the total AHI",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R147"
+      ],
+      "explanation": "The report does not break down central and mixed apneas, so it cannot be determined whether they exceed one-quarter of the total AHI.",
+      "evidence_ids": [
+        "b57b819a-9882-4f1a-8c35-765e5d30edba"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 (uncontrolled hypertension bullet): no persistent uncontrolled hypertension despite medication",
+      "policy_text": "Persistent uncontrolled hypertension despite medication use",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R83",
+        "R84",
+        "R34",
+        "R36"
+      ],
+      "explanation": "Systolic pressure was 139 mm[Hg] in 2025 and 151 mm[Hg] in 2026 while on metoprolol and lisinopril. A single elevated reading with no hypertension diagnosis or follow-up documented does not establish persistent uncontrolled hypertension either way.",
+      "evidence_ids": [
+        "49fd2675-243c-0fbf-6b2c-0c177f7cbab2",
+        "49fd2675-243c-0fbf-a5d3-6c2d7b2a5ac5",
+        "49fd2675-243c-0fbf-22a0-5e85f0f6eab1",
+        "49fd2675-243c-0fbf-0ed9-874812923c09"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 (pregnancy bullet): no planned or current pregnancy",
+      "policy_text": "Beneficiaries who are, or who plan to become pregnant",
+      "verdict": "met",
+      "evidence": [
+        "R8"
+      ],
+      "explanation": "The patient is 68 years old and has a history of tubal ligation, and no pregnancy is recorded, so this contraindication is absent.",
+      "evidence_ids": [
+        "49fd2675-243c-0fbf-c164-86ec06fa07ec"
+      ]
+    },
+    {
+      "criterion": "Limitations.3 (recent myocardial infarction or severe arrhythmia bullet): none within the past 6 months",
+      "policy_text": "Recent myocardial infarction or severe cardiac arrhythmias (within the past 6 months)",
+      "verdict": "met",
+      "evidence": [
+        "R11",
+        "R12"
+      ],
+      "explanation": "The acute myocardial infarction was recorded on 2012-01-03, far more than 6 months before the order, and no severe cardiac arrhythmia is documented, so this contraindication is absent.",
+      "evidence_ids": [
+        "49fd2675-243c-0fbf-e9ac-6bda7e72b43d",
+        "49fd2675-243c-0fbf-e0b3-12d375cc66fd"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The AHI of 14 events per hour is below the required 15 to 65 range (Covered Indications.5 not met), and CPAP failure or intolerance has not been documented because CPAP was only ordered on 2026-04-05 (Covered Indications.6 not met). Because at least one applicable criterion is not met, the order is denied. Other criteria, including the DISE result, the anatomical findings, and the central/mixed apnea percentage, remain insufficiently documented.",
+  "patient_file_sha256": "670d068704565ef49c416758e9b72f450679424f3b7c4d17ca70e3b95022531d",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}

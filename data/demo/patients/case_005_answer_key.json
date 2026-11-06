@@ -1,0 +1,181 @@
+{
+  "case_id": "case_005",
+  "patient_file": "case_005.json",
+  "source_file": "Iraida50_Tarsha65_Lebsack687_49fd2675-243c-0fbf-f68e-fe178b0a5fca.json",
+  "levers": {
+    "order": "E0601",
+    "diagnosis": "OSA",
+    "visit": "before",
+    "ahi": 14,
+    "sleep_hours": 6.5,
+    "test_type": "Type I",
+    "symptoms": "daytime sleepiness",
+    "test_ordered": true,
+    "supplier_instruction": true,
+    "cpap_trial": null,
+    "test_performer": "sleep center"
+  },
+  "order": {
+    "code": "E0601",
+    "description": "Continuous positive airway pressure (CPAP) device",
+    "date": "2026-04-05",
+    "resource_id": "29487ff3-6870-4be7-89df-e63fc106770a"
+  },
+  "governing_policies": [
+    "L33718"
+  ],
+  "accepted_policies": [
+    "L33718"
+  ],
+  "checklist": "data/criteria/L33718.json",
+  "criteria": {
+    "I.A": {
+      "verdict": "met",
+      "evidence": [
+        "d9442b2e-1e7d-4cba-beb4-0eefb6421fcb",
+        "9c84635f-4078-4e60-907b-e36824ecc6e4",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f"
+      ],
+      "explanation": "In-person evaluation for OSA by the treating practitioner before the sleep test."
+    },
+    "I.B": {
+      "verdict": "met",
+      "evidence": [
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "a779ef78-e321-407f-ac66-e4a118d85106",
+        "02d53a85-e49d-46f9-983f-b4abab78779f",
+        "a0681564-f68e-4773-957b-00f96ac3b420",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f"
+      ],
+      "explanation": "Path 2: AHI 14 (5-14) with 91 events and documented daytime sleepiness."
+    },
+    "Sleep Tests.1": {
+      "verdict": "met",
+      "evidence": [
+        "b57b819a-9882-4f1a-8c35-765e5d30edba"
+      ],
+      "explanation": "The study is a Type I sleep test, a recognized type."
+    },
+    "Sleep Tests.3": {
+      "verdict": "met",
+      "evidence": [
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "a779ef78-e321-407f-ac66-e4a118d85106",
+        "02d53a85-e49d-46f9-983f-b4abab78779f",
+        "a0681564-f68e-4773-957b-00f96ac3b420",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f"
+      ],
+      "explanation": "Restates I.B: Path 2: AHI 14 (5-14) with 91 events and documented daytime sleepiness.",
+      "restates": "I.B"
+    },
+    "Sleep Tests.4": {
+      "verdict": "met",
+      "evidence": [
+        "8dfe88f4-3ee7-41b2-b573-55af39f0eb05"
+      ],
+      "explanation": "The sleep test was ordered by the treating practitioner."
+    },
+    "I.C": {
+      "verdict": "met",
+      "evidence": [
+        "7fcbc1c8-4a0a-4ade-8940-a9f84a6a78e2"
+      ],
+      "explanation": "The supplier's instruction on device use and care is documented."
+    }
+  },
+  "expected_decision": "covered",
+  "decision_explanation": "Every applicable criterion is met.",
+  "original_entry_count": 639,
+  "added_resources": [
+    {
+      "id": "d9442b2e-1e7d-4cba-beb4-0eefb6421fcb",
+      "resourceType": "Encounter",
+      "description": "In-person evaluation encounter"
+    },
+    {
+      "id": "9c84635f-4078-4e60-907b-e36824ecc6e4",
+      "resourceType": "Procedure",
+      "description": "Sleep apnea assessment"
+    },
+    {
+      "id": "a0681564-f68e-4773-957b-00f96ac3b420",
+      "resourceType": "Observation",
+      "description": "Epworth score 17"
+    },
+    {
+      "id": "b118ba2c-61c4-4d72-b9ae-16fef303e281",
+      "resourceType": "DiagnosticReport",
+      "description": "Evaluation note (note)"
+    },
+    {
+      "id": "8ab24879-0a23-40e5-ae23-72d3c271455f",
+      "resourceType": "DocumentReference",
+      "description": "Evaluation note (note, document copy)"
+    },
+    {
+      "id": "8dfe88f4-3ee7-41b2-b573-55af39f0eb05",
+      "resourceType": "ServiceRequest",
+      "description": "Sleep study order from the treating practitioner"
+    },
+    {
+      "id": "54898869-acb3-47ed-b0f9-e80297f94875",
+      "resourceType": "Encounter",
+      "description": "Overnight sleep test encounter"
+    },
+    {
+      "id": "a779ef78-e321-407f-ac66-e4a118d85106",
+      "resourceType": "Observation",
+      "description": "AHI 14"
+    },
+    {
+      "id": "02d53a85-e49d-46f9-983f-b4abab78779f",
+      "resourceType": "Observation",
+      "description": "91 events"
+    },
+    {
+      "id": "43b95bd4-8570-41e4-8cc9-7b0636f7462c",
+      "resourceType": "Observation",
+      "description": "6.5 hours"
+    },
+    {
+      "id": "abd96529-fbcd-42d4-b07d-d57a660c3d86",
+      "resourceType": "Observation",
+      "description": "SpO2 nadir 81%"
+    },
+    {
+      "id": "b57b819a-9882-4f1a-8c35-765e5d30edba",
+      "resourceType": "DiagnosticReport",
+      "description": "Sleep test report"
+    },
+    {
+      "id": "cfb1089d-c242-40ab-84c5-428afeb75fb1",
+      "resourceType": "Encounter",
+      "description": "Follow-up encounter"
+    },
+    {
+      "id": "68c2c003-eeaf-4c6e-b148-c1c88f3fb0ac",
+      "resourceType": "Condition",
+      "description": "Obstructive sleep apnea diagnosis"
+    },
+    {
+      "id": "4b4a3db2-85c5-47fd-8759-abb2eb75eea7",
+      "resourceType": "DiagnosticReport",
+      "description": "Follow-up note (note)"
+    },
+    {
+      "id": "b9f82d6b-cb71-4434-86f4-be8a1b1991a5",
+      "resourceType": "DocumentReference",
+      "description": "Follow-up note (note, document copy)"
+    },
+    {
+      "id": "29487ff3-6870-4be7-89df-e63fc106770a",
+      "resourceType": "DeviceRequest",
+      "description": "E0601 order"
+    },
+    {
+      "id": "7fcbc1c8-4a0a-4ade-8940-a9f84a6a78e2",
+      "resourceType": "Procedure",
+      "description": "Supplier instruction on device use and care"
+    }
+  ]
+}

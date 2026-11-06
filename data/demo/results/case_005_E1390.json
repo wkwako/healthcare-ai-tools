@@ -1,0 +1,181 @@
+{
+  "order": "E1390",
+  "order_description": "Oxygen concentrator, single delivery port, capable of delivering 85 percent or greater oxygen concentration at the prescribed flow rate",
+  "candidates": [
+    {
+      "lcd_id": 33797,
+      "title": "Oxygen and Oxygen Equipment",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33800,
+      "title": "Respiratory Assist Devices",
+      "contractors": "CGS Administrators, LLC"
+    },
+    {
+      "lcd_id": 33718,
+      "title": "Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea",
+      "contractors": "CGS Administrators, LLC"
+    }
+  ],
+  "selected_policy": "L33797",
+  "selection_reason": "The order is for E1390, an oxygen concentrator, which is oxygen equipment governed by the Oxygen and Oxygen Equipment LCD (L33797). The other two candidates cover PAP and respiratory assist devices, not oxygen. The record does not appear to meet L33797 criteria: the only low saturation is an SpO2 nadir of 81% during the sleep study, with no awake room-air blood gas or oximetry at or below 88%. The sleep-only oxygen pathway requires nocturnal oximetry performed after optimal PAP settings are established, and the patient was just ordered a CPAP device, so that testing has not occurred. The order would likely be denied, but L33797 is the LCD that governs it.",
+  "criteria": [
+    {
+      "criterion": "Initial coverage condition 1: the treating practitioner ordered and evaluated the results of a qualifying blood gas study performed at the time of need",
+      "policy_text": "The treating practitioner has ordered and evaluated the results of a qualifying blood gas study performed at the time of need",
+      "verdict": "met",
+      "evidence": [
+        "R43",
+        "R49",
+        "R50",
+        "R152",
+        "R153"
+      ],
+      "explanation": "Dr. Irene779 Kirlin939 ordered the attended in-laboratory polysomnography on 2026-03-12 (R43; R152 'Ordered a sleep study'). The study was performed 2026-03-23 (R50), and the practitioner reviewed the results at the 2026-04-05 visit (R153). The study was done during the illness, so the time-of-need requirement appears satisfied.",
+      "evidence_ids": [
+        "8dfe88f4-3ee7-41b2-b573-55af39f0eb05",
+        "d9442b2e-1e7d-4cba-beb4-0eefb6421fcb",
+        "54898869-acb3-47ed-b0f9-e80297f94875",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f",
+        "b9f82d6b-cb71-4434-86f4-be8a1b1991a5"
+      ]
+    },
+    {
+      "criterion": "Initial coverage condition 3: the qualifying blood gas study was performed by a treating practitioner or by a qualified provider or supplier of laboratory services",
+      "policy_text": "The qualifying blood gas study was performed by a treating practitioner or by a qualified provider or supplier of laboratory services",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R50",
+        "R147"
+      ],
+      "explanation": "The study was performed by a sleep center technologist in an attended lab (R50). The record does not state whether the performing facility is a hospital, IDTF, laboratory or other qualified provider, or whether it is a supplier. The qualifying-provider status cannot be confirmed from the record.",
+      "evidence_ids": [
+        "54898869-acb3-47ed-b0f9-e80297f94875",
+        "b57b819a-9882-4f1a-8c35-765e5d30edba"
+      ]
+    },
+    {
+      "criterion": "Initial coverage condition 2 and Group I criteria: the beneficiary's blood gas study meets a Group I criterion (rest/awake PaO2 at or below 55 or SpO2 at or below 88 percent on room air; sleep value with awake PaO2 at or above 56 or SpO2 at or above 89 percent; sleep decrease over 10 mm Hg PaO2 or over 5 percent SpO2 from baseline with symptoms; or exercise value with daytime resting value at or above 56 or 89 percent)",
+      "policy_text": "An arterial PO2 at or below 55 mm Hg or an arterial oxygen saturation at or below 88 percent taken at rest (awake) while breathing room air; or, An arterial PO2 at or below 55 mm Hg, or an arterial oxygen saturation at or below 88 percent, taken during sleep for a beneficiary who demonstrates an arterial PO2 at or above 56 mm Hg or an arterial oxygen saturation at or above 89 percent while awake",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R122",
+        "R147",
+        "R139",
+        "R143",
+        "R82"
+      ],
+      "explanation": "The only qualifying-range value is a sleep SpO2 nadir of 81 percent (R122, R147), which would satisfy the sleep-value threshold only if the patient also had an awake value at or above 89 percent. No awake or resting room-air saturation or PaO2 is documented. No baseline mean saturation is recorded, so the 5-point sleep-decrease option cannot be assessed, and no exercise testing is documented. Group I cannot be confirmed from the record. The sleep study is also subject to the OSA titration requirement below.",
+      "evidence_ids": [
+        "abd96529-fbcd-42d4-b07d-d57a660c3d86",
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "02d53a85-e49d-46f9-983f-b4abab78779f",
+        "43b95bd4-8570-41e4-8cc9-7b0636f7462c",
+        "a779ef78-e321-407f-ac66-e4a118d85106"
+      ]
+    },
+    {
+      "criterion": "Obstructive sleep apnea titration requirement: for beneficiaries with OSA, a qualifying oxygen saturation may only occur during a titration polysomnographic study with optimal PAP settings, and nocturnal oximetry must show saturation at or below 88 percent",
+      "policy_text": "For beneficiaries with OSA, a qualifying oxygen saturation test may only occur during a titration polysomnographic study (either split night or stand-alone). The titration PSG is one in which all of the following criteria are met: 1. The titration is conducted over a minimum of two (2) hours; and, 2. During titration: 1. The AHI/RDI is reduced to less than or equal to an average of ten (10) events per hour",
+      "verdict": "not met",
+      "evidence": [
+        "R32",
+        "R43",
+        "R50",
+        "R82",
+        "R139",
+        "R147",
+        "R44",
+        "R81"
+      ],
+      "explanation": "The patient has OSA (R32). The sleep study was an attended diagnostic Type I polysomnography, not a titration study (R43, R50, R147). The AHI remained 14 events per hour (R82, R147), above the threshold of 10, and no optimal PAP settings were determined. The CPAP device was ordered only on 2026-04-05 (R44) and the patient was instructed on its use on 2026-04-09 (R81), so the oxygen saturation result was not obtained under titrated PAP therapy. The sleep oximetry therefore cannot qualify under the OSA rules.",
+      "evidence_ids": [
+        "68c2c003-eeaf-4c6e-b148-c1c88f3fb0ac",
+        "8dfe88f4-3ee7-41b2-b573-55af39f0eb05",
+        "54898869-acb3-47ed-b0f9-e80297f94875",
+        "a779ef78-e321-407f-ac66-e4a118d85106",
+        "02d53a85-e49d-46f9-983f-b4abab78779f",
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "29487ff3-6870-4be7-89df-e63fc106770a",
+        "7fcbc1c8-4a0a-4ade-8940-a9f84a6a78e2"
+      ]
+    },
+    {
+      "criterion": "Initial coverage condition 4: the provision of oxygen and oxygen equipment in the home setting will improve the beneficiary's condition",
+      "policy_text": "The provision of oxygen and oxygen equipment in the home setting will improve the beneficiary's condition",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R152",
+        "R153",
+        "R122"
+      ],
+      "explanation": "The record documents sleep-related oxygen desaturation to 81 percent and daytime sleepiness (R122, R152), but contains no clinical assessment or documentation that home oxygen would improve the patient's condition, and no oxygen order is recorded.",
+      "evidence_ids": [
+        "8ab24879-0a23-40e5-ae23-72d3c271455f",
+        "b9f82d6b-cb71-4434-86f4-be8a1b1991a5",
+        "abd96529-fbcd-42d4-b07d-d57a660c3d86"
+      ]
+    },
+    {
+      "criterion": "Group II criteria: arterial PO2 of 56-59 mm Hg or SpO2 of 89 percent, plus any of dependent edema suggesting congestive heart failure, pulmonary hypertension or cor pulmonale, or erythrocythemia with hematocrit greater than 56 percent",
+      "policy_text": "A. An arterial PO2 of 56-59 mm Hg or an arterial blood oxygen saturation of 89 percent; and, B. Any of the following: 1. Dependent edema suggesting congestive heart failure; or, 2. Pulmonary hypertension or cor pulmonale; or, 3. Erythrocythemia with a hematocrit greater than 56 percent",
+      "verdict": "insufficient information",
+      "evidence": [
+        "R114",
+        "R152",
+        "R122",
+        "R11",
+        "R12"
+      ],
+      "explanation": "No awake PO2 of 56-59 mm Hg or SpO2 of 89 percent is documented (criterion A). Hematocrit is 45.788 percent (R114), below the erythrocythemia threshold. The record does not document dependent edema, pulmonary hypertension, or cor pulmonale. Her cardiac history of myocardial infarction (R11, R12) does not establish any of these conditions. Group II cannot be confirmed.",
+      "evidence_ids": [
+        "49fd2675-243c-0fbf-cb34-e348a9ec0ca4",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f",
+        "abd96529-fbcd-42d4-b07d-d57a660c3d86",
+        "49fd2675-243c-0fbf-e9ac-6bda7e72b43d",
+        "49fd2675-243c-0fbf-e0b3-12d375cc66fd"
+      ]
+    },
+    {
+      "criterion": "Group III criteria: absence of hypoxemia as defined in Groups I and II, plus a condition whose symptoms are documented in peer-reviewed literature to be improved by oxygen",
+      "policy_text": "1. Absence of hypoxemia defined in Group I and Group II above; and, 2. A medical condition with distinct physiologic, cognitive, and/or functional symptoms documented in high-quality, peer-reviewed literature to be improved by oxygen therapy, such as cluster headaches",
+      "verdict": "not met",
+      "evidence": [
+        "R122",
+        "R147",
+        "R102",
+        "R152"
+      ],
+      "explanation": "Group III applies only to patients without hypoxemia. The record documents sleep oxygen saturation falling to 81 percent (R122, R147), which is hypoxemia, so the absence-of-hypoxemia element is contradicted. No qualifying Group III condition such as cluster headache is documented either.",
+      "evidence_ids": [
+        "abd96529-fbcd-42d4-b07d-d57a660c3d86",
+        "b57b819a-9882-4f1a-8c35-765e5d30edba",
+        "a0681564-f68e-4773-957b-00f96ac3b420",
+        "8ab24879-0a23-40e5-ae23-72d3c271455f"
+      ]
+    },
+    {
+      "criterion": "Group IV denial conditions: angina without hypoxemia, dyspnea without cor pulmonale or hypoxemia, severe peripheral vascular disease with desaturation, or terminal illness not affecting breathing",
+      "policy_text": "Oxygen therapy and oxygen equipment will also be denied as not reasonable and necessary if any of the following conditions are present: 1. Angina pectoris in the absence of hypoxemia. 2. Dyspnea without cor pulmonale or evidence of hypoxemia. 3. Severe peripheral vascular disease resulting in clinically evident desaturation in one or more extremities. 4. Terminal illnesses that do not affect the ability to breathe.",
+      "verdict": "met",
+      "evidence": [
+        "R152",
+        "R32",
+        "R11",
+        "R12"
+      ],
+      "explanation": "None of the Group IV denial conditions is documented. The cardiopulmonary exam was unremarkable (R152), no angina, dyspnea, peripheral vascular disease or terminal illness is recorded, and the sleep-related desaturation is attributed to OSA (R32, R147).",
+      "evidence_ids": [
+        "8ab24879-0a23-40e5-ae23-72d3c271455f",
+        "68c2c003-eeaf-4c6e-b148-c1c88f3fb0ac",
+        "49fd2675-243c-0fbf-e9ac-6bda7e72b43d",
+        "49fd2675-243c-0fbf-e0b3-12d375cc66fd"
+      ]
+    }
+  ],
+  "decision": "denied",
+  "decision_explanation": "The qualifying sleep oxygen saturation of 81 percent (R122) was obtained during a diagnostic polysomnography in a patient with OSA. No titration study with optimal PAP settings is documented (R43, R50, R147, R82), so the OSA titration requirement is not met and the result cannot qualify. The Group III absence-of-hypoxemia element is contradicted by the documented sleep hypoxemia. Group I, Group II and the condition that home oxygen will improve the patient's condition remain unsupported by the record. Because at least one applicable criterion is not met, the order is denied.",
+  "patient_file_sha256": "670d068704565ef49c416758e9b72f450679424f3b7c4d17ca70e3b95022531d",
+  "pipeline_sha256": "304d98d094ad2bb967c524078d5660841477cc947887b17841d54d89a7dd85ac"
+}
