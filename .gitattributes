@@ -1,0 +1,2 @@
+#the demo results store a hash of each demo patient file's exact bytes, so git must not convert their line endings
+data/demo/** -text
