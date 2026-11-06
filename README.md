@@ -38,9 +38,9 @@ These aren't in a patient's chart; they live in other systems. Provider enrollme
 
 Other limits on scope:
 - **Medicare only.** The tool uses Medicare LCDs, not the policies of Medicare Advantage or commercial plans, and only those in a fixed corpus of about 25 sleep-related LCDs.
-- **Synthetic data only.** It was built and tested on Synthea patients, and the web app is not set up to handle real patient records (PPI).
+- **Synthetic data only.** It was built and tested on Synthea patients, and the web app is not set up to handle real patient records (PHI).
 - **Not reviewed by a clinician.** Neither the tool's outputs nor the answer keys used to evaluate it were checked by a clinician or coding professional (see Limitations).
-- **Restricted uploads.** The deploayed site only runs on five synthetic demo patients, with results computed ahead of time. Additionally, uploads are turned off completely, to prevent PII from accidentally being uploaded.
+- **Restricted uploads.** The deployed site only runs on five synthetic demo patients, with results computed ahead of time. Additionally, uploads are turned off completely, to prevent PII from accidentally being uploaded.
 
 # Architecture
 
@@ -194,7 +194,7 @@ data folder: contains fake patient files (not on GitHub), LCD documents, criteri
 
 `prior_auth_checker.py`: Builds the patient summary, retrieves policy passages, selects the LCD, and judges the order's criteria.
 
-`demo.py`: Builds a demo for the website. Contains 5 demo patients and 5 order visits to pick from. It runs every patient/order combination ahead of time and saves the results to data/demo/ so the deployed site never calls the model (saves tokens and prevents PII from accidentally being revealed).
+`demo.py`: Builds a demo for the website. Contains 5 demo patients and 5 orders to pick from. It runs every patient/order combination ahead of time and saves the results to data/demo/ so the deployed site never calls the model (saves tokens and prevents PII from accidentally being revealed).
 
 `monitoring.py`: Logs each request to an SQLite3 db (de-identified patient information).
 
