@@ -24,6 +24,21 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
+#every tool, for the toolbar on each page and the cards on the homepage
+TOOLS = [
+    {"name": "Prior Authorization Checker", "short_name": "Prior Auth", "path": "/prior-auth-checker", "ready": True,
+     "description": "Finds the Medicare policy that governs an order, then checks each of its criteria against a "
+                    "patient record, citing the evidence it used."},
+    {"name": "835 Denial Validator", "short_name": "Denial Validator", "path": "/denial-validator", "ready": True,
+     "description": "Checks an 835 remittance file's envelope structure, and that its payments, adjustments and "
+                    "provider-level adjustments balance."},
+    {"name": "835 Denial Explainer", "short_name": "Denial Explainer", "path": "/denials-explainer", "ready": False,
+     "description": "Explains the denials in an 835 remittance file in plain language."},
+    {"name": "Medicare Policy Assistant", "short_name": "Policy Assistant", "path": "/medicare-policy-assistant",
+     "ready": False, "description": "Answers questions about Medicare coverage policies, citing the policy text."},
+]
+templates.env.globals["tools"] = TOOLS
+
 #when a browser sends a GET request to "/", run home() and send back whatever it returns
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):

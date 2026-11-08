@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Healthcare AI Tools{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
 </head>
 <body>
-  <nav><a href="/">Home</a> | <a href="/denial-validator"> 835 Denial Validator </a> | <a href="/denials-explainer">835 Denial Explainer</a> | <a href="/medicare-policy-assistant"> Medicare Policy Assistant </a> | <a href="/prior-auth-checker"> Prior Authorization Checker </a> </nav>
-  <p class="disclaimer">Demonstration only. All data is synthetic.</p>
-  {% block content %}{% endblock %}
+  <header class="toolbar">
+    <nav class="toolbar-inner">
+      <a class="site-name" href="/">Healthcare AI Tools</a>
+      <div class="toolbar-links">
+        {% for tool in tools %}
+        <a href="{{ tool.path }}" {% if request.url.path == tool.path %}class="current" aria-current="page"{% endif %}>
+          {{ tool.short_name }}</a>
+        {% endfor %}
+      </div>
+    </nav>
+  </header>
+  <main>
+    <p class="disclaimer">Demonstration only. All data is synthetic.</p>
+    {% block content %}{% endblock %}
+  </main>
 </body>
 </html>

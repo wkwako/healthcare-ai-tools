@@ -43,6 +43,16 @@ def test_evidence_lines_keep_the_measurement_name():
 def test_pages_load(path):
     assert client.get(path).status_code == 200
 
+def test_homepage_has_a_card_for_every_tool():
+    page = client.get("/").text
+    cards = re.findall(r'<a class="card[^"]*" href="([^"]+)"', page)
+    assert cards == [tool["path"] for tool in main.TOOLS]
+
+def test_toolbar_marks_the_current_page():
+    page = client.get("/prior-auth-checker").text
+    assert 'href="/prior-auth-checker" class="current"' in page
+    assert page.count('class="current"') == 1
+
 @pytest.mark.parametrize("case_id", TESTED)
 def test_demo_shows_the_expected_decision(case_id):
     """Tests that each tested demo patient's page shows the decision in its answer key, and logs it as scored"""
