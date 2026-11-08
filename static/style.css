@@ -1,7 +1,110 @@
 body {
   font-family: sans-serif;
+  margin: 0;
+}
+
+main {
   max-width: 700px;
-  margin: 40px auto;
+  margin: 24px auto 40px;
+  padding: 0 16px;
+}
+
+/* Toolbar at the top of every page */
+.toolbar {
+  background: #1a365d;
+}
+
+.toolbar-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 20px;
+}
+
+.toolbar a {
+  color: #e2e8f0;
+  text-decoration: none;
+}
+
+.toolbar a:hover {
+  color: white;
+}
+
+.site-name {
+  font-weight: bold;
+}
+
+.toolbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  font-size: 0.9rem;
+}
+
+.toolbar-links a {
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.toolbar-links a.current {
+  color: white;
+  border-bottom-color: #90cdf4;
+}
+
+.disclaimer {
+  color: #4a5568;
+  font-size: 0.85rem;
+}
+
+/* Homepage tool cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.card {
+  display: block;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 14px 16px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.card:hover, .card:focus-visible {
+  border-color: #2b6cb0;
+  box-shadow: 0 2px 8px rgba(26, 54, 93, 0.15);
+}
+
+.card-title {
+  font-weight: bold;
+  color: #2b6cb0;
+}
+
+.card p {
+  margin: 8px 0 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.card-soon .card-title {
+  color: #4a5568;
+}
+
+.soon {
+  margin-left: 6px;
+  font-size: 0.75rem;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: #edf2f7;
+  color: #4a5568;
 }
 
 .button {

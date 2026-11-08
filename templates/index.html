@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 <h1> Healthcare AI Tools </h1>
-<a class="button" href="/prior-auth-checker"> Prior Authorization Checker </a>
-<p> More tools coming soon </p>
+<p>Tools for working with healthcare claims and coverage, built on Medicare policies and synthetic patient data.</p>
+
+<div class="cards">
+  {% for tool in tools %}
+  <a class="card {% if not tool.ready %}card-soon{% endif %}" href="{{ tool.path }}">
+    <span class="card-title">{{ tool.name }}</span>
+    {% if not tool.ready %}<span class="soon">Coming soon</span>{% endif %}
+    <p>{{ tool.description }}</p>
+  </a>
+  {% endfor %}
+</div>
 {% endblock %}
