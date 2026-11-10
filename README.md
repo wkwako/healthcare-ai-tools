@@ -1,10 +1,17 @@
-# Project Overview
+# Healthcare AI Tools
 
-I created a webapp that hosts a suite of healthcare tools focused on 835 remittances, like checking the structure and balance of 835s, and predicting if an order is covered under Medicare. The entirety of this file is focused on this second tool; other tools are detailed in the appendix.
+A prior authorization checker that predicts whether Medicare will cover an order, given a patient's FHIR record. It retrieves the governing coverage policy (LCD) from a corpus of about 25 similar sleep-related policies, then judges each of the policy's clinical criteria as met, not met, or insufficient information, citing evidence from the record. When evidence is missing, it says so rather than guessing.
 
-# Prior Authorization Checker Tool
+I evaluated it on 72 synthetic test cases built to meet, fail, or omit specific criteria, using one policy for development and a second, held-out policy to test generalization (5 runs per case):
 
-Given a patient FHIR file and an order, the tool predicts if the order is covered under Medicare. The result can be one of three values: "covered", "denied," or "insufficient information," if there isn't enough information in the patient file to make a clear determination. A demo of the tool can be accessed at [healthcare.williamkwako.com](https://healthcare.williamkwako.com).
+| | Development (PAP, L33718) | Held-out (HGNS, L38307) |
+|---|---|---|
+| Policy selection | 98% | 99.5% |
+| Decision accuracy | 94% | 89% |
+| Criterion accuracy | 95% | 97% |
+| False "covered" decisions | 2.9% (4/140) | 1.9% (4/215) |
+
+**Live demo:** [healthcare.williamkwako.com](https://healthcare.williamkwako.com) (synthetic data only; results precomputed).
 
 # Background
 
@@ -19,10 +26,6 @@ Fast Healthcare Interoperability Resources (FHIR) is a standard applied to files
 ### LCD files
 
 An order is only covered under Medicare if certain criteria are met. For example, a CPAP device is covered only if a sleep test shows an AHI of at least 15, or 5–14 with symptoms such as daytime sleepiness or hypertension. Coverage criteria come from national coverage determinations (NCDs) or, more often, from local coverage determinations (LCDs). Typically, items do not have any NCDs and only have local coverage determinations (LCDs), created by local contractors, Medicare Administrative Contractors (MACs), who specify requirements in their own local jurisdiction. LCDs must yield to NCDs and cannot override them.
-
-### 835 remittance files
-
-An 835 is the X12 electronic remittance advice. It explains a payment (but it itself is not a payment), including paid amounts, adjustments, and denials, and contains payer, patient, and payment information. It may include partial or full denials as well.
 
 # Scope
 
@@ -57,13 +60,25 @@ There are several different levels of architecture:
 A few notes on these:
 - Policy selection only sees retrieved Chroma DB chunks, whereas judging sees the full LCD. Passages are enough to tell policies apart, but judging requires the full context.
 - Evaluation results are reused while the model, prompts, and schema are unchanged.
-- We don't use a fallback model. If a different model answered some cases, it would confound the evaluation.
+- I don't use a fallback model. If a different model answered some cases, it would confound the evaluation.
+
+# Deployment
+
+The demo runs on an Azure virtual machine (Ubuntu Linux):
+
+- **nginx** receives web traffic and forwards it to the app, and serves HTTPS with a free Let's Encrypt certificate (renewed automatically by certbot).
+- **gunicorn** runs the FastAPI app with uvicorn workers.
+- **systemd** keeps the app running and restarts it after crashes or reboots.
+- **DNS** is managed through Cloudflare, with the app on its own subdomain.
+- **GitHub Actions** runs the pytest suite on every push.
+
+The deployed site never calls the model. Demo results are computed ahead of time, so the server doesn't hold an API key at all, and visitors can't run up costs. Uploads are disabled, so no real patient data can reach the server. Each request is logged to an SQLite database for monitoring (no patient identifiers).
 
 # Design
 
 The prior auth tool predicts coverage through a four-step process:
 1. **Select a patient FHIR file and order for coverage prediction.** A user uploads an FHIR file and inputs an order on the web app (currently, only a demo is available on the live site, which uses five preselected patients).
-2. **Select the right policy (LCD).** The code's official description is looked up in the LCDs' code lists (`order_codes.json`), and the search query is the code plus that description. The Chroma vector store is searched with this query and we return the top 3 best-matching distinct policies. Haiku can also answer "none" in case we don't find a match. The LCD corpus holds about 25 sleep-related LCDs that share vocabulary (PAP, sleep studies, HGNS, etc.) that make this a meaningful test of policy selection.
+2. **Select the right policy (LCD).** The code's official description is looked up in the LCDs' code lists (`order_codes.json`), and the search query is the code plus that description. The Chroma vector store is searched with this query and returns the top 3 best-matching distinct policies. Haiku can also answer "none" in case we don't find a match. The LCD corpus holds about 25 sleep-related LCDs that share vocabulary (PAP, sleep studies, HGNS, etc.) that make this a meaningful test of policy selection.
 3. **Predict order coverage.** The LCD and a summary of the FHIR record are sent to Haiku, and I ask Haiku to determine if each criterion listed in the LCD file is met, not met, insufficient information, or not applicable, based on provided patient data. If all criteria are met, the order is covered; if any criteria are not met, the order is denied; otherwise (nothing not met, but at least one criterion lacks evidence), insufficient information.
 4. **Display the information.** Last, I display each criterion to the user and its individual decision, along with evidence for each decision from the patient file.
 
@@ -76,10 +91,10 @@ The judging prompt therefore tells the model to leave out administrative require
 The goal of the evaluation step is to determine prediction accuracy. I discuss both the evaluation method, and the process of selecting which LCDs to test.
 
 ### Method
-Our evaluation method consists of several steps:
+The evaluation method consists of several steps:
 1. **Obtaining test patient data.** I use Synthea (https://synthea.mitre.org/) to generate fake patient data for testing.
 2. **Modify patient files so criteria are explicitly met or unmet.** I add encounters, labs, and other resources to Synthea patient files to test the prior auth prediction pipeline. At the same time, I record each modification in "answer key" files, which are later compared against model prediction to calculate accuracy. This way, I know exactly which modifications have been made and what the ground truth is for each patient.
-3. **Run the tool and compare its output with the answer key.** At the same time, I keep track of several variables, including how often we select the right policy, how often the model predicts the correct decision, and how often the model cites sufficient evidence for its determination. Note that for decision accuracy, I split each accuracy metric into its own permutation of expectation/prediction. For example, how often the model selected "covered" when the answer was "denied" is a separate metric from how often the model selected "insufficient" when the answer was "covered", and so on.
+3. **Run the tool and compare its output with the answer key.** At the same time, I keep track of several variables, including how often the right policy is selected, how often the model predicts the correct decision, and how often the model cites sufficient evidence for its determination. Note that for decision accuracy, I split each accuracy metric into its own permutation of expectation/prediction. For example, how often the model selected "covered" when the answer was "denied" is a separate metric from how often the model selected "insufficient" when the answer was "covered", and so on.
 
 Each test case starts from a fully qualifying patient and changes one thing. In cases.py, a case is a base Synthea patient plus the settings ("levers") that differ from the defaults, and the defaults describe a patient who meets every criterion. For example, case_044 is a qualifying HGNS patient except that no shared decision making is documented (one criterion lacks evidence, so the expected decision is insufficient information). Because most cases change a single lever, a wrong answer points to one criterion. A few cases change two levers on purpose, to check that verdicts combine correctly: one "not met" plus one "insufficient" should still be "denied".
 
@@ -91,10 +106,10 @@ The answer key is computed from the same lever settings rather than read off the
 
 I use order E0601 (continuous positive airway pressure device coverage for obstructive sleep apnea) for the development set, and 64582 (implantation of hypoglossal nerve neurostimulator system) for the held-out set. I create a couple dozen patient examples with varying qualifications for both orders. Then, I tune the prompt to increase its accuracy across the development set, then run the evaluation on the held-out set with minimal changes to determine generalizable accuracy.
 
-After the first run on the held-out set, we made a few changes, as policy selection failed on 15 of the 17 cases. None of the modifications affect criterion judging. Changes on the held-out set included:
+After the first run on the held-out set, a few changes were made, as policy selection failed on 15 of the 17 cases. None of the modifications affect criterion judging. Changes on the held-out set included:
 1. Changing test cases to only include patients with Medicare
 2. Allowing regional versions of the same policy to be interchangeable
-3. Fixing the scores label matching after seeing held-out results to fix a label-matching bug in scoring
+3. Fixing a label-matching bug in scoring, found after seeing the held-out results
 
 In addition to the above changes, I created 26 additional test cases for better coverage.
 
@@ -142,7 +157,7 @@ The diagonals display correctly-predicted selection. Covered accuracy was 100% (
 
 The criteria verdict confusion matrix adds a fourth column for "missing" information. This occurs when the model's output had no verdict that could be matched to that checklist criterion, usually because it labeled or numbered the criteria differently. There is no corresponding row because I never expect to receive a missing prediction. The results across the criteria verdict matrix are similar: 97% "met" accuracy, 84% "not met" accuracy, and 97% insufficient accuracy. And like the decision matrix, "not met" had the lowest accuracy.
 
-In Figure 2, I display data relating to the held-out set's model selection (implantation of hypoglossal nerve neurostimulator system, LCD L38307). For decisions, the model achieves 75% accuracy on covered selections, 99% on denied and 92% on insufficient. For individual criteria, it achieves 97% accuracy on "met", 97% on "not met", and 91% on "insufficient". The held-out set had fewer denied-predicted-as-covered errors, but more insufficient-predicted-as-covered errors
+In Figure 2, I display data relating to the held-out set's model selection (implantation of hypoglossal nerve neurostimulator system, LCD L38307). For decisions, the model achieves 75% accuracy on covered selections, 99% on denied and 92% on insufficient. For individual criteria, it achieves 97% accuracy on "met", 97% on "not met", and 91% on "insufficient". The held-out set had fewer denied-predicted-as-covered errors, but more insufficient-predicted-as-covered errors.
 
 ![Figure 2: confusion matrices for held-out set](data/eval_results/claude-haiku-5-5/figures/L38307.png)
 
@@ -161,12 +176,23 @@ There are several limitations to this study:
 6. **Incorrect order selection.** On an untested order (E0471), the model sometimes selected an order already in the patient's record instead of the user-entered policy (picked an HGNS policy for a bi-level device).
 
 # Future Work
-1. Deploying to web via Azure
-2. Monitoring deployment and tool use
-3. Increasing accuracy, reducing frequency of critical errors
+1. **Continuous deployment:** automatically deploy to the VM after tests pass.
+2. **More and reviewed test cases:** two to three times as many cases, with answer keys reviewed by someone with clinical or coding expertise.
+3. **Reducing false covers:** most came from one compound criterion where the model accepted half of the required evidence (CI.6).
+4. **Model comparison:** compare Haiku with larger models on accuracy, false covers, and cost.
+5. **More policies:** extend beyond the two evaluated policies, and use the patient's region to choose between contractors' versions of the same policy.
+6. **A monitoring dashboard** built on the request logs.
+7. **Finishing the 835 structure and balance checker.**
+
+# What's not in this repository
+Some data is excluded from the repo, either for licensing or because it can be regenerated:
+
+- **LCD documents and the Chroma vector store.** Medicare's coverage policies include CPT procedure codes, which are copyrighted by the American Medical Association and licensed for personal use only. Accessing them through CMS's API requires accepting that license, so I don't redistribute them. `cms_data_retrieval.py` downloads and cleans them, and `policy_store.py` rebuilds the vector store.
+- **Synthea patient files.** The base patients come from Synthea's pre-generated sample data (FHIR R4). The test patients built from them are large (over 200 MB) and are regenerated by `build_cases.py` from `cases.py`, which is committed.
+- **The monitoring database and API keys,** which are specific to the deployment.
 
 # Code Overview
-data folder: contains fake patient files (not on GitHub), LCD documents, criteria, evaluation results, and the Chroma vector store.
+data folder: contains fake patient files (not on GitHub), LCD documents, criteria, evaluation results, and the Chroma vector store (some not on GitHub; see “What’s not in this repository”)
 
 .github folder: Contains automated workflow actions (tests via pytest) that run on pushing to GitHub.
 
@@ -203,4 +229,6 @@ data folder: contains fake patient files (not on GitHub), LCD documents, criteri
 # Appendix
 
 ### 835 structure and balance checker
+
+An 835 is the X12 electronic remittance advice. It explains a payment (but it itself is not a payment), including paid amounts, adjustments, and denials, and contains payer, patient, and payment information. It may include partial or full denials as well.
 - in progress
