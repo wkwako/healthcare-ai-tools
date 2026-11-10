@@ -29,7 +29,7 @@ TOOLS = [
     {"name": "Prior Authorization Checker", "short_name": "Prior Auth", "path": "/prior-auth-checker", "ready": True,
      "description": "Finds the Medicare policy that governs an order, then checks each of its criteria against a "
                     "patient record, citing the evidence it used."},
-    {"name": "835 Denial Validator", "short_name": "Denial Validator", "path": "/denial-validator", "ready": True,
+    {"name": "835 Denial Validator", "short_name": "Denial Validator", "path": "/denial-validator", "ready": False,
      "description": "Checks an 835 remittance file's envelope structure, and that its payments, adjustments and "
                     "provider-level adjustments balance."},
     {"name": "835 Denial Explainer", "short_name": "Denial Explainer", "path": "/denials-explainer", "ready": False,

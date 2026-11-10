@@ -40,7 +40,7 @@ Other limits on scope:
 - **Medicare only.** The tool uses Medicare LCDs, not the policies of Medicare Advantage or commercial plans, and only those in a fixed corpus of about 25 sleep-related LCDs.
 - **Synthetic data only.** It was built and tested on Synthea patients, and the web app is not set up to handle real patient records (PHI).
 - **Not reviewed by a clinician.** Neither the tool's outputs nor the answer keys used to evaluate it were checked by a clinician or coding professional (see Limitations).
-- **Restricted uploads.** The deployed site only runs on five synthetic demo patients, with results computed ahead of time. Additionally, uploads are turned off completely, to prevent PII from accidentally being uploaded.
+- **Restricted uploads.** The deployed site only runs on five synthetic demo patients, with results computed ahead of time. Additionally, uploads are turned off completely, to prevent PHI from accidentally being uploaded.
 
 # Architecture
 
@@ -62,7 +62,7 @@ A few notes on these:
 # Design
 
 The prior auth tool predicts coverage through a four-step process:
-1. **Select a patient FHIR file and order for coverage prediction.** A user uploads an FHIR file and inputs an order on the web app.
+1. **Select a patient FHIR file and order for coverage prediction.** A user uploads an FHIR file and inputs an order on the web app (currently, only a demo is available on the live site, which uses five preselected patients).
 2. **Select the right policy (LCD).** The code's official description is looked up in the LCDs' code lists (`order_codes.json`), and the search query is the code plus that description. The Chroma vector store is searched with this query and we return the top 3 best-matching distinct policies. Haiku can also answer "none" in case we don't find a match. The LCD corpus holds about 25 sleep-related LCDs that share vocabulary (PAP, sleep studies, HGNS, etc.) that make this a meaningful test of policy selection.
 3. **Predict order coverage.** The LCD and a summary of the FHIR record are sent to Haiku, and I ask Haiku to determine if each criterion listed in the LCD file is met, not met, insufficient information, or not applicable, based on provided patient data. If all criteria are met, the order is covered; if any criteria are not met, the order is denied; otherwise (nothing not met, but at least one criterion lacks evidence), insufficient information.
 4. **Display the information.** Last, I display each criterion to the user and its individual decision, along with evidence for each decision from the patient file.
@@ -91,12 +91,12 @@ The answer key is computed from the same lever settings rather than read off the
 
 I use order E0601 (continuous positive airway pressure device coverage for obstructive sleep apnea) for the development set, and 64582 (implantation of hypoglossal nerve neurostimulator system) for the held-out set. I create a couple dozen patient examples with varying qualifications for both orders. Then, I tune the prompt to increase its accuracy across the development set, then run the evaluation on the held-out set with minimal changes to determine generalizable accuracy.
 
-After the first-run on the held-out set, we made a few of changes, as policy selection failed on 15 of the 17 cases. None of the modifications affect criterion judging. Modifications: Changes on the held-out set included:
+After the first run on the held-out set, we made a few changes, as policy selection failed on 15 of the 17 cases. None of the modifications affect criterion judging. Changes on the held-out set included:
 1. Changing test cases to only include patients with Medicare
 2. Allowing regional versions of the same policy to be interchangeable
-3. Fixing the scores label matching after seeing held-out results, so the results were more accurate (only affects scoring)
+3. Fixing the scores label matching after seeing held-out results to fix a label-matching bug in scoring
 
-In addition to the above changes, I created 26 additional test cases for better converage.
+In addition to the above changes, I created 26 additional test cases for better coverage.
 
 
 ### Results
@@ -134,15 +134,15 @@ Table 2 breaks the pooled numbers out by run, to show how consistent the model i
 | 5 | 89% | 90% | 1 | 91% | 96% | 1 |
 | **Mean** | **94%** | **95%** | **0.8** | **89%** | **97%** | **0.8** |
 
-Figure 1 displays two confusion matrices for the development set data (PAP devices for sleep apnea, LCD L33718). The expected decision is on the rows, and the model's prediction is on the columns. The left-most confusion matrix represents decisions (covered/denied/insufficient for an *order*), and the right-most matrix represents criterion verdicts (met/not met/insufficient for a *criterion*). LCDs contain several criteria that make up a decision for an order, and we display decision selection separately for orders and criteria.
+Figure 1 displays two confusion matrices for the development set data (PAP devices for sleep apnea, LCD L33718). The expected decision is on the rows, and the model's prediction is on the columns. The left-most confusion matrix represents decisions (covered/denied/insufficient for an *order*), and the right-most matrix represents criterion verdicts (met/not met/insufficient for a *criterion*). LCDs contain several criteria that make up a decision for an order, and I display decision selection separately for orders and criteria.
 
 The diagonals display correctly-predicted selection. Covered accuracy was 100% (when covered was expected, the model predicted covered in 100% of cases), denied accuracy was 87%, and insufficient accuracy was 98%. The model struggles the most with predicting expected denials. Predicting covered when the expected is denied is the most costly mistake, as telling a patient their order is covered when insurance denies could lead to fees the patient wasn't expecting.
 
 ![Figure 1: confusion matrices for development set](data/eval_results/claude-haiku-5-5/figures/L33718.png)
 
-The criteria verdict confusion matrix adds a fourth column for "missing" information. This occurs when the model's output had no verdict that could be matched to that checklist criterion, usually because it labeled or numbered the criteria differently. There is no corresponding row because we never expect to receive a missing prediction. The results across the criteria verdict matrix are similar: 97% "met" accuracy, 84% "not met" accuracy, and 97% insufficient accuracy. And like the decision matrix, "not met" had the lowest accuracy.
+The criteria verdict confusion matrix adds a fourth column for "missing" information. This occurs when the model's output had no verdict that could be matched to that checklist criterion, usually because it labeled or numbered the criteria differently. There is no corresponding row because I never expect to receive a missing prediction. The results across the criteria verdict matrix are similar: 97% "met" accuracy, 84% "not met" accuracy, and 97% insufficient accuracy. And like the decision matrix, "not met" had the lowest accuracy.
 
-In Figure 2, we display data relating to the held-out set's model selection (implantation of hypoglossal nerve neurostimulator system, LCD L38307). For decisions, the model achieves 75% accuracy on covered selections, 99% on denied and 92% on insufficient. For individual criteria, it achieves 97% accuracy on "met", 97% on "not met", and 91% on "insufficient". Notably, the model actually performs better on expected denied/predicted coverage selections than it did on the development set, but worse on the expected insufficient predicted covered selection.
+In Figure 2, I display data relating to the held-out set's model selection (implantation of hypoglossal nerve neurostimulator system, LCD L38307). For decisions, the model achieves 75% accuracy on covered selections, 99% on denied and 92% on insufficient. For individual criteria, it achieves 97% accuracy on "met", 97% on "not met", and 91% on "insufficient". The held-out set had fewer denied-predicted-as-covered errors, but more insufficient-predicted-as-covered errors
 
 ![Figure 2: confusion matrices for held-out set](data/eval_results/claude-haiku-5-5/figures/L38307.png)
 
@@ -156,7 +156,7 @@ There are several limitations to this study:
 1. **Model usage.** I use Anthropic's Claude Haiku model, designed for quick everyday tasks, to minimize cost. Even with this inexpensive model, each decision takes ~30 seconds of compute time, and costs several cents. Spot tests are cheap, but more robust comparisons that query Haiku hundreds of times cost a few dollars each. Claude Opus may achieve a higher accuracy and make fewer critical errors, but with a restrictive budget, large-scale assessments aren't feasible.
 2. **Amount of Data.** As mentioned earlier, I created 29 test cases for L33718, and 43 test cases for L38307, and ran every case 5 times. The 5 runs show how consistent the model is, but they aren't 5 times as much data: they're the same 72 cases judged repeatedly, so a flaw in one case (like case_047's, see #5) repeats in every run. The pooled totals in Table 1 (140 and 215 judged decisions) therefore overstate how much independent evidence there is; the number of distinct cases is the better measure of sample size. This is enough for a small-scale analysis, but ideally there would be two or three times as many cases. With so few, the conclusions I can draw from the analysis are limited, and a few cases can move the results noticeably.
 3. **Using fake patient data.** Synthea's patient data is clean. Encounters, lab results, and patient information are all present and accounted for, and do not perfectly mimic what a real patient FHIR file would look like. Healthcare in real-world scenarios is messy: registration cannot obtain patient information, family histories are sparse, patients unintentionally miss symptom details, and incorrect information is occasionally sent to payers. The models' predictions may be higher than they would in a real-world scenario due to the availability and presence of information. 
-4. **Some decision errors are costly.** When we expect a decision of "denied" but the model predicts "covered," the outcomes can be disastrous for patients, since they may owe fees that they didn't expect.
+4. **Some decision errors are costly.** When a decision of "denied" is expected but the model predicts "covered," the outcomes can be disastrous for patients, since they may owe fees that they didn't expect.
 5. **Answer keys without independent review.** The answer keys are computed by code that I wrote with the help of an AI coding assistant (Claude Code). No second person, and no one with clinical or coding expertise, checked them against the LCDs. Because the assistant and the model under test are both Claude models, they may share blind spots: an LCD reading that both get wrong would score as correct. One mistake did surface in the results. Before building a case, the builder rejects base patients whose record already contains a possible contraindication, so that every contraindication in a case is one I added on purpose. That check looks for "pulmonary hypertension" but not ordinary hypertension. L38307 counts uncontrolled hypertension despite medication as a contraindication (Lim.3). case_047's base patient has hypertension on lisinopril, with readings of 138/107 and 136/104. The builder let this patient through, added a note saying blood pressure was controlled, and the answer key expected "covered". The model read the actual readings, saw that they contradict the note, and answered "denied" in all 5 runs, which is arguably correct. I left the case and its answer key unchanged rather than fixing them after seeing the results, so these 5 judgments count as errors in Table 1.
 6. **Incorrect order selection.** On an untested order (E0471), the model sometimes selected an order already in the patient's record instead of the user-entered policy (picked an HGNS policy for a bi-level device).
 
@@ -194,7 +194,7 @@ data folder: contains fake patient files (not on GitHub), LCD documents, criteri
 
 `prior_auth_checker.py`: Builds the patient summary, retrieves policy passages, selects the LCD, and judges the order's criteria.
 
-`demo.py`: Builds a demo for the website. Contains 5 demo patients and 5 orders to pick from. It runs every patient/order combination ahead of time and saves the results to data/demo/ so the deployed site never calls the model (saves tokens and prevents PII from accidentally being revealed).
+`demo.py`: Builds a demo for the website. Contains 5 demo patients and 5 orders to pick from. It runs every patient/order combination ahead of time and saves the results to data/demo/ so the deployed site never calls the model (saves tokens and prevents PHI from accidentally being revealed).
 
 `monitoring.py`: Logs each request to an SQLite3 db (de-identified patient information).
 
