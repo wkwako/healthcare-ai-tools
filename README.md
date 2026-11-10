@@ -176,13 +176,12 @@ There are several limitations to this study:
 6. **Incorrect order selection.** On an untested order (E0471), the model sometimes selected an order already in the patient's record instead of the user-entered policy (picked an HGNS policy for a bi-level device).
 
 # Future Work
-1. **Continuous deployment:** automatically deploy to the VM after tests pass.
-2. **More and reviewed test cases:** two to three times as many cases, with answer keys reviewed by someone with clinical or coding expertise.
-3. **Reducing false covers:** most came from one compound criterion where the model accepted half of the required evidence (CI.6).
-4. **Model comparison:** compare Haiku with larger models on accuracy, false covers, and cost.
-5. **More policies:** extend beyond the two evaluated policies, and use the patient's region to choose between contractors' versions of the same policy.
-6. **A monitoring dashboard** built on the request logs.
-7. **Finishing the 835 structure and balance checker.**
+1. **More and reviewed test cases:** two to three times as many cases, with answer keys reviewed by someone with clinical or coding expertise.
+2. **Reducing false covers:** most came from one compound criterion where the model accepted half of the required evidence (CI.6).
+3. **Model comparison:** compare Haiku with larger models on accuracy, false covers, and cost.
+4. **More policies:** extend beyond the two evaluated policies, and use the patient's region to choose between contractors' versions of the same policy.
+5. **A monitoring dashboard** built on the request logs.
+6. **Finishing the 835 structure and balance checker.**
 
 # What's not in this repository
 Some data is excluded from the repo, either for licensing or because it can be regenerated:
