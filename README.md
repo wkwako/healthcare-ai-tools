@@ -4,7 +4,7 @@ I created a webapp that hosts a suite of healthcare tools focused on 835 remitta
 
 # Prior Authorization Checker Tool
 
-Given a patient FHIR file and an order, the tool predicts if the order is covered under Medicare. The result can be one of three values: "covered", "denied," or "insufficient information," if there isn't enough information in the patient file to make a clear determination.
+Given a patient FHIR file and an order, the tool predicts if the order is covered under Medicare. The result can be one of three values: "covered", "denied," or "insufficient information," if there isn't enough information in the patient file to make a clear determination. A demo of the tool can be accessed at [healthcare.williamkwako.com](healthcare.williamkwako.com).
 
 # Background
 
