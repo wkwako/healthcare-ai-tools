@@ -4,7 +4,7 @@
 {% block content %}
 <h1> Prior Authorization Checker </h1>
 
-<p>Pick a patient and an order. The patients are synthetic test records generated with Synthea, not real people.</p>
+<p>Given a patient's information and an order, this tool predicts if the order is covered under Medicare. A demo is available below: select a patient and an order from several options, then hit Predict to see a sample output. The patients are synthetic test records generated with Synthea, not real people.</p>
 
 <form class="pa-form" action="/prior-auth-checker/demo" method="post">
   <fieldset>
